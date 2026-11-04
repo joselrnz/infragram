@@ -1,0 +1,121 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "digitalocean-base",
+  "title": "DigitalOcean infrastructure template",
+  "description": "A reusable DigitalOcean editor with the canonical Diagrams node library and one-click DOKS foundation.",
+  "template_brief": "DIGITALOCEAN REFERENCE\n\nCOMPUTE\ndiagrams.digitalocean.compute.Containers\ndiagrams.digitalocean.compute.Docker\ndiagrams.digitalocean.compute.DropletConnect\ndiagrams.digitalocean.compute.DropletSnapshot\ndiagrams.digitalocean.compute.Droplet\ndiagrams.digitalocean.compute.K8SCluster\ndiagrams.digitalocean.compute.K8SNodePool\ndiagrams.digitalocean.compute.K8SNode\n\nDATABASE\ndiagrams.digitalocean.database.DbaasPrimaryStandbyMore\ndiagrams.digitalocean.database.DbaasPrimary\ndiagrams.digitalocean.database.DbaasReadOnly\ndiagrams.digitalocean.database.DbaasStandby\n\nNETWORK\ndiagrams.digitalocean.network.Certificate\ndiagrams.digitalocean.network.DomainRegistration\ndiagrams.digitalocean.network.Domain\ndiagrams.digitalocean.network.Firewall\ndiagrams.digitalocean.network.FloatingIp\ndiagrams.digitalocean.network.InternetGateway\ndiagrams.digitalocean.network.LoadBalancer\ndiagrams.digitalocean.network.ManagedVpn\ndiagrams.digitalocean.network.Vpc\n\nSTORAGE\ndiagrams.digitalocean.storage.Folder\ndiagrams.digitalocean.storage.Space\ndiagrams.digitalocean.storage.VolumeSnapshot\ndiagrams.digitalocean.storage.Volume",
+  "starter_preset": "digitalocean-application",
+  "providers": [
+    {
+      "id": "digitalocean",
+      "enabled": true
+    }
+  ],
+  "default_library": "digitalocean",
+  "layers": [
+    {
+      "id": "provider:digitalocean",
+      "name": "DigitalOcean",
+      "kind": "provider",
+      "provider": "digitalocean",
+      "visible": true,
+      "locked": false,
+      "order": 0
+    }
+  ],
+  "presentation": {
+    "size": "doc-wide",
+    "detail": "balanced",
+    "audience": "engineer",
+    "eyebrow": "DigitalOcean architecture",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "DigitalOcean infrastructure template",
+    "type": "group",
+    "children": [
+      {
+        "id": "client",
+        "name": "Client",
+        "type": "client",
+        "layer_id": "provider:digitalocean",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": "HTTPS traffic"
+        },
+        "connections": [
+          {
+            "target": "load-balancer",
+            "kind": "solid",
+            "label": "HTTPS"
+          }
+        ]
+      },
+      {
+        "id": "load-balancer",
+        "name": "Load Balancer",
+        "type": "gateway",
+        "component": {
+          "provider": "digitalocean",
+          "service_id": "load-balancer",
+          "icon_ref": "digitalocean:load-balancer"
+        },
+        "layer_id": "provider:digitalocean",
+        "attributes": {
+          "category": "networking",
+          "detail": "public entry point"
+        },
+        "connections": [
+          {
+            "target": "doks-cluster",
+            "kind": "solid",
+            "label": "routes"
+          }
+        ]
+      },
+      {
+        "id": "doks-cluster",
+        "name": "Kubernetes cluster",
+        "type": "service",
+        "component": {
+          "provider": "digitalocean",
+          "service_id": "k8s-cluster",
+          "icon_ref": "digitalocean:k8s-cluster"
+        },
+        "layer_id": "provider:digitalocean",
+        "attributes": {
+          "category": "containers",
+          "detail": "DOKS workloads"
+        },
+        "connections": [
+          {
+            "target": "database-primary",
+            "kind": "solid",
+            "label": "queries"
+          }
+        ]
+      },
+      {
+        "id": "database-primary",
+        "name": "Managed database",
+        "type": "database",
+        "component": {
+          "provider": "digitalocean",
+          "service_id": "dbaas-primary",
+          "icon_ref": "digitalocean:dbaas-primary"
+        },
+        "layer_id": "provider:digitalocean",
+        "attributes": {
+          "category": "databases",
+          "detail": "managed primary"
+        }
+      }
+    ]
+  }
+}

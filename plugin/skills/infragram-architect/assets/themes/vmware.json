@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "slug": "vmware",
+  "name": "VMware vSphere",
+  "title": "VMware vSphere virtualization",
+  "mark": "logos:vmware#default",
+  "mark_color": "#0091da",
+  "icons": {
+    "categories": [
+      "analytics",
+      "compute",
+      "containers",
+      "data",
+      "integration",
+      "networking",
+      "security",
+      "storage"
+    ],
+    "items": []
+  },
+  "theme": {
+    "paper": "#ffffff",
+    "paper_2": "#f4f8f9",
+    "ink": "#131f26",
+    "muted": "#455c68",
+    "soft": "#5e7682",
+    "accent": "#0091da",
+    "link": "#0073ad"
+  },
+  "icon_palette": [
+    "#0091da",
+    "#607078",
+    "#ffffff"
+  ],
+  "services": {
+    "entry": {
+      "name": "NSX Load Balancer",
+      "detail": "edge gateway · TLS"
+    },
+    "app": {
+      "name": "vSphere Virtual Machine",
+      "detail": "ESXi host · vMotion"
+    },
+    "object_store": {
+      "name": "vSAN Datastore",
+      "detail": "hyperconverged storage"
+    },
+    "database": {
+      "name": "Database Virtual Machine",
+      "detail": "self-managed · vSAN-backed"
+    }
+  },
+  "boundaries": {
+    "color": "#0091da"
+  }
+}

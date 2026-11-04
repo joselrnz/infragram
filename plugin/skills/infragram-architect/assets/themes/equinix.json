@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "slug": "equinix",
+  "name": "Equinix",
+  "title": "Equinix interconnection",
+  "mark": "logos:equinix-metal#default",
+  "mark_color": "#ed2224",
+  "icons": {
+    "categories": [
+      "analytics",
+      "compute",
+      "containers",
+      "data",
+      "integration",
+      "networking",
+      "security",
+      "storage"
+    ],
+    "items": []
+  },
+  "theme": {
+    "paper": "#ffffff",
+    "paper_2": "#f9f4f4",
+    "ink": "#261314",
+    "muted": "#684548",
+    "soft": "#825e61",
+    "accent": "#ed2224",
+    "link": "#b3151a"
+  },
+  "icon_palette": [
+    "#ed2224",
+    "#000000",
+    "#ffffff"
+  ],
+  "services": {
+    "entry": {
+      "name": "Network Edge Load Balancer",
+      "detail": "virtual device · Fabric attached"
+    },
+    "app": {
+      "name": "Colocated Server",
+      "detail": "customer cabinet · cross connect"
+    },
+    "object_store": {
+      "name": "Colocated Storage Array",
+      "detail": "customer-owned · in the cage"
+    },
+    "database": {
+      "name": "Colocated Database Server",
+      "detail": "customer-owned · in the cage"
+    }
+  },
+  "boundaries": {
+    "color": "#ed2224"
+  }
+}

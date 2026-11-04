@@ -1,0 +1,474 @@
+{
+  "schema_version": 2,
+  "kind": "hybrid",
+  "slug": "digitalocean-kubernetes-cluster",
+  "title": "DigitalOcean Kubernetes application cluster",
+  "description": "A documentation-oriented DOKS reference architecture showing public ingress, a managed control plane, three editable worker-node frames, application pods, managed PostgreSQL, and Spaces object storage.",
+  "template_brief": "DIGITALOCEAN KUBERNETES REFERENCE\n\nARCHITECTURE INTENT\nInternet -> DigitalOcean Load Balancer -> Gateway / Ingress -> application pods.\nThe DOKS control plane is fully managed by DigitalOcean.\nIllustrative pod placement uses three worker-node frames; the Kubernetes scheduler may reschedule replicas across workers.\nManaged PostgreSQL and Spaces remain outside the Kubernetes workload boundary.\n\nDOCUMENTATION\nhttps://docs.digitalocean.com/products/kubernetes/details/managed/\nhttps://docs.digitalocean.com/products/kubernetes/how-to/add-load-balancers/\nhttps://docs.digitalocean.com/products/kubernetes/how-to/use-spaces/\nhttps://docs.digitalocean.com/products/kubernetes/how-to/data-storage/\nhttps://kubernetes.io/docs/concepts/architecture/\nhttps://kubernetes.io/docs/concepts/services-networking/ingress/",
+  "providers": [
+    {
+      "id": "digitalocean",
+      "enabled": true
+    },
+    {
+      "id": "kubernetes",
+      "enabled": true
+    }
+  ],
+  "default_library": "digitalocean",
+  "layers": [
+    {
+      "id": "provider:digitalocean",
+      "name": "DigitalOcean",
+      "kind": "provider",
+      "provider": "digitalocean",
+      "visible": true,
+      "locked": false,
+      "order": 0
+    },
+    {
+      "id": "platform:kubernetes",
+      "name": "Kubernetes workloads",
+      "kind": "platform",
+      "provider": "kubernetes",
+      "visible": true,
+      "locked": false,
+      "order": 1
+    }
+  ],
+  "presentation": {
+    "size": "fit",
+    "detail": "faithful",
+    "audience": "engineer",
+    "eyebrow": "DigitalOcean Kubernetes reference architecture",
+    "heading": "Managed DOKS application cluster",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "DigitalOcean Kubernetes application cluster",
+    "type": "estate",
+    "attributes": {
+      "flow": "row"
+    },
+    "children": [
+      {
+        "id": "internet-client",
+        "name": "Internet clients",
+        "type": "client",
+        "layer_id": "provider:digitalocean",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": "HTTPS traffic",
+          "category": "networking",
+          "editor_display_mode": "card"
+        },
+        "connections": [
+          {
+            "target": "load-balancer",
+            "kind": "solid",
+            "label": "HTTPS"
+          }
+        ]
+      },
+      {
+        "id": "do-vpc",
+        "name": "DigitalOcean VPC",
+        "type": "vpc",
+        "component": {
+          "provider": "infragram",
+          "service_id": "custom-boundary-do-vpc",
+          "icon_ref": "infragram:custom-boundary-do-vpc"
+        },
+        "layer_id": "provider:digitalocean",
+        "attributes": {
+          "editor_order": 0,
+          "editor_frame_group": "digitalocean",
+          "editor_boundary_style": {
+            "stroke": "#0080ff",
+            "darkStroke": "#0080ff",
+            "fill": "none",
+            "dash": null,
+            "strokeWidth": 1.0,
+            "radius": 0,
+            "labelColor": "#0080ff",
+            "labelFont": "sans",
+            "labelSize": 10,
+            "labelWeight": 500,
+            "labelTracking": "0",
+            "labelCase": "preserve",
+            "pad": 24
+          }
+        },
+        "children": [
+          {
+            "id": "load-balancer",
+            "name": "DigitalOcean Load Balancer",
+            "type": "gateway",
+            "component": {
+              "provider": "digitalocean",
+              "service_id": "load-balancer",
+              "icon_ref": "digitalocean:load-balancer"
+            },
+            "layer_id": "provider:digitalocean",
+            "attributes": {
+              "category": "networking",
+              "detail": "DOKS LoadBalancer service",
+              "editor_display_mode": "card"
+            },
+            "connections": [
+              {
+                "target": "gateway",
+                "kind": "solid",
+                "label": "LoadBalancer"
+              }
+            ]
+          },
+          {
+            "id": "doks-cluster",
+            "name": "DigitalOcean Kubernetes cluster",
+            "type": "cluster",
+            "component": {
+              "provider": "infragram",
+              "service_id": "custom-boundary-do-doks",
+              "icon_ref": "infragram:custom-boundary-do-doks"
+            },
+            "layer_id": "provider:digitalocean",
+            "attributes": {
+              "editor_order": 1,
+              "editor_frame_group": "digitalocean",
+              "editor_boundary_style": {
+                "stroke": "#0080ff",
+                "darkStroke": "#0080ff",
+                "fill": "none",
+                "dash": "5,4",
+                "strokeWidth": 1.0,
+                "radius": 0,
+                "labelColor": "#0080ff",
+                "labelFont": "sans",
+                "labelSize": 10,
+                "labelWeight": 500,
+                "labelTracking": "0",
+                "labelCase": "preserve",
+                "pad": 24
+              }
+            },
+            "children": [
+              {
+                "id": "managed-control-plane",
+                "name": "Managed DOKS control plane",
+                "type": "control-plane",
+                "component": {
+                  "provider": "digitalocean",
+                  "service_id": "k8s-cluster",
+                  "icon_ref": "digitalocean:k8s-cluster"
+                },
+                "layer_id": "provider:digitalocean",
+                "attributes": {
+                  "category": "containers",
+                  "detail": "DigitalOcean-managed · HA · Kubernetes API",
+                  "editor_display_mode": "card"
+                }
+              },
+              {
+                "id": "app-namespace",
+                "name": "Application namespace",
+                "type": "namespace",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "custom-boundary-kubernetes-namespace",
+                  "icon_ref": "infragram:custom-boundary-kubernetes-namespace"
+                },
+                "layer_id": "platform:kubernetes",
+                "attributes": {
+                  "editor_order": 2,
+                  "editor_frame_group": "kubernetes",
+                  "editor_boundary_style": {
+                    "stroke": "#326ce5",
+                    "darkStroke": "#326ce5",
+                    "fill": "none",
+                    "dash": "5,4",
+                    "strokeWidth": 1.0,
+                    "radius": 0,
+                    "labelColor": "#326ce5",
+                    "labelFont": "sans",
+                    "labelSize": 10,
+                    "labelWeight": 500,
+                    "labelTracking": "0",
+                    "labelCase": "preserve",
+                    "pad": 24
+                  }
+                },
+                "children": [
+                  {
+                    "id": "gateway",
+                    "name": "Gateway / Ingress controller",
+                    "type": "gateway",
+                    "component": {
+                      "provider": "kubernetes",
+                      "service_id": "ing",
+                      "icon_ref": "kubernetes:ing"
+                    },
+                    "layer_id": "platform:kubernetes",
+                    "attributes": {
+                      "category": "networking",
+                      "detail": "TLS termination · HTTP routing",
+                      "editor_display_mode": "card"
+                    },
+                    "connections": [
+                      {
+                        "target": "web-ui-pod",
+                        "kind": "solid",
+                        "label": "web"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "worker-pool",
+                    "name": "DOKS worker node pool",
+                    "type": "node-pool",
+                    "component": {
+                      "provider": "infragram",
+                      "service_id": "custom-boundary-do-node-pool",
+                      "icon_ref": "infragram:custom-boundary-do-node-pool"
+                    },
+                    "layer_id": "provider:digitalocean",
+                    "attributes": {
+                      "editor_order": 3,
+                      "editor_frame_group": "digitalocean",
+                      "editor_boundary_style": {
+                        "stroke": "#0080ff",
+                        "darkStroke": "#0080ff",
+                        "fill": "none",
+                        "dash": "5,4",
+                        "strokeWidth": 1.0,
+                        "radius": 0,
+                        "labelColor": "#0080ff",
+                        "labelFont": "sans",
+                        "labelSize": 10,
+                        "labelWeight": 500,
+                        "labelTracking": "0",
+                        "labelCase": "preserve",
+                        "pad": 24
+                      },
+                      "flow": "row",
+                      "arrange": "manual"
+                    },
+                    "children": [
+                      {
+                        "id": "worker-node-1",
+                        "name": "Worker node 1",
+                        "type": "group",
+                        "component": {
+                          "provider": "infragram",
+                          "service_id": "custom-boundary-kubernetes-workload",
+                          "icon_ref": "infragram:custom-boundary-kubernetes-workload"
+                        },
+                        "layer_id": "platform:kubernetes",
+                        "attributes": {
+                          "editor_order": 4,
+                          "editor_frame_group": "kubernetes",
+                          "editor_boundary_style": {
+                            "stroke": "#326ce5",
+                            "darkStroke": "#326ce5",
+                            "fill": "none",
+                            "dash": "5,4",
+                            "strokeWidth": 1.0,
+                            "radius": 0,
+                            "labelColor": "#326ce5",
+                            "labelFont": "sans",
+                            "labelSize": 10,
+                            "labelWeight": 500,
+                            "labelTracking": "0",
+                            "labelCase": "preserve",
+                            "pad": 24
+                          }
+                        },
+                        "children": [
+                          {
+                            "id": "user-api-pod",
+                            "name": "User API pod",
+                            "type": "pod",
+                            "component": {
+                              "provider": "kubernetes",
+                              "service_id": "pod",
+                              "icon_ref": "kubernetes:pod"
+                            },
+                            "layer_id": "platform:kubernetes",
+                            "attributes": {
+                              "category": "containers",
+                              "detail": "identity workload",
+                              "editor_display_mode": "card"
+                            },
+                            "connections": [
+                              {
+                                "target": "managed-postgresql",
+                                "kind": "solid",
+                                "label": "SQL"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "worker-node-2",
+                        "name": "Worker node 2",
+                        "type": "group",
+                        "component": {
+                          "provider": "infragram",
+                          "service_id": "custom-boundary-kubernetes-workload",
+                          "icon_ref": "infragram:custom-boundary-kubernetes-workload"
+                        },
+                        "layer_id": "platform:kubernetes",
+                        "attributes": {
+                          "editor_order": 5,
+                          "editor_frame_group": "kubernetes",
+                          "editor_boundary_style": {
+                            "stroke": "#326ce5",
+                            "darkStroke": "#326ce5",
+                            "fill": "none",
+                            "dash": "5,4",
+                            "strokeWidth": 1.0,
+                            "radius": 0,
+                            "labelColor": "#326ce5",
+                            "labelFont": "sans",
+                            "labelSize": 10,
+                            "labelWeight": 500,
+                            "labelTracking": "0",
+                            "labelCase": "preserve",
+                            "pad": 24
+                          }
+                        },
+                        "children": [
+                          {
+                            "id": "web-ui-pod",
+                            "name": "Web UI pod",
+                            "type": "pod",
+                            "component": {
+                              "provider": "kubernetes",
+                              "service_id": "pod",
+                              "icon_ref": "kubernetes:pod"
+                            },
+                            "layer_id": "platform:kubernetes",
+                            "attributes": {
+                              "category": "containers",
+                              "detail": "frontend replica",
+                              "editor_display_mode": "card"
+                            },
+                            "connections": [
+                              {
+                                "target": "user-api-pod",
+                                "kind": "solid",
+                                "label": "User API"
+                              },
+                              {
+                                "target": "photo-api-pod",
+                                "kind": "solid",
+                                "label": "Photo API"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "worker-node-3",
+                        "name": "Worker node 3",
+                        "type": "group",
+                        "component": {
+                          "provider": "infragram",
+                          "service_id": "custom-boundary-kubernetes-workload",
+                          "icon_ref": "infragram:custom-boundary-kubernetes-workload"
+                        },
+                        "layer_id": "platform:kubernetes",
+                        "attributes": {
+                          "editor_order": 6,
+                          "editor_frame_group": "kubernetes",
+                          "editor_boundary_style": {
+                            "stroke": "#326ce5",
+                            "darkStroke": "#326ce5",
+                            "fill": "none",
+                            "dash": "5,4",
+                            "strokeWidth": 1.0,
+                            "radius": 0,
+                            "labelColor": "#326ce5",
+                            "labelFont": "sans",
+                            "labelSize": 10,
+                            "labelWeight": 500,
+                            "labelTracking": "0",
+                            "labelCase": "preserve",
+                            "pad": 24
+                          }
+                        },
+                        "children": [
+                          {
+                            "id": "photo-api-pod",
+                            "name": "Photo API pod",
+                            "type": "pod",
+                            "component": {
+                              "provider": "kubernetes",
+                              "service_id": "pod",
+                              "icon_ref": "kubernetes:pod"
+                            },
+                            "layer_id": "platform:kubernetes",
+                            "attributes": {
+                              "category": "containers",
+                              "detail": "media workload",
+                              "editor_display_mode": "card"
+                            },
+                            "connections": [
+                              {
+                                "target": "spaces",
+                                "kind": "solid",
+                                "label": "S3 API"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "managed-postgresql",
+            "name": "Managed PostgreSQL",
+            "type": "database",
+            "component": {
+              "provider": "digitalocean",
+              "service_id": "dbaas-primary-standby-more",
+              "icon_ref": "digitalocean:dbaas-primary-standby-more"
+            },
+            "layer_id": "provider:digitalocean",
+            "attributes": {
+              "category": "databases",
+              "detail": "private VPC endpoint · HA",
+              "editor_display_mode": "card"
+            }
+          }
+        ]
+      },
+      {
+        "id": "spaces",
+        "name": "DigitalOcean Spaces",
+        "type": "storage",
+        "component": {
+          "provider": "digitalocean",
+          "service_id": "space",
+          "icon_ref": "digitalocean:space"
+        },
+        "layer_id": "provider:digitalocean",
+        "attributes": {
+          "category": "storage",
+          "detail": "S3-compatible object storage",
+          "editor_display_mode": "card"
+        }
+      }
+    ]
+  }
+}

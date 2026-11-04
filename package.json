@@ -1,0 +1,11 @@
+{
+  "name": "infragram-architect-repository",
+  "private": true,
+  "description": "The repository around the Infragram Architect plugin, which is ./plugin. This file only points Pi at the plugin's skills when Pi installs the repository itself (pi install git:<repository>); the npm package is ./plugin/package.json.",
+  "license": "MIT",
+  "pi": {
+    "skills": [
+      "./plugin/skills"
+    ]
+  }
+}

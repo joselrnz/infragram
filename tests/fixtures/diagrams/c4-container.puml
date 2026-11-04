@@ -1,0 +1,22 @@
+@startuml
+!include <C4/C4_Container>
+LAYOUT_WITH_LEGEND()
+title Container diagram for Internet Banking System
+
+Person(customer, Customer, "A customer of the bank, with personal bank accounts")
+System_Boundary(c1, "Internet Banking") {
+    Container(web_app, "Web Application", "Java, Spring MVC", "Delivers the static content and the Internet banking SPA")
+    Container(spa, "Single-Page App", "JavaScript, Angular", "Provides all the Internet banking functionality to customers via their web browser")
+    ContainerDb(database, "Database", "SQL Database", "Stores user registration information, hashed auth credentials, access logs, etc.")
+    ContainerQueue(events, "Event bus", "Kafka", "Account events")
+}
+System_Ext(banking_system, "Mainframe Banking System", "Stores all of the core banking information")
+
+Rel(customer, web_app, "Uses", "HTTPS")
+Rel(customer, spa, "Uses", "HTTPS")
+Rel_Neighbor(web_app, spa, "Delivers")
+Rel(spa, database, "Reads from and writes to", "JDBC")
+Rel_Back(database, events, "Feeds")
+Rel(spa, banking_system, "Uses", "XML/HTTPS")
+SHOW_LEGEND()
+@enduml

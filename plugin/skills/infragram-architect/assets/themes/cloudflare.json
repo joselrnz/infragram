@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "slug": "cloudflare",
+  "name": "Cloudflare",
+  "title": "Cloudflare edge architecture",
+  "mark": "logos:cloudflare#default",
+  "mark_color": "#f38020",
+  "icons": {
+    "categories": [
+      "analytics",
+      "compute",
+      "containers",
+      "data",
+      "integration",
+      "networking",
+      "security",
+      "storage"
+    ],
+    "items": []
+  },
+  "theme": {
+    "paper": "#ffffff",
+    "paper_2": "#f9f7f4",
+    "ink": "#261b13",
+    "muted": "#685545",
+    "soft": "#826f5e",
+    "accent": "#f38020",
+    "link": "#a55009"
+  },
+  "icon_palette": [
+    "#f38020",
+    "#faad3f",
+    "#ffffff"
+  ],
+  "services": {
+    "entry": {
+      "name": "Cloudflare DNS, WAF, and CDN",
+      "detail": "anycast edge network"
+    },
+    "app": {
+      "name": "Cloudflare Workers",
+      "detail": "edge serverless runtime"
+    },
+    "object_store": {
+      "name": "Cloudflare R2",
+      "detail": "S3-compatible object storage"
+    },
+    "database": {
+      "name": "Cloudflare D1",
+      "detail": "serverless SQL database"
+    }
+  },
+  "boundaries": {
+    "color": "#f38020"
+  }
+}

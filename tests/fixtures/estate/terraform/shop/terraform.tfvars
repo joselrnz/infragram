@@ -1,0 +1,2 @@
+project     = "shop"
+environment = "prod"

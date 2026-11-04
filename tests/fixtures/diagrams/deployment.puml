@@ -1,0 +1,32 @@
+@startuml Deployment
+title Homelab deployment
+left to right direction
+skinparam componentStyle rectangle
+skinparam node {
+  BackgroundColor #eee
+}
+actor "Family" as family
+cloud "Internet" as net
+node "k3s cluster" as k3s {
+  node "media namespace" as media {
+    component [Jellyfin] as jelly
+    component "Sonarr" as sonarr <<$gear>>
+  }
+  database "PostgreSQL" as pg
+}
+queue "MQTT" as mqtt
+storage nas as "NAS share"
+note right of k3s : runs on three Pis
+note as N1
+  multi-line
+  note
+end note
+' a comment
+family --> net : browses
+net --> jelly : HTTPS
+sonarr ..> pg
+jelly -[#red,dashed]-> nas : reads media
+sonarr -up-> mqtt : events
+[Home Assistant] --> mqtt
+jelly -[hidden]- sonarr
+@enduml

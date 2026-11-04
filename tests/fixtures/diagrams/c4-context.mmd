@@ -1,0 +1,18 @@
+C4Context
+  title System Context diagram for Internet Banking System
+  Enterprise_Boundary(b0, "BankBoundary") {
+    Person(customerA, "Banking Customer A", "A customer of the bank, with personal bank accounts.")
+    System(SystemAA, "Internet Banking System", "Allows customers to view information about their bank accounts, and make payments.")
+    System_Boundary(b1, "BankBoundary2") {
+      SystemDb_Ext(SystemE, "Mainframe Banking System", "Stores all of the core banking information about customers, accounts, transactions, etc.")
+      Container(api, "API Application", "Java, Docker Container", "Provides Internet banking functionality via API.")
+      ContainerDb(db, "Database", "PostgreSQL", "Stores user registration information.")
+    }
+    System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
+  }
+  BiRel(customerA, SystemAA, "Uses")
+  Rel(SystemAA, SystemE, "Uses")
+  Rel(SystemAA, api, "Makes API calls to", "JSON/HTTPS")
+  Rel(api, db, "Reads from and writes to", "JDBC")
+  Rel_Back(customerA, SystemC, "Sends e-mails to")
+  UpdateRelStyle(customerA, SystemAA, $textColor="blue", $offsetY="-10")

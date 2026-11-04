@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "slug": "vultr",
+  "name": "Vultr",
+  "title": "Vultr cloud delivery",
+  "mark": "logos:vultr#default",
+  "mark_color": "#007bfc",
+  "icons": {
+    "categories": [
+      "analytics",
+      "compute",
+      "containers",
+      "data",
+      "integration",
+      "networking",
+      "security",
+      "storage"
+    ],
+    "items": []
+  },
+  "theme": {
+    "paper": "#ffffff",
+    "paper_2": "#f4f7f9",
+    "ink": "#131c26",
+    "muted": "#455668",
+    "soft": "#5e7082",
+    "accent": "#007bfc",
+    "link": "#0055ad"
+  },
+  "icon_palette": [
+    "#007bfc",
+    "#51b9ff",
+    "#ffffff"
+  ],
+  "services": {
+    "entry": {
+      "name": "Vultr Load Balancer",
+      "detail": "regional · TLS"
+    },
+    "app": {
+      "name": "Cloud Compute Instance",
+      "detail": "vc2 · VPC attached"
+    },
+    "object_store": {
+      "name": "Vultr Object Storage",
+      "detail": "S3-compatible"
+    },
+    "database": {
+      "name": "Managed Database",
+      "detail": "PostgreSQL · HA"
+    }
+  },
+  "boundaries": {
+    "color": "#007bfc",
+    "icons": {
+      "cluster": "logos:kubernetes#mono"
+    }
+  }
+}

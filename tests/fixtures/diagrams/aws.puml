@@ -1,0 +1,25 @@
+@startuml
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v19.0/dist
+!include AWSPuml/AWSCommon.puml
+!include AWSPuml/Groups/all.puml
+!include AWSPuml/Compute/Lambda.puml
+!include AWSPuml/Database/DynamoDB.puml
+!include AWSPuml/ApplicationIntegration/APIGateway.puml
+!include AWSPuml/Storage/SimpleStorageService.puml
+AWSGroupColoring(x, #ffffff, #000000, plain)
+
+AWSCloudGroup(cloud) {
+  VPCGroup(vpc, "Serverless VPC") {
+    APIGateway(api, "Public API", "REST")
+    Lambda(fn, "Orders function", "Python 3.12")
+  }
+  DynamoDB(table, "Orders table", "on-demand")
+  SimpleStorageService(bucket, "Receipts", "")
+}
+rectangle "<$Lambda>\nNightly report" as report
+
+api --> fn : invokes
+fn --> table : writes
+fn ..> bucket : receipt PDF
+report --> table
+@enduml

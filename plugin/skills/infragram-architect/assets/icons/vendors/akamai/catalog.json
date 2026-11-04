@@ -1,0 +1,299 @@
+{
+ "schema_version": 1,
+ "collection": "vendors/akamai",
+ "generated_by": "scripts/build/vendor-tiles.py (this project's own tiles: a Tabler glyph on the vendor's colour)",
+ "source": {
+  "url": "https://www.linode.com/",
+  "release": "drawn for Infragram; not the vendor's artwork. Glyphs: Tabler Icons (MIT).",
+  "terms": "https://github.com/tabler/tabler-icons/blob/main/LICENSE"
+ },
+ "counts": {
+  "icons": 24
+ },
+ "icons": [
+  {
+   "id": "entry-service",
+   "name": "NodeBalancer",
+   "aliases": [
+    "load balancer",
+    "nodebalancer"
+   ],
+   "category": "networking",
+   "file": "networking/entry-service.svg",
+   "source_path": "drawn: Tabler glyph arrows-split on #0096d6",
+   "sha256": "20e4e85369a90b909ab37923bf29018d5d7a4060f112c05713600ba2e61d4f57"
+  },
+  {
+   "id": "app-service",
+   "name": "Linode Compute Instance",
+   "aliases": [
+    "linode",
+    "instance",
+    "shared cpu"
+   ],
+   "category": "compute",
+   "file": "compute/app-service.svg",
+   "source_path": "drawn: Tabler glyph server on #0096d6",
+   "sha256": "39fc377076ae55eca5a1aa06ec8a71024a8ee8069a04f02b7f2a7a0da8076855"
+  },
+  {
+   "id": "object-store-service",
+   "name": "Object Storage",
+   "aliases": [
+    "s3-compatible",
+    "object storage"
+   ],
+   "category": "storage",
+   "file": "storage/object-store-service.svg",
+   "source_path": "drawn: Tabler glyph bucket on #0096d6",
+   "sha256": "3b363c3436deb8314f2805ef692dace93c6648fd0ae50489451fe2939b9d9c4a"
+  },
+  {
+   "id": "database-service",
+   "name": "Managed Database",
+   "aliases": [
+    "postgresql",
+    "mysql"
+   ],
+   "category": "databases",
+   "file": "databases/database-service.svg",
+   "source_path": "drawn: Tabler glyph database on #0096d6",
+   "sha256": "a9bef207d2e4e9039e8b0e39ddaf5a1cdcc26afe66359611ac4a12b392969f22"
+  },
+  {
+   "id": "dedicated-cpu",
+   "name": "Dedicated CPU Instance",
+   "aliases": [
+    "dedicated cpu"
+   ],
+   "category": "compute",
+   "file": "compute/dedicated-cpu.svg",
+   "source_path": "drawn: Tabler glyph cpu-2 on #0096d6",
+   "sha256": "c809526404825c55bde428877c7fd9967648d13fe435d7a348a592e2655ea656"
+  },
+  {
+   "id": "gpu-instance",
+   "name": "GPU Instance",
+   "aliases": [
+    "gpu",
+    "rtx"
+   ],
+   "category": "compute",
+   "file": "compute/gpu-instance.svg",
+   "source_path": "drawn: Tabler glyph cpu on #0096d6",
+   "sha256": "ebcec3c518bfb85cfeb355913c0597b6d594ca25c712e7af45a2180a1e533f21"
+  },
+  {
+   "id": "bare-metal",
+   "name": "Bare Metal",
+   "aliases": [
+    "dedicated server"
+   ],
+   "category": "compute",
+   "file": "compute/bare-metal.svg",
+   "source_path": "drawn: Tabler glyph server-2 on #0096d6",
+   "sha256": "f53046c89c0ae6b0955264779884edfa599e1e4309b4700bb9c64ff39e6cd79f"
+  },
+  {
+   "id": "lke",
+   "name": "Linode Kubernetes Engine",
+   "aliases": [
+    "lke",
+    "kubernetes"
+   ],
+   "category": "containers",
+   "file": "containers/lke.svg",
+   "source_path": "drawn: Tabler glyph hexagon on #0096d6",
+   "sha256": "62bd215df7b44c36ff2964ae4f1f587c2e326f66eb3961113814849c0375eed7"
+  },
+  {
+   "id": "block-storage",
+   "name": "Block Storage",
+   "aliases": [
+    "volume"
+   ],
+   "category": "storage",
+   "file": "storage/block-storage.svg",
+   "source_path": "drawn: Tabler glyph device-floppy on #0096d6",
+   "sha256": "ad5eadb0bf8a5d997242ebeaf1dad03b2df6dd535ae13c86a5a8dc8b9c8573ec"
+  },
+  {
+   "id": "images",
+   "name": "Images",
+   "aliases": [
+    "custom image",
+    "golden image"
+   ],
+   "category": "storage",
+   "file": "storage/images.svg",
+   "source_path": "drawn: Tabler glyph disc on #0096d6",
+   "sha256": "7afac27a62492813ab65ce8458396de39835aa6135b33a9332e8f74f2a5598e8"
+  },
+  {
+   "id": "backups",
+   "name": "Backups",
+   "aliases": [
+    "backup",
+    "snapshot"
+   ],
+   "category": "storage",
+   "file": "storage/backups.svg",
+   "source_path": "drawn: Tabler glyph archive on #0096d6",
+   "sha256": "a8ba6b376dcd7e42d01ec7c987eb63eeb059f4672998a02cdd77e763bd08f53e"
+  },
+  {
+   "id": "vpc",
+   "name": "VPC",
+   "aliases": [
+    "private network",
+    "vlan"
+   ],
+   "category": "networking",
+   "file": "networking/vpc.svg",
+   "source_path": "drawn: Tabler glyph topology-star on #0096d6",
+   "sha256": "d9882cdb2a45de6d05cca7122c472166b928dfa35c213e66c360621399f62860"
+  },
+  {
+   "id": "cloud-firewall",
+   "name": "Cloud Firewall",
+   "aliases": [
+    "firewall"
+   ],
+   "category": "security",
+   "file": "security/cloud-firewall.svg",
+   "source_path": "drawn: Tabler glyph wall on #0096d6",
+   "sha256": "c484d7cf3625e6d6698eccf0e6e00bfc8d82c858e523f11f35fddd954a848938"
+  },
+  {
+   "id": "dns-manager",
+   "name": "DNS Manager",
+   "aliases": [
+    "dns",
+    "domain"
+   ],
+   "category": "networking",
+   "file": "networking/dns-manager.svg",
+   "source_path": "drawn: Tabler glyph world-www on #0096d6",
+   "sha256": "fced8572a71939011ced7fd3d4e07014d5dbc18c78e643d19f6fe37f5b06cd06"
+  },
+  {
+   "id": "edge-dns",
+   "name": "Akamai Edge DNS",
+   "aliases": [
+    "authoritative dns",
+    "edge dns"
+   ],
+   "category": "networking",
+   "file": "networking/edge-dns.svg",
+   "source_path": "drawn: Tabler glyph world on #0096d6",
+   "sha256": "e1b0cd6c2835a218a360bf33cb41d7001eb0c3ad2f0aa225de8f1151dbc04c77"
+  },
+  {
+   "id": "cdn",
+   "name": "Akamai CDN",
+   "aliases": [
+    "ion",
+    "content delivery"
+   ],
+   "category": "networking",
+   "file": "networking/cdn.svg",
+   "source_path": "drawn: Tabler glyph cloud-network on #0096d6",
+   "sha256": "3fb8e2a2a9bcc2c8a9f61214bd49997b8cdd9a45ac3321debd9795447abca06d"
+  },
+  {
+   "id": "app-api-protector",
+   "name": "App and API Protector",
+   "aliases": [
+    "waf",
+    "api protection"
+   ],
+   "category": "security",
+   "file": "security/app-api-protector.svg",
+   "source_path": "drawn: Tabler glyph shield-check on #0096d6",
+   "sha256": "12aceab71293c345cfcb2d55ea7ca3d2eaef418599a7baac985963079219a02c"
+  },
+  {
+   "id": "bot-manager",
+   "name": "Bot Manager",
+   "aliases": [
+    "bots"
+   ],
+   "category": "security",
+   "file": "security/bot-manager.svg",
+   "source_path": "drawn: Tabler glyph spider on #0096d6",
+   "sha256": "f71e44abcc087f14d0d8595e6b733e268a2d93ef73fbc8203b86aadccc0272fa"
+  },
+  {
+   "id": "prolexic",
+   "name": "Prolexic DDoS Protection",
+   "aliases": [
+    "ddos",
+    "prolexic"
+   ],
+   "category": "security",
+   "file": "security/prolexic.svg",
+   "source_path": "drawn: Tabler glyph shield-lock on #0096d6",
+   "sha256": "cf4373a83074e92a3063e2b608a7792ed45eac359aa4350d2cabf285692e06f5"
+  },
+  {
+   "id": "guardicore",
+   "name": "Guardicore Segmentation",
+   "aliases": [
+    "microsegmentation",
+    "zero trust"
+   ],
+   "category": "security",
+   "file": "security/guardicore.svg",
+   "source_path": "drawn: Tabler glyph layers-intersect on #0096d6",
+   "sha256": "dcb6fdff7cdb383c448328599ea6396021fcca650a4b4b057c37471050762af2"
+  },
+  {
+   "id": "enterprise-application-access",
+   "name": "Enterprise Application Access",
+   "aliases": [
+    "ztna",
+    "eaa"
+   ],
+   "category": "security",
+   "file": "security/enterprise-application-access.svg",
+   "source_path": "drawn: Tabler glyph id-badge on #0096d6",
+   "sha256": "24338f473fc8c98896c6e28a007bce03b384adbee8e355686d07700f3f490ad8"
+  },
+  {
+   "id": "edgeworkers",
+   "name": "EdgeWorkers",
+   "aliases": [
+    "edge compute",
+    "edge functions"
+   ],
+   "category": "compute",
+   "file": "compute/edgeworkers.svg",
+   "source_path": "drawn: Tabler glyph bolt on #0096d6",
+   "sha256": "ad3de0da8d7960a1c60d349c33275419546aa29050238b9800758b772733b56f"
+  },
+  {
+   "id": "edgekv",
+   "name": "EdgeKV",
+   "aliases": [
+    "key-value",
+    "edge kv"
+   ],
+   "category": "databases",
+   "file": "databases/edgekv.svg",
+   "source_path": "drawn: Tabler glyph key on #0096d6",
+   "sha256": "979dad450193739dd76d8f4b75acd25f63704bc6dd4440b1282c7b5cdc632290"
+  },
+  {
+   "id": "datastream",
+   "name": "DataStream",
+   "aliases": [
+    "logs",
+    "log streaming"
+   ],
+   "category": "analytics",
+   "file": "analytics/datastream.svg",
+   "source_path": "drawn: Tabler glyph file-text on #0096d6",
+   "sha256": "2ead553c4ee595b36c6b634708edb79e582dda0bc57877678d11d5982a10fb66"
+  }
+ ]
+}

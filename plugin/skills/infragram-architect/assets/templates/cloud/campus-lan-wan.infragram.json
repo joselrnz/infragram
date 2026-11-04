@@ -1,0 +1,515 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "campus-lan-wan",
+  "title": "Campus LAN with two buildings and a branch over the WAN",
+  "description": "A campus MDF holds the edge router, firewall, core switches and WLAN controller; IDF closets in two buildings hold access switches, access points, patch panels and IP phones; shared network services sit on their own VLAN; two ISP uplinks and an SD-WAN link to a branch office reach the edge.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Campus network architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Campus LAN with two buildings and a branch over the WAN",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "isp1",
+        "name": "ISP A uplink",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "isp-uplink",
+          "icon_ref": "infragram:isp-uplink"
+        },
+        "attributes": {
+          "detail": "1 Gbps fibre"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "edge",
+            "kind": "solid",
+            "label": "BGP",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "isp2",
+        "name": "ISP B uplink",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "isp-uplink",
+          "icon_ref": "infragram:isp-uplink"
+        },
+        "attributes": {
+          "detail": "500 Mbps"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "edge",
+            "kind": "solid",
+            "label": "BGP",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "branch",
+        "name": "Branch office",
+        "type": "location",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "br-router",
+            "name": "Branch router",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "edge-router",
+              "icon_ref": "infragram:edge-router"
+            },
+            "attributes": {
+              "detail": "SD-WAN"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "edge",
+                "kind": "dashed",
+                "label": "WAN · IPsec",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "br-sw",
+            "name": "Access switch",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "network-switch",
+              "icon_ref": "onprem:network-switch"
+            },
+            "attributes": {
+              "detail": "PoE"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "br-ap",
+                "kind": "solid",
+                "label": "PoE",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "br-ap",
+            "name": "Access point",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "wireless-access-point",
+              "icon_ref": "infragram:wireless-access-point"
+            },
+            "attributes": {
+              "detail": ""
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "campus",
+        "name": "Campus · HQ",
+        "type": "campus",
+        "attributes": {
+          "editor_frame_group": "generic"
+        },
+        "children": [
+          {
+            "id": "mdf",
+            "name": "MDF · Building A ground floor",
+            "type": "closet",
+            "attributes": {
+              "editor_frame_group": "generic"
+            },
+            "children": [
+              {
+                "id": "edge",
+                "name": "Edge router",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "edge-router",
+                  "icon_ref": "infragram:edge-router"
+                },
+                "attributes": {
+                  "detail": "dual-homed"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "fw",
+                    "kind": "solid",
+                    "label": "L3",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "fw",
+                "name": "Firewall",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "firewall",
+                  "icon_ref": "infragram:firewall"
+                },
+                "attributes": {
+                  "detail": "north-south"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "core",
+                    "kind": "solid",
+                    "label": "L3",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "core",
+                "name": "Core switches",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "core-switch",
+                  "icon_ref": "infragram:core-switch"
+                },
+                "attributes": {
+                  "detail": "stacked pair · L3"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "sw1",
+                    "kind": "solid",
+                    "label": "10G fibre",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "sw2",
+                    "kind": "solid",
+                    "label": "10G fibre",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "wlc",
+                    "kind": "solid",
+                    "label": "CAPWAP",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "wlc",
+                "name": "WLAN controller",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "wlan-controller",
+                  "icon_ref": "infragram:wlan-controller"
+                },
+                "attributes": {
+                  "detail": "SSIDs · roaming"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "ups",
+                "name": "UPS + PDU",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "pdu",
+                  "icon_ref": "infragram:pdu"
+                },
+                "attributes": {
+                  "detail": "rack power"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "idf1",
+            "name": "IDF-1 · Building A floor 2",
+            "type": "closet",
+            "attributes": {
+              "editor_frame_group": "generic"
+            },
+            "children": [
+              {
+                "id": "sw1",
+                "name": "Access switches",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "network-switch",
+                  "icon_ref": "onprem:network-switch"
+                },
+                "attributes": {
+                  "detail": "PoE · 48 ports"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "ap1",
+                    "kind": "solid",
+                    "label": "PoE",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "patch1",
+                    "kind": "dotted",
+                    "label": "patched",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "ap1",
+                "name": "Access points",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "wireless-access-point",
+                  "icon_ref": "infragram:wireless-access-point"
+                },
+                "attributes": {
+                  "detail": "Wi-Fi 6E"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "patch1",
+                "name": "Patch panel",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "patch-panel",
+                  "icon_ref": "infragram:patch-panel"
+                },
+                "attributes": {
+                  "detail": "Cat6A"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "idf2",
+            "name": "IDF-2 · Building B",
+            "type": "closet",
+            "attributes": {
+              "editor_frame_group": "generic"
+            },
+            "children": [
+              {
+                "id": "sw2",
+                "name": "Access switches",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "network-switch",
+                  "icon_ref": "onprem:network-switch"
+                },
+                "attributes": {
+                  "detail": "PoE · 48 ports"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "ap2",
+                    "kind": "solid",
+                    "label": "PoE",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "phones",
+                    "kind": "solid",
+                    "label": "PoE",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "ap2",
+                "name": "Access points",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "wireless-access-point",
+                  "icon_ref": "infragram:wireless-access-point"
+                },
+                "attributes": {
+                  "detail": "Wi-Fi 6E"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "phones",
+                "name": "IP phones",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "pbx",
+                  "icon_ref": "infragram:pbx"
+                },
+                "attributes": {
+                  "detail": "SIP · voice VLAN"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "services",
+            "name": "VLAN 20 · Network services",
+            "type": "subnet-private",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "dhcp",
+                "name": "DHCP server",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "dhcp-server",
+                  "icon_ref": "infragram:dhcp-server"
+                },
+                "attributes": {
+                  "detail": "scopes per VLAN"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "dns",
+                "name": "DNS",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "dns-service",
+                  "icon_ref": "infragram:dns-service"
+                },
+                "attributes": {
+                  "detail": "internal zones"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "dc",
+                "name": "Domain controller",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "domain-controller",
+                  "icon_ref": "infragram:domain-controller"
+                },
+                "attributes": {
+                  "detail": "AD · Kerberos"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "radius",
+                    "kind": "dotted",
+                    "label": "LDAP",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "radius",
+                "name": "RADIUS / NAC",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "radius-server",
+                  "icon_ref": "infragram:radius-server"
+                },
+                "attributes": {
+                  "detail": "802.1X"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "ap2",
+                    "kind": "dotted",
+                    "label": "802.1X · WPA3-Enterprise",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "ntp",
+                "name": "NTP server",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "ntp-server",
+                  "icon_ref": "infragram:ntp-server"
+                },
+                "attributes": {
+                  "detail": "stratum 2"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

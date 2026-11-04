@@ -1,0 +1,152 @@
+{
+ "schema_version": 3,
+ "kind": "single-cloud",
+ "slug": "azure-production-groups",
+ "title": "Azure: Production (groups view)",
+ "description": "Read from Azure Resource Graph at 2026-10-27 12:00 UTC: Production. 1 resource group(s) and 1 resource(s), filed by resource group, as Azure Resource Manager holds them.",
+ "template_brief": "",
+ "providers": [
+  {
+   "id": "azure",
+   "enabled": true
+  }
+ ],
+ "default_library": "azure",
+ "layers": [],
+ "views": [],
+ "presentation": {
+  "size": "fit",
+  "detail": "balanced",
+  "audience": "mixed",
+  "eyebrow": "Architecture",
+  "heading": "",
+  "legend": [],
+  "display": "icon",
+  "crossings": "plain",
+  "frame_lines": "thin",
+  "status": "",
+  "notes": [],
+  "drawn": ""
+ },
+ "topology": {
+  "id": "root",
+  "name": "Azure: Production (groups view)",
+  "type": "group",
+  "attributes": {},
+  "children": [
+   {
+    "id": "production",
+    "name": "Production",
+    "type": "subscription",
+    "component": {
+     "provider": "infragram",
+     "service_id": "custom-boundary-azure-subscription",
+     "icon_ref": "infragram:custom-boundary-azure-subscription"
+    },
+    "attributes": {
+     "editor_frame_group": "azure"
+    },
+    "children": [
+     {
+      "id": "rg-app",
+      "name": "rg-app",
+      "type": "resource-group",
+      "component": {
+       "provider": "infragram",
+       "service_id": "custom-boundary-azure-resource-group",
+       "icon_ref": "infragram:custom-boundary-azure-resource-group"
+      },
+      "attributes": {
+       "editor_frame_group": "azure"
+      },
+      "children": [
+       {
+        "id": "vm-web",
+        "name": "vm-web",
+        "type": "Virtual Machine",
+        "component": {
+         "provider": "azure",
+         "service_id": "virtual-machine",
+         "icon_ref": "azure:virtual-machine"
+        },
+        "attributes": {
+         "icon": "virtual-machine",
+         "collection": "azure",
+         "category": "compute",
+         "sizing": {
+          "region": "eastus2",
+          "count": 1
+         },
+         "attached": [
+          {
+           "role": "NIC",
+           "name": "nic-web",
+           "id": "/subscriptions/11111111-2222-3333-4444-555555555555/resourcegroups/rg-app/providers/microsoft.network/networkinterfaces/nic-web",
+           "detail": "10.1.1.4",
+           "component": "azure:network-interfaces"
+          },
+          {
+           "role": "OS disk",
+           "name": "vm-web_OsDisk",
+           "id": "/subscriptions/11111111-2222-3333-4444-555555555555/resourcegroups/rg-app/providers/microsoft.compute/disks/vm-web_osdisk",
+           "detail": "128 GiB",
+           "component": "azure:disks"
+          },
+          {
+           "role": "public IP",
+           "name": "pip-web",
+           "id": "/subscriptions/11111111-2222-3333-4444-555555555555/resourcegroups/rg-app/providers/microsoft.network/publicipaddresses/pip-web",
+           "detail": "",
+           "component": "azure:public-ip-addresses"
+          }
+         ],
+         "table": {
+          "columns": [
+           "Property",
+           "Value"
+          ],
+          "rows": [
+           [
+            "Type",
+            "microsoft.compute/virtualmachines"
+           ],
+           [
+            "Resource group",
+            "rg-app"
+           ],
+           [
+            "Location",
+            "eastus2"
+           ],
+           [
+            "Resource ID",
+            "/subscriptions/11111111-2222-3333-4444-555555555555/resourcegroups/rg-app/providers/microsoft.compute/virtualmachines/vm-web"
+           ],
+           [
+            "NIC",
+            "nic-web · 10.1.1.4"
+           ],
+           [
+            "OS disk",
+            "vm-web_OsDisk · 128 GiB"
+           ],
+           [
+            "public IP",
+            "pip-web"
+           ]
+          ]
+         }
+        },
+        "children": [],
+        "connections": []
+       }
+      ],
+      "connections": []
+     }
+    ],
+    "connections": []
+   }
+  ],
+  "connections": []
+ }
+}

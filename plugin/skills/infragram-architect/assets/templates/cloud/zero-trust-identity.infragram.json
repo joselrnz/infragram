@@ -1,0 +1,404 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "zero-trust-identity",
+  "title": "Zero-trust access with a central identity provider",
+  "description": "Remote users and managed devices authenticate through an identity provider with hardware MFA and device posture from endpoint protection; a zero-trust gateway brokers per-application access to a DMZ and an internal zone; administrators reach servers only through the privileged access manager, and the PKI and HSM anchor the trust chain.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Security architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Zero-trust access with a central identity provider",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "users",
+        "name": "Remote users",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": "any network"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "idp",
+            "kind": "solid",
+            "label": "OIDC · SAML",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "devices",
+        "name": "Managed devices",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "browser-client",
+          "icon_ref": "infragram:browser-client"
+        },
+        "attributes": {
+          "detail": "posture checked"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "edr",
+            "kind": "dotted",
+            "label": "telemetry",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "admins",
+        "name": "Administrators",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "administrator",
+          "icon_ref": "infragram:administrator"
+        },
+        "attributes": {
+          "detail": ""
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "pam",
+            "kind": "solid",
+            "label": "brokered session",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "identity",
+        "name": "Identity & trust",
+        "type": "security-zone",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "idp",
+            "name": "Identity provider",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "brand-keycloak",
+              "icon_ref": "infragram:brand-keycloak"
+            },
+            "attributes": {
+              "detail": "SSO · policies"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "ztna",
+                "kind": "solid",
+                "label": "assertions",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "mfa",
+            "name": "Hardware MFA",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "brand-yubico",
+              "icon_ref": "infragram:brand-yubico"
+            },
+            "attributes": {
+              "detail": "FIDO2 keys"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "idp",
+                "kind": "dotted",
+                "label": "WebAuthn",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "edr",
+            "name": "Endpoint protection",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "endpoint-protection",
+              "icon_ref": "infragram:endpoint-protection"
+            },
+            "attributes": {
+              "detail": "EDR posture"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "ztna",
+                "kind": "dotted",
+                "label": "device trust",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "pam",
+            "name": "Privileged access",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "privileged-access",
+              "icon_ref": "infragram:privileged-access"
+            },
+            "attributes": {
+              "detail": "vaulted credentials"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "servers",
+                "kind": "solid",
+                "label": "SSH · RDP",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "pki",
+            "name": "PKI",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "pki",
+              "icon_ref": "infragram:pki"
+            },
+            "attributes": {
+              "detail": "device and server certificates"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "hsm",
+                "kind": "solid",
+                "label": "root key",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "hsm",
+            "name": "HSM",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "hsm",
+              "icon_ref": "infragram:hsm"
+            },
+            "attributes": {
+              "detail": "FIPS 140-3"
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "dmz",
+        "name": "DMZ",
+        "type": "dmz",
+        "attributes": {
+          "editor_frame_group": "generic"
+        },
+        "children": [
+          {
+            "id": "ztna",
+            "name": "Zero-trust gateway",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "zero-trust-gateway",
+              "icon_ref": "infragram:zero-trust-gateway"
+            },
+            "attributes": {
+              "detail": "per-app access"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "waf",
+                "kind": "solid",
+                "label": "HTTPS",
+                "direction": "forward"
+              },
+              {
+                "target": "app",
+                "kind": "solid",
+                "label": "HTTPS",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "waf",
+            "name": "WAF",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "waf",
+              "icon_ref": "infragram:waf"
+            },
+            "attributes": {
+              "detail": "OWASP rules"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "web",
+                "kind": "solid",
+                "label": "HTTPS",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "web",
+            "name": "Public web",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "network-nginx",
+              "icon_ref": "onprem:network-nginx"
+            },
+            "attributes": {
+              "detail": "static · APIs"
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "internal",
+        "name": "Internal zone",
+        "type": "security-zone",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "app",
+            "name": "Application servers",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "compute-server",
+              "icon_ref": "onprem:compute-server"
+            },
+            "attributes": {
+              "detail": "mTLS"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "db",
+                "kind": "solid",
+                "label": "SQL",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "db",
+            "name": "Database",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "database-postgresql",
+              "icon_ref": "onprem:database-postgresql"
+            },
+            "attributes": {
+              "detail": "encrypted at rest"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "dc",
+            "name": "Domain controller",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "domain-controller",
+              "icon_ref": "infragram:domain-controller"
+            },
+            "attributes": {
+              "detail": "Kerberos"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "servers",
+            "name": "Server estate",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "physical-server",
+              "icon_ref": "infragram:physical-server"
+            },
+            "attributes": {
+              "detail": "no direct admin access"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "siem",
+            "name": "SIEM",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "elastic-security-siem",
+              "icon_ref": "onprem:elastic-security-siem"
+            },
+            "attributes": {
+              "detail": "audit trail"
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

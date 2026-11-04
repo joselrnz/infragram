@@ -1,0 +1,55 @@
+{
+ "schema_version": 1,
+ "slug": "alibaba",
+ "name": "Alibaba Cloud",
+ "title": "Alibaba Cloud application delivery",
+ "mark": "marks/alibaba.svg",
+ "icons": {
+  "categories": [
+   "analytics",
+   "compute",
+   "containers",
+   "data",
+   "integration",
+   "networking",
+   "security",
+   "storage"
+  ],
+  "items": []
+ },
+ "theme": {
+  "paper": "#ffffff",
+  "paper_2": "#f9f6f4",
+  "ink": "#261b13",
+  "muted": "#685445",
+  "soft": "#826d5e",
+  "accent": "#ff7a1a",
+  "link": "#ad4900"
+ },
+ "icon_palette": [
+  "#ff6a00",
+  "#ff8f1f",
+  "#5f6368"
+ ],
+ "services": {
+  "entry": {
+   "name": "Alibaba Cloud CDN",
+   "detail": "edge · acceleration"
+  },
+  "app": {
+   "name": "Elastic Compute Service",
+   "detail": "virtual compute"
+  },
+  "object_store": {
+   "name": "Object Storage Service",
+   "detail": "static · objects"
+  },
+  "database": {
+   "name": "PolarDB",
+   "detail": "managed data"
+  }
+ },
+ "boundaries": {
+  "color": "#ff6a00"
+ }
+}

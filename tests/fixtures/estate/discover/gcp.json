@@ -1,0 +1,68 @@
+{
+  "about": "What the gcloud CLI answers for a small project: a VPC network with two subnetworks, a VM, a GKE cluster, a Cloud SQL instance on the private network, Cloud NAT on a router, Cloud Run, a bucket, and firewall rules: HTTPS from the internet to the web tag, SSH from the bastion's tag, Identity-Aware Proxy's range, the broad internal rule, a deny. Keys are the call without --project, --format, --quiet and the program name.",
+  "calls": {
+    "config list": {"core": {"project": "shop-prod-1234", "account": "reader@example.com"}},
+    "compute networks list": [
+      {"name": "shop-vpc", "id": "111", "selfLink": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/networks/shop-vpc"}
+    ],
+    "compute networks subnets list": [
+      {"name": "web", "id": "211", "selfLink": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/regions/europe-west1/subnetworks/web",
+       "network": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/networks/shop-vpc",
+       "region": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/regions/europe-west1", "ipCidrRange": "10.20.1.0/24"},
+      {"name": "gke", "id": "212", "selfLink": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/regions/europe-west1/subnetworks/gke",
+       "network": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/networks/shop-vpc",
+       "region": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/regions/europe-west1", "ipCidrRange": "10.20.8.0/22"}
+    ],
+    "compute instances list": [
+      {"name": "bastion", "selfLink": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/zones/europe-west1-b/instances/bastion",
+       "zone": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/zones/europe-west1-b",
+       "machineType": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/zones/europe-west1-b/machineTypes/e2-small",
+       "tags": {"items": ["bastion"], "fingerprint": "42WmSpB8rSM="},
+       "serviceAccounts": [{"email": "bastion@shop-prod-1234.iam.gserviceaccount.com", "scopes": ["https://www.googleapis.com/auth/cloud-platform"]}],
+       "networkInterfaces": [{"network": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/networks/shop-vpc",
+                              "subnetwork": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/regions/europe-west1/subnetworks/web", "networkIP": "10.20.1.2"}]},
+      {"name": "web-1", "selfLink": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/zones/europe-west1-b/instances/web-1",
+       "zone": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/zones/europe-west1-b",
+       "machineType": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/zones/europe-west1-b/machineTypes/e2-medium",
+       "tags": {"items": ["web"], "fingerprint": "Ks2Ts0yGZ0A="},
+       "networkInterfaces": [{"network": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/networks/shop-vpc",
+                              "subnetwork": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/regions/europe-west1/subnetworks/web", "networkIP": "10.20.1.3"}]}
+    ],
+    "compute firewall-rules list": [
+      {"name": "allow-https", "selfLink": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/firewalls/allow-https", "network": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/networks/shop-vpc",
+       "direction": "INGRESS", "priority": 1000, "disabled": false, "sourceRanges": ["0.0.0.0/0"], "targetTags": ["web"],
+       "allowed": [{"IPProtocol": "tcp", "ports": ["443"]}]},
+      {"name": "allow-ssh-from-bastion", "selfLink": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/firewalls/allow-ssh-from-bastion", "network": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/networks/shop-vpc",
+       "direction": "INGRESS", "priority": 1000, "disabled": false, "sourceTags": ["bastion"], "targetTags": ["web"],
+       "allowed": [{"IPProtocol": "tcp", "ports": ["22"]}]},
+      {"name": "allow-iap-ssh", "selfLink": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/firewalls/allow-iap-ssh", "network": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/networks/shop-vpc",
+       "direction": "INGRESS", "priority": 1000, "disabled": false, "sourceRanges": ["35.235.240.0/20"], "targetTags": ["bastion"],
+       "allowed": [{"IPProtocol": "tcp", "ports": ["22"]}]},
+      {"name": "allow-internal", "selfLink": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/firewalls/allow-internal", "network": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/networks/shop-vpc",
+       "direction": "INGRESS", "priority": 65534, "disabled": false, "sourceRanges": ["10.20.0.0/16"],
+       "allowed": [{"IPProtocol": "tcp", "ports": ["0-65535"]}, {"IPProtocol": "udp", "ports": ["0-65535"]}, {"IPProtocol": "icmp"}]},
+      {"name": "deny-telnet", "selfLink": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/firewalls/deny-telnet", "network": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/networks/shop-vpc",
+       "direction": "INGRESS", "priority": 900, "disabled": false, "sourceRanges": ["0.0.0.0/0"],
+       "denied": [{"IPProtocol": "tcp", "ports": ["23"]}]}
+    ],
+    "compute routers list": [
+      {"name": "shop-router", "selfLink": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/regions/europe-west1/routers/shop-router",
+       "network": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/global/networks/shop-vpc",
+       "region": "https://www.googleapis.com/compute/v1/projects/shop-prod-1234/regions/europe-west1",
+       "nats": [{"name": "shop-nat"}]}
+    ],
+    "container clusters list": [
+      {"name": "shop-gke", "selfLink": "https://container.googleapis.com/v1/projects/shop-prod-1234/locations/europe-west1/clusters/shop-gke",
+       "location": "europe-west1", "network": "shop-vpc", "subnetwork": "gke"}
+    ],
+    "sql instances list": [
+      {"name": "shop-db", "selfLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/shop-prod-1234/instances/shop-db", "region": "europe-west1",
+       "databaseVersion": "POSTGRES_16", "settings": {"tier": "db-custom-2-7680", "ipConfiguration": {"privateNetwork": "projects/shop-prod-1234/global/networks/shop-vpc"}}}
+    ],
+    "run services list": [
+      {"metadata": {"name": "shop-api", "labels": {"cloud.googleapis.com/location": "europe-west1"}}}
+    ],
+    "storage buckets list": [{"name": "shop-prod-assets", "location": "EU"}],
+    "redis instances list --region europe-west1": []
+  }
+}

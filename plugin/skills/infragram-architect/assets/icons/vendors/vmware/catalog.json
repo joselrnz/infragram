@@ -1,0 +1,300 @@
+{
+ "schema_version": 1,
+ "collection": "vendors/vmware",
+ "generated_by": "scripts/build/vendor-tiles.py (this project's own tiles: a Tabler glyph on the vendor's colour)",
+ "source": {
+  "url": "https://www.vmware.com/products/vsphere.html",
+  "release": "drawn for Infragram; not the vendor's artwork. Glyphs: Tabler Icons (MIT).",
+  "terms": "https://github.com/tabler/tabler-icons/blob/main/LICENSE"
+ },
+ "counts": {
+  "icons": 23
+ },
+ "icons": [
+  {
+   "id": "entry-service",
+   "name": "NSX Load Balancer",
+   "aliases": [
+    "load balancer",
+    "nsx alb",
+    "avi"
+   ],
+   "category": "networking",
+   "file": "networking/entry-service.svg",
+   "source_path": "drawn: Tabler glyph arrows-split on #0091da",
+   "sha256": "b0c3b4f1b938851b6881bc0f4368f1aa3a879bc5cdc21cb8b05f0b52f19b012f"
+  },
+  {
+   "id": "app-service",
+   "name": "vSphere Virtual Machine",
+   "aliases": [
+    "vm",
+    "virtual machine",
+    "guest"
+   ],
+   "category": "compute",
+   "file": "compute/app-service.svg",
+   "source_path": "drawn: Tabler glyph cube on #0091da",
+   "sha256": "180438809ad23a83f023a2089b7f3d0972e66674b6f613a0a83706351f1ccd24"
+  },
+  {
+   "id": "object-store-service",
+   "name": "vSAN Datastore",
+   "aliases": [
+    "vsan",
+    "hyperconverged"
+   ],
+   "category": "storage",
+   "file": "storage/object-store-service.svg",
+   "source_path": "drawn: Tabler glyph stack-2 on #0091da",
+   "sha256": "a8d054af8cc0ced91610704d9fec80ee5591c720696a99af3851a53f4b07d840"
+  },
+  {
+   "id": "database-service",
+   "name": "Database Virtual Machine",
+   "aliases": [
+    "database vm",
+    "sql vm"
+   ],
+   "category": "databases",
+   "file": "databases/database-service.svg",
+   "source_path": "drawn: Tabler glyph database on #0091da",
+   "sha256": "cd2f07c92e79fbd7fa259d7920382d296f894df9c7004a0a00581c8508931107"
+  },
+  {
+   "id": "esxi-host",
+   "name": "ESXi Host",
+   "aliases": [
+    "esxi",
+    "hypervisor",
+    "host"
+   ],
+   "category": "compute",
+   "file": "compute/esxi-host.svg",
+   "source_path": "drawn: Tabler glyph server on #0091da",
+   "sha256": "5147ec54e443df6834a6a2088af99dc7bd4ba1cfb5273bc3c164bd1d20c61c23"
+  },
+  {
+   "id": "vcenter",
+   "name": "vCenter Server",
+   "aliases": [
+    "vcenter",
+    "vcsa",
+    "management"
+   ],
+   "category": "devops",
+   "file": "devops/vcenter.svg",
+   "source_path": "drawn: Tabler glyph server-cog on #0091da",
+   "sha256": "0bcbde40266155321dae44e4ad1cc251dc1f5d6fac07f111a78a3941d793b1fb"
+  },
+  {
+   "id": "vsphere-cluster",
+   "name": "vSphere Cluster",
+   "aliases": [
+    "cluster",
+    "ha cluster"
+   ],
+   "category": "compute",
+   "file": "compute/vsphere-cluster.svg",
+   "source_path": "drawn: Tabler glyph stack-3 on #0091da",
+   "sha256": "ff4f13825ba556a1b0bc819adc1ff2861664700c754247098d760ffd2017bb0d"
+  },
+  {
+   "id": "resource-pool",
+   "name": "Resource Pool",
+   "aliases": [
+    "resource pool",
+    "vapp"
+   ],
+   "category": "compute",
+   "file": "compute/resource-pool.svg",
+   "source_path": "drawn: Tabler glyph box-multiple on #0091da",
+   "sha256": "f1c49ffc8b88c88c313b7006cf17f30f516d2d893f51df7f9ca3a3f92d7d627b"
+  },
+  {
+   "id": "vm-template",
+   "name": "VM Template",
+   "aliases": [
+    "template",
+    "content library"
+   ],
+   "category": "compute",
+   "file": "compute/vm-template.svg",
+   "source_path": "drawn: Tabler glyph file on #0091da",
+   "sha256": "12ec45ce14e9572f89f34efa48b8374f9ebb0e4606eab16725fc9d393b534010"
+  },
+  {
+   "id": "vmotion",
+   "name": "vMotion",
+   "aliases": [
+    "live migration",
+    "vmotion"
+   ],
+   "category": "compute",
+   "file": "compute/vmotion.svg",
+   "source_path": "drawn: Tabler glyph arrows-exchange on #0091da",
+   "sha256": "a9b83329a7788d161fc9b75e89b33aa5de3bf19693b22974b2530be0ad25a049"
+  },
+  {
+   "id": "ha-drs",
+   "name": "HA and DRS",
+   "aliases": [
+    "high availability",
+    "drs",
+    "scheduler"
+   ],
+   "category": "compute",
+   "file": "compute/ha-drs.svg",
+   "source_path": "drawn: Tabler glyph refresh on #0091da",
+   "sha256": "34ac523dce012a13da819214b9d5dbc9a2d648076e5e5e1dcfd3cb3d76ea8cc5"
+  },
+  {
+   "id": "datastore",
+   "name": "VMFS Datastore",
+   "aliases": [
+    "datastore",
+    "vmfs",
+    "nfs datastore"
+   ],
+   "category": "storage",
+   "file": "storage/datastore.svg",
+   "source_path": "drawn: Tabler glyph device-floppy on #0091da",
+   "sha256": "8db52277f0f5096af1b2c5e530d53b3446062d3919fb34bbf152e5f1512c4821"
+  },
+  {
+   "id": "storage-policy",
+   "name": "Storage Policy",
+   "aliases": [
+    "spbm",
+    "policy"
+   ],
+   "category": "storage",
+   "file": "storage/storage-policy.svg",
+   "source_path": "drawn: Tabler glyph clipboard-list on #0091da",
+   "sha256": "33462ed8c4041a5edbc85bc02ee77304542a014b41eb802347dbd17a2ff86906"
+  },
+  {
+   "id": "nsx-manager",
+   "name": "NSX Manager",
+   "aliases": [
+    "nsx",
+    "sdn",
+    "overlay"
+   ],
+   "category": "networking",
+   "file": "networking/nsx-manager.svg",
+   "source_path": "drawn: Tabler glyph topology-star on #0091da",
+   "sha256": "1a20d8f1005929dd005d3a403230b3ac01f026b7776f7fc13d6e5b320c55655a"
+  },
+  {
+   "id": "nsx-edge",
+   "name": "NSX Edge Gateway",
+   "aliases": [
+    "tier-0",
+    "tier-1",
+    "edge"
+   ],
+   "category": "networking",
+   "file": "networking/nsx-edge.svg",
+   "source_path": "drawn: Tabler glyph router on #0091da",
+   "sha256": "0c7aac59baf195fcfa2852d5863bfe3cd1a580caf175b5974a06b238e8fe84e9"
+  },
+  {
+   "id": "distributed-switch",
+   "name": "vSphere Distributed Switch",
+   "aliases": [
+    "vds",
+    "port group"
+   ],
+   "category": "networking",
+   "file": "networking/distributed-switch.svg",
+   "source_path": "drawn: Tabler glyph switch-2 on #0091da",
+   "sha256": "cb962eeec1dcab34466e029bd0840b5c58d347579e5249d72f5c2a9c8bc9ed21"
+  },
+  {
+   "id": "distributed-firewall",
+   "name": "NSX Distributed Firewall",
+   "aliases": [
+    "dfw",
+    "microsegmentation"
+   ],
+   "category": "security",
+   "file": "security/distributed-firewall.svg",
+   "source_path": "drawn: Tabler glyph wall on #0091da",
+   "sha256": "d9e2a8d61cd93a62327ef121c8b04926104eaa33f7a28e4e3794d5d95578f5ab"
+  },
+  {
+   "id": "tanzu",
+   "name": "Tanzu Kubernetes Grid",
+   "aliases": [
+    "tkg",
+    "kubernetes",
+    "supervisor"
+   ],
+   "category": "containers",
+   "file": "containers/tanzu.svg",
+   "source_path": "drawn: Tabler glyph hexagon on #0091da",
+   "sha256": "bc534c0b52fa2ca99c2ef8fc7a4c96214b6ff80f84622637dfe802d9a27fea8c"
+  },
+  {
+   "id": "horizon",
+   "name": "Horizon Desktop",
+   "aliases": [
+    "vdi",
+    "horizon"
+   ],
+   "category": "compute",
+   "file": "compute/horizon.svg",
+   "source_path": "drawn: Tabler glyph device-desktop on #0091da",
+   "sha256": "49cacf618798f84bfc55fb9264466ad08cd2d1c173138818691a61585b71f743"
+  },
+  {
+   "id": "aria-operations",
+   "name": "Aria Operations",
+   "aliases": [
+    "vrealize operations",
+    "vrops"
+   ],
+   "category": "analytics",
+   "file": "analytics/aria-operations.svg",
+   "source_path": "drawn: Tabler glyph chart-line on #0091da",
+   "sha256": "92d180e2b1b436caf39ef9194bbae78b956ca5d734ac98fb9eb0ed9a2a3a9501"
+  },
+  {
+   "id": "aria-automation",
+   "name": "Aria Automation",
+   "aliases": [
+    "vrealize automation",
+    "vra"
+   ],
+   "category": "devops",
+   "file": "devops/aria-automation.svg",
+   "source_path": "drawn: Tabler glyph robot on #0091da",
+   "sha256": "812f8b891dc6e685d468672a772f91562987f5262db0e96a5ea0cbc23506783c"
+  },
+  {
+   "id": "site-recovery",
+   "name": "Site Recovery Manager",
+   "aliases": [
+    "srm",
+    "disaster recovery"
+   ],
+   "category": "storage",
+   "file": "storage/site-recovery.svg",
+   "source_path": "drawn: Tabler glyph archive on #0091da",
+   "sha256": "af5ff4f30e9478d8bf726ee7712f3800a069e05e0eb4a8de7dfcacdb6c3a092e"
+  },
+  {
+   "id": "cloud-foundation",
+   "name": "Cloud Foundation",
+   "aliases": [
+    "vcf",
+    "sddc"
+   ],
+   "category": "compute",
+   "file": "compute/cloud-foundation.svg",
+   "source_path": "drawn: Tabler glyph layers-intersect on #0091da",
+   "sha256": "92a5ce81d80d38ec12779ebf0a372e00c5758e785ed8daf5d94be60e5c7e24e3"
+  }
+ ]
+}

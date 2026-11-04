@@ -1,0 +1,23 @@
+---
+title: Checkout flow
+---
+%% a web shop, drawn the way people write Mermaid
+flowchart LR
+    user((fa:fa-user Shopper)) -->|HTTPS| cdn[CDN]
+    cdn --> web[Storefront<br/>Next.js]
+    subgraph backend [Backend services]
+        direction TB
+        api[[Orders API]] & pay{{Payment Service}}
+        api -- publishes --> q>order-events]
+        worker(Fulfilment worker):::slow
+        q -.-> worker
+    end
+    web --> api
+    api --> db[(Orders DB)]
+    pay <--> stripe[Stripe]
+    worker --- mail@{ shape: doc, label: "Invoice mail" }
+    fn@{ shape: rect, label: "Resize", icon: "aws:lambda" }
+    worker ==> fn
+    web ~~~ stripe
+    classDef slow fill:#f96
+    click api "https://example.com/orders" "Orders API docs"

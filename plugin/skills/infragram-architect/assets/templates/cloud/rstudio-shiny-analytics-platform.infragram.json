@@ -1,0 +1,1061 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "rstudio-shiny-analytics-platform",
+  "title": "RStudio and Shiny analytics platform",
+  "description": "Shiny on Fargate and RStudio on EC2, each behind its own load balancer and spread across two Availability Zones. Data arrives by SFTP through Transfer Family or straight into S3, is queried through Athena over JDBC, and every compute tier mounts the same EFS file system.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "aws",
+      "enabled": true
+    }
+  ],
+  "default_library": "aws",
+  "layers": [],
+  "presentation": {
+    "display": "card",
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "RStudio and Shiny analytics platform",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "devices",
+        "name": "devices",
+        "type": "Desktop client",
+        "component": {
+          "provider": "infragram",
+          "service_id": "desktop-client",
+          "icon_ref": "infragram:desktop-client"
+        },
+        "attributes": {
+          "detail": "analyst workstations",
+          "icon": "desktop-client",
+          "collection": "infragram",
+          "category": "compute"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "aws-transfer-family",
+            "kind": "solid",
+            "label": "SFTP File Ingestion",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "users",
+        "name": "users",
+        "type": "Public users",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": "researchers",
+          "icon": "public-users",
+          "collection": "infragram",
+          "category": "identity"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "amazon-s3",
+            "kind": "solid",
+            "label": "S3 File Ingestion",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "aws-cloud",
+        "name": "AWS Cloud",
+        "type": "cloud",
+        "component": {
+          "provider": "infragram",
+          "service_id": "custom-boundary-aws-cloud",
+          "icon_ref": "infragram:custom-boundary-aws-cloud"
+        },
+        "attributes": {
+          "arrange": "manual",
+          "flow": "column",
+          "editor_frame_group": "aws"
+        },
+        "children": [
+          {
+            "id": "region",
+            "name": "Region",
+            "type": "region",
+            "component": {
+              "provider": "infragram",
+              "service_id": "custom-boundary-region",
+              "icon_ref": "infragram:custom-boundary-region"
+            },
+            "attributes": {
+              "arrange": "manual",
+              "flow": "column",
+              "editor_frame_group": "aws"
+            },
+            "children": [
+              {
+                "id": "account-wide-services",
+                "name": "Account-wide services",
+                "type": "security-zone",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "custom-boundary-security-zone",
+                  "icon_ref": "infragram:custom-boundary-security-zone"
+                },
+                "attributes": {
+                  "flow": "row",
+                  "editor_frame_group": "generic"
+                },
+                "children": [
+                  {
+                    "id": "aws-privatelink",
+                    "name": "AWS PrivateLink",
+                    "type": "AWS PrivateLink",
+                    "component": {
+                      "provider": "aws",
+                      "service_id": "privatelink",
+                      "icon_ref": "aws:privatelink"
+                    },
+                    "attributes": {
+                      "detail": "private service access",
+                      "icon": "privatelink",
+                      "collection": "aws",
+                      "category": "networking-content-delivery"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "amazon-cloudtrail",
+                    "name": "Amazon CloudTrail",
+                    "type": "AWS CloudTrail",
+                    "component": {
+                      "provider": "aws",
+                      "service_id": "cloudtrail",
+                      "icon_ref": "aws:cloudtrail"
+                    },
+                    "attributes": {
+                      "detail": "API audit trail",
+                      "icon": "cloudtrail",
+                      "collection": "aws",
+                      "category": "management-tools"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "aws-key-management-service",
+                    "name": "AWS Key Management Service",
+                    "type": "AWS Key Management Service",
+                    "component": {
+                      "provider": "aws",
+                      "service_id": "key-management-service",
+                      "icon_ref": "aws:key-management-service"
+                    },
+                    "attributes": {
+                      "detail": "CMKs",
+                      "icon": "key-management-service",
+                      "collection": "aws",
+                      "category": "security-identity"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "aws-shield",
+                    "name": "AWS Shield",
+                    "type": "AWS Shield",
+                    "component": {
+                      "provider": "aws",
+                      "service_id": "shield",
+                      "icon_ref": "aws:shield"
+                    },
+                    "attributes": {
+                      "detail": "DDoS protection",
+                      "icon": "shield",
+                      "collection": "aws",
+                      "category": "security-identity"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "amazon-route-53",
+                    "name": "Amazon Route 53",
+                    "type": "Amazon Route 53",
+                    "component": {
+                      "provider": "aws",
+                      "service_id": "route-53",
+                      "icon_ref": "aws:route-53"
+                    },
+                    "attributes": {
+                      "detail": "public DNS",
+                      "icon": "route-53",
+                      "collection": "aws",
+                      "category": "networking-content-delivery"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "internet-gateway",
+                        "kind": "solid",
+                        "label": "",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "amazon-certificate-manager",
+                    "name": "Amazon Certificate Manager",
+                    "type": "AWS Certificate Manager",
+                    "component": {
+                      "provider": "aws",
+                      "service_id": "certificate-manager",
+                      "icon_ref": "aws:certificate-manager"
+                    },
+                    "attributes": {
+                      "detail": "TLS certs",
+                      "icon": "certificate-manager",
+                      "collection": "aws",
+                      "category": "security-identity"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "amazon-guardduty",
+                    "name": "Amazon GuardDuty",
+                    "type": "Amazon GuardDuty",
+                    "component": {
+                      "provider": "aws",
+                      "service_id": "guardduty",
+                      "icon_ref": "aws:guardduty"
+                    },
+                    "attributes": {
+                      "detail": "threat detection",
+                      "icon": "guardduty",
+                      "collection": "aws",
+                      "category": "security-identity"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "amazon-cloudwatch",
+                    "name": "Amazon CloudWatch",
+                    "type": "Amazon CloudWatch",
+                    "component": {
+                      "provider": "aws",
+                      "service_id": "cloudwatch",
+                      "icon_ref": "aws:cloudwatch"
+                    },
+                    "attributes": {
+                      "detail": "logs and metrics",
+                      "icon": "cloudwatch",
+                      "collection": "aws",
+                      "category": "management-tools"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "amazon-ecr",
+                    "name": "Amazon ECR",
+                    "type": "Amazon Elastic Container Registry",
+                    "component": {
+                      "provider": "aws",
+                      "service_id": "elastic-container-registry",
+                      "icon_ref": "aws:elastic-container-registry"
+                    },
+                    "attributes": {
+                      "detail": "container images",
+                      "icon": "elastic-container-registry",
+                      "collection": "aws",
+                      "category": "containers"
+                    },
+                    "children": [],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "vpc",
+                "name": "VPC",
+                "type": "vpc",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "custom-boundary-vpc",
+                  "icon_ref": "infragram:custom-boundary-vpc"
+                },
+                "attributes": {
+                  "arrange": "manual",
+                  "flow": "row",
+                  "editor_frame_group": "aws"
+                },
+                "children": [
+                  {
+                    "id": "availability-zone-a",
+                    "name": "Availability Zone A",
+                    "type": "zone",
+                    "component": {
+                      "provider": "infragram",
+                      "service_id": "custom-boundary-availability-zone",
+                      "icon_ref": "infragram:custom-boundary-availability-zone"
+                    },
+                    "attributes": {
+                      "arrange": "manual",
+                      "flow": "column",
+                      "editor_frame_group": "aws"
+                    },
+                    "children": [
+                      {
+                        "id": "public-subnet-a",
+                        "name": "Public subnet A",
+                        "type": "subnet-public",
+                        "component": {
+                          "provider": "infragram",
+                          "service_id": "custom-boundary-public-subnet",
+                          "icon_ref": "infragram:custom-boundary-public-subnet"
+                        },
+                        "attributes": {
+                          "flow": "row",
+                          "editor_frame_group": "aws"
+                        },
+                        "children": [
+                          {
+                            "id": "nat-gateway",
+                            "name": "NAT Gateway",
+                            "type": "NAT Gateway (Amazon VPC)",
+                            "component": {
+                              "provider": "aws",
+                              "service_id": "vpc-nat-gateway",
+                              "icon_ref": "aws:vpc-nat-gateway"
+                            },
+                            "attributes": {
+                              "detail": "outbound only",
+                              "icon": "vpc-nat-gateway",
+                              "collection": "aws",
+                              "category": "networking-content-delivery"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "internet-gateway",
+                                "kind": "dashed",
+                                "label": "",
+                                "direction": "forward"
+                              }
+                            ]
+                          }
+                        ],
+                        "connections": []
+                      },
+                      {
+                        "id": "private-subnet-a",
+                        "name": "Private subnet A",
+                        "type": "subnet-private",
+                        "component": {
+                          "provider": "infragram",
+                          "service_id": "custom-boundary-private-subnet",
+                          "icon_ref": "infragram:custom-boundary-private-subnet"
+                        },
+                        "attributes": {
+                          "arrange": "manual",
+                          "flow": "column",
+                          "editor_frame_group": "aws"
+                        },
+                        "children": [
+                          {
+                            "id": "amazon-ecs",
+                            "name": "Amazon ECS",
+                            "type": "Amazon Elastic Container Service",
+                            "component": {
+                              "provider": "aws",
+                              "service_id": "elastic-container-service",
+                              "icon_ref": "aws:elastic-container-service"
+                            },
+                            "attributes": {
+                              "detail": "Shiny task definitions",
+                              "icon": "elastic-container-service",
+                              "collection": "aws",
+                              "category": "containers"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "aws-fargate-shiny",
+                                "kind": "dotted",
+                                "label": "",
+                                "direction": "forward"
+                              },
+                              {
+                                "target": "aws-fargate-shiny-2",
+                                "kind": "dotted",
+                                "label": "",
+                                "direction": "forward"
+                              }
+                            ]
+                          },
+                          {
+                            "id": "aws-fargate-shiny",
+                            "name": "AWS Fargate Shiny",
+                            "type": "AWS Fargate",
+                            "component": {
+                              "provider": "aws",
+                              "service_id": "fargate",
+                              "icon_ref": "aws:fargate"
+                            },
+                            "attributes": {
+                              "detail": "serverless task",
+                              "icon": "fargate",
+                              "collection": "aws",
+                              "category": "containers"
+                            },
+                            "children": [],
+                            "connections": []
+                          },
+                          {
+                            "id": "aws-fargate-shiny-2",
+                            "name": "AWS Fargate Shiny",
+                            "type": "AWS Fargate",
+                            "component": {
+                              "provider": "aws",
+                              "service_id": "fargate",
+                              "icon_ref": "aws:fargate"
+                            },
+                            "attributes": {
+                              "detail": "serverless task",
+                              "icon": "fargate",
+                              "collection": "aws",
+                              "category": "containers"
+                            },
+                            "children": [],
+                            "connections": []
+                          },
+                          {
+                            "id": "auto-scaling-group",
+                            "name": "Auto Scaling group",
+                            "type": "auto-scaling",
+                            "component": {
+                              "provider": "infragram",
+                              "service_id": "custom-boundary-aws-auto-scaling",
+                              "icon_ref": "infragram:custom-boundary-aws-auto-scaling"
+                            },
+                            "attributes": {
+                              "flow": "row",
+                              "editor_frame_group": "aws"
+                            },
+                            "children": [
+                              {
+                                "id": "ec2-server",
+                                "name": "EC2 Server",
+                                "type": "Amazon EC2",
+                                "component": {
+                                  "provider": "aws",
+                                  "service_id": "ec2",
+                                  "icon_ref": "aws:ec2"
+                                },
+                                "attributes": {
+                                  "detail": "RStudio host",
+                                  "icon": "ec2",
+                                  "collection": "aws",
+                                  "category": "compute"
+                                },
+                                "children": [],
+                                "connections": []
+                              },
+                              {
+                                "id": "rstudio-containers",
+                                "name": "RStudio Containers",
+                                "type": "Amazon Elastic Container Registry",
+                                "component": {
+                                  "provider": "aws",
+                                  "service_id": "elastic-container-registry",
+                                  "icon_ref": "aws:elastic-container-registry"
+                                },
+                                "attributes": {
+                                  "detail": "pulled from ECR",
+                                  "icon": "elastic-container-registry",
+                                  "collection": "aws",
+                                  "category": "containers"
+                                },
+                                "children": [],
+                                "connections": []
+                              }
+                            ],
+                            "connections": []
+                          },
+                          {
+                            "id": "egress-filtering",
+                            "name": "Egress Filtering",
+                            "type": "Firewall",
+                            "component": {
+                              "provider": "infragram",
+                              "service_id": "firewall",
+                              "icon_ref": "infragram:firewall"
+                            },
+                            "attributes": {
+                              "detail": "allow-list only",
+                              "icon": "firewall",
+                              "collection": "infragram",
+                              "category": "security"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "nat-gateway",
+                                "kind": "solid",
+                                "label": "",
+                                "direction": "forward"
+                              }
+                            ]
+                          }
+                        ],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  },
+                  {
+                    "id": "shared-ingress-and-data",
+                    "name": "Shared ingress and data",
+                    "type": "network",
+                    "component": {
+                      "provider": "infragram",
+                      "service_id": "custom-boundary-network",
+                      "icon_ref": "infragram:custom-boundary-network"
+                    },
+                    "attributes": {
+                      "arrange": "manual",
+                      "flow": "column",
+                      "editor_frame_group": "generic"
+                    },
+                    "children": [
+                      {
+                        "id": "internet-gateway",
+                        "name": "Internet Gateway",
+                        "type": "Internet Gateway (Amazon VPC)",
+                        "component": {
+                          "provider": "aws",
+                          "service_id": "vpc-internet-gateway",
+                          "icon_ref": "aws:vpc-internet-gateway"
+                        },
+                        "attributes": {
+                          "detail": "VPC ingress",
+                          "icon": "vpc-internet-gateway",
+                          "collection": "aws",
+                          "category": "networking-content-delivery"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "aws-waf",
+                            "kind": "solid",
+                            "label": "",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "aws-waf",
+                        "name": "AWS WAF",
+                        "type": "AWS Network Firewall",
+                        "component": {
+                          "provider": "aws",
+                          "service_id": "network-firewall",
+                          "icon_ref": "aws:network-firewall"
+                        },
+                        "attributes": {
+                          "detail": "managed rule groups",
+                          "icon": "network-firewall",
+                          "collection": "aws",
+                          "category": "security-identity"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "amazon-elb-shiny",
+                            "kind": "solid",
+                            "label": "",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "amazon-elb-rstudio",
+                            "kind": "solid",
+                            "label": "",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "amazon-elb-shiny",
+                        "name": "Amazon ELB Shiny",
+                        "type": "Elastic Load Balancing",
+                        "component": {
+                          "provider": "aws",
+                          "service_id": "elastic-load-balancing",
+                          "icon_ref": "aws:elastic-load-balancing"
+                        },
+                        "attributes": {
+                          "detail": "HTTPS",
+                          "icon": "elastic-load-balancing",
+                          "collection": "aws",
+                          "category": "networking-content-delivery"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "aws-fargate-shiny",
+                            "kind": "solid",
+                            "label": "Shiny traffic",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "aws-fargate-shiny-3",
+                            "kind": "solid",
+                            "label": "Shiny traffic",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "amazon-elb-rstudio",
+                        "name": "Amazon ELB RStudio",
+                        "type": "Elastic Load Balancing",
+                        "component": {
+                          "provider": "aws",
+                          "service_id": "elastic-load-balancing",
+                          "icon_ref": "aws:elastic-load-balancing"
+                        },
+                        "attributes": {
+                          "detail": "HTTPS",
+                          "icon": "elastic-load-balancing",
+                          "collection": "aws",
+                          "category": "networking-content-delivery"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "ec2-server",
+                            "kind": "solid",
+                            "label": "RStudio traffic",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "ec2-server-2",
+                            "kind": "solid",
+                            "label": "RStudio traffic",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "aws-transfer-family",
+                        "name": "AWS Transfer Family",
+                        "type": "AWS Transfer Family",
+                        "component": {
+                          "provider": "aws",
+                          "service_id": "transfer-family",
+                          "icon_ref": "aws:transfer-family"
+                        },
+                        "attributes": {
+                          "detail": "managed SFTP",
+                          "icon": "transfer-family",
+                          "collection": "aws",
+                          "category": "migration-modernization"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "amazon-s3",
+                            "kind": "solid",
+                            "label": "",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "amazon-s3",
+                        "name": "Amazon S3",
+                        "type": "Amazon Simple Storage Service",
+                        "component": {
+                          "provider": "aws",
+                          "service_id": "simple-storage-service",
+                          "icon_ref": "aws:simple-storage-service"
+                        },
+                        "attributes": {
+                          "detail": "landing and results",
+                          "icon": "simple-storage-service",
+                          "collection": "aws",
+                          "category": "storage"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "aws-datasync",
+                            "kind": "solid",
+                            "label": "",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "amazon-athena",
+                            "kind": "solid",
+                            "label": "",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "aws-datasync",
+                        "name": "AWS DataSync",
+                        "type": "AWS DataSync",
+                        "component": {
+                          "provider": "aws",
+                          "service_id": "datasync",
+                          "icon_ref": "aws:datasync"
+                        },
+                        "attributes": {
+                          "detail": "S3 to EFS",
+                          "icon": "datasync",
+                          "collection": "aws",
+                          "category": "migration-modernization"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "amazon-efs",
+                            "kind": "solid",
+                            "label": "",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "amazon-athena",
+                        "name": "Amazon Athena",
+                        "type": "Amazon Athena",
+                        "component": {
+                          "provider": "aws",
+                          "service_id": "athena",
+                          "icon_ref": "aws:athena"
+                        },
+                        "attributes": {
+                          "detail": "SQL over S3",
+                          "icon": "athena",
+                          "collection": "aws",
+                          "category": "analytics"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "rstudio-containers",
+                            "kind": "dotted",
+                            "label": "JDBC",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "rstudio-containers-2",
+                            "kind": "dotted",
+                            "label": "JDBC",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "amazon-efs",
+                        "name": "Amazon EFS",
+                        "type": "Amazon EFS",
+                        "component": {
+                          "provider": "aws",
+                          "service_id": "efs",
+                          "icon_ref": "aws:efs"
+                        },
+                        "attributes": {
+                          "detail": "shared home directories",
+                          "icon": "efs",
+                          "collection": "aws",
+                          "category": "storage"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "rstudio-containers",
+                            "kind": "dashed",
+                            "label": "NFS Mount",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "aws-fargate-shiny-2",
+                            "kind": "dashed",
+                            "label": "",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "rstudio-containers-2",
+                            "kind": "dashed",
+                            "label": "NFS Mount",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "aws-fargate-shiny-4",
+                            "kind": "dashed",
+                            "label": "",
+                            "direction": "forward"
+                          }
+                        ]
+                      }
+                    ],
+                    "connections": []
+                  },
+                  {
+                    "id": "availability-zone-b",
+                    "name": "Availability Zone B",
+                    "type": "zone",
+                    "component": {
+                      "provider": "infragram",
+                      "service_id": "custom-boundary-availability-zone",
+                      "icon_ref": "infragram:custom-boundary-availability-zone"
+                    },
+                    "attributes": {
+                      "arrange": "manual",
+                      "flow": "column",
+                      "editor_frame_group": "aws"
+                    },
+                    "children": [
+                      {
+                        "id": "public-subnet-b",
+                        "name": "Public subnet B",
+                        "type": "subnet-public",
+                        "component": {
+                          "provider": "infragram",
+                          "service_id": "custom-boundary-public-subnet",
+                          "icon_ref": "infragram:custom-boundary-public-subnet"
+                        },
+                        "attributes": {
+                          "flow": "row",
+                          "editor_frame_group": "aws"
+                        },
+                        "children": [
+                          {
+                            "id": "nat-gateway-2",
+                            "name": "NAT Gateway",
+                            "type": "NAT Gateway (Amazon VPC)",
+                            "component": {
+                              "provider": "aws",
+                              "service_id": "vpc-nat-gateway",
+                              "icon_ref": "aws:vpc-nat-gateway"
+                            },
+                            "attributes": {
+                              "detail": "outbound only",
+                              "icon": "vpc-nat-gateway",
+                              "collection": "aws",
+                              "category": "networking-content-delivery"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "internet-gateway",
+                                "kind": "dashed",
+                                "label": "",
+                                "direction": "forward"
+                              }
+                            ]
+                          }
+                        ],
+                        "connections": []
+                      },
+                      {
+                        "id": "private-subnet-b",
+                        "name": "Private subnet B",
+                        "type": "subnet-private",
+                        "component": {
+                          "provider": "infragram",
+                          "service_id": "custom-boundary-private-subnet",
+                          "icon_ref": "infragram:custom-boundary-private-subnet"
+                        },
+                        "attributes": {
+                          "arrange": "manual",
+                          "flow": "column",
+                          "editor_frame_group": "aws"
+                        },
+                        "children": [
+                          {
+                            "id": "amazon-ecs-2",
+                            "name": "Amazon ECS",
+                            "type": "Amazon Elastic Container Service",
+                            "component": {
+                              "provider": "aws",
+                              "service_id": "elastic-container-service",
+                              "icon_ref": "aws:elastic-container-service"
+                            },
+                            "attributes": {
+                              "detail": "Shiny task definitions",
+                              "icon": "elastic-container-service",
+                              "collection": "aws",
+                              "category": "containers"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "aws-fargate-shiny-3",
+                                "kind": "dotted",
+                                "label": "",
+                                "direction": "forward"
+                              },
+                              {
+                                "target": "aws-fargate-shiny-4",
+                                "kind": "dotted",
+                                "label": "",
+                                "direction": "forward"
+                              }
+                            ]
+                          },
+                          {
+                            "id": "aws-fargate-shiny-3",
+                            "name": "AWS Fargate Shiny",
+                            "type": "AWS Fargate",
+                            "component": {
+                              "provider": "aws",
+                              "service_id": "fargate",
+                              "icon_ref": "aws:fargate"
+                            },
+                            "attributes": {
+                              "detail": "serverless task",
+                              "icon": "fargate",
+                              "collection": "aws",
+                              "category": "containers"
+                            },
+                            "children": [],
+                            "connections": []
+                          },
+                          {
+                            "id": "aws-fargate-shiny-4",
+                            "name": "AWS Fargate Shiny",
+                            "type": "AWS Fargate",
+                            "component": {
+                              "provider": "aws",
+                              "service_id": "fargate",
+                              "icon_ref": "aws:fargate"
+                            },
+                            "attributes": {
+                              "detail": "serverless task",
+                              "icon": "fargate",
+                              "collection": "aws",
+                              "category": "containers"
+                            },
+                            "children": [],
+                            "connections": []
+                          },
+                          {
+                            "id": "auto-scaling-group-2",
+                            "name": "Auto Scaling group",
+                            "type": "auto-scaling",
+                            "component": {
+                              "provider": "infragram",
+                              "service_id": "custom-boundary-aws-auto-scaling",
+                              "icon_ref": "infragram:custom-boundary-aws-auto-scaling"
+                            },
+                            "attributes": {
+                              "flow": "row",
+                              "editor_frame_group": "aws"
+                            },
+                            "children": [
+                              {
+                                "id": "ec2-server-2",
+                                "name": "EC2 Server",
+                                "type": "Amazon EC2",
+                                "component": {
+                                  "provider": "aws",
+                                  "service_id": "ec2",
+                                  "icon_ref": "aws:ec2"
+                                },
+                                "attributes": {
+                                  "detail": "RStudio host",
+                                  "icon": "ec2",
+                                  "collection": "aws",
+                                  "category": "compute"
+                                },
+                                "children": [],
+                                "connections": []
+                              },
+                              {
+                                "id": "rstudio-containers-2",
+                                "name": "RStudio Containers",
+                                "type": "Amazon Elastic Container Registry",
+                                "component": {
+                                  "provider": "aws",
+                                  "service_id": "elastic-container-registry",
+                                  "icon_ref": "aws:elastic-container-registry"
+                                },
+                                "attributes": {
+                                  "detail": "pulled from ECR",
+                                  "icon": "elastic-container-registry",
+                                  "collection": "aws",
+                                  "category": "containers"
+                                },
+                                "children": [],
+                                "connections": []
+                              }
+                            ],
+                            "connections": []
+                          },
+                          {
+                            "id": "egress-filtering-2",
+                            "name": "Egress Filtering",
+                            "type": "Firewall",
+                            "component": {
+                              "provider": "infragram",
+                              "service_id": "firewall",
+                              "icon_ref": "infragram:firewall"
+                            },
+                            "attributes": {
+                              "detail": "allow-list only",
+                              "icon": "firewall",
+                              "collection": "infragram",
+                              "category": "security"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "nat-gateway-2",
+                                "kind": "solid",
+                                "label": "",
+                                "direction": "forward"
+                              }
+                            ]
+                          }
+                        ],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

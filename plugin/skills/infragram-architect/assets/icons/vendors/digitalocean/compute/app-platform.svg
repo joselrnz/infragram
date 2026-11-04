@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" data-name="Final Icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1, .cls-2 {
+        fill: none;
+        stroke: #0069ff;
+        stroke-width: 1.5px;
+      }
+
+      .cls-1 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-miterlimit: 10;
+      }</style></defs><polyline class="cls-1" points="17.55 6.5 17.55 3.136 13.596 3.136 11.801 7.263"/><polyline class="cls-1" points="6.061 8.552 0.829 5.834 2.211 11.866"/><polyline class="cls-1" points="6.061 18.146 0.829 20.864 2.211 14.832"/><path class="cls-1" d="m23.266 13.056a5.7924 5.7924 0 0 1-5.7924 5.7924h-8.7654a3.8164 3.8164 0 0 1-1.8128-0.55441l-6.1616-5.1577 6.1476-5.2897a3.2409 3.2409 0 0 1 1.8546-0.5831h8.7376a5.7924 5.7924 0 0 1 5.7924 5.7924z"/><line class="cls-2" x1="17.55" x2="17.55" y1="7.7229" y2="18.555"/><polyline class="cls-1" points="7.733 11.449 9.337 13.052 7.587 14.802"/><line class="cls-1" x1="11.801" x2="13.675" y1="14.802" y2="14.802"/></svg>

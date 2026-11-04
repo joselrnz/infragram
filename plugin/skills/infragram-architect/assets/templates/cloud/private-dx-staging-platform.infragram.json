@@ -1,0 +1,952 @@
+{
+  "schema_version": 2,
+  "kind": "hybrid",
+  "slug": "private-dx-staging-platform",
+  "title": "Private Direct Connect staging platform",
+  "description": "IBM InfoSphere DataStage extracts from an on-premises SQL Server and lands into an AWS staging environment over a dedicated Direct Connect private virtual interface. The VPC has no internet gateway: S3, KMS and Secrets Manager are reached through VPC endpoints, the staging tier and the Multi-AZ RDS instance each sit in their own security group, and GuardDuty, CloudTrail, Security Hub, Macie and Config watch the account.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    },
+    {
+      "id": "aws",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Private Direct Connect staging platform",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "corporate-data-center",
+        "name": "Corporate data center",
+        "type": "site",
+        "component": {
+          "provider": "infragram",
+          "service_id": "custom-boundary-onprem-datacenter",
+          "icon_ref": "infragram:custom-boundary-onprem-datacenter"
+        },
+        "attributes": {
+          "flow": "column",
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "source-systems",
+            "name": "Source systems",
+            "type": "security-zone",
+            "component": {
+              "provider": "infragram",
+              "service_id": "custom-boundary-onprem-security-zone",
+              "icon_ref": "infragram:custom-boundary-onprem-security-zone"
+            },
+            "attributes": {
+              "flow": "row",
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "sql-server-2022",
+                "name": "SQL Server 2022",
+                "type": "Microsoft SQL Server",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "database-mssql",
+                  "icon_ref": "onprem:database-mssql"
+                },
+                "attributes": {
+                  "detail": "OLTP source · CDC enabled",
+                  "icon": "database-mssql",
+                  "collection": "onprem",
+                  "category": "database"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "ibm-infosphere-datastage",
+                    "kind": "solid",
+                    "label": "CDC extract",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "ibm-infosphere-datastage",
+                "name": "IBM InfoSphere DataStage",
+                "type": "Sync / reconcile",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "sync-process",
+                  "icon_ref": "infragram:sync-process"
+                },
+                "attributes": {
+                  "detail": "parallel ETL engine",
+                  "icon": "sync-process",
+                  "collection": "infragram",
+                  "category": "integration"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "information-governance-catalog",
+                    "kind": "dotted",
+                    "label": "lineage",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "perimeter-firewall",
+                    "kind": "solid",
+                    "label": "TLS 1.3",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "information-governance-catalog",
+                "name": "Information Governance Catalog",
+                "type": "Search index",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "search-index",
+                  "icon_ref": "infragram:search-index"
+                },
+                "attributes": {
+                  "detail": "lineage and glossary",
+                  "icon": "search-index",
+                  "collection": "infragram",
+                  "category": "databases"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "edge-network",
+            "name": "Edge network",
+            "type": "network",
+            "component": {
+              "provider": "infragram",
+              "service_id": "custom-boundary-onprem-network",
+              "icon_ref": "infragram:custom-boundary-onprem-network"
+            },
+            "attributes": {
+              "flow": "row",
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "perimeter-firewall",
+                "name": "Perimeter firewall",
+                "type": "Firewall",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "firewall",
+                  "icon_ref": "infragram:firewall"
+                },
+                "attributes": {
+                  "detail": "egress allow-list only",
+                  "icon": "firewall",
+                  "collection": "infragram",
+                  "category": "security"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "edge-router",
+                    "kind": "solid",
+                    "label": "",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "edge-router",
+                "name": "Edge router",
+                "type": "Edge router",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "edge-router",
+                  "icon_ref": "infragram:edge-router"
+                },
+                "attributes": {
+                  "detail": "BGP · AS 65000",
+                  "icon": "edge-router",
+                  "collection": "infragram",
+                  "category": "networking"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "direct-connect",
+                    "kind": "dashed",
+                    "label": "MACsec · BGP",
+                    "direction": "forward"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "direct-connect-location",
+        "name": "Direct Connect location",
+        "type": "location",
+        "component": {
+          "provider": "infragram",
+          "service_id": "custom-boundary-direct-connect-location",
+          "icon_ref": "infragram:custom-boundary-direct-connect-location"
+        },
+        "attributes": {
+          "editor_frame_group": "aws"
+        },
+        "children": [
+          {
+            "id": "direct-connect",
+            "name": "Direct Connect",
+            "type": "AWS Direct Connect",
+            "component": {
+              "provider": "aws",
+              "service_id": "direct-connect",
+              "icon_ref": "aws:direct-connect"
+            },
+            "attributes": {
+              "detail": "10 Gbps dedicated · MACsec",
+              "icon": "direct-connect",
+              "collection": "aws",
+              "category": "networking-content-delivery"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "transit-gateway",
+                "kind": "dashed",
+                "label": "10 Gbps · transit VIF",
+                "direction": "forward"
+              }
+            ]
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "aws-cloud",
+        "name": "AWS Cloud",
+        "type": "cloud",
+        "component": {
+          "provider": "infragram",
+          "service_id": "custom-boundary-aws-cloud",
+          "icon_ref": "infragram:custom-boundary-aws-cloud"
+        },
+        "attributes": {
+          "arrange": "manual",
+          "flow": "column",
+          "editor_frame_group": "aws"
+        },
+        "children": [
+          {
+            "id": "environment-staging",
+            "name": "Environment · staging",
+            "type": "environment",
+            "component": {
+              "provider": "infragram",
+              "service_id": "custom-boundary-environment",
+              "icon_ref": "infragram:custom-boundary-environment"
+            },
+            "attributes": {
+              "flow": "column",
+              "editor_frame_group": "generic"
+            },
+            "children": [
+              {
+                "id": "region-us-east-1",
+                "name": "Region · us-east-1",
+                "type": "region",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "custom-boundary-region",
+                  "icon_ref": "infragram:custom-boundary-region"
+                },
+                "attributes": {
+                  "arrange": "manual",
+                  "flow": "column",
+                  "editor_frame_group": "aws"
+                },
+                "children": [
+                  {
+                    "id": "transit-gateway",
+                    "name": "Transit Gateway",
+                    "type": "AWS Transit Gateway",
+                    "component": {
+                      "provider": "aws",
+                      "service_id": "transit-gateway",
+                      "icon_ref": "aws:transit-gateway"
+                    },
+                    "attributes": {
+                      "detail": "private VIF · no internet route",
+                      "icon": "transit-gateway",
+                      "collection": "aws",
+                      "category": "networking-content-delivery"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "datastage-landing-node",
+                        "kind": "solid",
+                        "label": "",
+                        "direction": "forward"
+                      },
+                      {
+                        "target": "datastage-landing-node-2",
+                        "kind": "solid",
+                        "label": "",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "vpc-10-40-0-0-16-no-internet-gateway",
+                    "name": "VPC · 10.40.0.0/16 · no internet gateway",
+                    "type": "vpc",
+                    "component": {
+                      "provider": "infragram",
+                      "service_id": "custom-boundary-vpc",
+                      "icon_ref": "infragram:custom-boundary-vpc"
+                    },
+                    "attributes": {
+                      "arrange": "manual",
+                      "flow": "row",
+                      "editor_frame_group": "aws"
+                    },
+                    "children": [
+                      {
+                        "id": "s3-gateway-endpoint",
+                        "name": "S3 gateway endpoint",
+                        "type": "Endpoints (Amazon VPC)",
+                        "component": {
+                          "provider": "aws",
+                          "service_id": "vpc-endpoints",
+                          "icon_ref": "aws:vpc-endpoints"
+                        },
+                        "attributes": {
+                          "detail": "route table · policy-scoped",
+                          "icon": "vpc-endpoints",
+                          "collection": "aws",
+                          "category": "networking-content-delivery"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "s3-staging-bucket",
+                            "kind": "solid",
+                            "label": "staged parquet",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "availability-zone-a",
+                        "name": "Availability Zone A",
+                        "type": "zone",
+                        "component": {
+                          "provider": "infragram",
+                          "service_id": "custom-boundary-availability-zone",
+                          "icon_ref": "infragram:custom-boundary-availability-zone"
+                        },
+                        "attributes": {
+                          "arrange": "manual",
+                          "flow": "column",
+                          "editor_frame_group": "aws"
+                        },
+                        "children": [
+                          {
+                            "id": "private-subnet-a",
+                            "name": "Private subnet A",
+                            "type": "subnet-private",
+                            "component": {
+                              "provider": "infragram",
+                              "service_id": "custom-boundary-private-subnet",
+                              "icon_ref": "infragram:custom-boundary-private-subnet"
+                            },
+                            "attributes": {
+                              "arrange": "manual",
+                              "flow": "column",
+                              "editor_frame_group": "aws"
+                            },
+                            "children": [
+                              {
+                                "id": "private-subnet-endpoints",
+                                "name": "Private subnet · endpoints",
+                                "type": "subnet-private",
+                                "component": {
+                                  "provider": "infragram",
+                                  "service_id": "custom-boundary-private-subnet",
+                                  "icon_ref": "infragram:custom-boundary-private-subnet"
+                                },
+                                "attributes": {
+                                  "flow": "row",
+                                  "editor_frame_group": "aws"
+                                },
+                                "children": [
+                                  {
+                                    "id": "kms-endpoint",
+                                    "name": "KMS endpoint",
+                                    "type": "AWS Key Management Service",
+                                    "component": {
+                                      "provider": "aws",
+                                      "service_id": "key-management-service",
+                                      "icon_ref": "aws:key-management-service"
+                                    },
+                                    "attributes": {
+                                      "detail": "interface · private DNS",
+                                      "icon": "key-management-service",
+                                      "collection": "aws",
+                                      "category": "security-identity"
+                                    },
+                                    "children": [],
+                                    "connections": [
+                                      {
+                                        "target": "kms",
+                                        "kind": "dotted",
+                                        "label": "",
+                                        "direction": "forward"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "secrets-endpoint",
+                                    "name": "Secrets endpoint",
+                                    "type": "AWS Secrets Manager",
+                                    "component": {
+                                      "provider": "aws",
+                                      "service_id": "secrets-manager",
+                                      "icon_ref": "aws:secrets-manager"
+                                    },
+                                    "attributes": {
+                                      "detail": "interface · private DNS",
+                                      "icon": "secrets-manager",
+                                      "collection": "aws",
+                                      "category": "security-identity"
+                                    },
+                                    "children": [],
+                                    "connections": [
+                                      {
+                                        "target": "secrets-manager",
+                                        "kind": "dotted",
+                                        "label": "",
+                                        "direction": "forward"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "connections": []
+                              },
+                              {
+                                "id": "security-group-staging",
+                                "name": "Security group · staging",
+                                "type": "security-group",
+                                "component": {
+                                  "provider": "infragram",
+                                  "service_id": "custom-boundary-aws-security-group",
+                                  "icon_ref": "infragram:custom-boundary-aws-security-group"
+                                },
+                                "attributes": {
+                                  "editor_frame_group": "aws"
+                                },
+                                "children": [
+                                  {
+                                    "id": "datastage-landing-node",
+                                    "name": "DataStage landing node",
+                                    "type": "Amazon EC2",
+                                    "component": {
+                                      "provider": "aws",
+                                      "service_id": "ec2",
+                                      "icon_ref": "aws:ec2"
+                                    },
+                                    "attributes": {
+                                      "detail": "parallel writes",
+                                      "icon": "ec2",
+                                      "collection": "aws",
+                                      "category": "compute"
+                                    },
+                                    "children": [],
+                                    "connections": [
+                                      {
+                                        "target": "s3-gateway-endpoint",
+                                        "kind": "solid",
+                                        "label": "",
+                                        "direction": "forward"
+                                      },
+                                      {
+                                        "target": "rds-primary",
+                                        "kind": "solid",
+                                        "label": "bulk load",
+                                        "direction": "forward"
+                                      },
+                                      {
+                                        "target": "secrets-endpoint",
+                                        "kind": "dotted",
+                                        "label": "credentials",
+                                        "direction": "forward"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "connections": []
+                              },
+                              {
+                                "id": "security-group-database",
+                                "name": "Security group · database",
+                                "type": "security-group",
+                                "component": {
+                                  "provider": "infragram",
+                                  "service_id": "custom-boundary-aws-security-group",
+                                  "icon_ref": "infragram:custom-boundary-aws-security-group"
+                                },
+                                "attributes": {
+                                  "editor_frame_group": "aws"
+                                },
+                                "children": [
+                                  {
+                                    "id": "rds-primary",
+                                    "name": "RDS primary",
+                                    "type": "Amazon RDS",
+                                    "component": {
+                                      "provider": "aws",
+                                      "service_id": "rds",
+                                      "icon_ref": "aws:rds"
+                                    },
+                                    "attributes": {
+                                      "detail": "SQL Server · encrypted",
+                                      "icon": "rds",
+                                      "collection": "aws",
+                                      "category": "databases"
+                                    },
+                                    "children": [],
+                                    "connections": [
+                                      {
+                                        "target": "rds-standby",
+                                        "kind": "dashed",
+                                        "label": "synchronous",
+                                        "direction": "both"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "connections": []
+                              }
+                            ],
+                            "connections": []
+                          }
+                        ],
+                        "connections": []
+                      },
+                      {
+                        "id": "availability-zone-b",
+                        "name": "Availability Zone B",
+                        "type": "zone",
+                        "component": {
+                          "provider": "infragram",
+                          "service_id": "custom-boundary-availability-zone",
+                          "icon_ref": "infragram:custom-boundary-availability-zone"
+                        },
+                        "attributes": {
+                          "arrange": "manual",
+                          "flow": "column",
+                          "editor_frame_group": "aws"
+                        },
+                        "children": [
+                          {
+                            "id": "private-subnet-b",
+                            "name": "Private subnet B",
+                            "type": "subnet-private",
+                            "component": {
+                              "provider": "infragram",
+                              "service_id": "custom-boundary-private-subnet",
+                              "icon_ref": "infragram:custom-boundary-private-subnet"
+                            },
+                            "attributes": {
+                              "arrange": "manual",
+                              "flow": "column",
+                              "editor_frame_group": "aws"
+                            },
+                            "children": [
+                              {
+                                "id": "private-subnet-endpoints-2",
+                                "name": "Private subnet · endpoints",
+                                "type": "subnet-private",
+                                "component": {
+                                  "provider": "infragram",
+                                  "service_id": "custom-boundary-private-subnet",
+                                  "icon_ref": "infragram:custom-boundary-private-subnet"
+                                },
+                                "attributes": {
+                                  "flow": "row",
+                                  "editor_frame_group": "aws"
+                                },
+                                "children": [
+                                  {
+                                    "id": "kms-endpoint-2",
+                                    "name": "KMS endpoint",
+                                    "type": "AWS Key Management Service",
+                                    "component": {
+                                      "provider": "aws",
+                                      "service_id": "key-management-service",
+                                      "icon_ref": "aws:key-management-service"
+                                    },
+                                    "attributes": {
+                                      "detail": "interface · private DNS",
+                                      "icon": "key-management-service",
+                                      "collection": "aws",
+                                      "category": "security-identity"
+                                    },
+                                    "children": [],
+                                    "connections": []
+                                  },
+                                  {
+                                    "id": "secrets-endpoint-2",
+                                    "name": "Secrets endpoint",
+                                    "type": "AWS Secrets Manager",
+                                    "component": {
+                                      "provider": "aws",
+                                      "service_id": "secrets-manager",
+                                      "icon_ref": "aws:secrets-manager"
+                                    },
+                                    "attributes": {
+                                      "detail": "interface · private DNS",
+                                      "icon": "secrets-manager",
+                                      "collection": "aws",
+                                      "category": "security-identity"
+                                    },
+                                    "children": [],
+                                    "connections": []
+                                  }
+                                ],
+                                "connections": []
+                              },
+                              {
+                                "id": "security-group-staging-2",
+                                "name": "Security group · staging",
+                                "type": "security-group",
+                                "component": {
+                                  "provider": "infragram",
+                                  "service_id": "custom-boundary-aws-security-group",
+                                  "icon_ref": "infragram:custom-boundary-aws-security-group"
+                                },
+                                "attributes": {
+                                  "editor_frame_group": "aws"
+                                },
+                                "children": [
+                                  {
+                                    "id": "datastage-landing-node-2",
+                                    "name": "DataStage landing node",
+                                    "type": "Amazon EC2",
+                                    "component": {
+                                      "provider": "aws",
+                                      "service_id": "ec2",
+                                      "icon_ref": "aws:ec2"
+                                    },
+                                    "attributes": {
+                                      "detail": "parallel writes",
+                                      "icon": "ec2",
+                                      "collection": "aws",
+                                      "category": "compute"
+                                    },
+                                    "children": [],
+                                    "connections": [
+                                      {
+                                        "target": "s3-gateway-endpoint",
+                                        "kind": "solid",
+                                        "label": "",
+                                        "direction": "forward"
+                                      },
+                                      {
+                                        "target": "secrets-endpoint-2",
+                                        "kind": "dotted",
+                                        "label": "credentials",
+                                        "direction": "forward"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "connections": []
+                              },
+                              {
+                                "id": "security-group-database-2",
+                                "name": "Security group · database",
+                                "type": "security-group",
+                                "component": {
+                                  "provider": "infragram",
+                                  "service_id": "custom-boundary-aws-security-group",
+                                  "icon_ref": "infragram:custom-boundary-aws-security-group"
+                                },
+                                "attributes": {
+                                  "editor_frame_group": "aws"
+                                },
+                                "children": [
+                                  {
+                                    "id": "rds-standby",
+                                    "name": "RDS standby",
+                                    "type": "Amazon RDS",
+                                    "component": {
+                                      "provider": "aws",
+                                      "service_id": "rds",
+                                      "icon_ref": "aws:rds"
+                                    },
+                                    "attributes": {
+                                      "detail": "synchronous · failover",
+                                      "icon": "rds",
+                                      "collection": "aws",
+                                      "category": "databases"
+                                    },
+                                    "children": [],
+                                    "connections": []
+                                  }
+                                ],
+                                "connections": []
+                              }
+                            ],
+                            "connections": []
+                          }
+                        ],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  },
+                  {
+                    "id": "encrypted-service-tier",
+                    "name": "Encrypted service tier",
+                    "type": "security-zone",
+                    "component": {
+                      "provider": "infragram",
+                      "service_id": "custom-boundary-security-zone",
+                      "icon_ref": "infragram:custom-boundary-security-zone"
+                    },
+                    "attributes": {
+                      "flow": "row",
+                      "editor_frame_group": "generic"
+                    },
+                    "children": [
+                      {
+                        "id": "s3-staging-bucket",
+                        "name": "S3 staging bucket",
+                        "type": "Amazon Simple Storage Service",
+                        "component": {
+                          "provider": "aws",
+                          "service_id": "simple-storage-service",
+                          "icon_ref": "aws:simple-storage-service"
+                        },
+                        "attributes": {
+                          "detail": "SSE-KMS · versioned · block public access",
+                          "icon": "simple-storage-service",
+                          "collection": "aws",
+                          "category": "storage"
+                        },
+                        "children": [],
+                        "connections": []
+                      },
+                      {
+                        "id": "kms",
+                        "name": "KMS",
+                        "type": "AWS Key Management Service",
+                        "component": {
+                          "provider": "aws",
+                          "service_id": "key-management-service",
+                          "icon_ref": "aws:key-management-service"
+                        },
+                        "attributes": {
+                          "detail": "customer-managed key",
+                          "icon": "key-management-service",
+                          "collection": "aws",
+                          "category": "security-identity"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "s3-staging-bucket",
+                            "kind": "dotted",
+                            "label": "CMK",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "rds-primary",
+                            "kind": "dotted",
+                            "label": "CMK",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "secrets-manager",
+                        "name": "Secrets Manager",
+                        "type": "AWS Secrets Manager",
+                        "component": {
+                          "provider": "aws",
+                          "service_id": "secrets-manager",
+                          "icon_ref": "aws:secrets-manager"
+                        },
+                        "attributes": {
+                          "detail": "rotated credentials",
+                          "icon": "secrets-manager",
+                          "collection": "aws",
+                          "category": "security-identity"
+                        },
+                        "children": [],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "detection-and-audit",
+            "name": "Detection and audit",
+            "type": "security-zone",
+            "component": {
+              "provider": "infragram",
+              "service_id": "custom-boundary-security-zone",
+              "icon_ref": "infragram:custom-boundary-security-zone"
+            },
+            "attributes": {
+              "flow": "row",
+              "editor_frame_group": "generic"
+            },
+            "children": [
+              {
+                "id": "guardduty",
+                "name": "GuardDuty",
+                "type": "Amazon GuardDuty",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "guardduty",
+                  "icon_ref": "aws:guardduty"
+                },
+                "attributes": {
+                  "detail": "threat detection",
+                  "icon": "guardduty",
+                  "collection": "aws",
+                  "category": "security-identity"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "cloudtrail",
+                "name": "CloudTrail",
+                "type": "AWS CloudTrail",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "cloudtrail",
+                  "icon_ref": "aws:cloudtrail"
+                },
+                "attributes": {
+                  "detail": "org trail · immutable",
+                  "icon": "cloudtrail",
+                  "collection": "aws",
+                  "category": "management-tools"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "s3-staging-bucket",
+                    "kind": "dotted",
+                    "label": "logs",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "security-hub",
+                "name": "Security Hub",
+                "type": "AWS Security Hub",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "security-hub",
+                  "icon_ref": "aws:security-hub"
+                },
+                "attributes": {
+                  "detail": "posture findings",
+                  "icon": "security-hub",
+                  "collection": "aws",
+                  "category": "security-identity"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "macie",
+                "name": "Macie",
+                "type": "Amazon Macie",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "macie",
+                  "icon_ref": "aws:macie"
+                },
+                "attributes": {
+                  "detail": "PII discovery in S3",
+                  "icon": "macie",
+                  "collection": "aws",
+                  "category": "security-identity"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "s3-staging-bucket",
+                    "kind": "dotted",
+                    "label": "scans",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "config",
+                "name": "Config",
+                "type": "AWS Config",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "config",
+                  "icon_ref": "aws:config"
+                },
+                "attributes": {
+                  "detail": "drift and compliance",
+                  "icon": "config",
+                  "collection": "aws",
+                  "category": "management-tools"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

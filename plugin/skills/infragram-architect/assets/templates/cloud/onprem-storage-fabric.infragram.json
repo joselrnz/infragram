@@ -1,0 +1,463 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "onprem-storage-fabric",
+  "title": "SAN storage fabric with dual fabrics and replication",
+  "description": "Hypervisor hosts and a blade chassis attach to two Fibre Channel fabrics that zone them to a primary array; the primary replicates synchronously to a secondary array, whose snapshots go to a tape library; a NAS serves the file servers over Ethernet. A management network carries the KVM console, console server, monitoring and the backup server, and a power column shows UPS, PDU and generator.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Storage architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "SAN storage fabric with dual fabrics and replication",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "dc",
+        "name": "Datacenter",
+        "type": "site",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "compute",
+            "name": "Compute cluster",
+            "type": "cluster",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "host1",
+                "name": "ESXi host 1",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "physical-server",
+                  "icon_ref": "infragram:physical-server"
+                },
+                "attributes": {
+                  "detail": "2 × HBA"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "fab-a",
+                    "kind": "solid",
+                    "label": "FC 32G",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "fab-b",
+                    "kind": "solid",
+                    "label": "FC 32G",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "host2",
+                "name": "ESXi host 2",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "physical-server",
+                  "icon_ref": "infragram:physical-server"
+                },
+                "attributes": {
+                  "detail": "2 × HBA"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "fab-a",
+                    "kind": "solid",
+                    "label": "",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "fab-b",
+                    "kind": "solid",
+                    "label": "",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "blade",
+                "name": "Blade chassis",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "blade-chassis",
+                  "icon_ref": "infragram:blade-chassis"
+                },
+                "attributes": {
+                  "detail": "16 blades · FC modules"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "fab-a",
+                    "kind": "solid",
+                    "label": "FC",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "fab-b",
+                    "kind": "solid",
+                    "label": "FC",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "files",
+                "name": "File servers",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "generic-file",
+                  "icon_ref": "infragram:generic-file"
+                },
+                "attributes": {
+                  "detail": "SMB · NFS"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "nas",
+                    "kind": "solid",
+                    "label": "10G Ethernet",
+                    "direction": "forward"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "fabric",
+            "name": "SAN fabric · A / B",
+            "type": "storage-fabric",
+            "attributes": {
+              "editor_frame_group": "generic"
+            },
+            "children": [
+              {
+                "id": "fab-a",
+                "name": "SAN switch · fabric A",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "san-switch",
+                  "icon_ref": "infragram:san-switch"
+                },
+                "attributes": {
+                  "detail": "48 × 32G"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "primary",
+                    "kind": "solid",
+                    "label": "zoning",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "fab-b",
+                "name": "SAN switch · fabric B",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "san-switch",
+                  "icon_ref": "infragram:san-switch"
+                },
+                "attributes": {
+                  "detail": "48 × 32G"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "primary",
+                    "kind": "solid",
+                    "label": "zoning",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "fc-patch",
+                "name": "Patch panel",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "patch-panel",
+                  "icon_ref": "infragram:patch-panel"
+                },
+                "attributes": {
+                  "detail": "LC fibre"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "arrays",
+            "name": "Storage arrays",
+            "type": "server-group",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "primary",
+                "name": "Primary array",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "storage-array",
+                  "icon_ref": "infragram:storage-array"
+                },
+                "attributes": {
+                  "detail": "all-flash · LUNs"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "secondary",
+                    "kind": "dashed",
+                    "label": "sync replication",
+                    "direction": "both"
+                  }
+                ]
+              },
+              {
+                "id": "secondary",
+                "name": "Secondary array",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "storage-array",
+                  "icon_ref": "infragram:storage-array"
+                },
+                "attributes": {
+                  "detail": "hybrid"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "tape",
+                    "kind": "dotted",
+                    "label": "snapshot copies",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "tape",
+                "name": "Tape library",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "tape-library",
+                  "icon_ref": "infragram:tape-library"
+                },
+                "attributes": {
+                  "detail": "LTO-9"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "nas",
+                "name": "NAS filer",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "nas",
+                  "icon_ref": "infragram:nas"
+                },
+                "attributes": {
+                  "detail": "NFS · SMB"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "mgmt",
+            "name": "Management network · OOB",
+            "type": "management",
+            "attributes": {
+              "editor_frame_group": "generic"
+            },
+            "children": [
+              {
+                "id": "kvm",
+                "name": "KVM console",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "kvm-console",
+                  "icon_ref": "infragram:kvm-console"
+                },
+                "attributes": {
+                  "detail": "rack KVM"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "console",
+                "name": "Console server",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "console-server",
+                  "icon_ref": "infragram:console-server"
+                },
+                "attributes": {
+                  "detail": "serial · arrays and switches"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "primary",
+                    "kind": "dotted",
+                    "label": "mgmt",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "secondary",
+                    "kind": "dotted",
+                    "label": "",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "monitoring",
+                "name": "Monitoring",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "monitoring",
+                  "icon_ref": "infragram:monitoring"
+                },
+                "attributes": {
+                  "detail": "capacity · latency"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "backup",
+                "name": "Backup server",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "backup-recovery",
+                  "icon_ref": "infragram:backup-recovery"
+                },
+                "attributes": {
+                  "detail": "catalog · scheduling"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "tape",
+                    "kind": "solid",
+                    "label": "write",
+                    "direction": "forward"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "power",
+            "name": "Power",
+            "type": "server-group",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "ups",
+                "name": "UPS",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "ups",
+                  "icon_ref": "infragram:ups"
+                },
+                "attributes": {
+                  "detail": "N+1"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "pdu",
+                "name": "PDU",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "pdu",
+                  "icon_ref": "infragram:pdu"
+                },
+                "attributes": {
+                  "detail": "A / B feeds"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "generator",
+                "name": "Generator",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "generator",
+                  "icon_ref": "infragram:generator"
+                },
+                "attributes": {
+                  "detail": "diesel · 48 h"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

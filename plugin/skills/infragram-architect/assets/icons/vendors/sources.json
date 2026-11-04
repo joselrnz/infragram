@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "comment": "Source-of-truth manifest for official vendor icon collections. scripts/importers/official-icons.py reads this; add or change a vendor here, not in code. 'format' selects the pack-layout parser; 'root' is relative to scripts/cloud-diagram-sources/.",
+  "vendors": {
+    "azure": {
+      "format": "azure-v24",
+      "root": "azure/official-architecture-icons-v24/Azure_Public_Service_Icons_V24/Azure_Public_Service_Icons/Icons",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
+      "release": "Azure Public Service Icons V24",
+      "archive": "azure/official-architecture-icons-v24/Azure_Public_Service_Icons_V24.zip",
+      "terms": "Microsoft permits use in architecture diagrams, training materials, and documentation; do not alter the artwork.",
+      "supplements": [
+        {
+          "format": "listed-icons",
+          "root": "entra/Microsoft Entra architecture icons - Oct 2023/Microsoft Entra color icons SVG",
+          "url": "https://learn.microsoft.com/en-us/entra/architecture/architecture-icons",
+          "release": "Microsoft Entra architecture icons (Oct 2023)",
+          "archive": "entra/microsoft-entra-architecture-icons-oct-2023.zip",
+          "terms": "Microsoft permits use in architectural diagrams, training materials, or documentation; do not crop, flip, rotate or distort the icons, or use them in marketing.",
+          "category": "identity",
+          "icons": {
+            "Microsoft Entra ID color icon.svg": {
+              "id": "entra-id",
+              "name": "Entra ID",
+              "aliases": [
+                "Microsoft Entra ID",
+                "Azure Active Directory",
+                "Azure AD",
+                "AAD",
+                "tenant"
+              ]
+            },
+            "Microsoft Entra ID Governance color icon.svg": {
+              "id": "entra-id-governance",
+              "name": "Entra ID Governance",
+              "aliases": [
+                "Microsoft Entra ID Governance",
+                "access reviews",
+                "entitlement management"
+              ]
+            },
+            "Microsoft Entra Workload ID color icon.svg": {
+              "id": "entra-workload-id",
+              "name": "Entra Workload ID",
+              "aliases": [
+                "Microsoft Entra Workload ID",
+                "workload identity",
+                "workload identity federation",
+                "federated identity credential"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "aws": {
+      "format": "aws-arch",
+      "root": "aws/official-architecture-icons-2026-q3/Icon-package_07312026",
+      "url": "https://aws.amazon.com/architecture/icons/",
+      "release": "AWS Architecture Icons 2026-Q3 (07/31/2026)",
+      "archive": "aws/official-architecture-icons-2026-q3/Icon-package_07312026.zip",
+      "terms": "AWS permits these assets for architecture diagrams and related materials; AWS asset terms remain.",
+      "tiers": "Architecture-Service-Icons (Arch_*_64) and Resource-Icons (Res_*_48)"
+    },
+    "gcp": {
+      "format": "gcp-products",
+      "root": "gcp/official-icon-library-2025",
+      "core_products_subdir": "core-products-icons/Unique Icons",
+      "legacy_subdir": "google-cloud-legacy-icons",
+      "url": "https://cloud.google.com/icons",
+      "release": "Google Cloud icon library 2025 (core products + legacy set)",
+      "archive": "gcp/official-icon-library-2025/core-products-icons.zip",
+      "terms": "Google product-icon and trademark terms remain; do not alter the artwork."
+    },
+    "kubernetes": {
+      "format": "k8s-community",
+      "root": "cncf-kubernetes/kubernetes-community/icons/svg",
+      "url": "https://github.com/kubernetes/community",
+      "release": "kubernetes/community icons (Apache-2.0; Kubernetes trademark policy applies)",
+      "archive": null,
+      "terms": "Apache-2.0 repository; CNCF/Linux Foundation trademark policy applies to the marks."
+    },
+    "databricks": {
+      "format": "databricks-icons",
+      "root": "databricks",
+      "license_file": "LICENSE",
+      "url": "https://brand.databricks.com/",
+      "release": "Databricks architecture icons, vendored: built from Databricks' official SVGs by Eduardo Rabelo (MIT, the notice in LICENSE beside the icons)",
+      "archive": null,
+      "terms": "MIT (LICENSE beside the icons); the license grants no trademark rights. Databricks, the Databricks logo and the product names are trademarks of Databricks, Inc., which does not sponsor or endorse the set."
+    }
+  }
+}

@@ -1,0 +1,266 @@
+{
+ "schema_version": 1,
+ "slug": "hetzner",
+ "name": "Hetzner Cloud",
+ "title": "Hetzner Cloud application delivery",
+ "mark": "marks/hetzner.svg",
+ "icons": {
+  "categories": [
+   "analytics",
+   "compute",
+   "containers",
+   "data",
+   "integration",
+   "networking",
+   "security",
+   "storage"
+  ],
+  "items": [
+   {
+    "id": "api",
+    "name": "Hetzner Cloud API",
+    "category": "integration",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/api"
+   },
+   {
+    "id": "ax-server",
+    "name": "Hetzner AX Dedicated Server",
+    "category": "compute",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/ax-server"
+   },
+   {
+    "id": "cloud",
+    "name": "Hetzner Cloud",
+    "category": "compute",
+    "aliases": [
+     "hcloud"
+    ],
+    "asset_ref": "vendors/hetzner/cloud"
+   },
+   {
+    "id": "dedicated-server",
+    "name": "Hetzner Dedicated Server",
+    "category": "compute",
+    "aliases": [
+     "rootserver",
+     "bare metal"
+    ],
+    "asset_ref": "vendors/hetzner/dedicated-server"
+   },
+   {
+    "id": "dns-console",
+    "name": "Hetzner Dns Console",
+    "category": "networking",
+    "aliases": [
+     "dns"
+    ],
+    "asset_ref": "vendors/hetzner/dns-console"
+   },
+   {
+    "id": "domain-registration",
+    "name": "Hetzner Domain Registration",
+    "category": "networking",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/domain-registration"
+   },
+   {
+    "id": "ex-server",
+    "name": "Hetzner EX Dedicated Server",
+    "category": "compute",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/ex-server"
+   },
+   {
+    "id": "firewalls",
+    "name": "Hetzner Firewalls",
+    "category": "security",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/firewalls"
+   },
+   {
+    "id": "gpu-server",
+    "name": "Hetzner GPU Server",
+    "category": "compute",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/gpu-server"
+   },
+   {
+    "id": "images",
+    "name": "Hetzner Images",
+    "category": "containers",
+    "aliases": [
+     "os images"
+    ],
+    "asset_ref": "vendors/hetzner/images"
+   },
+   {
+    "id": "integrations",
+    "name": "Hetzner Integrations",
+    "category": "integration",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/integrations"
+   },
+   {
+    "id": "konsoleh",
+    "name": "Hetzner konsoleH",
+    "category": "integration",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/konsoleh"
+   },
+   {
+    "id": "load-balancer",
+    "name": "Hetzner Load Balancer",
+    "category": "networking",
+    "aliases": [
+     "lb"
+    ],
+    "asset_ref": "vendors/hetzner/load-balancer"
+   },
+   {
+    "id": "managed-server",
+    "name": "Hetzner Managed Server",
+    "category": "compute",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/managed-server"
+   },
+   {
+    "id": "network",
+    "name": "Hetzner Network",
+    "category": "networking",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/network"
+   },
+   {
+    "id": "networks",
+    "name": "Hetzner Networks",
+    "category": "networking",
+    "aliases": [
+     "private network",
+     "vpc"
+    ],
+    "asset_ref": "vendors/hetzner/networks"
+   },
+   {
+    "id": "object-storage",
+    "name": "Hetzner Object Storage",
+    "category": "storage",
+    "aliases": [
+     "s3",
+     "object storage"
+    ],
+    "asset_ref": "vendors/hetzner/object-storage"
+   },
+   {
+    "id": "robot",
+    "name": "Hetzner Robot Console",
+    "category": "integration",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/robot"
+   },
+   {
+    "id": "rx-server",
+    "name": "Hetzner RX Dedicated Server",
+    "category": "compute",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/rx-server"
+   },
+   {
+    "id": "security",
+    "name": "Hetzner Security",
+    "category": "security",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/security"
+   },
+   {
+    "id": "snapshot",
+    "name": "Hetzner Snapshot",
+    "category": "storage",
+    "aliases": [
+     "snapshots"
+    ],
+    "asset_ref": "vendors/hetzner/snapshot"
+   },
+   {
+    "id": "ssl-certificate",
+    "name": "Hetzner Ssl Certificate",
+    "category": "security",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/ssl-certificate"
+   },
+   {
+    "id": "storage-box",
+    "name": "Hetzner Storage Box",
+    "category": "storage",
+    "aliases": [
+     "storagebox"
+    ],
+    "asset_ref": "vendors/hetzner/storage-box"
+   },
+   {
+    "id": "storage-share",
+    "name": "Hetzner Storage Share",
+    "category": "storage",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/storage-share"
+   },
+   {
+    "id": "sx-server",
+    "name": "Hetzner SX Dedicated Server",
+    "category": "compute",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/sx-server"
+   },
+   {
+    "id": "webhosting",
+    "name": "Hetzner Webhosting",
+    "category": "compute",
+    "aliases": [],
+    "asset_ref": "vendors/hetzner/webhosting"
+   }
+  ]
+ },
+ "theme": {
+  "paper": "#ffffff",
+  "paper_2": "#f9f5f4",
+  "ink": "#261313",
+  "muted": "#684745",
+  "soft": "#82605e",
+  "accent": "#ff6159",
+  "link": "#ad0800"
+ },
+ "icon_palette": [
+  "#d50c2d",
+  "#d50f2e",
+  "#ededed",
+  "#ffffff"
+ ],
+ "services": {
+  "entry": {
+   "name": "Hetzner Load Balancer",
+   "detail": "lb11 · tcp/https"
+  },
+  "app": {
+   "name": "Hetzner Cloud Server",
+   "detail": "cx32 · shared vCPU"
+  },
+  "object_store": {
+   "name": "Hetzner Object Storage",
+   "detail": "s3-compatible"
+  },
+  "database": {
+   "name": "PostgreSQL on Cloud Server",
+   "detail": "self-managed · volume-backed"
+  }
+ },
+ "service_icons": {
+  "entry": "load-balancer",
+  "app": "dedicated-server",
+  "object_store": "object-storage",
+  "database": "storage-box"
+ },
+ "boundaries": {
+  "color": "#d50c2d"
+ }
+}

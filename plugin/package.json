@@ -1,0 +1,54 @@
+{
+  "name": "infragram-architect",
+  "version": "0.0.1",
+  "description": "Interactive, local-first infrastructure diagram editor and exporter. Build cloud, multicloud, hybrid, Kubernetes, virtualization, and on-premises architecture diagrams from nineteen provider libraries (AWS, Azure, Google Cloud, DigitalOcean, Hetzner Cloud, Cloudflare, Oracle Cloud, IBM Cloud, Alibaba Cloud, OVHcloud, Vultr, Akamai Cloud, Kubernetes, Databricks, Equinix, OpenStack, VMware vSphere, Proxmox VE, Local & On-Premises) with provider containment frames and network links, then export one versioned .infragram.json project to interactive HTML, clean SVG, and PNG. Draw what already exists from Terraform or a live AWS, Azure or Google Cloud account or Kubernetes cluster, read-only, and write a diagram's Terraform skeleton.",
+  "license": "MIT",
+  "author": "Infragram Architect",
+  "keywords": [
+    "pi-package",
+    "claude-code-plugin",
+    "codex-plugin",
+    "agent-skills",
+    "mcp",
+    "infrastructure",
+    "diagrams",
+    "architecture",
+    "cloud",
+    "multicloud",
+    "hybrid",
+    "aws",
+    "azure",
+    "gcp",
+    "kubernetes",
+    "databricks",
+    "on-premises",
+    "editor",
+    "svg",
+    "png"
+  ],
+  "files": [
+    ".claude-plugin/",
+    ".codex-plugin/",
+    ".agents/",
+    "plugin.json",
+    ".mcp.json",
+    "mcp.json",
+    "skills/",
+    "agents/",
+    "hooks/",
+    "examples/",
+    "src/infragram/",
+    "pyproject.toml",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_LICENSES.md",
+    "licenses/",
+    "!**/__pycache__/**",
+    "!**/*.pyc"
+  ],
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  }
+}

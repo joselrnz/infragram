@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "slug": "hetzner-application-delivery",
+  "title": "Hetzner Cloud application delivery",
+  "description": "Client traffic enters through a Hetzner Load Balancer, reaches a Cloud Server, writes to PostgreSQL, and backs up to Object Storage.",
+  "provider": "hetzner",
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Hetzner Cloud architecture",
+    "legend": [
+      [
+        "solid",
+        "Request and data flow"
+      ]
+    ]
+  },
+  "topology": {
+    "id": "root",
+    "name": "Hetzner Cloud application delivery",
+    "type": "group",
+    "children": [
+      {
+        "id": "client",
+        "name": "Client",
+        "type": "client",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": "browser"
+        },
+        "connections": [
+          {
+            "target": "load-balancer",
+            "kind": "solid",
+            "label": "HTTPS"
+          }
+        ]
+      },
+      {
+        "id": "load-balancer",
+        "name": "Load Balancer",
+        "type": "gateway",
+        "attributes": {
+          "icon": "load-balancer",
+          "category": "networking",
+          "detail": "LB11 · TCP/HTTPS"
+        },
+        "connections": [
+          {
+            "target": "cloud-server",
+            "kind": "solid",
+            "label": "routes"
+          }
+        ]
+      },
+      {
+        "id": "cloud-server",
+        "name": "Cloud Server",
+        "type": "service",
+        "role": "hub",
+        "attributes": {
+          "icon": "cloud",
+          "category": "compute",
+          "detail": "shared vCPU"
+        },
+        "connections": [
+          {
+            "target": "database",
+            "kind": "solid",
+            "label": "queries"
+          }
+        ]
+      },
+      {
+        "id": "database",
+        "name": "PostgreSQL",
+        "type": "database",
+        "attributes": {
+          "icon": "storage-box",
+          "category": "storage",
+          "detail": "volume-backed"
+        },
+        "connections": [
+          {
+            "target": "object-storage",
+            "kind": "solid",
+            "label": "backups"
+          }
+        ]
+      },
+      {
+        "id": "object-storage",
+        "name": "Object Storage",
+        "type": "storage",
+        "attributes": {
+          "icon": "object-storage",
+          "category": "storage",
+          "detail": "S3-compatible backups"
+        }
+      }
+    ]
+  }
+}

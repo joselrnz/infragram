@@ -1,0 +1,58 @@
+.claude/
+# Credentials never belong here. Listed explicitly so a stray copy of a
+# secrets file cannot be added by a wildcard `git add`.
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.pfx
+*.p12
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+# Reviewed synthetic regression inputs used by the Terraform readers.
+!tests/fixtures/estate/terraform.tfstate
+!tests/fixtures/estate/terraform/registry/terraform.tfvars
+!tests/fixtures/estate/terraform/shop/terraform.tfvars
+*_ed25519
+*_rsa
+# A secrets file or folder by its shape (secrets.json, credentials/), not any
+# name that starts with the word: hatch reads these patterns when it builds the
+# sdist, and `secrets*` once dropped aws/security-identity/secrets-manager.svg
+# from every published wheel.
+secrets.*
+secrets/
+*.secrets
+credentials.*
+credential.*
+credentials/
+# A personal MCP configuration at the root; the plugin's own (plugin/.mcp.json) ships.
+/.mcp.json
+__pycache__/
+.venv/
+.mypy_cache/
+htmlcov/
+.vscode/
+.idea/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage*
+/build/
+dist/
+*.egg-info/
+# The wheel carries the plugin folder beside the package; the tree never holds a copy.
+plugin/src/infragram/_plugin/
+# npm pack's tarball, when it is made in the plugin folder.
+plugin/*.tgz
+
+# Upstream research vault: the vendors' own icon downloads, under their
+# own mixed third-party licenses. It is the input to the importers beside
+# it in scripts/importers/, not part of this package. Reviewed output lives
+# in plugin/skills/infragram-architect/assets/icons/.
+/scripts/cloud-diagram-sources/
+
+# built by scripts/docs/regenerate-media.py; attached to a release, not tracked
+docs/media/infragram-brand-kit.zip

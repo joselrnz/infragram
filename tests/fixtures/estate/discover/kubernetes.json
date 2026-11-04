@@ -1,0 +1,89 @@
+{
+  "config": {"current-context": "shop-prod", "contexts": [{"name": "shop-prod"}]},
+  "forbidden": ["daemonsets"],
+  "kinds": {
+    "ingresses": [
+      {"metadata": {"name": "shop", "namespace": "shop", "uid": "ing-shop"},
+       "spec": {"rules": [{"host": "shop.example.com", "http": {"paths": [
+         {"path": "/", "backend": {"service": {"name": "web", "port": {"number": 80}}}},
+         {"path": "/api", "backend": {"service": {"name": "api", "port": {"number": 80}}}}]}}]}}
+    ],
+    "services": [
+      {"metadata": {"name": "web", "namespace": "shop", "uid": "svc-web"},
+       "spec": {"type": "ClusterIP", "selector": {"app": "web"}, "ports": [{"port": 80, "targetPort": 8080}]}},
+      {"metadata": {"name": "api", "namespace": "shop", "uid": "svc-api"},
+       "spec": {"type": "ClusterIP", "selector": {"app": "api"}, "ports": [{"port": 80, "targetPort": 9000}]}},
+      {"metadata": {"name": "db", "namespace": "shop", "uid": "svc-db"},
+       "spec": {"type": "ClusterIP", "selector": {"app": "db"}, "ports": [{"port": 5432}]}},
+      {"metadata": {"name": "kubernetes", "namespace": "default", "uid": "svc-kubernetes"},
+       "spec": {"type": "ClusterIP", "ports": [{"port": 443}]}},
+      {"metadata": {"name": "kube-dns", "namespace": "kube-system", "uid": "svc-dns"},
+       "spec": {"selector": {"k8s-app": "kube-dns"}, "ports": [{"port": 53}]}}
+    ],
+    "deployments": [
+      {"metadata": {"name": "web", "namespace": "shop", "uid": "d-web"},
+       "spec": {"replicas": 3, "template": {"metadata": {"labels": {"app": "web", "tier": "front"}},
+         "spec": {"containers": [{"name": "web", "image": "registry.example.com/shop/web:1.4"}]}}}},
+      {"metadata": {"name": "api", "namespace": "shop", "uid": "d-api"},
+       "spec": {"replicas": 2, "template": {"metadata": {"labels": {"app": "api"}},
+         "spec": {"containers": [{"name": "api", "image": "registry.example.com/shop/api:2.0"}],
+                  "volumes": [{"name": "uploads", "persistentVolumeClaim": {"claimName": "uploads"}}]}}}},
+      {"metadata": {"name": "coredns", "namespace": "kube-system", "uid": "d-dns"},
+       "spec": {"replicas": 2, "template": {"metadata": {"labels": {"k8s-app": "kube-dns"}},
+         "spec": {"containers": [{"image": "registry.k8s.io/coredns/coredns:v1.11.1"}]}}}}
+    ],
+    "statefulsets": [
+      {"metadata": {"name": "db", "namespace": "shop", "uid": "sts-db"},
+       "spec": {"replicas": 2, "template": {"metadata": {"labels": {"app": "db"}},
+         "spec": {"containers": [{"image": "postgres:16"}]}},
+         "volumeClaimTemplates": [{"metadata": {"name": "data"}}]}}
+    ],
+    "cronjobs": [
+      {"metadata": {"name": "nightly-report", "namespace": "shop", "uid": "cj-report"},
+       "spec": {"schedule": "0 2 * * *", "jobTemplate": {"spec": {"template": {
+         "metadata": {"labels": {"job": "report"}},
+         "spec": {"containers": [{"image": "registry.example.com/shop/report:1.0"}]}}}}}}
+    ],
+    "jobs": [
+      {"metadata": {"name": "nightly-report-29311", "namespace": "shop", "uid": "job-1",
+                    "ownerReferences": [{"kind": "CronJob", "name": "nightly-report", "uid": "cj-report", "controller": true}]},
+       "spec": {"template": {"spec": {"containers": [{"image": "registry.example.com/shop/report:1.0"}]}}}}
+    ],
+    "replicasets": [
+      {"metadata": {"name": "web-7d9f", "namespace": "shop", "uid": "rs-web",
+                    "ownerReferences": [{"kind": "Deployment", "name": "web", "uid": "d-web", "controller": true}]},
+       "spec": {"replicas": 3, "template": {"metadata": {"labels": {"app": "web", "tier": "front"}}}}},
+      {"metadata": {"name": "api-5c1a", "namespace": "shop", "uid": "rs-api",
+                    "ownerReferences": [{"kind": "Deployment", "name": "api", "uid": "d-api", "controller": true}]},
+       "spec": {"replicas": 2, "template": {"metadata": {"labels": {"app": "api"}}}}}
+    ],
+    "pods": [
+      {"metadata": {"name": "web-7d9f-a1", "namespace": "shop", "uid": "p-web-1", "labels": {"app": "web", "tier": "front"},
+                    "ownerReferences": [{"kind": "ReplicaSet", "name": "web-7d9f", "uid": "rs-web", "controller": true}]},
+       "spec": {"containers": [{"image": "registry.example.com/shop/web:1.4"}]}},
+      {"metadata": {"name": "web-7d9f-b2", "namespace": "shop", "uid": "p-web-2", "labels": {"app": "web", "tier": "front"},
+                    "ownerReferences": [{"kind": "ReplicaSet", "name": "web-7d9f", "uid": "rs-web", "controller": true}]},
+       "spec": {"containers": [{"image": "registry.example.com/shop/web:1.4"}]}},
+      {"metadata": {"name": "db-0", "namespace": "shop", "uid": "p-db-0", "labels": {"app": "db"},
+                    "ownerReferences": [{"kind": "StatefulSet", "name": "db", "uid": "sts-db", "controller": true}]},
+       "spec": {"containers": [{"image": "postgres:16"}]}},
+      {"metadata": {"name": "nightly-report-29311-x", "namespace": "shop", "uid": "p-job",
+                    "ownerReferences": [{"kind": "Job", "name": "nightly-report-29311", "uid": "job-1", "controller": true}]},
+       "spec": {"containers": [{"image": "registry.example.com/shop/report:1.0"}]}},
+      {"metadata": {"name": "debug", "namespace": "shop", "uid": "p-debug", "labels": {"run": "debug"}},
+       "spec": {"containers": [{"image": "busybox:1.36"}]}}
+    ],
+    "horizontalpodautoscalers": [
+      {"metadata": {"name": "api", "namespace": "shop", "uid": "hpa-api"},
+       "spec": {"minReplicas": 2, "maxReplicas": 10, "scaleTargetRef": {"apiVersion": "apps/v1", "kind": "Deployment", "name": "api"}}}
+    ],
+    "persistentvolumeclaims": [
+      {"metadata": {"name": "uploads", "namespace": "shop", "uid": "pvc-uploads"},
+       "spec": {"storageClassName": "standard", "resources": {"requests": {"storage": "20Gi"}}}},
+      {"metadata": {"name": "data-db-0", "namespace": "shop", "uid": "pvc-db-0"},
+       "spec": {"resources": {"requests": {"storage": "50Gi"}}}},
+      {"metadata": {"name": "data-db-1", "namespace": "shop", "uid": "pvc-db-1"},
+       "spec": {"resources": {"requests": {"storage": "50Gi"}}}}
+    ]
+  }
+}

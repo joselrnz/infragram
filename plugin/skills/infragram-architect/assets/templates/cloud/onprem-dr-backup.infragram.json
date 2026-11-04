@@ -1,0 +1,388 @@
+{
+  "schema_version": 2,
+  "kind": "hybrid",
+  "slug": "onprem-dr-backup",
+  "title": "Disaster recovery and backup across two sites and a cloud tier",
+  "description": "The primary datacenter runs the application behind an HA firewall pair with a PostgreSQL primary; Veeam backs it up to a storage array that copies to tape and replicates to the DR site; the database streams to a hot standby in DC2 over the site-to-site link, and monthly tape copies land in S3 Glacier Deep Archive as the off-site tier.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    },
+    {
+      "id": "aws",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Business continuity architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Disaster recovery and backup across two sites and a cloud tier",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "primary",
+        "name": "Primary datacenter · DC1",
+        "type": "site",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "edge",
+            "name": "Perimeter",
+            "type": "security-zone",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "fw",
+                "name": "Firewall pair",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "firewall",
+                  "icon_ref": "infragram:firewall"
+                },
+                "attributes": {
+                  "detail": "active / standby"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "app1",
+                    "kind": "solid",
+                    "label": "HTTPS",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "dr-fw",
+                    "kind": "dashed",
+                    "label": "site-to-site VPN · 10 Gbps",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "ups",
+                "name": "UPS",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "ups",
+                  "icon_ref": "infragram:ups"
+                },
+                "attributes": {
+                  "detail": "30 min runtime"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "backup",
+            "name": "Backup zone",
+            "type": "security-zone",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "veeam",
+                "name": "Veeam Backup",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "brand-veeam",
+                  "icon_ref": "infragram:brand-veeam"
+                },
+                "attributes": {
+                  "detail": "daily · 30 days"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "array",
+                    "kind": "solid",
+                    "label": "repository",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "array",
+                "name": "Storage array",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "storage-array",
+                  "icon_ref": "infragram:storage-array"
+                },
+                "attributes": {
+                  "detail": "dedupe repository"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "tape",
+                    "kind": "solid",
+                    "label": "weekly copy",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "dr-array",
+                    "kind": "dashed",
+                    "label": "replication",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "tape",
+                "name": "Tape library",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "tape-library",
+                  "icon_ref": "infragram:tape-library"
+                },
+                "attributes": {
+                  "detail": "LTO-9 · offsite rotation"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "glacier",
+                    "kind": "dotted",
+                    "label": "monthly copy",
+                    "direction": "forward"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "prod",
+            "name": "VLAN 10 · Production",
+            "type": "subnet-private",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "app1",
+                "name": "Application servers",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "compute-server",
+                  "icon_ref": "onprem:compute-server"
+                },
+                "attributes": {
+                  "detail": "active"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "db1",
+                    "kind": "solid",
+                    "label": "SQL",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "db1",
+                "name": "PostgreSQL primary",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "database-postgresql",
+                  "icon_ref": "onprem:database-postgresql"
+                },
+                "attributes": {
+                  "detail": "synchronous standby in DC2"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "db2",
+                    "kind": "dashed",
+                    "label": "streaming replication",
+                    "direction": "forward"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "dr",
+        "name": "DR site · DC2",
+        "type": "site",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "dr-edge",
+            "name": "Perimeter",
+            "type": "security-zone",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "dr-fw",
+                "name": "Firewall",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "firewall",
+                  "icon_ref": "infragram:firewall"
+                },
+                "attributes": {
+                  "detail": "standby edge"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "app2",
+                    "kind": "dotted",
+                    "label": "on failover",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "dr-array",
+                "name": "Storage array",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "storage-array",
+                  "icon_ref": "infragram:storage-array"
+                },
+                "attributes": {
+                  "detail": "replica repository"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "dr-prod",
+            "name": "VLAN 10 · Standby",
+            "type": "subnet-private",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "app2",
+                "name": "Application servers",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "compute-server",
+                  "icon_ref": "onprem:compute-server"
+                },
+                "attributes": {
+                  "detail": "warm standby"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "db2",
+                    "kind": "solid",
+                    "label": "SQL",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "db2",
+                "name": "PostgreSQL standby",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "database-postgresql",
+                  "icon_ref": "onprem:database-postgresql"
+                },
+                "attributes": {
+                  "detail": "hot standby · RPO 0"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "aws",
+        "name": "AWS Cloud · off-site tier",
+        "type": "cloud",
+        "attributes": {
+          "editor_frame_group": "aws"
+        },
+        "children": [
+          {
+            "id": "glacier",
+            "name": "S3 Glacier Deep Archive",
+            "type": "service",
+            "component": {
+              "provider": "aws",
+              "service_id": "simple-storage-service-glacier",
+              "icon_ref": "aws:simple-storage-service-glacier"
+            },
+            "attributes": {
+              "detail": "7-year retention"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "drs",
+            "name": "Elastic Disaster Recovery",
+            "type": "service",
+            "component": {
+              "provider": "aws",
+              "service_id": "elastic-disaster-recovery",
+              "icon_ref": "aws:elastic-disaster-recovery"
+            },
+            "attributes": {
+              "detail": "optional cloud failover"
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

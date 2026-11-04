@@ -1,0 +1,18 @@
+architecture-beta
+    title Photo service
+    group edge(cloud)[Edge]
+    group cloud(logos:aws)[AWS]
+    group vpc(cloud)[VPC] in cloud
+
+    service internet(internet)[Internet] in edge
+    service gw(logos:aws-api-gateway)[API] in cloud
+    service fn(logos:aws-lambda)[Uploader] in vpc
+    service db(database)[Metadata] in vpc
+    service disk1(disk)[Photos] in vpc
+    junction fork in vpc
+
+    internet:R --> L:gw
+    gw:R --> L:fn
+    fn:B -- T:fork
+    fork:R -- L:db
+    fork:B -- T:disk1

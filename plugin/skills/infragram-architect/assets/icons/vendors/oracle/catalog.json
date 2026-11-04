@@ -1,0 +1,1276 @@
+{
+ "schema_version": 1,
+ "collection": "vendors/oracle",
+ "generated_by": "pinned mingrammer/diagrams provider node importer",
+ "source": {
+  "url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci",
+  "release": "mingrammer/diagrams v0.25.1 (dd0763d939f377c99898951a489e813c0360cd4a)",
+  "terms": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE",
+  "label": "Oracle Cloud Infrastructure"
+ },
+ "counts": {
+  "icons": 70
+ },
+ "icons": [
+  {
+   "id": "compute-autoscale",
+   "name": "Autoscale",
+   "class_name": "Autoscale",
+   "aliases": [
+    "Autoscale",
+    "diagrams.oci.compute.Autoscale",
+    "autoscale"
+   ],
+   "category": "compute",
+   "file": "compute/compute-autoscale.svg",
+   "source_path": "resources/oci/compute/autoscale.png",
+   "sha256": "ae7aec4f14b5b4790bde1e7c4a3599f47bf9415e30fdf0c8d24bca5ad48265bb",
+   "source_sha256": "2d303808b2b684668929df160c96ab029ef4091502c1dfed49d1911421dc9247",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/compute/autoscale.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-bm",
+   "name": "Bare Metal",
+   "class_name": "BM",
+   "aliases": [
+    "BM",
+    "diagrams.oci.compute.BM",
+    "bm"
+   ],
+   "category": "compute",
+   "file": "compute/compute-bm.svg",
+   "source_path": "resources/oci/compute/bm.png",
+   "sha256": "4d2270b9cc473c24d0155b961ca6a2d575e7b705d258eaa1a41af607f75128eb",
+   "source_sha256": "d7f61d597df4479b14358c1a2f69beaaa2cab8f38c1b06b112dff389fe608873",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/compute/bm.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-container",
+   "name": "Container",
+   "class_name": "Container",
+   "aliases": [
+    "Container",
+    "diagrams.oci.compute.Container",
+    "container"
+   ],
+   "category": "compute",
+   "file": "compute/compute-container.svg",
+   "source_path": "resources/oci/compute/container.png",
+   "sha256": "27e382507c04871c3940f46b83b76ea975ce36c145585208a934403c2f61c615",
+   "source_sha256": "207fa4e39e331c520c91726e70279f72e18caefb5ffbd1b452f6947a213a41c8",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/compute/container.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-functions",
+   "name": "Functions",
+   "class_name": "Functions",
+   "aliases": [
+    "Functions",
+    "diagrams.oci.compute.Functions",
+    "functions"
+   ],
+   "category": "compute",
+   "file": "compute/compute-functions.svg",
+   "source_path": "resources/oci/compute/functions.png",
+   "sha256": "dbff03277cd1d2d60d86247147326c6084b17a7d34cd81b83ec1162652f0f8c3",
+   "source_sha256": "8b38d8a5813bd75e28ec3079d4790149c15092ed21a3c32874ca2d7b7aebe42d",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/compute/functions.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-instance-pools",
+   "name": "Instance Pools",
+   "class_name": "InstancePools",
+   "aliases": [
+    "InstancePools",
+    "diagrams.oci.compute.InstancePools",
+    "instance-pools"
+   ],
+   "category": "compute",
+   "file": "compute/compute-instance-pools.svg",
+   "source_path": "resources/oci/compute/instance-pools.png",
+   "sha256": "8afc544a4efb887a633d3cccaaf860792b5525330c83befb9c605bda4317713e",
+   "source_sha256": "198dfe3d0a48ae87a83be7be19233319202c1b31c5197789a745e352b225e6e0",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/compute/instance-pools.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-ocir",
+   "name": "OCIR",
+   "class_name": "OCIR",
+   "aliases": [
+    "OCIR",
+    "diagrams.oci.compute.OCIR",
+    "ocir"
+   ],
+   "category": "compute",
+   "file": "compute/compute-ocir.svg",
+   "source_path": "resources/oci/compute/ocir.png",
+   "sha256": "1c79873c82b005e2f8607e39026580dac39e4446f97a8d8ff9eb1c79a17fe5b9",
+   "source_sha256": "42e7c7293ce37be994d1919bd55fd25fe9ed3454d3d3d475163849c6cfd3d992",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/compute/ocir.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-oke",
+   "name": "OKE",
+   "class_name": "OKE",
+   "aliases": [
+    "OKE",
+    "diagrams.oci.compute.OKE",
+    "oke"
+   ],
+   "category": "compute",
+   "file": "compute/compute-oke.svg",
+   "source_path": "resources/oci/compute/oke.png",
+   "sha256": "9c1f1c175c574b6c3a92472545b5331c2757d8a8ef20e3401942e94abf2596c4",
+   "source_sha256": "b180475920092e7d41002e720a46d26e5b92252aa78376b6821b6efcdb3080da",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/compute/oke.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-vm",
+   "name": "VM",
+   "class_name": "VM",
+   "aliases": [
+    "VM",
+    "diagrams.oci.compute.VM",
+    "vm"
+   ],
+   "category": "compute",
+   "file": "compute/compute-vm.svg",
+   "source_path": "resources/oci/compute/vm.png",
+   "sha256": "d16cb680fad7d22b1d8cdfac7ba69fbd3467cdcd3a9b97317d08a6382646c345",
+   "source_sha256": "2b6967e307033125ae1639baf6264dfa45b44382ecdaa689dc168127062ee793",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/compute/vm.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "connectivity-backbone",
+   "name": "Backbone",
+   "class_name": "Backbone",
+   "aliases": [
+    "Backbone",
+    "diagrams.oci.connectivity.Backbone",
+    "backbone"
+   ],
+   "category": "connectivity",
+   "file": "connectivity/connectivity-backbone.svg",
+   "source_path": "resources/oci/connectivity/backbone.png",
+   "sha256": "b2cd170b8b0a8303db10a422b10e4f164c9efc21e1ef9c24f91951f0ec2fb7ba",
+   "source_sha256": "e15f928287f449360e658e1f063cd95c9112872874311a831960bf8b51649f50",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/connectivity/backbone.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "connectivity-cdn",
+   "name": "CDN",
+   "class_name": "CDN",
+   "aliases": [
+    "CDN",
+    "diagrams.oci.connectivity.CDN",
+    "cdn"
+   ],
+   "category": "connectivity",
+   "file": "connectivity/connectivity-cdn.svg",
+   "source_path": "resources/oci/connectivity/cdn.png",
+   "sha256": "36861ce5c1c85ff501962d35f09f6e4129b480e0143f206d296d5a1382ca3929",
+   "source_sha256": "c439e9845e84f993eb18891dcf130cd37e87c5c492b9e351f28e157e14fb2367",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/connectivity/cdn.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "connectivity-customer-datacenter",
+   "name": "Customer Datacenter",
+   "class_name": "CustomerDatacenter",
+   "aliases": [
+    "CustomerDatacenter",
+    "diagrams.oci.connectivity.CustomerDatacenter",
+    "customer-datacenter"
+   ],
+   "category": "connectivity",
+   "file": "connectivity/connectivity-customer-datacenter.svg",
+   "source_path": "resources/oci/connectivity/customer-datacenter.png",
+   "sha256": "536ec05dc7c39f1809638e0c4226825f92551dd99ddd50de5be07f3a98318a77",
+   "source_sha256": "cd5b89df96a720671d261bce7c0278369c670c26de3aac93e46641c539a5ceee",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/connectivity/customer-datacenter.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "connectivity-customer-premises",
+   "name": "Customer Premises",
+   "class_name": "CustomerPremises",
+   "aliases": [
+    "CustomerPremises",
+    "diagrams.oci.connectivity.CustomerPremises",
+    "customer-premises"
+   ],
+   "category": "connectivity",
+   "file": "connectivity/connectivity-customer-premises.svg",
+   "source_path": "resources/oci/connectivity/customer-premises.png",
+   "sha256": "3f7b40524128291ca5d51fb233a8b5c069c18ae0559bf2ac26254f7e738475e2",
+   "source_sha256": "508617768456973aaa8698a1dcc5505d4e6b732b42405c5773d70aa0949b290b",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/connectivity/customer-premises.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "connectivity-disconnected-regions",
+   "name": "Disconnected Regions",
+   "class_name": "DisconnectedRegions",
+   "aliases": [
+    "DisconnectedRegions",
+    "diagrams.oci.connectivity.DisconnectedRegions",
+    "disconnected-regions"
+   ],
+   "category": "connectivity",
+   "file": "connectivity/connectivity-disconnected-regions.svg",
+   "source_path": "resources/oci/connectivity/disconnected-regions.png",
+   "sha256": "8b14088cfc6c90f52da66734849c3c47b41a155853ba676c9e71e8fb00a8b59d",
+   "source_sha256": "2dd38d49a493cec785e5ebda1f6d41c70dc3f9c3940283f64324ea55b666577a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/connectivity/disconnected-regions.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "connectivity-dns",
+   "name": "DNS",
+   "class_name": "DNS",
+   "aliases": [
+    "DNS",
+    "diagrams.oci.connectivity.DNS",
+    "dns"
+   ],
+   "category": "connectivity",
+   "file": "connectivity/connectivity-dns.svg",
+   "source_path": "resources/oci/connectivity/dns.png",
+   "sha256": "e5dc6aa3955ae6aba41789913270a3bf5410535da576d07b0b8a1c937dd765cb",
+   "source_sha256": "8e0e2a41ffba8538109859e8fe3db1d24db911a1787b487fa98d627feba67c57",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/connectivity/dns.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "connectivity-fast-connect",
+   "name": "Fast Connect",
+   "class_name": "FastConnect",
+   "aliases": [
+    "FastConnect",
+    "diagrams.oci.connectivity.FastConnect",
+    "fast-connect"
+   ],
+   "category": "connectivity",
+   "file": "connectivity/connectivity-fast-connect.svg",
+   "source_path": "resources/oci/connectivity/fast-connect.png",
+   "sha256": "1574466720b1bf2983935d1d9a0730a32adb1110460d3f7dc8b267a2f47cf6cc",
+   "source_sha256": "8fceac1a576d5e87e7a19ba1d13900dbab20060e560403e0d955486e30222ce9",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/connectivity/fast-connect.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "connectivity-nat-gateway",
+   "name": "NAT Gateway",
+   "class_name": "NATGateway",
+   "aliases": [
+    "NATGateway",
+    "diagrams.oci.connectivity.NATGateway",
+    "nat-gateway"
+   ],
+   "category": "connectivity",
+   "file": "connectivity/connectivity-nat-gateway.svg",
+   "source_path": "resources/oci/connectivity/nat-gateway.png",
+   "sha256": "65735945de78a8a6c9f0fb0709fb344ff1c8b57416a4414c33a101076ae39f27",
+   "source_sha256": "b0c1f6ddcc5e38712b0c89af98f54c0cbefaa67568b31ffe6f999ce973636333",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/connectivity/nat-gateway.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "connectivity-vpn",
+   "name": "VPN",
+   "class_name": "VPN",
+   "aliases": [
+    "VPN",
+    "diagrams.oci.connectivity.VPN",
+    "vpn"
+   ],
+   "category": "connectivity",
+   "file": "connectivity/connectivity-vpn.svg",
+   "source_path": "resources/oci/connectivity/vpn.png",
+   "sha256": "28c25dc9fb58f25b5202a18ecd23c437e3c38053eb12639c7e2afde4dccc0b19",
+   "source_sha256": "888a6ae6a8a9b7d19614e399d670e85cb61854591fc5113a1749644dee31d5a9",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/connectivity/vpn.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-autonomous",
+   "name": "Autonomous",
+   "class_name": "Autonomous",
+   "aliases": [
+    "Autonomous",
+    "diagrams.oci.database.Autonomous",
+    "autonomous"
+   ],
+   "category": "database",
+   "file": "database/database-autonomous.svg",
+   "source_path": "resources/oci/database/autonomous.png",
+   "sha256": "e4def25363dcf410e84912fac0073ef23846de01e10ae2c2f49f2be303cf05aa",
+   "source_sha256": "1d9fd6a8dd63755ffcbca027726eaa0ce2de7513dce8e2e0b006b3e381d326b1",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/database/autonomous.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-bigdata-service",
+   "name": "Bigdata Service",
+   "class_name": "BigdataService",
+   "aliases": [
+    "BigdataService",
+    "diagrams.oci.database.BigdataService",
+    "bigdata-service"
+   ],
+   "category": "database",
+   "file": "database/database-bigdata-service.svg",
+   "source_path": "resources/oci/database/bigdata-service.png",
+   "sha256": "7a735f4f10bd90d27d61c3e40695487d53ee49d49051016ea881ee20da4eef65",
+   "source_sha256": "d6ccf76924fed5e5b84ee40edff05e15bce0d221428c5933441cdfccc5f626f6",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/database/bigdata-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-database-service",
+   "name": "Database Service",
+   "class_name": "DatabaseService",
+   "aliases": [
+    "DatabaseService",
+    "diagrams.oci.database.DatabaseService",
+    "database-service"
+   ],
+   "category": "database",
+   "file": "database/database-database-service.svg",
+   "source_path": "resources/oci/database/database-service.png",
+   "sha256": "0eb7ec62f343911e0de941144b1392c8a19ebe8bfddf9cc01613cc2fd75d27bc",
+   "source_sha256": "7693bdf0905036a8e93f77e8f5bba02fe9379b8ee5bb96f9ea935399c57a962f",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/database/database-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-dataflow-apache",
+   "name": "Dataflow Apache",
+   "class_name": "DataflowApache",
+   "aliases": [
+    "DataflowApache",
+    "diagrams.oci.database.DataflowApache",
+    "dataflow-apache"
+   ],
+   "category": "database",
+   "file": "database/database-dataflow-apache.svg",
+   "source_path": "resources/oci/database/dataflow-apache.png",
+   "sha256": "bdba7a33882dca98e8980e7d510f9c550ad61c54bbc76dd7e4c9de06f0704311",
+   "source_sha256": "22292f474886fbfb2f0988d2ddc9afb181989dc3a045050c58cf73959dec9054",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/database/dataflow-apache.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-dcat",
+   "name": "Dcat",
+   "class_name": "Dcat",
+   "aliases": [
+    "Dcat",
+    "diagrams.oci.database.Dcat",
+    "dcat"
+   ],
+   "category": "database",
+   "file": "database/database-dcat.svg",
+   "source_path": "resources/oci/database/dcat.png",
+   "sha256": "7ee27c7e33ab411d6d41658889c03c59732a9fe2a2ee752b8b34f186c3e10125",
+   "source_sha256": "3fb7db45b1f4ef6f0cc8ed1973e1344a06291aaa48e92589271a37befff9b45c",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/database/dcat.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-dis",
+   "name": "Dis",
+   "class_name": "Dis",
+   "aliases": [
+    "Dis",
+    "diagrams.oci.database.Dis",
+    "dis"
+   ],
+   "category": "database",
+   "file": "database/database-dis.svg",
+   "source_path": "resources/oci/database/dis.png",
+   "sha256": "cbe532115f8d9a26c98247fdd43ce34e826757c35baa6b0117b5e8114feed2fb",
+   "source_sha256": "e3b938c13eecbc27776616c475930168fc2106231f727d897f8508fcebaf49c0",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/database/dis.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-dms",
+   "name": "DMS",
+   "class_name": "DMS",
+   "aliases": [
+    "DMS",
+    "diagrams.oci.database.DMS",
+    "dms"
+   ],
+   "category": "database",
+   "file": "database/database-dms.svg",
+   "source_path": "resources/oci/database/dms.png",
+   "sha256": "d3f387c30169d2f13e6dbf26c69cfff9a21b61cf4db7959c5fbcd2909705ec24",
+   "source_sha256": "d7c304d49fc026f7613aa471b8bd8bbc85eb5406ca42a3b914599a286f799d06",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/database/dms.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-science",
+   "name": "Science",
+   "class_name": "Science",
+   "aliases": [
+    "Science",
+    "diagrams.oci.database.Science",
+    "science"
+   ],
+   "category": "database",
+   "file": "database/database-science.svg",
+   "source_path": "resources/oci/database/science.png",
+   "sha256": "560256f8256149eea53a0e245176f3aea48a34a4a964c9bd8d8138ce13245acb",
+   "source_sha256": "a40590a9fc573b9e3d3b4f0c63ef632bf54570e9d536b86c2e0a986f3b04b15d",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/database/science.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-stream",
+   "name": "Stream",
+   "class_name": "Stream",
+   "aliases": [
+    "Stream",
+    "diagrams.oci.database.Stream",
+    "stream"
+   ],
+   "category": "database",
+   "file": "database/database-stream.svg",
+   "source_path": "resources/oci/database/stream.png",
+   "sha256": "d6dc1b438e317ee484bb91e5e92bb2b74e6fda2710112964cb53867f002d0ce1",
+   "source_sha256": "dccea9caacf4bcb349260b2fb1d34ffb6ed8e7d1729186668094344d56f12265",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/database/stream.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "devops-api-gateway",
+   "name": "API Gateway",
+   "class_name": "APIGateway",
+   "aliases": [
+    "APIGateway",
+    "diagrams.oci.devops.APIGateway",
+    "api-gateway"
+   ],
+   "category": "devops",
+   "file": "devops/devops-api-gateway.svg",
+   "source_path": "resources/oci/devops/api-gateway.png",
+   "sha256": "2fea622fcca2f06b17241607d0a616527423afdefeba3becd82cb96286cfe753",
+   "source_sha256": "988359763d3e654ecdebb6322bf7fe5e37d218dbac9fdc3a2b3a4df5a279c572",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/devops/api-gateway.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "devops-api-service",
+   "name": "API Service",
+   "class_name": "APIService",
+   "aliases": [
+    "APIService",
+    "diagrams.oci.devops.APIService",
+    "api-service"
+   ],
+   "category": "devops",
+   "file": "devops/devops-api-service.svg",
+   "source_path": "resources/oci/devops/api-service.png",
+   "sha256": "188e42eefe352b1cbc39369832f75dd9315ccb33b2327dde2d926bb252afbfc4",
+   "source_sha256": "55e4006b511385d3d09287a1d1b897c62e352edca63efd9450f746ab072ff92a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/devops/api-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "devops-resource-mgmt",
+   "name": "Resource Mgmt",
+   "class_name": "ResourceMgmt",
+   "aliases": [
+    "ResourceMgmt",
+    "diagrams.oci.devops.ResourceMgmt",
+    "resource-mgmt"
+   ],
+   "category": "devops",
+   "file": "devops/devops-resource-mgmt.svg",
+   "source_path": "resources/oci/devops/resource-mgmt.png",
+   "sha256": "5541b52e0425cd8caca4a1efcce2f257caa506f8b2d24649caa19bc0f5709e8b",
+   "source_sha256": "0b339ba2bed9b5cb45ffc457cc4f09f0284a87fa3fbe6f5d257faac48d9c1c19",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/devops/resource-mgmt.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "governance-audit",
+   "name": "Audit",
+   "class_name": "Audit",
+   "aliases": [
+    "Audit",
+    "diagrams.oci.governance.Audit",
+    "audit"
+   ],
+   "category": "governance",
+   "file": "governance/governance-audit.svg",
+   "source_path": "resources/oci/governance/audit.png",
+   "sha256": "80ca86e38872e6fab054aed4af6fd892dd2ff9904430df41a9def019fd71c742",
+   "source_sha256": "37fc8e556f9838b898fa408b9fcd33869ac7e31746696e9ddf895db413f5a672",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/governance/audit.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "governance-compartments",
+   "name": "Compartments",
+   "class_name": "Compartments",
+   "aliases": [
+    "Compartments",
+    "diagrams.oci.governance.Compartments",
+    "compartments"
+   ],
+   "category": "governance",
+   "file": "governance/governance-compartments.svg",
+   "source_path": "resources/oci/governance/compartments.png",
+   "sha256": "ea9891568008b5132a903fb92de53d94943409387fd410183b7364c56f79ee33",
+   "source_sha256": "0f59e96a6621b8c810338baa1bbb86eef7c427387e4046241191c421b1c6765e",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/governance/compartments.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "governance-groups",
+   "name": "Groups",
+   "class_name": "Groups",
+   "aliases": [
+    "Groups",
+    "diagrams.oci.governance.Groups",
+    "groups"
+   ],
+   "category": "governance",
+   "file": "governance/governance-groups.svg",
+   "source_path": "resources/oci/governance/groups.png",
+   "sha256": "97e4c42a8857b141f2b29550e8fae34ca6ff9c05e7f54a2e4602fa96b3655b89",
+   "source_sha256": "abfdcb38877e93307ae2d9a009b50ced61fe91ecd8ca9a60ef9403274734ba8d",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/governance/groups.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "governance-logging",
+   "name": "Logging",
+   "class_name": "Logging",
+   "aliases": [
+    "Logging",
+    "diagrams.oci.governance.Logging",
+    "logging"
+   ],
+   "category": "governance",
+   "file": "governance/governance-logging.svg",
+   "source_path": "resources/oci/governance/logging.png",
+   "sha256": "1cc324d253b9ddf61a328faf7c40d372a55e3cb8aabb451c3413e342f2b752b7",
+   "source_sha256": "20139b6240f73263cf8b3660b80fff1922b1aecc34257551d7b9bdc02a4526a3",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/governance/logging.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "governance-ocid",
+   "name": "OCID",
+   "class_name": "OCID",
+   "aliases": [
+    "OCID",
+    "diagrams.oci.governance.OCID",
+    "ocid"
+   ],
+   "category": "governance",
+   "file": "governance/governance-ocid.svg",
+   "source_path": "resources/oci/governance/ocid.png",
+   "sha256": "401c7bf9133d26f792d3ff4d173142d0cc436034b1d6226424a4e0da20e1573e",
+   "source_sha256": "215cced50ef03d744b4f32d28f3d03509774d263e2525c06b1c83c630d63c7ea",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/governance/ocid.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "governance-policies",
+   "name": "Policies",
+   "class_name": "Policies",
+   "aliases": [
+    "Policies",
+    "diagrams.oci.governance.Policies",
+    "policies"
+   ],
+   "category": "governance",
+   "file": "governance/governance-policies.svg",
+   "source_path": "resources/oci/governance/policies.png",
+   "sha256": "8af164b96f1c4b01a98d0ac4d1b03163cc8d75faa8b6547df34e7c51efbf5c4d",
+   "source_sha256": "06279f182a84ca04c0b5478f9650594638c921f905272ab766950607b00fb3cd",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/governance/policies.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "governance-tagging",
+   "name": "Tagging",
+   "class_name": "Tagging",
+   "aliases": [
+    "Tagging",
+    "diagrams.oci.governance.Tagging",
+    "tagging"
+   ],
+   "category": "governance",
+   "file": "governance/governance-tagging.svg",
+   "source_path": "resources/oci/governance/tagging.png",
+   "sha256": "c6401d2f9f1eddee478f8ba585bc703c23bc117d264d9c530c38c5eaeea5a8ae",
+   "source_sha256": "341e568b2f3db04680a8049ea485969ad99581aaed724191c8f89305492e7a7f",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/governance/tagging.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "monitoring-alarm",
+   "name": "Alarm",
+   "class_name": "Alarm",
+   "aliases": [
+    "Alarm",
+    "diagrams.oci.monitoring.Alarm",
+    "alarm"
+   ],
+   "category": "monitoring",
+   "file": "monitoring/monitoring-alarm.svg",
+   "source_path": "resources/oci/monitoring/alarm.png",
+   "sha256": "acb66a8f31028171ee063d5c7e7717a8de6a6c240afadb62848879b3165f36f0",
+   "source_sha256": "c1c66ea7274a51e9a1038e906ae5a14fbc93628d9f6058cb7b93070c4656f957",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/monitoring/alarm.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "monitoring-email",
+   "name": "Email",
+   "class_name": "Email",
+   "aliases": [
+    "Email",
+    "diagrams.oci.monitoring.Email",
+    "email"
+   ],
+   "category": "monitoring",
+   "file": "monitoring/monitoring-email.svg",
+   "source_path": "resources/oci/monitoring/email.png",
+   "sha256": "3a852e2402be5eeb0b3e07e9e973bdd195e0e5c2ed46b63f687278adfd71c4c1",
+   "source_sha256": "ab7cfb7b172dec7b09a15aa8343d968419a5a3fb1d18b4c000792413c5e8d019",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/monitoring/email.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "monitoring-events",
+   "name": "Events",
+   "class_name": "Events",
+   "aliases": [
+    "Events",
+    "diagrams.oci.monitoring.Events",
+    "events"
+   ],
+   "category": "monitoring",
+   "file": "monitoring/monitoring-events.svg",
+   "source_path": "resources/oci/monitoring/events.png",
+   "sha256": "bd92def9dca90e821001b18f9ca80088d33179d142628eef54e7da8ecd3faaba",
+   "source_sha256": "6b9abad7297f35739637b90fedd18d96cb629c2f0c492ac7ffb2738e8869135e",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/monitoring/events.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "monitoring-health-check",
+   "name": "Health Check",
+   "class_name": "HealthCheck",
+   "aliases": [
+    "HealthCheck",
+    "diagrams.oci.monitoring.HealthCheck",
+    "health-check"
+   ],
+   "category": "monitoring",
+   "file": "monitoring/monitoring-health-check.svg",
+   "source_path": "resources/oci/monitoring/health-check.png",
+   "sha256": "c3d6291c901fc1cd55a9b178e9d02856d4e4232d32c87c5056a42bdfa4f3d0cf",
+   "source_sha256": "9db4e5316ba7550dad586db9ff79fffbbc7871a5df38450eff6ab6c15d6783a5",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/monitoring/health-check.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "monitoring-notifications",
+   "name": "Notifications",
+   "class_name": "Notifications",
+   "aliases": [
+    "Notifications",
+    "diagrams.oci.monitoring.Notifications",
+    "notifications"
+   ],
+   "category": "monitoring",
+   "file": "monitoring/monitoring-notifications.svg",
+   "source_path": "resources/oci/monitoring/notifications.png",
+   "sha256": "309a92d8247a328d8426b4443627e98ff605238a833af7d56e81d62f18713553",
+   "source_sha256": "9b7954cf03a01998c9d58acf6a12fa7bc297a1318c4065d1c1adb67bd69c9b8b",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/monitoring/notifications.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "monitoring-queue",
+   "name": "Queue",
+   "class_name": "Queue",
+   "aliases": [
+    "Queue",
+    "diagrams.oci.monitoring.Queue",
+    "queue"
+   ],
+   "category": "monitoring",
+   "file": "monitoring/monitoring-queue.svg",
+   "source_path": "resources/oci/monitoring/queue.png",
+   "sha256": "2c141a9a21ec8b1450e06cb97d577bd8cfb8784cde2522aa67bea4f59f57c4a4",
+   "source_sha256": "d5bd781b14de557b1649e4e32c1bfa5e6b30ec3e5dfdef22d61e0f4a12446819",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/monitoring/queue.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "monitoring-search",
+   "name": "Search",
+   "class_name": "Search",
+   "aliases": [
+    "Search",
+    "diagrams.oci.monitoring.Search",
+    "search"
+   ],
+   "category": "monitoring",
+   "file": "monitoring/monitoring-search.svg",
+   "source_path": "resources/oci/monitoring/search.png",
+   "sha256": "5536b34d5e26eae827c07b1a8bc4db49f7af72dcd5df2f331f84c75e412409c3",
+   "source_sha256": "407b72c8b3c25c72c4ac64c11888a37a94b5aa8403261b4b95f9195d4887d9e8",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/monitoring/search.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "monitoring-telemetry",
+   "name": "Telemetry",
+   "class_name": "Telemetry",
+   "aliases": [
+    "Telemetry",
+    "diagrams.oci.monitoring.Telemetry",
+    "telemetry"
+   ],
+   "category": "monitoring",
+   "file": "monitoring/monitoring-telemetry.svg",
+   "source_path": "resources/oci/monitoring/telemetry.png",
+   "sha256": "3c18cf4fe143a98d48e410632d2d5d549b7c9ab649997c6108385c05337c177e",
+   "source_sha256": "9cf44f11b94b1bc17dbd3eed983f928031f28bf8a711021abfb3c9e0e1eef925",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/monitoring/telemetry.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "monitoring-workflow",
+   "name": "Workflow",
+   "class_name": "Workflow",
+   "aliases": [
+    "Workflow",
+    "diagrams.oci.monitoring.Workflow",
+    "workflow"
+   ],
+   "category": "monitoring",
+   "file": "monitoring/monitoring-workflow.svg",
+   "source_path": "resources/oci/monitoring/workflow.png",
+   "sha256": "b903fd3d5c037e5ab0df8d061c49587a26e70da4274de3d34d990c1652323d82",
+   "source_sha256": "79887e9ae7b99bb8b200124545decbab0c39c57b89a7c7c5d0b12ff12e3f089e",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/monitoring/workflow.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-drg",
+   "name": "Drg",
+   "class_name": "Drg",
+   "aliases": [
+    "Drg",
+    "diagrams.oci.network.Drg",
+    "drg"
+   ],
+   "category": "network",
+   "file": "network/network-drg.svg",
+   "source_path": "resources/oci/network/drg.png",
+   "sha256": "c0f6fb55c31886459ca0dd6a5c9d11a989dc181f294764f5f7ba8e11634b08e1",
+   "source_sha256": "053f3e8e8540e1a00a2ca215779afffaf91e3596a134bef68c9fc132210d62a8",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/network/drg.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-firewall",
+   "name": "Firewall",
+   "class_name": "Firewall",
+   "aliases": [
+    "Firewall",
+    "diagrams.oci.network.Firewall",
+    "firewall"
+   ],
+   "category": "network",
+   "file": "network/network-firewall.svg",
+   "source_path": "resources/oci/network/firewall.png",
+   "sha256": "0abad93a956527a69c017a9ad307d260c4efe6378ae4e806d80bde70b93767b3",
+   "source_sha256": "c3ddf7896493d18d1003ad3454dd9f69c1a37ebbedaf346fbad51eec477799ab",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/network/firewall.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-internet-gateway",
+   "name": "Internet Gateway",
+   "class_name": "InternetGateway",
+   "aliases": [
+    "InternetGateway",
+    "diagrams.oci.network.InternetGateway",
+    "internet-gateway"
+   ],
+   "category": "network",
+   "file": "network/network-internet-gateway.svg",
+   "source_path": "resources/oci/network/internet-gateway.png",
+   "sha256": "e75b22892577987b7021b7d73c738cb8e6ef1187be44a8fb308a5a3067b1de5f",
+   "source_sha256": "3c73ee8656663feeff75e92d7c8b622542302f6c9163f2cedf477c154283f51f",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/network/internet-gateway.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-load-balancer",
+   "name": "Load Balancer",
+   "class_name": "LoadBalancer",
+   "aliases": [
+    "LoadBalancer",
+    "diagrams.oci.network.LoadBalancer",
+    "load-balancer"
+   ],
+   "category": "network",
+   "file": "network/network-load-balancer.svg",
+   "source_path": "resources/oci/network/load-balancer.png",
+   "sha256": "4205b3b0cad8c2159bddaf6441b0fbf7f31174049f1ce99072138b35a9c91a24",
+   "source_sha256": "7d8b4c4fd84188d396473807342405d53175837e35d84ff929b13f82a2864cd2",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/network/load-balancer.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-route-table",
+   "name": "Route Table",
+   "class_name": "RouteTable",
+   "aliases": [
+    "RouteTable",
+    "diagrams.oci.network.RouteTable",
+    "route-table"
+   ],
+   "category": "network",
+   "file": "network/network-route-table.svg",
+   "source_path": "resources/oci/network/route-table.png",
+   "sha256": "d2ca58308a8c93dd03fd808520b54eec54b3ab7d39075fec932e53176134acfa",
+   "source_sha256": "9d0f95c903bd16eb5cbc3fbb04fc1751f4a5cacc4865b1f9ed3b23c7418a0974",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/network/route-table.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-security-lists",
+   "name": "Security Lists",
+   "class_name": "SecurityLists",
+   "aliases": [
+    "SecurityLists",
+    "diagrams.oci.network.SecurityLists",
+    "security-lists"
+   ],
+   "category": "network",
+   "file": "network/network-security-lists.svg",
+   "source_path": "resources/oci/network/security-lists.png",
+   "sha256": "0577d2393c430a40f1c9c7d4f1252f980684608e34d59b1530a75fc057aabbce",
+   "source_sha256": "341b74b4ff706ed42dda339d96b4761fbe25f83b598c00686047bc51f3e93692",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/network/security-lists.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-service-gateway",
+   "name": "Service Gateway",
+   "class_name": "ServiceGateway",
+   "aliases": [
+    "ServiceGateway",
+    "diagrams.oci.network.ServiceGateway",
+    "service-gateway"
+   ],
+   "category": "network",
+   "file": "network/network-service-gateway.svg",
+   "source_path": "resources/oci/network/service-gateway.png",
+   "sha256": "79452a06d5f6c6163715f1f50a8495bf1da00d308b6c1103fd9b2cde6205702d",
+   "source_sha256": "a6f8a37693f0be4c4d53753632e513f1400c3f8f66318093e2924f5c818c301c",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/network/service-gateway.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-vcn",
+   "name": "VCN",
+   "class_name": "Vcn",
+   "aliases": [
+    "Vcn",
+    "diagrams.oci.network.Vcn",
+    "vcn"
+   ],
+   "category": "network",
+   "file": "network/network-vcn.svg",
+   "source_path": "resources/oci/network/vcn.png",
+   "sha256": "83ceadb030abf2247e8a96c05d84821b7ff03f637f0b1e2c200655fe3b7561b5",
+   "source_sha256": "aa90adca147594bafe9e2c5dd975cff603baca5d51fbcc303a5af006677490c4",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/network/vcn.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-cloud-guard",
+   "name": "Cloud Guard",
+   "class_name": "CloudGuard",
+   "aliases": [
+    "CloudGuard",
+    "diagrams.oci.security.CloudGuard",
+    "cloud-guard"
+   ],
+   "category": "security",
+   "file": "security/security-cloud-guard.svg",
+   "source_path": "resources/oci/security/cloud-guard.png",
+   "sha256": "5229282500534d978af762a767d4715a28412883bc0bd12e64b90878ff992e0e",
+   "source_sha256": "e14856e373078695d4b97d6f7996ea6ef7e26935b36fb6a926125c3a9c376bfe",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/security/cloud-guard.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-ddos",
+   "name": "DDOS",
+   "class_name": "DDOS",
+   "aliases": [
+    "DDOS",
+    "diagrams.oci.security.DDOS",
+    "ddos"
+   ],
+   "category": "security",
+   "file": "security/security-ddos.svg",
+   "source_path": "resources/oci/security/ddos.png",
+   "sha256": "8a825ffc00fce084b68ee21340279ca2e9f88b8ced767681703888b9cd07c54b",
+   "source_sha256": "0ab5722877c7782121dfd92b10ee1327f845a0f9c279f87c79e8f9a23062f964",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/security/ddos.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-encryption",
+   "name": "Encryption",
+   "class_name": "Encryption",
+   "aliases": [
+    "Encryption",
+    "diagrams.oci.security.Encryption",
+    "encryption"
+   ],
+   "category": "security",
+   "file": "security/security-encryption.svg",
+   "source_path": "resources/oci/security/encryption.png",
+   "sha256": "0b641b2ee56880e95d6819557b6627200cbb684993ccfba8d243627cab1c9bb8",
+   "source_sha256": "b24c6b9e471f56bd9e6622c726ef4b2eaf57fee95a4ec6e445aec55146afa4da",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/security/encryption.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-id-access",
+   "name": "ID Access",
+   "class_name": "IDAccess",
+   "aliases": [
+    "IDAccess",
+    "diagrams.oci.security.IDAccess",
+    "id-access"
+   ],
+   "category": "security",
+   "file": "security/security-id-access.svg",
+   "source_path": "resources/oci/security/id-access.png",
+   "sha256": "0626a7c33b70ae5511f8ba8476c21d9d74632625285df66a4469437f9afda10f",
+   "source_sha256": "57ef515b7e9e22655811b4756c60b37d702d876f30bf84987d353856dc264140",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/security/id-access.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-key-management",
+   "name": "Key Management",
+   "class_name": "KeyManagement",
+   "aliases": [
+    "KeyManagement",
+    "diagrams.oci.security.KeyManagement",
+    "key-management"
+   ],
+   "category": "security",
+   "file": "security/security-key-management.svg",
+   "source_path": "resources/oci/security/key-management.png",
+   "sha256": "a111781d9896ea9de1aa230c9d0af6627ae2700d0e66a131738e0d46f6111ada",
+   "source_sha256": "e640c9750dd0fc9b6f1208e847d2a731f7cf256759839f2838add91ffdea767a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/security/key-management.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-max-security-zone",
+   "name": "Max Security Zone",
+   "class_name": "MaxSecurityZone",
+   "aliases": [
+    "MaxSecurityZone",
+    "diagrams.oci.security.MaxSecurityZone",
+    "max-security-zone"
+   ],
+   "category": "security",
+   "file": "security/security-max-security-zone.svg",
+   "source_path": "resources/oci/security/max-security-zone.png",
+   "sha256": "28b2588281065117a2ab9d8e373d56b0ec620da94bada32589ea6100f98ceeee",
+   "source_sha256": "062065025e6504f00ed9e79fe9364cb953ff1d6560ec969466369a8b164a7f46",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/security/max-security-zone.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-vault",
+   "name": "Vault",
+   "class_name": "Vault",
+   "aliases": [
+    "Vault",
+    "diagrams.oci.security.Vault",
+    "vault"
+   ],
+   "category": "security",
+   "file": "security/security-vault.svg",
+   "source_path": "resources/oci/security/vault.png",
+   "sha256": "b7f0211b675cfc581625a7ed24a230a5d15f8dc36042bd120fcc1dab612c2d88",
+   "source_sha256": "56dd82b7f424c99fdfbf4f72923962f4dd5109449bbae6a81c4db9935162ce39",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/security/vault.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-waf",
+   "name": "WAF",
+   "class_name": "WAF",
+   "aliases": [
+    "WAF",
+    "diagrams.oci.security.WAF",
+    "waf"
+   ],
+   "category": "security",
+   "file": "security/security-waf.svg",
+   "source_path": "resources/oci/security/waf.png",
+   "sha256": "e3523b150ba929197cd50d57bb14606b42c365f377f29c4d5fc8f1e9bab44f93",
+   "source_sha256": "e21b4642dfb2fdb487ec119d0bfcce6a0e85d487fc3ecd84fcb378aebf1ab5f3",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/security/waf.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-backup-restore",
+   "name": "Backup Restore",
+   "class_name": "BackupRestore",
+   "aliases": [
+    "BackupRestore",
+    "diagrams.oci.storage.BackupRestore",
+    "backup-restore"
+   ],
+   "category": "storage",
+   "file": "storage/storage-backup-restore.svg",
+   "source_path": "resources/oci/storage/backup-restore.png",
+   "sha256": "fb8d3a71a4aad396aa0827a3c9870edcdea99c1dea8762b8290caea3af388b9e",
+   "source_sha256": "4804d5ad8c1bc8f7c2993fa0810966b236067182a1a507927a402308e56b4a88",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/storage/backup-restore.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-block-storage",
+   "name": "Block Storage",
+   "class_name": "BlockStorage",
+   "aliases": [
+    "BlockStorage",
+    "diagrams.oci.storage.BlockStorage",
+    "block-storage"
+   ],
+   "category": "storage",
+   "file": "storage/storage-block-storage.svg",
+   "source_path": "resources/oci/storage/block-storage.png",
+   "sha256": "52bdb6a09e86f1f4607d88637754ea2446377e5b0c8948980754895bece3f081",
+   "source_sha256": "fb8b92a755eee386ad22cccc7936c1955abc3bbb1e0d6259a7c558517848de29",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/storage/block-storage.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-block-storage-clone",
+   "name": "Block Storage Clone",
+   "class_name": "BlockStorageClone",
+   "aliases": [
+    "BlockStorageClone",
+    "diagrams.oci.storage.BlockStorageClone",
+    "block-storage-clone"
+   ],
+   "category": "storage",
+   "file": "storage/storage-block-storage-clone.svg",
+   "source_path": "resources/oci/storage/block-storage-clone.png",
+   "sha256": "1aab4cba8855b7f59ef5d07aec4f52a454d37dfd34f84dca1bf1c50f49752328",
+   "source_sha256": "6a97c235a8b943fbcf5c275a1777bd41ce1ca8f5855225836365060846db8a75",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/storage/block-storage-clone.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-buckets",
+   "name": "Buckets",
+   "class_name": "Buckets",
+   "aliases": [
+    "Buckets",
+    "diagrams.oci.storage.Buckets",
+    "buckets"
+   ],
+   "category": "storage",
+   "file": "storage/storage-buckets.svg",
+   "source_path": "resources/oci/storage/buckets.png",
+   "sha256": "33ff07a0f1eb12357db4892fc04bc220eced7480f25cfa04f59926734b9f3abe",
+   "source_sha256": "232eabade24cd059b77c2c850874228f0e438ac9dc8f3715771d9ce54765410b",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/storage/buckets.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-data-transfer",
+   "name": "Data Transfer",
+   "class_name": "DataTransfer",
+   "aliases": [
+    "DataTransfer",
+    "diagrams.oci.storage.DataTransfer",
+    "data-transfer"
+   ],
+   "category": "storage",
+   "file": "storage/storage-data-transfer.svg",
+   "source_path": "resources/oci/storage/data-transfer.png",
+   "sha256": "0aeb1211328cc04ccf6ec6675dcfa56318dfea706db4ea30b511f003922fdcdb",
+   "source_sha256": "e35fec3b2409d7787272da2f768ab475e74e0c883969686b4b446c4d9438b70f",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/storage/data-transfer.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-elastic-performance",
+   "name": "Elastic Performance",
+   "class_name": "ElasticPerformance",
+   "aliases": [
+    "ElasticPerformance",
+    "diagrams.oci.storage.ElasticPerformance",
+    "elastic-performance"
+   ],
+   "category": "storage",
+   "file": "storage/storage-elastic-performance.svg",
+   "source_path": "resources/oci/storage/elastic-performance.png",
+   "sha256": "4942c658442ece9c733dd93e4fd087fbebc46226dce99a6244bff169f8bf7f09",
+   "source_sha256": "9d59359399bd27c32d33ddbf33039f69499303f7ddb3e4a5c84ddeb081acad25",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/storage/elastic-performance.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-file-storage",
+   "name": "File Storage",
+   "class_name": "FileStorage",
+   "aliases": [
+    "FileStorage",
+    "diagrams.oci.storage.FileStorage",
+    "file-storage"
+   ],
+   "category": "storage",
+   "file": "storage/storage-file-storage.svg",
+   "source_path": "resources/oci/storage/file-storage.png",
+   "sha256": "9251e061183a0cc12334185632c0f4333705cd74b0971904cbb39dc62699da0e",
+   "source_sha256": "eb0516f585731f162558921456356176e85b4aa65f15d84ebf68726a849e8ea9",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/storage/file-storage.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-object-storage",
+   "name": "Object Storage",
+   "class_name": "ObjectStorage",
+   "aliases": [
+    "ObjectStorage",
+    "diagrams.oci.storage.ObjectStorage",
+    "object-storage"
+   ],
+   "category": "storage",
+   "file": "storage/storage-object-storage.svg",
+   "source_path": "resources/oci/storage/object-storage.png",
+   "sha256": "5b0b427e8e9fd36edea19ec922576b29d2c93ee5291422e8d8077f13284bf5fc",
+   "source_sha256": "51ed89047d7c8ba49de7e25fe82524d48955d06a844611888e491ffdb55ff53b",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/storage/object-storage.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-storage-gateway",
+   "name": "Storage Gateway",
+   "class_name": "StorageGateway",
+   "aliases": [
+    "StorageGateway",
+    "diagrams.oci.storage.StorageGateway",
+    "storage-gateway"
+   ],
+   "category": "storage",
+   "file": "storage/storage-storage-gateway.svg",
+   "source_path": "resources/oci/storage/storage-gateway.png",
+   "sha256": "9f315f811b41741d9190cce2e3b477081aef1dfe8d980db041d72a01f1a57e5b",
+   "source_sha256": "56b8ccd680ea782f3628ea32c7aa035cba7c14368ad0ea38cd3c3d64d5b010a9",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/oci/storage/storage-gateway.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  }
+ ]
+}

@@ -1,0 +1,457 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "soc-siem",
+  "title": "Security operations centre with a SIEM pipeline",
+  "description": "Firewalls, IDS/IPS, endpoint agents, domain controllers and a network TAP feed the collectors; Logstash and Vector normalise events into an Elasticsearch cluster; Elastic Security detections open pages in PagerDuty and cases in the service desk, enriched with threat intelligence and vulnerability data; analysts work in Kibana.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Security operations architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Security operations centre with a SIEM pipeline",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "sources",
+        "name": "Log sources",
+        "type": "subnet-private",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "fw",
+            "name": "Firewalls",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "firewall",
+              "icon_ref": "infragram:firewall"
+            },
+            "attributes": {
+              "detail": "syslog"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "syslog",
+                "kind": "solid",
+                "label": "syslog",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "ids",
+            "name": "IDS / IPS",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "ids-ips",
+              "icon_ref": "infragram:ids-ips"
+            },
+            "attributes": {
+              "detail": "Suricata alerts"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "syslog",
+                "kind": "solid",
+                "label": "EVE JSON",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "tap",
+            "name": "Network TAP",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "network-tap",
+              "icon_ref": "infragram:network-tap"
+            },
+            "attributes": {
+              "detail": "mirror traffic"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "ids",
+                "kind": "solid",
+                "label": "SPAN",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "agents",
+            "name": "Endpoint agents",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "endpoint-protection",
+              "icon_ref": "infragram:endpoint-protection"
+            },
+            "attributes": {
+              "detail": "EDR telemetry"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "beats",
+                "kind": "solid",
+                "label": "events",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "dc",
+            "name": "Domain controllers",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "domain-controller",
+              "icon_ref": "infragram:domain-controller"
+            },
+            "attributes": {
+              "detail": "security log"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "beats",
+                "kind": "solid",
+                "label": "Winlogbeat",
+                "direction": "forward"
+              }
+            ]
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "collect",
+        "name": "Collection & normalisation",
+        "type": "cluster",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "syslog",
+            "name": "syslog-ng",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "log-stream",
+              "icon_ref": "infragram:log-stream"
+            },
+            "attributes": {
+              "detail": "relay"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "logstash",
+                "kind": "solid",
+                "label": "TLS",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "beats",
+            "name": "Elastic Agent",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "elastic-agent-fleet",
+              "icon_ref": "onprem:elastic-agent-fleet"
+            },
+            "attributes": {
+              "detail": "fleet managed"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "logstash",
+                "kind": "solid",
+                "label": "TLS",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "logstash",
+            "name": "Logstash",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "elastic-elasticsearch-logstash",
+              "icon_ref": "onprem:elastic-elasticsearch-logstash"
+            },
+            "attributes": {
+              "detail": "parse · enrich"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "es",
+                "kind": "solid",
+                "label": "bulk index",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "vector",
+            "name": "Vector",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "aggregator-vector",
+              "icon_ref": "onprem:aggregator-vector"
+            },
+            "attributes": {
+              "detail": "metrics pipeline"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "es",
+                "kind": "solid",
+                "label": "index",
+                "direction": "forward"
+              }
+            ]
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "siem",
+        "name": "SIEM cluster",
+        "type": "cluster",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "es",
+            "name": "Elasticsearch",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "elastic-elasticsearch-elasticsearch",
+              "icon_ref": "onprem:elastic-elasticsearch-elasticsearch"
+            },
+            "attributes": {
+              "detail": "hot · warm · cold"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "detections",
+                "kind": "solid",
+                "label": "queries",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "detections",
+            "name": "Elastic Security",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "elastic-security-siem",
+              "icon_ref": "onprem:elastic-security-siem"
+            },
+            "attributes": {
+              "detail": "detection rules"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "kibana",
+                "kind": "solid",
+                "label": "alerts",
+                "direction": "forward"
+              },
+              {
+                "target": "pager",
+                "kind": "solid",
+                "label": "page",
+                "direction": "forward"
+              },
+              {
+                "target": "desk",
+                "kind": "dotted",
+                "label": "case",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "kibana",
+            "name": "Kibana",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "elastic-elasticsearch-kibana",
+              "icon_ref": "onprem:elastic-elasticsearch-kibana"
+            },
+            "attributes": {
+              "detail": "analyst console"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "cold",
+            "name": "Object storage",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "object-storage",
+              "icon_ref": "infragram:object-storage"
+            },
+            "attributes": {
+              "detail": "searchable snapshots"
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "respond",
+        "name": "Enrichment & response",
+        "type": "subnet-private",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "ti",
+            "name": "Threat intelligence",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "brand-virustotal",
+              "icon_ref": "infragram:brand-virustotal"
+            },
+            "attributes": {
+              "detail": "IOC lookups"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "detections",
+                "kind": "dotted",
+                "label": "enrich",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "vuln",
+            "name": "Vulnerability scanner",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "brand-qualys",
+              "icon_ref": "infragram:brand-qualys"
+            },
+            "attributes": {
+              "detail": "asset risk"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "detections",
+                "kind": "dotted",
+                "label": "context",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "pager",
+            "name": "PagerDuty",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "brand-pagerduty",
+              "icon_ref": "infragram:brand-pagerduty"
+            },
+            "attributes": {
+              "detail": "on-call"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "desk",
+            "name": "Service desk",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "itsm",
+              "icon_ref": "infragram:itsm"
+            },
+            "attributes": {
+              "detail": "incident tickets"
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "analysts",
+        "name": "SOC analysts",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "administrator",
+          "icon_ref": "infragram:administrator"
+        },
+        "attributes": {
+          "detail": "tier 1-3"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "kibana",
+            "kind": "solid",
+            "label": "HTTPS",
+            "direction": "forward"
+          }
+        ]
+      }
+    ],
+    "connections": []
+  }
+}

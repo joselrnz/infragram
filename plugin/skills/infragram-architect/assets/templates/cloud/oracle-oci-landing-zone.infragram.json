@@ -1,0 +1,414 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "oracle-oci-landing-zone",
+  "title": "Oracle Cloud landing zone with a three-tier workload",
+  "description": "A tenancy with a production compartment: the VCN has a public subnet with the internet gateway, WAF-fronted load balancer and NAT gateway, a private application subnet with an instance pool and OKE, and a private data subnet with Autonomous Database, Object Storage and File Storage. Vault and Cloud Guard sit in a maximum security zone; the DRG terminates FastConnect from the customer datacenter.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "oracle",
+      "enabled": true
+    }
+  ],
+  "default_library": "oracle",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "OCI reference architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Oracle Cloud landing zone with a three-tier workload",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "users",
+        "name": "Users",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": "internet clients"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "igw",
+            "kind": "solid",
+            "label": "HTTPS",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "tenancy",
+        "name": "Tenancy",
+        "type": "organization",
+        "attributes": {
+          "editor_frame_group": "oracle"
+        },
+        "children": [
+          {
+            "id": "compartment",
+            "name": "Compartment · prod",
+            "type": "compartment",
+            "attributes": {
+              "editor_frame_group": "oracle"
+            },
+            "children": [
+              {
+                "id": "region",
+                "name": "Region · us-ashburn-1",
+                "type": "region",
+                "attributes": {
+                  "editor_frame_group": "oracle"
+                },
+                "children": [
+                  {
+                    "id": "vcn",
+                    "name": "VCN · 10.0.0.0/16",
+                    "type": "vpc",
+                    "attributes": {
+                      "editor_frame_group": "oracle",
+                      "flow": "row"
+                    },
+                    "children": [
+                      {
+                        "id": "public",
+                        "name": "Public subnet",
+                        "type": "subnet-private",
+                        "attributes": {
+                          "editor_frame_group": "oracle"
+                        },
+                        "children": [
+                          {
+                            "id": "igw",
+                            "name": "Internet Gateway",
+                            "type": "service",
+                            "component": {
+                              "provider": "oracle",
+                              "service_id": "network-internet-gateway",
+                              "icon_ref": "oracle:network-internet-gateway"
+                            },
+                            "attributes": {
+                              "detail": ""
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "waf",
+                                "kind": "solid",
+                                "label": "HTTPS",
+                                "direction": "forward"
+                              }
+                            ]
+                          },
+                          {
+                            "id": "waf",
+                            "name": "WAF + Load Balancer",
+                            "type": "service",
+                            "component": {
+                              "provider": "oracle",
+                              "service_id": "security-waf",
+                              "icon_ref": "oracle:security-waf"
+                            },
+                            "attributes": {
+                              "detail": "flexible LB"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "pool",
+                                "kind": "solid",
+                                "label": "HTTPS",
+                                "direction": "forward"
+                              },
+                              {
+                                "target": "oke",
+                                "kind": "solid",
+                                "label": "HTTPS",
+                                "direction": "forward"
+                              }
+                            ]
+                          },
+                          {
+                            "id": "nat",
+                            "name": "NAT Gateway",
+                            "type": "service",
+                            "component": {
+                              "provider": "oracle",
+                              "service_id": "connectivity-nat-gateway",
+                              "icon_ref": "oracle:connectivity-nat-gateway"
+                            },
+                            "attributes": {
+                              "detail": "egress"
+                            },
+                            "children": [],
+                            "connections": []
+                          }
+                        ],
+                        "connections": []
+                      },
+                      {
+                        "id": "private-app",
+                        "name": "Private subnet · app",
+                        "type": "subnet-private",
+                        "attributes": {
+                          "editor_frame_group": "oracle"
+                        },
+                        "children": [
+                          {
+                            "id": "pool",
+                            "name": "Instance pool",
+                            "type": "service",
+                            "component": {
+                              "provider": "oracle",
+                              "service_id": "compute-instance-pools",
+                              "icon_ref": "oracle:compute-instance-pools"
+                            },
+                            "attributes": {
+                              "detail": "autoscaled VMs"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "adb",
+                                "kind": "solid",
+                                "label": "SQL·net",
+                                "direction": "forward"
+                              },
+                              {
+                                "target": "fss",
+                                "kind": "solid",
+                                "label": "NFS",
+                                "direction": "forward"
+                              }
+                            ]
+                          },
+                          {
+                            "id": "oke",
+                            "name": "OKE",
+                            "type": "service",
+                            "component": {
+                              "provider": "oracle",
+                              "service_id": "compute-oke",
+                              "icon_ref": "oracle:compute-oke"
+                            },
+                            "attributes": {
+                              "detail": "Kubernetes Engine"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "adb",
+                                "kind": "solid",
+                                "label": "",
+                                "direction": "forward"
+                              },
+                              {
+                                "target": "objects",
+                                "kind": "dashed",
+                                "label": "objects",
+                                "direction": "forward"
+                              }
+                            ]
+                          },
+                          {
+                            "id": "ocir",
+                            "name": "Container Registry",
+                            "type": "service",
+                            "component": {
+                              "provider": "oracle",
+                              "service_id": "compute-ocir",
+                              "icon_ref": "oracle:compute-ocir"
+                            },
+                            "attributes": {
+                              "detail": "images"
+                            },
+                            "children": [],
+                            "connections": []
+                          }
+                        ],
+                        "connections": []
+                      },
+                      {
+                        "id": "private-data",
+                        "name": "Private subnet · data",
+                        "type": "subnet-private",
+                        "attributes": {
+                          "editor_frame_group": "oracle"
+                        },
+                        "children": [
+                          {
+                            "id": "adb",
+                            "name": "Autonomous Database",
+                            "type": "service",
+                            "component": {
+                              "provider": "oracle",
+                              "service_id": "database-autonomous",
+                              "icon_ref": "oracle:database-autonomous"
+                            },
+                            "attributes": {
+                              "detail": "ATP"
+                            },
+                            "children": [],
+                            "connections": []
+                          },
+                          {
+                            "id": "objects",
+                            "name": "Object Storage",
+                            "type": "service",
+                            "component": {
+                              "provider": "oracle",
+                              "service_id": "storage-object-storage",
+                              "icon_ref": "oracle:storage-object-storage"
+                            },
+                            "attributes": {
+                              "detail": "standard tier"
+                            },
+                            "children": [],
+                            "connections": []
+                          },
+                          {
+                            "id": "fss",
+                            "name": "File Storage",
+                            "type": "service",
+                            "component": {
+                              "provider": "oracle",
+                              "service_id": "storage-file-storage",
+                              "icon_ref": "oracle:storage-file-storage"
+                            },
+                            "attributes": {
+                              "detail": "NFS shares"
+                            },
+                            "children": [],
+                            "connections": []
+                          }
+                        ],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "secure",
+                "name": "Maximum security zone",
+                "type": "security-zone",
+                "attributes": {
+                  "editor_frame_group": "oracle"
+                },
+                "children": [
+                  {
+                    "id": "vault",
+                    "name": "Vault",
+                    "type": "service",
+                    "component": {
+                      "provider": "oracle",
+                      "service_id": "security-vault",
+                      "icon_ref": "oracle:security-vault"
+                    },
+                    "attributes": {
+                      "detail": "keys · secrets"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "guard",
+                    "name": "Cloud Guard",
+                    "type": "service",
+                    "component": {
+                      "provider": "oracle",
+                      "service_id": "security-cloud-guard",
+                      "icon_ref": "oracle:security-cloud-guard"
+                    },
+                    "attributes": {
+                      "detail": "posture"
+                    },
+                    "children": [],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "drg",
+                "name": "DRG",
+                "type": "service",
+                "component": {
+                  "provider": "oracle",
+                  "service_id": "network-drg",
+                  "icon_ref": "oracle:network-drg"
+                },
+                "attributes": {
+                  "detail": "dynamic routing gateway"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "fastconnect",
+                "name": "FastConnect",
+                "type": "service",
+                "component": {
+                  "provider": "oracle",
+                  "service_id": "connectivity-fast-connect",
+                  "icon_ref": "oracle:connectivity-fast-connect"
+                },
+                "attributes": {
+                  "detail": "private peering"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "drg",
+                    "kind": "solid",
+                    "label": "virtual circuit",
+                    "direction": "forward"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "onprem",
+        "name": "Customer datacenter",
+        "type": "service",
+        "component": {
+          "provider": "oracle",
+          "service_id": "connectivity-customer-datacenter",
+          "icon_ref": "oracle:connectivity-customer-datacenter"
+        },
+        "attributes": {
+          "detail": "corporate network"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "fastconnect",
+            "kind": "dashed",
+            "label": "FastConnect · 1 Gbps",
+            "direction": "forward"
+          }
+        ]
+      }
+    ],
+    "connections": []
+  }
+}

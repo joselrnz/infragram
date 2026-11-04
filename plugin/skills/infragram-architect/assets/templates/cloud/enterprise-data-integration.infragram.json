@@ -1,0 +1,392 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "enterprise-data-integration",
+  "title": "Enterprise data integration and reporting",
+  "description": "Source systems feed an Informatica-style integration platform that loads a ClickHouse warehouse and PostgreSQL marts; Power BI, Tableau, SAS and SPSS report on them.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "On-premises data integration",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Enterprise data integration and reporting",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "dc",
+        "name": "Corporate datacenter",
+        "type": "site",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "apps",
+            "name": "VLAN 20 · Source systems",
+            "type": "subnet-private",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "erp",
+                "name": "Oracle Database",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "database-oracle",
+                  "icon_ref": "onprem:database-oracle"
+                },
+                "attributes": {
+                  "detail": "ERP"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "powercenter",
+                    "kind": "solid",
+                    "label": "extract"
+                  }
+                ]
+              },
+              {
+                "id": "crm",
+                "name": "SQL Server",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "database-mssql",
+                  "icon_ref": "onprem:database-mssql"
+                },
+                "attributes": {
+                  "detail": "CRM"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "powercenter",
+                    "kind": "solid",
+                    "label": "extract"
+                  }
+                ]
+              },
+              {
+                "id": "files",
+                "name": "File server",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "file-server",
+                  "icon_ref": "onprem:file-server"
+                },
+                "attributes": {
+                  "detail": "flat files · SFTP"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "powercenter",
+                    "kind": "solid",
+                    "label": "SFTP"
+                  }
+                ]
+              },
+              {
+                "id": "web",
+                "name": "PostgreSQL",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "database-postgresql",
+                  "icon_ref": "onprem:database-postgresql"
+                },
+                "attributes": {
+                  "detail": "web applications"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "powercenter",
+                    "kind": "solid",
+                    "label": "CDC"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "platform",
+            "name": "Integration platform",
+            "type": "cluster",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "powercenter",
+                "name": "Informatica PowerCenter",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "sync-process",
+                  "icon_ref": "infragram:sync-process"
+                },
+                "attributes": {
+                  "detail": "ETL mappings"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "dq",
+                    "kind": "dotted",
+                    "label": "cleanse"
+                  },
+                  {
+                    "target": "warehouse",
+                    "kind": "solid",
+                    "label": "load"
+                  },
+                  {
+                    "target": "marts",
+                    "kind": "solid",
+                    "label": "publish"
+                  }
+                ]
+              },
+              {
+                "id": "dq",
+                "name": "Informatica Data Quality",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "test-runner",
+                  "icon_ref": "infragram:test-runner"
+                },
+                "attributes": {
+                  "detail": "profiling · rules"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "metadata",
+                "name": "Metadata Manager",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "search-index",
+                  "icon_ref": "infragram:search-index"
+                },
+                "attributes": {
+                  "detail": "lineage · glossary"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "dq",
+                    "kind": "dotted",
+                    "label": "lineage"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "data",
+            "name": "VLAN 30 · Data",
+            "type": "subnet-private",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "warehouse",
+                "name": "ClickHouse",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "database-clickhouse",
+                  "icon_ref": "onprem:database-clickhouse"
+                },
+                "attributes": {
+                  "detail": "warehouse"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "powerbi",
+                    "kind": "solid",
+                    "label": "DirectQuery"
+                  },
+                  {
+                    "target": "tableau",
+                    "kind": "solid",
+                    "label": "live"
+                  }
+                ]
+              },
+              {
+                "id": "marts",
+                "name": "PostgreSQL",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "database-postgresql",
+                  "icon_ref": "onprem:database-postgresql"
+                },
+                "attributes": {
+                  "detail": "data marts"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "archive",
+                    "kind": "dashed",
+                    "label": "retention"
+                  },
+                  {
+                    "target": "sas",
+                    "kind": "solid",
+                    "label": "ODBC"
+                  },
+                  {
+                    "target": "spss",
+                    "kind": "solid",
+                    "label": ""
+                  }
+                ]
+              },
+              {
+                "id": "archive",
+                "name": "Object storage",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "object-storage-appliance",
+                  "icon_ref": "onprem:object-storage-appliance"
+                },
+                "attributes": {
+                  "detail": "archive"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "reporting",
+            "name": "VLAN 40 · Reporting",
+            "type": "subnet-private",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "powerbi",
+                "name": "Power BI",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "analytics-powerbi",
+                  "icon_ref": "onprem:analytics-powerbi"
+                },
+                "attributes": {
+                  "detail": "self-service BI"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "tableau",
+                "name": "Tableau",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "data-tableau",
+                  "icon_ref": "infragram:data-tableau"
+                },
+                "attributes": {
+                  "detail": "dashboards"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "sas",
+                "name": "SAS",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "statistics-sas",
+                  "icon_ref": "infragram:statistics-sas"
+                },
+                "attributes": {
+                  "detail": "statistical analysis"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "spss",
+                "name": "SPSS",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "statistics-spss",
+                  "icon_ref": "infragram:statistics-spss"
+                },
+                "attributes": {
+                  "detail": "survey analytics"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "analysts",
+        "name": "Business analysts",
+        "type": "service",
+        "component": {
+          "provider": "onprem",
+          "service_id": "client-users",
+          "icon_ref": "onprem:client-users"
+        },
+        "attributes": {
+          "detail": "workstations"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "powerbi",
+            "kind": "solid",
+            "label": "HTTPS"
+          }
+        ]
+      }
+    ],
+    "connections": []
+  }
+}

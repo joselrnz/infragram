@@ -1,0 +1,281 @@
+{
+ "schema_version": 3,
+ "kind": "single-cloud",
+ "slug": "azure-production-groups",
+ "title": "Azure: Production (groups view)",
+ "description": "Read from Azure Resource Graph at 2026-10-30 09:00 UTC: Production. 1 resource group(s) and 3 resource(s), filed by resource group, as Azure Resource Manager holds them.",
+ "template_brief": "",
+ "providers": [
+  {
+   "id": "azure",
+   "enabled": true
+  }
+ ],
+ "default_library": "azure",
+ "layers": [],
+ "views": [],
+ "presentation": {
+  "size": "fit",
+  "detail": "balanced",
+  "audience": "mixed",
+  "eyebrow": "Architecture",
+  "heading": "",
+  "legend": [],
+  "display": "icon",
+  "crossings": "plain",
+  "frame_lines": "thin",
+  "status": "",
+  "notes": [],
+  "drawn": ""
+ },
+ "topology": {
+  "id": "root",
+  "name": "Azure: Production (groups view)",
+  "type": "group",
+  "attributes": {},
+  "children": [
+   {
+    "id": "production",
+    "name": "Production",
+    "type": "subscription",
+    "component": {
+     "provider": "infragram",
+     "service_id": "custom-boundary-azure-subscription",
+     "icon_ref": "infragram:custom-boundary-azure-subscription"
+    },
+    "attributes": {
+     "editor_frame_group": "azure"
+    },
+    "children": [
+     {
+      "id": "rg-app",
+      "name": "rg-app",
+      "type": "resource-group",
+      "component": {
+       "provider": "infragram",
+       "service_id": "custom-boundary-azure-resource-group",
+       "icon_ref": "infragram:custom-boundary-azure-resource-group"
+      },
+      "attributes": {
+       "editor_frame_group": "azure",
+       "changes": {
+        "read": "2026-10-30T09:00:00+00:00",
+        "count": 1,
+        "items": [
+         {
+          "name": "disk-old",
+          "when": "2026-10-27T08:00:00Z",
+          "kind": "Delete",
+          "by": "",
+          "client": "",
+          "properties": [],
+          "more": 0,
+          "part": "disk-old"
+         }
+        ]
+       }
+      },
+      "children": [
+       {
+        "id": "plan-prod",
+        "name": "plan-prod",
+        "type": "App Service Plans",
+        "component": {
+         "provider": "azure",
+         "service_id": "app-service-plans",
+         "icon_ref": "azure:app-service-plans"
+        },
+        "attributes": {
+         "icon": "app-service-plans",
+         "collection": "azure",
+         "category": "app-services",
+         "sizing": {
+          "os": "Windows",
+          "region": "eastus2"
+         },
+         "table": {
+          "columns": [
+           "Property",
+           "Value"
+          ],
+          "rows": [
+           [
+            "Type",
+            "microsoft.web/serverfarms"
+           ],
+           [
+            "Resource group",
+            "rg-app"
+           ],
+           [
+            "Location",
+            "eastus2"
+           ],
+           [
+            "Resource ID",
+            "/subscriptions/11111111-2222-3333-4444-555555555555/resourcegroups/rg-app/providers/microsoft.web/serverfarms/plan-prod"
+           ]
+          ]
+         }
+        },
+        "children": [],
+        "connections": []
+       },
+       {
+        "id": "kv-prod",
+        "name": "kv-prod",
+        "type": "Key Vaults",
+        "component": {
+         "provider": "azure",
+         "service_id": "key-vaults",
+         "icon_ref": "azure:key-vaults"
+        },
+        "attributes": {
+         "icon": "key-vaults",
+         "collection": "azure",
+         "category": "security",
+         "sizing": {
+          "region": "eastus2"
+         },
+         "table": {
+          "columns": [
+           "Property",
+           "Value"
+          ],
+          "rows": [
+           [
+            "Type",
+            "microsoft.keyvault/vaults"
+           ],
+           [
+            "Resource group",
+            "rg-app"
+           ],
+           [
+            "Location",
+            "eastus2"
+           ],
+           [
+            "Resource ID",
+            "/subscriptions/11111111-2222-3333-4444-555555555555/resourcegroups/rg-app/providers/microsoft.keyvault/vaults/kv-prod"
+           ]
+          ]
+         },
+         "changes": {
+          "read": "2026-10-30T09:00:00+00:00",
+          "count": 1,
+          "items": [
+           {
+            "name": "kv-prod",
+            "when": "2026-10-18T08:00:00Z",
+            "kind": "Create",
+            "by": "",
+            "client": "",
+            "properties": [],
+            "more": 0
+           }
+          ]
+         },
+         "findings": {
+          "count": 1,
+          "items": [
+           {
+            "source": "Defender",
+            "title": "Key vaults should have deletion protection enabled",
+            "severity": "Medium",
+            "detail": "",
+            "link": ""
+           }
+          ]
+         }
+        },
+        "children": [],
+        "connections": []
+       },
+       {
+        "id": "stprod",
+        "name": "stprod",
+        "type": "Storage Accounts",
+        "component": {
+         "provider": "azure",
+         "service_id": "storage-accounts",
+         "icon_ref": "azure:storage-accounts"
+        },
+        "attributes": {
+         "icon": "storage-accounts",
+         "collection": "azure",
+         "category": "storage",
+         "sizing": {
+          "region": "eastus2"
+         },
+         "table": {
+          "columns": [
+           "Property",
+           "Value"
+          ],
+          "rows": [
+           [
+            "Type",
+            "microsoft.storage/storageaccounts"
+           ],
+           [
+            "Resource group",
+            "rg-app"
+           ],
+           [
+            "Location",
+            "eastus2"
+           ],
+           [
+            "Resource ID",
+            "/subscriptions/11111111-2222-3333-4444-555555555555/resourcegroups/rg-app/providers/microsoft.storage/storageaccounts/stprod"
+           ]
+          ]
+         },
+         "changes": {
+          "read": "2026-10-30T09:00:00+00:00",
+          "count": 1,
+          "items": [
+           {
+            "name": "stprod",
+            "when": "2026-10-29T14:02:00Z",
+            "kind": "Update",
+            "by": "alice@contoso.com",
+            "client": "Azure Portal",
+            "properties": [
+             {
+              "path": "properties.networkAcls.defaultAction",
+              "before": "Deny",
+              "after": "Allow"
+             }
+            ],
+            "more": 0
+           }
+          ]
+         },
+         "findings": {
+          "count": 1,
+          "items": [
+           {
+            "source": "Defender",
+            "title": "Storage account public access should be disallowed",
+            "severity": "High",
+            "detail": "",
+            "link": ""
+           }
+          ]
+         }
+        },
+        "children": [],
+        "connections": []
+       }
+      ],
+      "connections": []
+     }
+    ],
+    "connections": []
+   }
+  ],
+  "connections": []
+ }
+}

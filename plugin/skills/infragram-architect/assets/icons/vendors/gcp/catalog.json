@@ -1,0 +1,2135 @@
+{
+ "schema_version": 1,
+ "collection": "vendors/gcp",
+ "generated_by": "scripts/importers/official-icons.py",
+ "source": {
+  "url": "https://cloud.google.com/icons",
+  "release": "Google Cloud icon library 2025 (core products + legacy set)",
+  "archive": "gcp/official-icon-library-2025/core-products-icons.zip",
+  "terms": "Google product-icon and trademark terms remain; do not alter the artwork."
+ },
+ "counts": {
+  "icons": 235,
+  "by_category": {
+   "core-products": 19,
+   "legacy": 216
+  }
+ },
+ "icons": [
+  {
+   "id": "ai-hypercomputer",
+   "name": "AI Hypercomputer",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/ai-hypercomputer.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/AI Hypercomputer/SVG/AIHypercomputer-512-color.svg",
+   "sha256": "df479167432124b2b03d975fcd3eae41a6c50cb1189326793f979a3b1ead1dfd"
+  },
+  {
+   "id": "alloydb",
+   "name": "AlloyDB",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/alloydb.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/AlloyDB/SVG/AlloyDB-512-color.svg",
+   "sha256": "6bbb783296fb9d7426c2247ebf1453a3f89842040e46d1d2588676fc6115aeee"
+  },
+  {
+   "id": "anthos",
+   "name": "Anthos",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/anthos.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Anthos/SVG/Anthos-512-color.svg",
+   "sha256": "ebfa6bb2ae93b6664c345d17af121ddbb9b20686db0355188f0690da5aca2abd"
+  },
+  {
+   "id": "apigee",
+   "name": "Apigee",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/apigee.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Apigee/SVG/Apigee-512-color-rgb.svg",
+   "sha256": "153705e55cad80f06f5f82d2c04ce9f2988c8e0784e7a6153fe6a17de1294250"
+  },
+  {
+   "id": "bigquery",
+   "name": "BigQuery",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/bigquery.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/BigQuery/SVG/BigQuery-512-color.svg",
+   "sha256": "6c088a2a7afbfcab01918c959aad90d76835093cfc2ec8314bf7ba25b85aaae8"
+  },
+  {
+   "id": "cloud-run",
+   "name": "Cloud Run",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/cloud-run.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Cloud Run/SVG/CloudRun-512-color-rgb.svg",
+   "sha256": "42a910e5d9f5a8685227f91623bf50c8c9259c556a41eb9a97157fd1e78b0cea"
+  },
+  {
+   "id": "cloud-spanner",
+   "name": "Cloud Spanner",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/cloud-spanner.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Cloud Spanner/SVG/CloudSpanner-512-color.svg",
+   "sha256": "8e6e5bd76d4f41afbd0f0056b5efa2335963f0dcfe7a0def3fa0bb393a02c700"
+  },
+  {
+   "id": "cloud-sql",
+   "name": "Cloud SQL",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/cloud-sql.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Cloud SQL/SVG/CloudSQL-512-color.svg",
+   "sha256": "4e0d3d2049a67f64e5a2c88f836bf2d1786f809a72d82279b18906ec9d6b35c9"
+  },
+  {
+   "id": "cloud-storage",
+   "name": "Cloud Storage",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/cloud-storage.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Cloud Storage/SVG/Cloud_Storage-512-color.svg",
+   "sha256": "df42fc4b652cb133a4150bea7988aa965651d2c52fdfd141b6e8a359552eec8e"
+  },
+  {
+   "id": "compute-engine",
+   "name": "Compute Engine",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/compute-engine.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Compute Engine/SVG/ComputeEngine-512-color-rgb.svg",
+   "sha256": "5cf9e57e4f99e125e45f9db269f3d5d1fa0dfd187aebfe00f3f97b9caf488af2"
+  },
+  {
+   "id": "distributed-cloud",
+   "name": "Distributed Cloud",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/distributed-cloud.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Distributed Cloud/SVG/DistributedCloud-512-color.svg",
+   "sha256": "274d4a42d6f04f05c45c58f2dfa1e3dc2fc5895504ca412711857af636d64551"
+  },
+  {
+   "id": "gke",
+   "name": "GKE",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/gke.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/GKE/SVG/GKE-512-color.svg",
+   "sha256": "6a33654c499bc4c38012661875a1a8c1bf2cdf01be8fdcc90d1c6504657878ec"
+  },
+  {
+   "id": "hyperdisk",
+   "name": "Hyperdisk",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/hyperdisk.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Hyperdisk/SVG/Hyperdisk-512-color.svg",
+   "sha256": "d60f9bd5f6025a24861cba4ad8bbf4d29a6203f6479e1d4774aabdcd2ed53d45"
+  },
+  {
+   "id": "looker",
+   "name": "Looker",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/looker.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Looker/SVG/Looker-512-color.svg",
+   "sha256": "e35fa3f9751713cde3e78f3604c1cbc9106396be89a88b313abae7195feccb0a"
+  },
+  {
+   "id": "mandiant",
+   "name": "Mandiant",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/mandiant.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Mandiant/SVG/Mandiant-512-color.svg",
+   "sha256": "3884408b49a5b96161cfc25a74295eb49243b6c29960103b2bbeda19cff3755c"
+  },
+  {
+   "id": "security-command-center",
+   "name": "Security Command Center",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/security-command-center.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Security Command Center/SVG/SecurityCommandCenter-512-color.svg",
+   "sha256": "d7cadf3c5bd7d4fea4bab88d72d3dff276f29728c86d1b8c5d99bede796ca542"
+  },
+  {
+   "id": "security-operations",
+   "name": "Security Operations",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/security-operations.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Security Operations/SVG/SecOps-512-color-rgb.svg",
+   "sha256": "cbc591c716adb6b9920f724754de29e4fb9197b8eeeadfcdd4a6c179a86e55f3"
+  },
+  {
+   "id": "threat-intelligence",
+   "name": "Threat Intelligence",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/threat-intelligence.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Threat Intelligence/SVG/ThreatIntelligence-512-color.svg",
+   "sha256": "a6d43a5d341d09cc445519567cc42f7817c0d39435294046a97ca2a6e17591e8"
+  },
+  {
+   "id": "vertex-ai",
+   "name": "Vertex AI",
+   "aliases": [],
+   "category": "core-products",
+   "file": "core-products/vertex-ai.svg",
+   "source_path": "gcp/official-icon-library-2025/core-products-icons/Unique Icons/Vertex AI/SVG/VertexAI-512-color.svg",
+   "sha256": "17922247f3110026fd637c531d0604c67a00c9a58a6e152030f2242b9fd48a8e"
+  },
+  {
+   "id": "access-context-manager",
+   "name": "access context manager",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/access-context-manager.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/access_context_manager/access_context_manager.svg",
+   "sha256": "674146e5eeebac89cc23b7c4676724eb6f2fe11cb8ae416cbd2cc7d021047143"
+  },
+  {
+   "id": "administration",
+   "name": "administration",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/administration.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/administration/administration.svg",
+   "sha256": "359410bd8c138a1550b7610dfe9c3566b465d8b7f2a22cc6e27ab240a7fa56de"
+  },
+  {
+   "id": "advanced-agent-modeling",
+   "name": "advanced agent modeling",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/advanced-agent-modeling.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/advanced_agent_modeling/advanced_agent_modeling.svg",
+   "sha256": "919211aad4da954ed383815c302ec17d620b5af52a02b450957e645c0f9776a3"
+  },
+  {
+   "id": "advanced-solutions-lab",
+   "name": "advanced solutions lab",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/advanced-solutions-lab.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/advanced_solutions_lab/advanced_solutions_lab.svg",
+   "sha256": "fabdedb658ea7a426e41398d93866f95e21a03e221a0aae203faccd7b08f29aa"
+  },
+  {
+   "id": "agent-assist",
+   "name": "agent assist",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/agent-assist.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/agent_assist/agent_assist.svg",
+   "sha256": "ddd0a006eb5bf536f57278dd05ee961feca89efda26b1a3516cd5e4e9f785839"
+  },
+  {
+   "id": "ai-hub",
+   "name": "ai hub",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/ai-hub.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/ai_hub/ai_hub.svg",
+   "sha256": "952b363689612dbbd9676e47725cd7a4db25b0cd56ad13a1ffd1e8e406f0bb78"
+  },
+  {
+   "id": "ai-platform",
+   "name": "ai platform",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/ai-platform.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/ai_platform/ai_platform.svg",
+   "sha256": "2cab5563dd440097c297b0f70253487d2a681dc673bda897e867e35dd33c6889"
+  },
+  {
+   "id": "ai-platform-unified",
+   "name": "ai platform unified",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/ai-platform-unified.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/ai_platform_unified/ai_platform_unified.svg",
+   "sha256": "3ca292f1038b8c9c8d92782008249d325f6b68df1af890a3a19b0f5760fe5caa"
+  },
+  {
+   "id": "analytics-hub",
+   "name": "analytics hub",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/analytics-hub.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/analytics_hub/analytics_hub.svg",
+   "sha256": "1bd09e320e754cd81550b22a5223a5bf13ff92a0ba68368207f1553734b07f18"
+  },
+  {
+   "id": "anthos-config-management",
+   "name": "anthos config management",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/anthos-config-management.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/anthos_config_management/anthos_config_management.svg",
+   "sha256": "7645208e97e77898506da74d68c69c03ee9e0f56296d866bfc29084d2e7a385d"
+  },
+  {
+   "id": "anthos-legacy",
+   "name": "anthos",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/anthos-legacy.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/anthos/anthos.svg",
+   "sha256": "ffa381a653046e5cf5dc230aa176cd52d508b8c7ea1388adb6322de8269424f6"
+  },
+  {
+   "id": "anthos-service-mesh",
+   "name": "anthos service mesh",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/anthos-service-mesh.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/anthos_service_mesh/anthos_service_mesh.svg",
+   "sha256": "1aad1090333442b11a6f94e737b728f6bcdb2a364aefaf1c3212736ce6c91854"
+  },
+  {
+   "id": "api",
+   "name": "api",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/api.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/api/api.svg",
+   "sha256": "b4a914d5282d0e57163d0fba5a698496d741bcdb6505efc5aace4c53b0621729"
+  },
+  {
+   "id": "api-analytics",
+   "name": "api analytics",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/api-analytics.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/api_analytics/api_analytics.svg",
+   "sha256": "6e17f3d2b6d99cf229a93439ecf5ae57a08def4b66bfcf042a335240df542a78"
+  },
+  {
+   "id": "api-monetization",
+   "name": "api monetization",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/api-monetization.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/api_monetization/api_monetization.svg",
+   "sha256": "236afdbe7472e202e8d24d5fa7fa298218cfe23cab07a1b386c6368442d69630"
+  },
+  {
+   "id": "apigee-api-platform",
+   "name": "apigee api platform",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/apigee-api-platform.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/apigee_api_platform/apigee_api_platform.svg",
+   "sha256": "dbcf2a1cadc13bea24cd9ffb004151685509248d1f7458af8b9be781b5b0b71a"
+  },
+  {
+   "id": "apigee-sense",
+   "name": "apigee sense",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/apigee-sense.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/apigee_sense/apigee_sense.svg",
+   "sha256": "cb0ce1955e121c154f002c8140eaf4863f485368c524d97a90981aa2a3988933"
+  },
+  {
+   "id": "app-engine",
+   "name": "app engine",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/app-engine.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/app_engine/app_engine.svg",
+   "sha256": "df6ddd07fef65c4ae1c96763b18de18c72a6f50a799d9079d6f59f88540c0c62"
+  },
+  {
+   "id": "artifact-registry",
+   "name": "artifact registry",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/artifact-registry.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/artifact_registry/artifact_registry.svg",
+   "sha256": "f12916d3a2b3fcab588c475f35200a4f9db6cdde421e7dacac8ce7c4c55a72f1"
+  },
+  {
+   "id": "asset-inventory",
+   "name": "asset inventory",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/asset-inventory.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/asset_inventory/asset_inventory.svg",
+   "sha256": "9550af91d3d1d7b34070f39976da1a551e9a44aa2d0e5ff1da3b173fe4e9823f"
+  },
+  {
+   "id": "assured-workloads",
+   "name": "assured workloads",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/assured-workloads.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/assured_workloads/assured_workloads.svg",
+   "sha256": "ff1b0923a88d7664eda331573272adbfb4ba9d5683c2b9b9e3f0d000711b1623"
+  },
+  {
+   "id": "automl",
+   "name": "automl",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/automl.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/automl/automl.svg",
+   "sha256": "1aa6c50715f847290a874d7a82510fdbdd700db1442a19d4116256b40f7f3bcc"
+  },
+  {
+   "id": "automl-natural-language",
+   "name": "automl natural language",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/automl-natural-language.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/automl_natural_language/automl_natural_language.svg",
+   "sha256": "6f8f8df503f785e82e343d2301011f8c9c212337b046e64712a3e98639badc6d"
+  },
+  {
+   "id": "automl-tables",
+   "name": "automl tables",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/automl-tables.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/automl_tables/automl_tables.svg",
+   "sha256": "35a13de5f4296f1027a9df6e286196dc764dba79d241e20c854b86ab9a4be48e"
+  },
+  {
+   "id": "automl-translation",
+   "name": "automl translation",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/automl-translation.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/automl_translation/automl_translation.svg",
+   "sha256": "1ff4f64d4694a4fb378933c8c7eec6966cbfaf0a3d906458f5368d9ce71b3b33"
+  },
+  {
+   "id": "automl-video-intelligence",
+   "name": "automl video intelligence",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/automl-video-intelligence.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/automl_video_intelligence/automl_video_intelligence.svg",
+   "sha256": "4727688cd1fd8316c5e898a6d0b06524a382e4c3f14c6bc59a93645d3fd210be"
+  },
+  {
+   "id": "automl-vision",
+   "name": "automl vision",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/automl-vision.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/automl_vision/automl_vision.svg",
+   "sha256": "00eff4c38763f364abecffadf4305a3f545be74b0cb79e86d10e4f0f237c6768"
+  },
+  {
+   "id": "bare-metal-solutions",
+   "name": "bare metal solutions",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/bare-metal-solutions.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/bare_metal_solutions/bare_metal_solutions.svg",
+   "sha256": "81705813cc06c8274944806fd83a8a0db25fbb5c813d1cf814bd4aaba128ca78"
+  },
+  {
+   "id": "batch",
+   "name": "batch",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/batch.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/batch/batch.svg",
+   "sha256": "041f2bec36bc0a98cf2acd932e7717f4520668e3872d41bc8774d385069d33ca"
+  },
+  {
+   "id": "beyondcorp",
+   "name": "beyondcorp",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/beyondcorp.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/beyondcorp/beyondcorp.svg",
+   "sha256": "3538b87886135a92ac3e076804c84b22ab1c65fff2b4931dc07535363cf3be4e"
+  },
+  {
+   "id": "bigquery-legacy",
+   "name": "bigquery",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/bigquery-legacy.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/bigquery/bigquery.svg",
+   "sha256": "e1791cc5897c2e3b2e92cac472a5dd4ba2aa09e5d52b7d01efcff9f4e402d1e3"
+  },
+  {
+   "id": "bigtable",
+   "name": "bigtable",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/bigtable.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/bigtable/bigtable.svg",
+   "sha256": "88120688828ab2f3e14dcc0edccb2e6e9c6dbdddc44b5287bf9fe2e67f727b7a"
+  },
+  {
+   "id": "billing",
+   "name": "billing",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/billing.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/billing/billing.svg",
+   "sha256": "b96494692f6a55481cb10c82f14e7b229e4c6c4567a5f86c58e9da966e148be6"
+  },
+  {
+   "id": "binary-authorization",
+   "name": "binary authorization",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/binary-authorization.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/binary_authorization/binary_authorization.svg",
+   "sha256": "db216c1a0c09ecaf88b49c865aad0fe14d92edddbdc59087d069f90408f1751f"
+  },
+  {
+   "id": "catalog",
+   "name": "catalog",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/catalog.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/catalog/catalog.svg",
+   "sha256": "b79b3cca25b7aef60e1d73ffa98a17ba56ca69ce728d8c974aee2f3a51d4c964"
+  },
+  {
+   "id": "certificate-authority-service",
+   "name": "certificate authority service",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/certificate-authority-service.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/certificate_authority_service/certificate_authority_service.svg",
+   "sha256": "9e17f0c9b232a02a478513cc10828abaf9edcc0421e6cc013eaa3274218ddb32"
+  },
+  {
+   "id": "certificate-manager",
+   "name": "certificate manager",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/certificate-manager.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/certificate_manager/certificate_manager.svg",
+   "sha256": "559ccd229f0a6a0023fc282206dfdf000fe69afaf028c36c210f7cbf66d949a1"
+  },
+  {
+   "id": "cloud-api-gateway",
+   "name": "cloud api gateway",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-api-gateway.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_api_gateway/cloud_api_gateway.svg",
+   "sha256": "0b43369a39f5c53c9307e6664c3783c4bd95e87d14ba210a44217eb8eebc3ce7"
+  },
+  {
+   "id": "cloud-apis",
+   "name": "cloud apis",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-apis.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_apis/cloud_apis.svg",
+   "sha256": "98658722262ef38c0969714ed676c19f010127c80e4dc8b9515d730346382104"
+  },
+  {
+   "id": "cloud-armor",
+   "name": "cloud armor",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-armor.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_armor/cloud_armor.svg",
+   "sha256": "69f0e9c8d64b48cdeba1679922dee5e8ebf73747d18ceb553faebeebb0c15711"
+  },
+  {
+   "id": "cloud-asset-inventory",
+   "name": "cloud asset inventory",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-asset-inventory.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_asset_inventory/cloud_asset_inventory.svg",
+   "sha256": "5dc0cd9109ab77a91d8b5c0fb52fb159a8b4b92c1932a8a7ce801a35eae9e201"
+  },
+  {
+   "id": "cloud-audit-logs",
+   "name": "cloud audit logs",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-audit-logs.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_audit_logs/cloud_audit_logs.svg",
+   "sha256": "276a529fbe4eb430e3b03e4f4a13d1cc6ac631ce3730f32731e4b892dbb05832"
+  },
+  {
+   "id": "cloud-build",
+   "name": "cloud build",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-build.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_build/cloud_build.svg",
+   "sha256": "2fbd6afc341de33de94ae428b4e50690c959f9ec57d29dafcc6c03eaa260c3e8"
+  },
+  {
+   "id": "cloud-cdn",
+   "name": "cloud cdn",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-cdn.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_cdn/cloud_cdn.svg",
+   "sha256": "9138a21222f0eb31c6d61d6481b6d61b1f8d7dd05d19508d91af2ac6ca88b64b"
+  },
+  {
+   "id": "cloud-code",
+   "name": "cloud code",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-code.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_code/cloud_code.svg",
+   "sha256": "6feff41dcc06d95526af3e94af72b86c1eecfb7099d24b5e0818b85ceeb07a81"
+  },
+  {
+   "id": "cloud-composer",
+   "name": "cloud composer",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-composer.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_composer/cloud_composer.svg",
+   "sha256": "3066a9dadb30f601a2820f27390ceab132c97526415c0ce4e8b2b34ed8d4248a"
+  },
+  {
+   "id": "cloud-data-fusion",
+   "name": "cloud data fusion",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-data-fusion.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_data_fusion/cloud_data_fusion.svg",
+   "sha256": "45d11ef053e7c3321c4c0c3e8a27e9c4f44093412a62b95661d0b202c4534bb5"
+  },
+  {
+   "id": "cloud-deploy",
+   "name": "cloud deploy",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-deploy.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_deploy/cloud_deploy.svg",
+   "sha256": "6bb1066ea1363b69b2dc056f8c6d1c446439cbfb1bc3a181c27bec5674a622b2"
+  },
+  {
+   "id": "cloud-deployment-manager",
+   "name": "cloud deployment manager",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-deployment-manager.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_deployment_manager/cloud_deployment_manager.svg",
+   "sha256": "3cc963b89730005b10d2852e9795c94a2de3f5bbb207035f4b8162d8af5a7dc1"
+  },
+  {
+   "id": "cloud-dns",
+   "name": "cloud dns",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-dns.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_dns/cloud_dns.svg",
+   "sha256": "c7908fbe9f86108c969c2df1494d825c6f1d9f83133a84e64a8860615f0906b2"
+  },
+  {
+   "id": "cloud-domains",
+   "name": "cloud domains",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-domains.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_domains/cloud_domains.svg",
+   "sha256": "58c0eebf471095d887b0c172e8425610bb1e49c0b07b19e89cd5b792641fbe1e"
+  },
+  {
+   "id": "cloud-ekm",
+   "name": "cloud ekm",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-ekm.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_ekm/cloud_ekm.svg",
+   "sha256": "779c3cd1f6b884ebc5b954f4af7d324012947a21d96f93647d0310392807c40a"
+  },
+  {
+   "id": "cloud-endpoints",
+   "name": "cloud endpoints",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-endpoints.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_endpoints/cloud_endpoints.svg",
+   "sha256": "0a11f948b83acd46c9d9073a58175cbc0e92915dbba261965748f19dcd5d6162"
+  },
+  {
+   "id": "cloud-external-ip-addresses",
+   "name": "cloud external ip addresses",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-external-ip-addresses.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_external_ip_addresses/cloud_external_ip_addresses.svg",
+   "sha256": "585f996315be894d21d5ba90c41e64f8125f272d0a71938f8a166ad96d8ed84a"
+  },
+  {
+   "id": "cloud-firewall-rules",
+   "name": "cloud firewall rules",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-firewall-rules.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_firewall_rules/cloud_firewall_rules.svg",
+   "sha256": "26abe401d753bfc7e587b24da15ad24e57550cc31f8de6e5a9f7d0a8d751c05f"
+  },
+  {
+   "id": "cloud-for-marketing",
+   "name": "cloud for marketing",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-for-marketing.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_for_marketing/cloud_for_marketing.svg",
+   "sha256": "ac941a700b2965183c2be09458dc41ef9cc246b572bdb9afbdaec6382caa253b"
+  },
+  {
+   "id": "cloud-functions",
+   "name": "cloud functions",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-functions.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_functions/cloud_functions.svg",
+   "sha256": "4083203f7fc949eca008ad06b9495d89c3ceff7b3980948f6093bd4e7db4d734"
+  },
+  {
+   "id": "cloud-generic",
+   "name": "cloud generic",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-generic.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_generic/cloud_generic.svg",
+   "sha256": "403cef2898f31b32a22b976fdde83ae411843d6ddc7fd56fc7ff54025f3ecc3b"
+  },
+  {
+   "id": "cloud-gpu",
+   "name": "cloud gpu",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-gpu.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_gpu/cloud_gpu.svg",
+   "sha256": "e64814d1c5ce53955b30b3c10e98e84248ec0110c9b43b8ffde8fccb197b241a"
+  },
+  {
+   "id": "cloud-healthcare-api",
+   "name": "cloud healthcare api",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-healthcare-api.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_healthcare_api/cloud_healthcare_api.svg",
+   "sha256": "17618c22245879c9dc76656b3e5c80214f9c809ac0fb475c7fd884571a07e638"
+  },
+  {
+   "id": "cloud-healthcare-marketplace",
+   "name": "cloud healthcare marketplace",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-healthcare-marketplace.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_healthcare_marketplace/cloud_healthcare_marketplace.svg",
+   "sha256": "3ea95a9c4fc65f2db798f0868d1832b5c6c8d5c5d9c634be7fc9af730c1c58d7"
+  },
+  {
+   "id": "cloud-hsm",
+   "name": "cloud hsm",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-hsm.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_hsm/cloud_hsm.svg",
+   "sha256": "036344b9907d258b961e00b1cd3b3b7915423fdecd1f0e623aebedde8339f7df"
+  },
+  {
+   "id": "cloud-ids",
+   "name": "cloud ids",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-ids.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_ids/cloud_ids.svg",
+   "sha256": "aa56d83ee692c08288e8def846091ba28fcf57c2d7e0568220549228016bc899"
+  },
+  {
+   "id": "cloud-inference-api",
+   "name": "cloud inference api",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-inference-api.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_inference_api/cloud_inference_api.svg",
+   "sha256": "8183f580cbb6dea6661615ceb230bbd9801b04f6ac44d58304aa4dbf444aa0b8"
+  },
+  {
+   "id": "cloud-interconnect",
+   "name": "cloud interconnect",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-interconnect.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_interconnect/cloud_interconnect.svg",
+   "sha256": "c8f10842213b314b4e31053a138013f292ee65f2b40a056da31e283a854fd658"
+  },
+  {
+   "id": "cloud-jobs-api",
+   "name": "cloud jobs api",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-jobs-api.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_jobs_api/cloud_jobs_api.svg",
+   "sha256": "51f19ad9121f67c6bd7faf3d21ae283f893c97b87d86f1f66f931d5a71671cea"
+  },
+  {
+   "id": "cloud-load-balancing",
+   "name": "cloud load balancing",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-load-balancing.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_load_balancing/cloud_load_balancing.svg",
+   "sha256": "ea8974dc8766309a616bc10c09c0f630c0ff6a5bb1e9664cc17c4fb1ec29ef11"
+  },
+  {
+   "id": "cloud-logging",
+   "name": "cloud logging",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-logging.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_logging/cloud_logging.svg",
+   "sha256": "f7fdd93a1847fdebf174c78cce418fac52198be72893116e7787ca3e1659cf38"
+  },
+  {
+   "id": "cloud-media-edge",
+   "name": "cloud media edge",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-media-edge.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_media_edge/cloud_media_edge.svg",
+   "sha256": "b3db766f26571e54df6d97412b9bf34a936bf27efe20e715824020fc69d7326a"
+  },
+  {
+   "id": "cloud-monitoring",
+   "name": "cloud monitoring",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-monitoring.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_monitoring/cloud_monitoring.svg",
+   "sha256": "804f66b773fcc5cd59a3fb8e0da9ff3de9b69efa99c23f8e1797943647a8e79e"
+  },
+  {
+   "id": "cloud-nat",
+   "name": "cloud nat",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-nat.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_nat/cloud_nat.svg",
+   "sha256": "88428f716fe11510dfadf80e5fb356d3d62dac524705553df19a8c82064a00dc"
+  },
+  {
+   "id": "cloud-natural-language-api",
+   "name": "cloud natural language api",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-natural-language-api.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_natural_language_api/cloud_natural_language_api.svg",
+   "sha256": "d3bbfee4094e34821c6fdb308d8bd62287829d8593d481fb269b83f531c32bfc"
+  },
+  {
+   "id": "cloud-network",
+   "name": "cloud network",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-network.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_network/cloud_network.svg",
+   "sha256": "99657e750b49a3e31ca6ef7096dc6b31efa47d0bcce1880bcbda0d333d9078f4"
+  },
+  {
+   "id": "cloud-ops",
+   "name": "cloud ops",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-ops.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_ops/cloud_ops.svg",
+   "sha256": "9e77964f5f981bfab6f60e689673de317922a6bdd50e5199402f931a667422e1"
+  },
+  {
+   "id": "cloud-optimization-ai",
+   "name": "cloud optimization ai",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-optimization-ai.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_optimization_ai/cloud_optimization_ai.svg",
+   "sha256": "159dcc4da1ff706460c9ddb91c6b807efc01ed68e76ef7f274e5f85f23eb7c93"
+  },
+  {
+   "id": "cloud-optimization-ai-fleet-routing-api",
+   "name": "cloud optimization ai   fleet routing api",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-optimization-ai-fleet-routing-api.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_optimization_ai_-_fleet_routing_api/cloud_optimization_ai_-_fleet_routing_api.svg",
+   "sha256": "df3bfd1f486dc6bcc6f4d9f166400ce772241f84d2963bf68ebf73d50804ffc7"
+  },
+  {
+   "id": "cloud-router",
+   "name": "cloud router",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-router.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_router/cloud_router.svg",
+   "sha256": "50a348b337bb27166a4fc4043d6812b29cd366fca4b5e7927d6f5cc83484fe22"
+  },
+  {
+   "id": "cloud-routes",
+   "name": "cloud routes",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-routes.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_routes/cloud_routes.svg",
+   "sha256": "33d44d684b6a1347c67a409a21d2dec90e21bd78789a99d935ff8bfd5962dfea"
+  },
+  {
+   "id": "cloud-run-for-anthos",
+   "name": "cloud run for anthos",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-run-for-anthos.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_run_for_anthos/cloud_run_for_anthos.svg",
+   "sha256": "5f0f2450a14bfaa6a9b46c4abaa08deeb912a30db9871430192fe8e98563ae2c"
+  },
+  {
+   "id": "cloud-run-legacy",
+   "name": "cloud run",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-run-legacy.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_run/cloud_run.svg",
+   "sha256": "97e1db08021eecae2a8c5124f382a9b451dc63deecaa87825dc5b396fab59c37"
+  },
+  {
+   "id": "cloud-scheduler",
+   "name": "cloud scheduler",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-scheduler.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_scheduler/cloud_scheduler.svg",
+   "sha256": "f1880ba2be9c1f294af12a7c0594d535f94e860ea9a5262eb94236b133fce5f9"
+  },
+  {
+   "id": "cloud-security-scanner",
+   "name": "cloud security scanner",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-security-scanner.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_security_scanner/cloud_security_scanner.svg",
+   "sha256": "30c19e5737dedd86fe4d84951dfa7f5bebbbee817260e4ffda3e9577c4f36f57"
+  },
+  {
+   "id": "cloud-shell",
+   "name": "cloud shell",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-shell.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_shell/cloud_shell.svg",
+   "sha256": "d616f79ead995482a5c85917cff08ae5db2b558a1211a1273bb51e15b0034d16"
+  },
+  {
+   "id": "cloud-spanner-legacy",
+   "name": "cloud spanner",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-spanner-legacy.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_spanner/cloud_spanner.svg",
+   "sha256": "b8031cbe251d22e7a96258b71bb1505afe5e98f5714b9ea222efcf90c31b7b0a"
+  },
+  {
+   "id": "cloud-sql-legacy",
+   "name": "cloud sql",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-sql-legacy.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_sql/cloud_sql.svg",
+   "sha256": "ffdf8329a098d53313f4a8b10449b33e1cf9f139aaeb4a53e6564c1fad6b8b1b"
+  },
+  {
+   "id": "cloud-storage-legacy",
+   "name": "cloud storage",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-storage-legacy.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_storage/cloud_storage.svg",
+   "sha256": "2528d1bf4dce824c66e5a1421e22e1153e0661b296a48d310886d5cd09921fef"
+  },
+  {
+   "id": "cloud-tasks",
+   "name": "cloud tasks",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-tasks.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_tasks/cloud_tasks.svg",
+   "sha256": "7e74840375dd10029a99e6ce25e41d38c4caae4f13c7af7a8f54fa699823cfbb"
+  },
+  {
+   "id": "cloud-test-lab",
+   "name": "cloud test lab",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-test-lab.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_test_lab/cloud_test_lab.svg",
+   "sha256": "e0819f91374d3b24b2628bba50e86756c09520a079294006f536f48dd1f0e81f"
+  },
+  {
+   "id": "cloud-tpu",
+   "name": "cloud tpu",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-tpu.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_tpu/cloud_tpu.svg",
+   "sha256": "5d61d9bc819d32ecb40fd8da21403ecefe861c4a144b6b0f98b84d914ced91d0"
+  },
+  {
+   "id": "cloud-translation-api",
+   "name": "cloud translation api",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-translation-api.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_translation_api/cloud_translation_api.svg",
+   "sha256": "c2e03e362ea522f543edadc48eda18a9521d3ab1f505ee312586ace3453d75e9"
+  },
+  {
+   "id": "cloud-vision-api",
+   "name": "cloud vision api",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-vision-api.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_vision_api/cloud_vision_api.svg",
+   "sha256": "f08001873aea0639b2dc25727fa8a5c0e67f9c763c2863afe08924defa54ae48"
+  },
+  {
+   "id": "cloud-vpn",
+   "name": "cloud vpn",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/cloud-vpn.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/cloud_vpn/cloud_vpn.svg",
+   "sha256": "868f5c9e0f72db83c0e7fe4be462433ddb98fc6d4b81aff6c5eb42fa44fd3116"
+  },
+  {
+   "id": "compute-engine-legacy",
+   "name": "compute engine",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/compute-engine-legacy.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/compute_engine/compute_engine.svg",
+   "sha256": "080178278d06fc5f87e180e8066a212c5d75236e2d11aaf02d40ce31756872a7"
+  },
+  {
+   "id": "configuration-management",
+   "name": "configuration management",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/configuration-management.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/configuration_management/configuration_management.svg",
+   "sha256": "8da1224ee2ee4e9277ab834e918d1b445d7113b97dc3d09e86851a81258d6f1b"
+  },
+  {
+   "id": "connectivity-test",
+   "name": "connectivity test",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/connectivity-test.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/connectivity_test/connectivity_test.svg",
+   "sha256": "54266612dd0d07eb02be8466ae6da2fc4b59282430a60795eadb2d78cb57d70a"
+  },
+  {
+   "id": "connectors",
+   "name": "connectors",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/connectors.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/connectors/connectors.svg",
+   "sha256": "36d224c5d1d4d204b6644f4ee0ed9f526172c9ee771c5454d0afe8bc3c1cc127"
+  },
+  {
+   "id": "contact-center-ai",
+   "name": "contact center ai",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/contact-center-ai.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/contact_center_ai/contact_center_ai.svg",
+   "sha256": "075252fc69fd6d2bd00a2b34f1045063ea662b9a04ce888bc54e49bb9ef8b8f3"
+  },
+  {
+   "id": "container-optimized-os",
+   "name": "container optimized os",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/container-optimized-os.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/container_optimized_os/container_optimized_os.svg",
+   "sha256": "7258d2f710a811882dfb87ebbd5792106c50441b6e3d961454f7bcd6849073f5"
+  },
+  {
+   "id": "container-registry",
+   "name": "container registry",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/container-registry.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/container_registry/container_registry.svg",
+   "sha256": "aee6fbede1dc486a0ecc24057aab625d106abfd14fdb0a2a25c58aabe49b603d"
+  },
+  {
+   "id": "data-catalog",
+   "name": "data catalog",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/data-catalog.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/data_catalog/data_catalog.svg",
+   "sha256": "3ada42a273d379bdb5b7be0c631faae664d3aebdbf1cadbbe7dba1c229af8f2e"
+  },
+  {
+   "id": "data-labeling",
+   "name": "data labeling",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/data-labeling.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/data_labeling/data_labeling.svg",
+   "sha256": "90324d0197e57b36c4d051fe69b9a400fc06ba344aa023c0192b573d8f3e92bc"
+  },
+  {
+   "id": "data-layers",
+   "name": "data layers",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/data-layers.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/data_layers/data_layers.svg",
+   "sha256": "ddb7b7040e97dbb95113a52b0988746e441e7437a2b468e28efd55564a1fcf38"
+  },
+  {
+   "id": "data-loss-prevention-api",
+   "name": "data loss prevention api",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/data-loss-prevention-api.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/data_loss_prevention_api/data_loss_prevention_api.svg",
+   "sha256": "3b167444bc71bfe226400ea058aa1162a1bdc63ed767a2369a5ff5e1f216a299"
+  },
+  {
+   "id": "data-qna",
+   "name": "data qna",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/data-qna.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/data_qna/data_qna.svg",
+   "sha256": "b745664062a2645344e9bc3f44c7af7e91bcb922d7fb9504b0eb95f701facf44"
+  },
+  {
+   "id": "data-studio",
+   "name": "data studio",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/data-studio.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/data_studio/data_studio.svg",
+   "sha256": "4fde274c43f6588f64f9acdd93a187f34cc89ef2ce6aa8a5df1e4097e12e5d17"
+  },
+  {
+   "id": "data-transfer",
+   "name": "data transfer",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/data-transfer.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/data_transfer/data_transfer.svg",
+   "sha256": "85025873799d2f511cf892442e2988d8f66bdae2621c1a9b6f150af0473bb342"
+  },
+  {
+   "id": "database-migration-service",
+   "name": "database migration service",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/database-migration-service.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/database_migration_service/database_migration_service.svg",
+   "sha256": "71e05e15a69bd1d7f16e3912fc1f4019b3c5a76a8f9075e3ee9003082ff40c46"
+  },
+  {
+   "id": "dataflow",
+   "name": "dataflow",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/dataflow.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/dataflow/dataflow.svg",
+   "sha256": "936ae0c8f4eaf5517f00948ab41607d6b6a222f2b9d32a4810825c73644d17fd"
+  },
+  {
+   "id": "datalab",
+   "name": "datalab",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/datalab.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/datalab/datalab.svg",
+   "sha256": "75259f3d3e719905f12e61f84e363fb505b97aa14dc5f3694e013cc0242eaeba"
+  },
+  {
+   "id": "dataplex",
+   "name": "dataplex",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/dataplex.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/dataplex/dataplex.svg",
+   "sha256": "03ec1d6b4cc32165a1a1ef788eab015adafac37cc73e8bb32308b0684da7ccff"
+  },
+  {
+   "id": "datapol",
+   "name": "datapol",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/datapol.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/datapol/datapol.svg",
+   "sha256": "baeb085de272266abe5c7fd48ddc4faa699110ca8f9752adfac43f23bf13aca6"
+  },
+  {
+   "id": "dataprep",
+   "name": "dataprep",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/dataprep.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/dataprep/dataprep.svg",
+   "sha256": "e0a3fed803c782635a1319519fc891b26bba7019538047eb35175afcf917f516"
+  },
+  {
+   "id": "dataproc",
+   "name": "dataproc",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/dataproc.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/dataproc/dataproc.svg",
+   "sha256": "44e3b84f3312ddceaa4bc959fe14f1d3e054d648fa4e3f420c3857aac4e43e7c"
+  },
+  {
+   "id": "dataproc-metastore",
+   "name": "dataproc metastore",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/dataproc-metastore.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/dataproc_metastore/dataproc_metastore.svg",
+   "sha256": "5f23e24ab8543870a7bc42fbb6ddcd0178c7aa3eb4334e3a3b1d0ac2cc8e9c49"
+  },
+  {
+   "id": "datashare",
+   "name": "datashare",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/datashare.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/datashare/datashare.svg",
+   "sha256": "924b2abcefc724a5cffce20ae3a59b128678404d64f7cd367f211cb10e5c967c"
+  },
+  {
+   "id": "datastore",
+   "name": "datastore",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/datastore.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/datastore/datastore.svg",
+   "sha256": "77f34567b9b45424232e6c2ddc3da2a1b2f3cfc02138217421f29f5829bec31f"
+  },
+  {
+   "id": "datastream",
+   "name": "datastream",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/datastream.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/datastream/datastream.svg",
+   "sha256": "80461076814b60beba26bd030253f6e635bc9cc27c79825a93fd7ff46d77b900"
+  },
+  {
+   "id": "debugger",
+   "name": "debugger",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/debugger.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/debugger/debugger.svg",
+   "sha256": "6fce06bae665cb05b913fff4be5a4c58bce3a2e41d1e03c356accc06411b61e7"
+  },
+  {
+   "id": "developer-portal",
+   "name": "developer portal",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/developer-portal.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/developer_portal/developer_portal.svg",
+   "sha256": "15f58092bc7fc549472489ef5d8651f03bc66bbd6930c408be884d17f74a4c8e"
+  },
+  {
+   "id": "dialogflow",
+   "name": "dialogflow",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/dialogflow.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/dialogflow/dialogflow.svg",
+   "sha256": "abe7d410df23d6d2facff15cd5826bf9d05ce4d4e15490b9dad24dbfc8486f0c"
+  },
+  {
+   "id": "dialogflow-cx",
+   "name": "dialogflow cx",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/dialogflow-cx.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/dialogflow_cx/dialogflow_cx.svg",
+   "sha256": "efc8920ea475e7d8a7f1dfd40782cce36bdbc9639795093b543c07045203d727"
+  },
+  {
+   "id": "dialogflow-insights",
+   "name": "dialogflow insights",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/dialogflow-insights.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/dialogflow_insights/dialogflow_insights.svg",
+   "sha256": "f92a6607fc7867c63a640d807f8112a9ab5122df3ce3a9c993aa0053f8154891"
+  },
+  {
+   "id": "document-ai",
+   "name": "document ai",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/document-ai.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/document_ai/document_ai.svg",
+   "sha256": "e923224022c7aab231ba0e979cfa22ed66abc1a94d047c88d81d104268daff08"
+  },
+  {
+   "id": "early-access-center",
+   "name": "early access center",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/early-access-center.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/early_access_center/early_access_center.svg",
+   "sha256": "18f277ff8d16b4e6b1f6d0bd320436eeac5ba3d6a8a13bfc7ffac8582d835850"
+  },
+  {
+   "id": "error-reporting",
+   "name": "error reporting",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/error-reporting.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/error_reporting/error_reporting.svg",
+   "sha256": "5e4712c2de808451055a2997891954d1d98fca38ab2076a2410c58800189f28e"
+  },
+  {
+   "id": "eventarc",
+   "name": "eventarc",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/eventarc.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/eventarc/eventarc.svg",
+   "sha256": "6c79e4660b5196c064a4dce7f54b2cacfdc25836bfdb2548b9767d5227862248"
+  },
+  {
+   "id": "filestore",
+   "name": "filestore",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/filestore.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/filestore/filestore.svg",
+   "sha256": "cf0dddecd33f3c2a24fa02c238eb9ea9312776e6cd9ef490a612bdf99cd6b309"
+  },
+  {
+   "id": "financial-services-marketplace",
+   "name": "financial services marketplace",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/financial-services-marketplace.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/financial_services_marketplace/financial_services_marketplace.svg",
+   "sha256": "50fd76fe1a65bd0eef5e1caeecfd90fd272dc3e869e60d2e6cee5f5cf71c5308"
+  },
+  {
+   "id": "firestore",
+   "name": "firestore",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/firestore.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/firestore/firestore.svg",
+   "sha256": "2452104b804806ec196f0cac9bb1f8c74884fede904f94f2adf8c7df4256c9d1"
+  },
+  {
+   "id": "fleet-engine",
+   "name": "fleet engine",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/fleet-engine.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/fleet_engine/fleet_engine.svg",
+   "sha256": "9e5bd77bb662547226e533d7ca80681e6e40ee6e6125aeebb43caf662007be67"
+  },
+  {
+   "id": "free-trial",
+   "name": "free trial",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/free-trial.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/free_trial/free_trial.svg",
+   "sha256": "a562229c7b728e71ce62ed40247660070d7aa723e033b8f6cf1c7e34fd5adab7"
+  },
+  {
+   "id": "game-servers",
+   "name": "game servers",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/game-servers.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/game_servers/game_servers.svg",
+   "sha256": "199de2875d91d83fdec56740d16ecd9be88e650058405a63f3704521eb492eb7"
+  },
+  {
+   "id": "gce-systems-management",
+   "name": "gce systems management",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/gce-systems-management.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/gce_systems_management/gce_systems_management.svg",
+   "sha256": "1ee306ed2612f19e7ebf807ad41f98f9749ef5a4bb5caf3726f1e080582dff1a"
+  },
+  {
+   "id": "genomics",
+   "name": "genomics",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/genomics.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/genomics/genomics.svg",
+   "sha256": "21caf4ffc6376f0db0bf9dc1e00f6679aab9a8e28248fc38599243a8c30d5a69"
+  },
+  {
+   "id": "gke-on-prem",
+   "name": "gke on prem",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/gke-on-prem.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/gke_on-prem/gke_on-prem.svg",
+   "sha256": "5cd2adcc0f87b8a6007dd587ceeaeb170d55658425e927f91d6176b34672ff0c"
+  },
+  {
+   "id": "google-cloud-marketplace",
+   "name": "google cloud marketplace",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/google-cloud-marketplace.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/google_cloud_marketplace/google_cloud_marketplace.svg",
+   "sha256": "a2250446bcca206934b36b401a264561abceb950785fb74e1cc4d01683bb1491"
+  },
+  {
+   "id": "google-kubernetes-engine",
+   "name": "google kubernetes engine",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/google-kubernetes-engine.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/google_kubernetes_engine/google_kubernetes_engine.svg",
+   "sha256": "5f44dce3df0483bd0b1a344be07129e054f61cb5fa947aea022db3441c25db5e"
+  },
+  {
+   "id": "google-maps-platform",
+   "name": "google maps platform",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/google-maps-platform.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/google_maps_platform/google_maps_platform.svg",
+   "sha256": "da81dd471a62b10afe118ebeb2479d08aa83d4ba0e4125f165d2ac5635d16b14"
+  },
+  {
+   "id": "healthcare-nlp-api",
+   "name": "healthcare nlp api",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/healthcare-nlp-api.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/healthcare_nlp_api/healthcare_nlp_api.svg",
+   "sha256": "0cce4ee696270cd85060c8eec05e00f3aac632670f5cd05d0ce43ac562bdef42"
+  },
+  {
+   "id": "home",
+   "name": "home",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/home.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/home/home.svg",
+   "sha256": "86ad4a1c0466c1df32c1475003ff2095d5e2b438a953fb2c48adc7fa939f22cd"
+  },
+  {
+   "id": "identity-and-access-management",
+   "name": "identity and access management",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/identity-and-access-management.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/identity_and_access_management/identity_and_access_management.svg",
+   "sha256": "16642a394d5eb28be4ea688870dd6cbbcb943b14a1360ce09ba3a03d561fc1eb"
+  },
+  {
+   "id": "identity-aware-proxy",
+   "name": "identity aware proxy",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/identity-aware-proxy.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/identity-aware_proxy/identity-aware_proxy.svg",
+   "sha256": "69bb9cf492b5d9249257826b8c84fe65579b3467f38728344b02f2bbba3fb977"
+  },
+  {
+   "id": "identity-platform",
+   "name": "identity platform",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/identity-platform.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/identity_platform/identity_platform.svg",
+   "sha256": "17d2d94e7e75dc963c8dedf4a35e282beb10396cb2e75e845a55adf16d3a7cbe"
+  },
+  {
+   "id": "iot-core",
+   "name": "iot core",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/iot-core.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/iot_core/iot_core.svg",
+   "sha256": "70a98d44b7ad5d5b257f50607c4e7fa85cfb46efa3335cebe69fb99fdb6f7fd4"
+  },
+  {
+   "id": "iot-edge",
+   "name": "iot edge",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/iot-edge.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/iot_edge/iot_edge.svg",
+   "sha256": "d316783b7e4060dd5bf4f3ab7c228660670ddd522644cae0409f1a0d0ce1ec47"
+  },
+  {
+   "id": "key-access-justifications",
+   "name": "key access justifications",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/key-access-justifications.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/key_access_justifications/key_access_justifications.svg",
+   "sha256": "114954c767b55d8dcde6103595cb6b6d2eb8df34cc0e431216ba3f182ab55019"
+  },
+  {
+   "id": "key-management-service",
+   "name": "key management service",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/key-management-service.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/key_management_service/key_management_service.svg",
+   "sha256": "036eeb3ddef1f08b8e799dc421a640d67632e0c6404edd290817e84b904eaa58"
+  },
+  {
+   "id": "kuberun",
+   "name": "kuberun",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/kuberun.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/kuberun/kuberun.svg",
+   "sha256": "8582e1a01ea7baf1ef6d595d1fed20680ea5e0dad787acb15a104c4e2ff8e988"
+  },
+  {
+   "id": "launcher",
+   "name": "launcher",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/launcher.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/launcher/launcher.svg",
+   "sha256": "35cbd9b9b505fccf42d63fa7b674780e9add86b3f995e6ee99ceacad168873aa"
+  },
+  {
+   "id": "local-ssd",
+   "name": "local ssd",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/local-ssd.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/local_ssd/local_ssd.svg",
+   "sha256": "9eb67aebfce0785b4ba457d7187870a3dff3bda294adb8804406d308a2162be5"
+  },
+  {
+   "id": "looker-legacy",
+   "name": "looker",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/looker-legacy.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/looker/looker.svg",
+   "sha256": "4b1c90b24d4a5170a815127a68859877ace8d9a824e9b9d1ef8dfe5215f31ab1"
+  },
+  {
+   "id": "managed-service-for-microsoft-active-directory",
+   "name": "managed service for microsoft active directory",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/managed-service-for-microsoft-active-directory.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/managed_service_for_microsoft_active_directory/managed_service_for_microsoft_active_directory.svg",
+   "sha256": "10b922e1c6c8e93a99c6fb87ed5f7c80f2026826c19cc96be28961c5e06afa71"
+  },
+  {
+   "id": "media-translation-api",
+   "name": "media translation api",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/media-translation-api.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/media_translation_api/media_translation_api.svg",
+   "sha256": "d8db4d5cfb2bd2d47e366f7886576cda477447ac2112325ed7f8916a12d67e04"
+  },
+  {
+   "id": "memorystore",
+   "name": "memorystore",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/memorystore.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/memorystore/memorystore.svg",
+   "sha256": "e1e14c0fa7a2a155cd5626226ea7b49b933641d384c86aa38b1a4fd9470fab6a"
+  },
+  {
+   "id": "migrate-for-anthos",
+   "name": "migrate for anthos",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/migrate-for-anthos.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/migrate_for_anthos/migrate_for_anthos.svg",
+   "sha256": "e3fad6d94f8b7d0398727af013e8082abc0076690ac00a4981cfd5bc1501ad2e"
+  },
+  {
+   "id": "migrate-for-compute-engine",
+   "name": "migrate for compute engine",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/migrate-for-compute-engine.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/migrate_for_compute_engine/migrate_for_compute_engine.svg",
+   "sha256": "ed1e9f064caad2e3be7e1f5f0bf4e9b85e37f64fb779892df213eaa75af685e0"
+  },
+  {
+   "id": "my-cloud",
+   "name": "my cloud",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/my-cloud.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/my_cloud/my_cloud.svg",
+   "sha256": "1f614000886b10e7766bab9f73ca07e507f01618eeec130e848ec0d79708f7eb"
+  },
+  {
+   "id": "network-connectivity-center",
+   "name": "network connectivity center",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/network-connectivity-center.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/network_connectivity_center/network_connectivity_center.svg",
+   "sha256": "f070cf01c5ddc277b4c43f955f61d68d9e71c67eec892b7d9a1e6c95e0304e41"
+  },
+  {
+   "id": "network-intelligence-center",
+   "name": "network intelligence center",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/network-intelligence-center.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/network_intelligence_center/network_intelligence_center.svg",
+   "sha256": "42db43d042449bc84187b6ff7b061728ec6aaf656665d9a3d3267b6d71bea20f"
+  },
+  {
+   "id": "network-security",
+   "name": "network security",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/network-security.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/network_security/network_security.svg",
+   "sha256": "44e5748abffffa6cd6149a6984be5e57de216f5f26718d42f097fbd20ef78e86"
+  },
+  {
+   "id": "network-tiers",
+   "name": "network tiers",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/network-tiers.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/network_tiers/network_tiers.svg",
+   "sha256": "5b22a6209c1dca17d7c78f361a6b8bcfcacab54976c630c66de292e335e22342"
+  },
+  {
+   "id": "network-topology",
+   "name": "network topology",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/network-topology.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/network_topology/network_topology.svg",
+   "sha256": "a34e8843ee8fc0bd589e236a1da456a6aa073de4c732f308c574cf86c7059420"
+  },
+  {
+   "id": "onboarding",
+   "name": "onboarding",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/onboarding.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/onboarding/onboarding.svg",
+   "sha256": "2ea48a5a335a7782e27a823e05f29711eeec520cd56b4c4d62d1218e752f5dbf"
+  },
+  {
+   "id": "os-configuration-management",
+   "name": "os configuration management",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/os-configuration-management.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/os_configuration_management/os_configuration_management.svg",
+   "sha256": "469aebe5d847f6cf3822625f8b61f4f56bd1f2a3a585f8ad152f6b56b9102a4a"
+  },
+  {
+   "id": "os-inventory-management",
+   "name": "os inventory management",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/os-inventory-management.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/os_inventory_management/os_inventory_management.svg",
+   "sha256": "805c6fb5d730308eb9bb4c10fd9c5e4611e6d7f7772ed4bd24fb927ac76b4f63"
+  },
+  {
+   "id": "os-patch-management",
+   "name": "os patch management",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/os-patch-management.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/os_patch_management/os_patch_management.svg",
+   "sha256": "d676376770c42f0d338efbf0d3b11c3d5a6a0730b0f427a3a964da38aac61506"
+  },
+  {
+   "id": "partner-interconnect",
+   "name": "partner interconnect",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/partner-interconnect.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/partner_interconnect/partner_interconnect.svg",
+   "sha256": "f14ae2cf8ed4c2b615e6f6999e5293dc67ba21f23e9f48f9a24ac7c41d022be6"
+  },
+  {
+   "id": "partner-portal",
+   "name": "partner portal",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/partner-portal.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/partner_portal/partner_portal.svg",
+   "sha256": "92da9bf4e959c7cebfd8953d9cf23503fdbbfd7998879200303adfc376508820"
+  },
+  {
+   "id": "performance-dashboard",
+   "name": "performance dashboard",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/performance-dashboard.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/performance_dashboard/performance_dashboard.svg",
+   "sha256": "66fcc74f88f740a20d7980d606a468e213d16af46e41f497bf5d5e5f23a74916"
+  },
+  {
+   "id": "permissions",
+   "name": "permissions",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/permissions.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/permissions/permissions.svg",
+   "sha256": "a1cd73ffbeec1a78d23448c28a887857e7cf2ef900fbeefbb2dda0e9ffb52a6c"
+  },
+  {
+   "id": "persistent-disk",
+   "name": "persistent disk",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/persistent-disk.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/persistent_disk/persistent_disk.svg",
+   "sha256": "f4a212dd847bdfa9acc09cfc37b12ca8034e61d0c9257944234acdf35b2d213c"
+  },
+  {
+   "id": "phishing-protection",
+   "name": "phishing protection",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/phishing-protection.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/phishing_protection/phishing_protection.svg",
+   "sha256": "e98eb84fde6677c953caee65928f6f59b6030c7c8415fa53aaa4a0918d8fb9d5"
+  },
+  {
+   "id": "policy-analyzer",
+   "name": "policy analyzer",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/policy-analyzer.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/policy_analyzer/policy_analyzer.svg",
+   "sha256": "f8f1490a4df693ce4dc3deddbd38f9a5f2d9231f45dd134e64d286d0172437a2"
+  },
+  {
+   "id": "premium-network-tier",
+   "name": "premium network tier",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/premium-network-tier.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/premium_network_tier/premium_network_tier.svg",
+   "sha256": "f16793415a2bfa51bbda4da346749a6bfe54371ea4813e98abf44239080f1b4f"
+  },
+  {
+   "id": "private-connectivity",
+   "name": "private connectivity",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/private-connectivity.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/private_connectivity/private_connectivity.svg",
+   "sha256": "5db684565c01a45d5fe7fd1b4e6ffe7b43eb323436f8f397ccf2762ec39939cb"
+  },
+  {
+   "id": "private-service-connect",
+   "name": "private service connect",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/private-service-connect.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/private_service_connect/private_service_connect.svg",
+   "sha256": "afa5eaa1a3f17d3c0d6a32a7f617253a1b7724f5b47ec080d99f7792c7b42acf"
+  },
+  {
+   "id": "producer-portal",
+   "name": "producer portal",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/producer-portal.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/producer_portal/producer_portal.svg",
+   "sha256": "c7c3ab48c06a1dc11c60bf5e12c1fc4d9a679342349c9b044b1eae4fd5cdf2cc"
+  },
+  {
+   "id": "profiler",
+   "name": "profiler",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/profiler.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/profiler/profiler.svg",
+   "sha256": "77691c35349139227653534b008b5067739ed558534f604d02415934901de6ac"
+  },
+  {
+   "id": "project",
+   "name": "project",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/project.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/project/project.svg",
+   "sha256": "a40b2f8cbb4a7b5e1f2b6dfc50c3167c73e41e9af7e5a6a4026e2e2933d9fb4e"
+  },
+  {
+   "id": "pubsub",
+   "name": "pubsub",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/pubsub.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/pubsub/pubsub.svg",
+   "sha256": "bd71cb16b24c5a368fc7913525e093f03e426d06e8917c1f255187e9f6c10217"
+  },
+  {
+   "id": "quantum-engine",
+   "name": "quantum engine",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/quantum-engine.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/quantum_engine/quantum_engine.svg",
+   "sha256": "4cd4848b289c9d386176114eec0255cd8259c269b06f44a1b0361f6e99c914aa"
+  },
+  {
+   "id": "quotas",
+   "name": "quotas",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/quotas.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/quotas/quotas.svg",
+   "sha256": "12f10ca10cea8ee70e23d489e7e7375239b4faf617692e52ee9100a391f83a57"
+  },
+  {
+   "id": "real-world-insights",
+   "name": "real world insights",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/real-world-insights.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/real-world_insights/real-world_insights.svg",
+   "sha256": "8f84970ade9b9e38835706a4a17c575779d633d41d96e0c328edcac2b0533f39"
+  },
+  {
+   "id": "recommendations-ai",
+   "name": "recommendations ai",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/recommendations-ai.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/recommendations_ai/recommendations_ai.svg",
+   "sha256": "bdd8959a8e5eaa1acfe136b57ca58387bf6976fdfd26eefb5b3cc7224e62bbf2"
+  },
+  {
+   "id": "release-notes",
+   "name": "release notes",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/release-notes.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/release_notes/release_notes.svg",
+   "sha256": "8dc04322f96e0d21471230f4c5109fa07269a1579e1f47429d331f824e8a8d5b"
+  },
+  {
+   "id": "retail-api",
+   "name": "retail api",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/retail-api.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/retail_api/retail_api.svg",
+   "sha256": "72c29e2184cf2ad0ae2e5eac124ce6c5530ec2ca3cf833e8c9255f6ab9755b48"
+  },
+  {
+   "id": "risk-manager",
+   "name": "risk manager",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/risk-manager.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/risk_manager/risk_manager.svg",
+   "sha256": "445184934b3f153045e5782b52312418e2f2fbd69cb5717b5672b6541390b46a"
+  },
+  {
+   "id": "runtime-config",
+   "name": "runtime config",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/runtime-config.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/runtime_config/runtime_config.svg",
+   "sha256": "7a8c04d3d333a747cd0e4008903c49ff70281e82c7fdcd166e37c301fe5f11c6"
+  },
+  {
+   "id": "secret-manager",
+   "name": "secret manager",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/secret-manager.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/secret_manager/secret_manager.svg",
+   "sha256": "194b0f81870b265064680007e472d011797d01fbdede0bb4ade28e025a22e7b6"
+  },
+  {
+   "id": "security",
+   "name": "security",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/security.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/security/security.svg",
+   "sha256": "658c6badb825280ad01f046c7293b3c0f6fb33791d1823e8477aded7307c9d1c"
+  },
+  {
+   "id": "security-command-center-legacy",
+   "name": "security command center",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/security-command-center-legacy.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/security_command_center/security_command_center.svg",
+   "sha256": "5df295072647afcd5fea514553c4ffd7283996ffa3466a802c7ed6075484786c"
+  },
+  {
+   "id": "security-health-advisor",
+   "name": "security health advisor",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/security-health-advisor.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/security_health_advisor/security_health_advisor.svg",
+   "sha256": "f4f02f50691f4dfa65861850d3f410992e545786e0f61f78d48aaf1b2bf61d36"
+  },
+  {
+   "id": "security-key-enforcement",
+   "name": "security key enforcement",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/security-key-enforcement.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/security_key_enforcement/security_key_enforcement.svg",
+   "sha256": "89bd8708fe5281651fe7dbf56ea7f53f043ab364f96ed7a3a9005167f4c8b854"
+  },
+  {
+   "id": "service-discovery",
+   "name": "service discovery",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/service-discovery.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/service_discovery/service_discovery.svg",
+   "sha256": "688ef5c0776fd2c5df224af4048956d576f3d591b8669998a40d1cf591c1a3f9"
+  },
+  {
+   "id": "speech-to-text",
+   "name": "speech to text",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/speech-to-text.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/speech-to-text/speech-to-text.svg",
+   "sha256": "4500f0f324e32c72b370d00edf84d981ad93c308e07a963e08520632bd425cc1"
+  },
+  {
+   "id": "stackdriver",
+   "name": "stackdriver",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/stackdriver.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/stackdriver/stackdriver.svg",
+   "sha256": "3c08c4b12f562362fc8c1d74aa686630a2c85fd384ce20078f68bc9113d4a2c8"
+  },
+  {
+   "id": "standard-network-tier",
+   "name": "standard network tier",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/standard-network-tier.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/standard_network_tier/standard_network_tier.svg",
+   "sha256": "168e0a60c4c2737f115f3466fa437b675804b9b9edb728e126c65fb83016fbaf"
+  },
+  {
+   "id": "stream-suite",
+   "name": "stream suite",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/stream-suite.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/stream_suite/stream_suite.svg",
+   "sha256": "71a47ae985b9365ce5ec70dda2b905bfcc6a458c783c0519721bccc1df7aa55f"
+  },
+  {
+   "id": "support",
+   "name": "support",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/support.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/support/support.svg",
+   "sha256": "c647d129a90687dcd456edf5c57c582771f68bec9f8f2f3e127e8dffbb20e276"
+  },
+  {
+   "id": "tensorflow-enterprise",
+   "name": "tensorflow enterprise",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/tensorflow-enterprise.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/tensorflow_enterprise/tensorflow_enterprise.svg",
+   "sha256": "bbd608bacc35637b24261737d7a5ca957c27f29f09059a91dbcdab2ef4daac41"
+  },
+  {
+   "id": "text-to-speech",
+   "name": "text to speech",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/text-to-speech.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/text-to-speech/text-to-speech.svg",
+   "sha256": "14769238d52fa64f2c02585bc24eadda2f1064f0b22c621a1aeb074b201ebb10"
+  },
+  {
+   "id": "tools-for-powershell",
+   "name": "tools for powershell",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/tools-for-powershell.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/tools_for_powershell/tools_for_powershell.svg",
+   "sha256": "ca35e6795104226d55083363aecb0aec747936609c861525a2ac5157c59931be"
+  },
+  {
+   "id": "trace",
+   "name": "trace",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/trace.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/trace/trace.svg",
+   "sha256": "c8434efa76a4d0d1bcf29e5a2d1d7d520efec8c6c6e4faf7655a423369471405"
+  },
+  {
+   "id": "traffic-director",
+   "name": "traffic director",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/traffic-director.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/traffic_director/traffic_director.svg",
+   "sha256": "734f44cb7845aa8cad376d230e9472da5b55e4e094293e2b0643fdc6fa1dd0fa"
+  },
+  {
+   "id": "transfer",
+   "name": "transfer",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/transfer.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/transfer/transfer.svg",
+   "sha256": "8b4ab1f96619579ed677783a730035ae97573d1765b22c463b2a48d2655410b4"
+  },
+  {
+   "id": "transfer-appliance",
+   "name": "transfer appliance",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/transfer-appliance.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/transfer_appliance/transfer_appliance.svg",
+   "sha256": "1dd5d605ad9e96aa729a0a6b0779e181b312db0219c11f3534a5f07e1598044b"
+  },
+  {
+   "id": "user-preferences",
+   "name": "user preferences",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/user-preferences.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/user_preferences/user_preferences.svg",
+   "sha256": "7bbe52b56f562b1cc14fb68e9e6790d7d43699263d1c6e703a302ee1c04e47f6"
+  },
+  {
+   "id": "vertexai",
+   "name": "vertexai",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/vertexai.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/vertexai/vertexai.svg",
+   "sha256": "d6a643fad5de9e513bba05af22b685572e5e06b92c3e5495b7ecf56666ff79c0"
+  },
+  {
+   "id": "video-intelligence-api",
+   "name": "video intelligence api",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/video-intelligence-api.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/video_intelligence_api/video_intelligence_api.svg",
+   "sha256": "6056c4ae1f9c243dcdfdfdc916d37ce4e11df2d61f9f43b9fd2ce888a669f9ca"
+  },
+  {
+   "id": "virtual-private-cloud",
+   "name": "virtual private cloud",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/virtual-private-cloud.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/virtual_private_cloud/virtual_private_cloud.svg",
+   "sha256": "68ea0f50027d41b4a2733b3cbd7d1ecb825f0fbe230f64ff31bc9c97e22a79b4"
+  },
+  {
+   "id": "visual-inspection",
+   "name": "visual inspection",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/visual-inspection.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/visual_inspection/visual_inspection.svg",
+   "sha256": "864086d54cd7cca0985f923e24ae4a385ba9c0c10b7048fcb39c8857d6851204"
+  },
+  {
+   "id": "vmware-engine",
+   "name": "vmware engine",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/vmware-engine.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/vmware_engine/vmware_engine.svg",
+   "sha256": "794274db875d8b170068f2bcff6ead796490442a35181357fa76bcebc9253695"
+  },
+  {
+   "id": "web-risk",
+   "name": "web risk",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/web-risk.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/web_risk/web_risk.svg",
+   "sha256": "4a97e206b9a9c2409f690b3251664ac9edf9d0b6d43f026396f6c0119ac8364f"
+  },
+  {
+   "id": "web-security-scanner",
+   "name": "web security scanner",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/web-security-scanner.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/web_security_scanner/web_security_scanner.svg",
+   "sha256": "035f2007bf3fe88d27d640479eb2c2b2bc0e6f1388bc93c0c064587d13ae60f0"
+  },
+  {
+   "id": "workflows",
+   "name": "workflows",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/workflows.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/workflows/workflows.svg",
+   "sha256": "8ec518111280257e81947f01461b90279a88c1676eeb3f78f8c00c81a8dc607c"
+  },
+  {
+   "id": "workload-identity-pool",
+   "name": "workload identity pool",
+   "aliases": [],
+   "category": "legacy",
+   "file": "legacy/workload-identity-pool.svg",
+   "source_path": "gcp/official-icon-library-2025/google-cloud-legacy-icons/workload_identity_pool/workload_identity_pool.svg",
+   "sha256": "4c7d40097e76d97ccd1604155f2e90d054ae481bb4c8edce72da7bc722b6c1a7"
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+  "about": "What the az CLI answers for a small subscription: a hub network peered with a spoke, a VM behind its network interface, an AKS cluster with two pools, a web app in the spoke, an SQL database reached through a private endpoint, network security groups on the hub's subnet (SSH from the internet) and the cluster's (HTTPS from anyone, SSH from the jump box's application security group). Keys are the call without --output, --only-show-errors, --subscription and the program name.",
+  "calls": {
+    "account show": {"id": "00000000-0000-0000-0000-000000000001", "name": "Contoso Production"},
+    "group list": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-hub", "name": "rg-hub", "location": "westeurope"},
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app", "name": "rg-app", "location": "westeurope"}
+    ],
+    "network vnet list": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-hub/providers/Microsoft.Network/virtualNetworks/vnet-hub", "name": "vnet-hub", "location": "westeurope", "resourceGroup": "rg-hub",
+       "addressSpace": {"addressPrefixes": ["10.0.0.0/16"]},
+       "subnets": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-hub/providers/Microsoft.Network/virtualNetworks/vnet-hub/subnets/snet-shared", "name": "snet-shared", "addressPrefix": "10.0.1.0/24", "resourceGroup": "rg-hub"}]},
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/virtualNetworks/vnet-app", "name": "vnet-app", "location": "westeurope", "resourceGroup": "rg-app",
+       "addressSpace": {"addressPrefixes": ["10.1.0.0/16"]},
+       "subnets": [
+         {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/virtualNetworks/vnet-app/subnets/snet-aks", "name": "snet-aks", "addressPrefix": "10.1.0.0/22", "resourceGroup": "rg-app"},
+         {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/virtualNetworks/vnet-app/subnets/snet-web", "name": "snet-web", "addressPrefix": "10.1.4.0/24", "resourceGroup": "rg-app"},
+         {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/virtualNetworks/vnet-app/subnets/snet-pe", "name": "snet-pe", "addressPrefix": "10.1.5.0/24", "resourceGroup": "rg-app"}]}
+    ],
+    "network vnet peering list --vnet-name vnet-hub --resource-group rg-hub": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-hub/providers/Microsoft.Network/virtualNetworks/vnet-hub/virtualNetworkPeerings/hub-to-app", "name": "hub-to-app", "resourceGroup": "rg-hub",
+       "remoteVirtualNetwork": {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/virtualNetworks/vnet-app"}}
+    ],
+    "network nic list": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-hub/providers/Microsoft.Network/networkInterfaces/nic-jump", "name": "nic-jump", "resourceGroup": "rg-hub", "location": "westeurope",
+       "ipConfigurations": [{"subnet": {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/RG-HUB/providers/Microsoft.Network/virtualNetworks/vnet-hub/subnets/snet-shared"},
+                             "privateIPAddress": "10.0.1.4",
+                             "applicationSecurityGroups": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/RG-HUB/providers/Microsoft.Network/applicationSecurityGroups/asg-jump"}]}]}
+    ],
+    "network asg list": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-hub/providers/Microsoft.Network/applicationSecurityGroups/asg-jump", "name": "asg-jump", "resourceGroup": "rg-hub", "location": "westeurope"}
+    ],
+    "network nsg list": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-hub/providers/Microsoft.Network/networkSecurityGroups/nsg-shared", "name": "nsg-shared", "resourceGroup": "rg-hub", "location": "westeurope",
+       "securityRules": [
+         {"name": "ssh-in", "priority": 100, "direction": "Inbound", "access": "Allow", "protocol": "Tcp",
+          "sourceAddressPrefix": "Internet", "sourcePortRange": "*", "destinationAddressPrefix": "*", "destinationPortRange": "22",
+          "sourceAddressPrefixes": [], "destinationAddressPrefixes": [], "destinationPortRanges": []}],
+       "defaultSecurityRules": [
+         {"name": "AllowVnetInBound", "priority": 65000, "direction": "Inbound", "access": "Allow", "protocol": "*",
+          "sourceAddressPrefix": "VirtualNetwork", "sourcePortRange": "*", "destinationAddressPrefix": "VirtualNetwork", "destinationPortRange": "*"},
+         {"name": "DenyAllInBound", "priority": 65500, "direction": "Inbound", "access": "Deny", "protocol": "*",
+          "sourceAddressPrefix": "*", "sourcePortRange": "*", "destinationAddressPrefix": "*", "destinationPortRange": "*"}],
+       "subnets": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/RG-HUB/providers/Microsoft.Network/virtualNetworks/vnet-hub/subnets/snet-shared"}]},
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/networkSecurityGroups/nsg-aks", "name": "nsg-aks", "resourceGroup": "rg-app", "location": "westeurope",
+       "securityRules": [
+         {"name": "https-in", "priority": 100, "direction": "Inbound", "access": "Allow", "protocol": "Tcp",
+          "sourceAddressPrefix": "*", "sourcePortRange": "*", "destinationAddressPrefix": "*", "destinationPortRange": "443"},
+         {"name": "ssh-from-jump", "priority": 110, "direction": "Inbound", "access": "Allow", "protocol": "Tcp",
+          "sourceApplicationSecurityGroups": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-hub/providers/Microsoft.Network/applicationSecurityGroups/asg-jump"}],
+          "sourcePortRange": "*", "destinationAddressPrefix": "*", "destinationPortRange": "22"},
+         {"name": "deny-rest", "priority": 4096, "direction": "Inbound", "access": "Deny", "protocol": "*",
+          "sourceAddressPrefix": "*", "sourcePortRange": "*", "destinationAddressPrefix": "*", "destinationPortRange": "*"}],
+       "subnets": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/virtualNetworks/vnet-app/subnets/snet-aks"}]}
+    ],
+    "network route-table list": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/routeTables/rt-app-egress", "name": "rt-app-egress", "resourceGroup": "rg-app",
+       "location": "westeurope",
+       "subnets": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/virtualNetworks/vnet-app/subnets/snet-aks"},
+                   {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/virtualNetworks/vnet-app/subnets/snet-web"}]}
+    ],
+    "vm list": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-hub/providers/Microsoft.Compute/virtualMachines/vm-jump", "name": "vm-jump", "resourceGroup": "rg-hub", "location": "westeurope",
+       "hardwareProfile": {"vmSize": "Standard_B2s"}, "storageProfile": {"osDisk": {"osType": "Linux"}},
+       "networkProfile": {"networkInterfaces": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-hub/providers/Microsoft.Network/networkInterfaces/nic-jump"}]}}
+    ],
+    "aks list": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.ContainerService/managedClusters/aks-app", "name": "aks-app", "resourceGroup": "rg-app", "location": "westeurope",
+       "agentPoolProfiles": [
+         {"name": "system", "vmSize": "Standard_D4s_v5", "vnetSubnetId": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/virtualNetworks/vnet-app/subnets/snet-aks"},
+         {"name": "user", "vmSize": "Standard_D8s_v5", "vnetSubnetId": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/virtualNetworks/vnet-app/subnets/snet-aks"}]}
+    ],
+    "webapp list": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Web/sites/app-shop", "name": "app-shop", "resourceGroup": "rg-app", "location": "westeurope", "kind": "app,linux",
+       "virtualNetworkSubnetId": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/virtualNetworks/vnet-app/subnets/snet-web"}
+    ],
+    "sql server list": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Sql/servers/sql-shop", "name": "sql-shop", "resourceGroup": "rg-app", "location": "westeurope"}
+    ],
+    "sql db list --server sql-shop --resource-group rg-app": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Sql/servers/sql-shop/databases/master", "name": "master", "resourceGroup": "rg-app"},
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Sql/servers/sql-shop/databases/shop", "name": "shop", "resourceGroup": "rg-app", "location": "westeurope", "currentSku": {"name": "S1"}}
+    ],
+    "network private-endpoint list": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/privateEndpoints/pe-sql", "name": "pe-sql", "resourceGroup": "rg-app", "location": "westeurope",
+       "subnet": {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Network/virtualNetworks/vnet-app/subnets/snet-pe"},
+       "privateLinkServiceConnections": [{"privateLinkServiceId": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.Sql/servers/sql-shop"}]}
+    ],
+    "keyvault list": [
+      {"id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-app/providers/Microsoft.KeyVault/vaults/kv-shop", "name": "kv-shop", "resourceGroup": "rg-app", "location": "westeurope"}
+    ],
+    "redis list": {"__error__": "ERROR: (AuthorizationFailed) The client does not have authorization to perform action 'Microsoft.Cache/redis/read'"}
+  }
+}

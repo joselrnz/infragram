@@ -1,0 +1,258 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "aws-three-tier-web",
+  "title": "Three-tier web application on AWS",
+  "description": "Users reach a load balancer in public subnets; web servers in private subnets talk to a Multi-AZ database.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "aws",
+      "enabled": true
+    }
+  ],
+  "default_library": "aws",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "AWS architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Three-tier web application on AWS",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "users",
+        "name": "Users",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": "browsers and mobile"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "route53",
+            "kind": "dotted",
+            "label": "DNS"
+          },
+          {
+            "target": "alb",
+            "kind": "solid",
+            "label": "HTTPS"
+          }
+        ]
+      },
+      {
+        "id": "aws-cloud",
+        "name": "AWS Cloud",
+        "type": "cloud",
+        "attributes": {
+          "editor_frame_group": "aws"
+        },
+        "children": [
+          {
+            "id": "region",
+            "name": "us-east-1",
+            "type": "region",
+            "attributes": {
+              "editor_frame_group": "aws"
+            },
+            "children": [
+              {
+                "id": "route53",
+                "name": "Amazon Route 53",
+                "type": "service",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "route-53",
+                  "icon_ref": "aws:route-53"
+                },
+                "attributes": {
+                  "detail": "public hosted zone"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "vpc",
+                "name": "VPC · 10.0.0.0/16",
+                "type": "vpc",
+                "attributes": {
+                  "editor_frame_group": "aws",
+                  "flow": "row"
+                },
+                "children": [
+                  {
+                    "id": "az-a",
+                    "name": "Availability Zone A",
+                    "type": "zone",
+                    "attributes": {
+                      "editor_frame_group": "aws",
+                      "arrange": "manual"
+                    },
+                    "children": [
+                      {
+                        "id": "public-a",
+                        "name": "Public subnet · 10.0.0.0/24",
+                        "type": "subnet-public",
+                        "attributes": {
+                          "editor_frame_group": "aws"
+                        },
+                        "children": [
+                          {
+                            "id": "alb",
+                            "name": "Application Load Balancer",
+                            "type": "service",
+                            "component": {
+                              "provider": "aws",
+                              "service_id": "elastic-load-balancing",
+                              "icon_ref": "aws:elastic-load-balancing"
+                            },
+                            "attributes": {
+                              "detail": "internet-facing"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "web-a",
+                                "kind": "solid",
+                                "label": "HTTP"
+                              },
+                              {
+                                "target": "web-b",
+                                "kind": "solid",
+                                "label": "HTTP"
+                              }
+                            ]
+                          }
+                        ],
+                        "connections": []
+                      },
+                      {
+                        "id": "private-a",
+                        "name": "Private subnet · 10.0.1.0/24",
+                        "type": "subnet-private",
+                        "attributes": {
+                          "editor_frame_group": "aws"
+                        },
+                        "children": [
+                          {
+                            "id": "web-a",
+                            "name": "Amazon EC2",
+                            "type": "service",
+                            "component": {
+                              "provider": "aws",
+                              "service_id": "ec2",
+                              "icon_ref": "aws:ec2"
+                            },
+                            "attributes": {
+                              "detail": "web tier"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "db",
+                                "kind": "solid",
+                                "label": "SQL"
+                              }
+                            ]
+                          }
+                        ],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  },
+                  {
+                    "id": "az-b",
+                    "name": "Availability Zone B",
+                    "type": "zone",
+                    "attributes": {
+                      "editor_frame_group": "aws",
+                      "arrange": "manual"
+                    },
+                    "children": [
+                      {
+                        "id": "public-b",
+                        "name": "Public subnet · 10.0.2.0/24",
+                        "type": "subnet-public",
+                        "attributes": {
+                          "editor_frame_group": "aws"
+                        },
+                        "children": [],
+                        "connections": []
+                      },
+                      {
+                        "id": "private-b",
+                        "name": "Private subnet · 10.0.3.0/24",
+                        "type": "subnet-private",
+                        "attributes": {
+                          "editor_frame_group": "aws"
+                        },
+                        "children": [
+                          {
+                            "id": "web-b",
+                            "name": "Amazon EC2",
+                            "type": "service",
+                            "component": {
+                              "provider": "aws",
+                              "service_id": "ec2",
+                              "icon_ref": "aws:ec2"
+                            },
+                            "attributes": {
+                              "detail": "web tier"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "db",
+                                "kind": "solid",
+                                "label": "SQL"
+                              }
+                            ]
+                          },
+                          {
+                            "id": "db",
+                            "name": "Amazon RDS",
+                            "type": "service",
+                            "component": {
+                              "provider": "aws",
+                              "service_id": "rds",
+                              "icon_ref": "aws:rds"
+                            },
+                            "attributes": {
+                              "detail": "Multi-AZ PostgreSQL"
+                            },
+                            "children": [],
+                            "connections": []
+                          }
+                        ],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

@@ -1,0 +1,404 @@
+{
+  "schema_version": 2,
+  "kind": "platform",
+  "slug": "proxmox-homelab-cluster",
+  "title": "Proxmox VE homelab cluster",
+  "description": "pfSense fronts a three-node Proxmox cluster: a reverse proxy VM publishes services; QEMU VMs and LXC containers run Jellyfin, Uptime Kuma and an MQTT broker; Ceph provides shared storage, Proxmox Backup Server syncs to a TrueNAS box, and vmbr0 carries the LAN with Pi-hole and an IoT VLAN with Home Assistant.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "proxmox",
+      "enabled": true
+    },
+    {
+      "id": "onprem",
+      "enabled": true
+    }
+  ],
+  "default_library": "proxmox",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Proxmox VE reference architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Proxmox VE homelab cluster",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "internet",
+        "name": "Internet",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-internet",
+          "icon_ref": "infragram:public-internet"
+        },
+        "attributes": {
+          "detail": "ISP"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "pfsense",
+            "kind": "solid",
+            "label": "WAN",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "clients",
+        "name": "Home clients",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "browser-client",
+          "icon_ref": "infragram:browser-client"
+        },
+        "attributes": {
+          "detail": "laptops · phones"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "pfsense",
+            "kind": "solid",
+            "label": "LAN",
+            "direction": "forward"
+          },
+          {
+            "target": "pihole",
+            "kind": "solid",
+            "label": "DNS",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "dc",
+        "name": "Datacenter · home",
+        "type": "site",
+        "attributes": {
+          "editor_frame_group": "proxmox"
+        },
+        "children": [
+          {
+            "id": "bridge",
+            "name": "Bridge · vmbr0",
+            "type": "network",
+            "attributes": {
+              "editor_frame_group": "proxmox"
+            },
+            "children": [
+              {
+                "id": "pfsense",
+                "name": "pfSense",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "generic-network-firewall",
+                  "icon_ref": "onprem:generic-network-firewall"
+                },
+                "attributes": {
+                  "detail": "firewall · router"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "proxy",
+                    "kind": "solid",
+                    "label": "port forward",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "vlan-lan",
+                "name": "VLAN 10 · LAN",
+                "type": "subnet-private",
+                "attributes": {
+                  "editor_frame_group": "proxmox"
+                },
+                "children": [
+                  {
+                    "id": "pihole",
+                    "name": "Pi-hole",
+                    "type": "service",
+                    "component": {
+                      "provider": "infragram",
+                      "service_id": "brand-pihole",
+                      "icon_ref": "infragram:brand-pihole"
+                    },
+                    "attributes": {
+                      "detail": "DNS · ad blocking"
+                    },
+                    "children": [],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "vlan-iot",
+                "name": "VLAN 20 · IoT",
+                "type": "subnet-private",
+                "attributes": {
+                  "editor_frame_group": "proxmox"
+                },
+                "children": [
+                  {
+                    "id": "ha",
+                    "name": "Home Assistant",
+                    "type": "service",
+                    "component": {
+                      "provider": "infragram",
+                      "service_id": "brand-home-assistant",
+                      "icon_ref": "infragram:brand-home-assistant"
+                    },
+                    "attributes": {
+                      "detail": "automation"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "mqtt",
+                        "kind": "solid",
+                        "label": "MQTT",
+                        "direction": "forward"
+                      }
+                    ]
+                  }
+                ],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "cluster",
+            "name": "Cluster · pve (corosync · HA)",
+            "type": "cluster",
+            "attributes": {
+              "editor_frame_group": "proxmox"
+            },
+            "children": [
+              {
+                "id": "node1",
+                "name": "Node · pve1",
+                "type": "server-group",
+                "attributes": {
+                  "editor_frame_group": "proxmox"
+                },
+                "children": [
+                  {
+                    "id": "proxy",
+                    "name": "Reverse proxy VM",
+                    "type": "service",
+                    "component": {
+                      "provider": "proxmox",
+                      "service_id": "entry-service",
+                      "icon_ref": "proxmox:entry-service"
+                    },
+                    "attributes": {
+                      "detail": "Nginx Proxy Manager"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "jellyfin",
+                        "kind": "solid",
+                        "label": "HTTPS",
+                        "direction": "forward"
+                      },
+                      {
+                        "target": "kuma",
+                        "kind": "solid",
+                        "label": "HTTPS",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "jellyfin",
+                    "name": "Jellyfin",
+                    "type": "service",
+                    "component": {
+                      "provider": "infragram",
+                      "service_id": "brand-jellyfin",
+                      "icon_ref": "infragram:brand-jellyfin"
+                    },
+                    "attributes": {
+                      "detail": "LXC · media"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "mqtt",
+                    "name": "MQTT broker",
+                    "type": "service",
+                    "component": {
+                      "provider": "infragram",
+                      "service_id": "brand-mqtt",
+                      "icon_ref": "infragram:brand-mqtt"
+                    },
+                    "attributes": {
+                      "detail": "LXC · Mosquitto"
+                    },
+                    "children": [],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "node2",
+                "name": "Node · pve2",
+                "type": "server-group",
+                "attributes": {
+                  "editor_frame_group": "proxmox"
+                },
+                "children": [
+                  {
+                    "id": "kuma",
+                    "name": "Uptime Kuma",
+                    "type": "service",
+                    "component": {
+                      "provider": "infragram",
+                      "service_id": "brand-uptime-kuma",
+                      "icon_ref": "infragram:brand-uptime-kuma"
+                    },
+                    "attributes": {
+                      "detail": "LXC · monitoring"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "db",
+                    "name": "Database container",
+                    "type": "service",
+                    "component": {
+                      "provider": "proxmox",
+                      "service_id": "database-service",
+                      "icon_ref": "proxmox:database-service"
+                    },
+                    "attributes": {
+                      "detail": "PostgreSQL LXC"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "vm1",
+                    "name": "QEMU VM",
+                    "type": "service",
+                    "component": {
+                      "provider": "proxmox",
+                      "service_id": "app-service",
+                      "icon_ref": "proxmox:app-service"
+                    },
+                    "attributes": {
+                      "detail": "general workloads"
+                    },
+                    "children": [],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "node3",
+                "name": "Node · pve3",
+                "type": "server-group",
+                "attributes": {
+                  "editor_frame_group": "proxmox"
+                },
+                "children": [
+                  {
+                    "id": "lxc",
+                    "name": "LXC container",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "container-lxc",
+                      "icon_ref": "onprem:container-lxc"
+                    },
+                    "attributes": {
+                      "detail": "utility"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "pbs",
+                    "name": "Proxmox Backup",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "proxmox-pve",
+                      "icon_ref": "onprem:proxmox-pve"
+                    },
+                    "attributes": {
+                      "detail": "PBS · nightly"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "truenas",
+                        "kind": "dashed",
+                        "label": "backup sync",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "ceph",
+                    "name": "Ceph storage",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "storage-ceph",
+                      "icon_ref": "onprem:storage-ceph"
+                    },
+                    "attributes": {
+                      "detail": "3 × OSD · RBD"
+                    },
+                    "children": [],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "truenas",
+            "name": "TrueNAS",
+            "type": "service",
+            "component": {
+              "provider": "infragram",
+              "service_id": "brand-truenas",
+              "icon_ref": "infragram:brand-truenas"
+            },
+            "attributes": {
+              "detail": "ZFS · NFS · SMB"
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

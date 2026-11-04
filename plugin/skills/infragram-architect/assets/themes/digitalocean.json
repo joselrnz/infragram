@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "slug": "digitalocean",
+  "name": "DigitalOcean",
+  "title": "DigitalOcean application delivery",
+  "mark": "marks/digitalocean.svg",
+  "icons": {
+    "categories": [
+      "analytics",
+      "compute",
+      "containers",
+      "data",
+      "integration",
+      "networking",
+      "security",
+      "storage"
+    ],
+    "items": [
+      {
+        "id": "load-balancer",
+        "name": "DigitalOcean Load Balancer",
+        "category": "networking",
+        "aliases": [
+          "lb"
+        ],
+        "asset_ref": "vendors/digitalocean/load-balancer"
+      },
+      {
+        "id": "droplet",
+        "name": "DigitalOcean Droplet",
+        "category": "compute",
+        "aliases": [
+          "vm",
+          "virtual machine"
+        ],
+        "asset_ref": "vendors/digitalocean/droplet"
+      },
+      {
+        "id": "spaces",
+        "name": "DigitalOcean Spaces",
+        "category": "storage",
+        "aliases": [
+          "object storage"
+        ],
+        "asset_ref": "vendors/digitalocean/spaces"
+      },
+      {
+        "id": "managed-database",
+        "name": "DigitalOcean Managed Database",
+        "category": "data",
+        "aliases": [
+          "database",
+          "postgresql"
+        ],
+        "asset_ref": "vendors/digitalocean/managed-database"
+      },
+      {
+        "id": "accounts",
+        "name": "DigitalOcean Accounts",
+        "category": "integration",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/accounts"
+      },
+      {
+        "id": "app-platform",
+        "name": "DigitalOcean App Platform",
+        "category": "compute",
+        "aliases": [
+          "paas"
+        ],
+        "asset_ref": "vendors/digitalocean/app-platform"
+      },
+      {
+        "id": "backups",
+        "name": "DigitalOcean Backups",
+        "category": "storage",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/backups"
+      },
+      {
+        "id": "bare-metal-gpus",
+        "name": "DigitalOcean Bare Metal GPUs",
+        "category": "compute",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/bare-metal-gpus"
+      },
+      {
+        "id": "billing",
+        "name": "DigitalOcean Billing",
+        "category": "integration",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/billing"
+      },
+      {
+        "id": "cloudways",
+        "name": "DigitalOcean Cloudways",
+        "category": "compute",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/cloudways"
+      },
+      {
+        "id": "compute",
+        "name": "DigitalOcean Compute",
+        "category": "compute",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/compute"
+      },
+      {
+        "id": "cspm",
+        "name": "DigitalOcean Cloud Security Posture Management",
+        "category": "security",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/cspm"
+      },
+      {
+        "id": "data-services",
+        "name": "DigitalOcean Data Services",
+        "category": "data",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/data-services"
+      },
+      {
+        "id": "databases",
+        "name": "DigitalOcean Databases",
+        "category": "data",
+        "aliases": [
+          "managed databases"
+        ],
+        "asset_ref": "vendors/digitalocean/databases"
+      },
+      {
+        "id": "ddos",
+        "name": "DigitalOcean DDoS Protection",
+        "category": "security",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/ddos"
+      },
+      {
+        "id": "deployments",
+        "name": "DigitalOcean Deployments",
+        "category": "analytics",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/deployments"
+      },
+      {
+        "id": "droplets",
+        "name": "DigitalOcean Droplets",
+        "category": "compute",
+        "aliases": [
+          "droplets"
+        ],
+        "asset_ref": "vendors/digitalocean/droplets"
+      },
+      {
+        "id": "functions",
+        "name": "DigitalOcean Functions",
+        "category": "compute",
+        "aliases": [
+          "serverless"
+        ],
+        "asset_ref": "vendors/digitalocean/functions"
+      },
+      {
+        "id": "inference",
+        "name": "DigitalOcean Inference",
+        "category": "analytics",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/inference"
+      },
+      {
+        "id": "knowledge-bases",
+        "name": "DigitalOcean Knowledge Bases",
+        "category": "data",
+        "aliases": [
+          "rag"
+        ],
+        "asset_ref": "vendors/digitalocean/knowledge-bases"
+      },
+      {
+        "id": "k8s-cluster",
+        "name": "DigitalOcean Kubernetes Cluster",
+        "category": "containers",
+        "aliases": [
+          "doks cluster"
+        ],
+        "asset_ref": "vendors/digitalocean/k8s-cluster"
+      },
+      {
+        "id": "kubernetes",
+        "name": "DigitalOcean Kubernetes",
+        "category": "containers",
+        "aliases": [
+          "doks",
+          "k8s"
+        ],
+        "asset_ref": "vendors/digitalocean/kubernetes"
+      },
+      {
+        "id": "machines",
+        "name": "DigitalOcean Machines",
+        "category": "compute",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/machines"
+      },
+      {
+        "id": "marketplace",
+        "name": "DigitalOcean Marketplace",
+        "category": "integration",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/marketplace"
+      },
+      {
+        "id": "mcp",
+        "name": "DigitalOcean MCP Server",
+        "category": "integration",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/mcp"
+      },
+      {
+        "id": "ml",
+        "name": "Paperspace Machine Learning",
+        "category": "analytics",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/ml"
+      },
+      {
+        "id": "monitoring",
+        "name": "DigitalOcean Monitoring",
+        "category": "analytics",
+        "aliases": [
+          "metrics"
+        ],
+        "asset_ref": "vendors/digitalocean/monitoring"
+      },
+      {
+        "id": "networking",
+        "name": "DigitalOcean Networking",
+        "category": "networking",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/networking"
+      },
+      {
+        "id": "nfs",
+        "name": "DigitalOcean Network File Storage",
+        "category": "storage",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/nfs"
+      },
+      {
+        "id": "notebooks",
+        "name": "DigitalOcean Notebooks",
+        "category": "analytics",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/notebooks"
+      },
+      {
+        "id": "platform",
+        "name": "DigitalOcean Platform",
+        "category": "integration",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/platform"
+      },
+      {
+        "id": "projects",
+        "name": "DigitalOcean Projects",
+        "category": "integration",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/projects"
+      },
+      {
+        "id": "reference",
+        "name": "DigitalOcean Reference",
+        "category": "integration",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/reference"
+      },
+      {
+        "id": "snapshooter",
+        "name": "DigitalOcean Snapshooter",
+        "category": "storage",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/snapshooter"
+      },
+      {
+        "id": "snapshots",
+        "name": "DigitalOcean Snapshots",
+        "category": "storage",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/snapshots"
+      },
+      {
+        "id": "spaces-docs",
+        "name": "DigitalOcean Spaces Object Storage",
+        "category": "storage",
+        "aliases": [
+          "spaces product icon"
+        ],
+        "asset_ref": "vendors/digitalocean/spaces-docs"
+      },
+      {
+        "id": "storage",
+        "name": "DigitalOcean Storage",
+        "category": "storage",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/storage"
+      },
+      {
+        "id": "support",
+        "name": "DigitalOcean Support",
+        "category": "integration",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/support"
+      },
+      {
+        "id": "vector-databases",
+        "name": "DigitalOcean Vector Databases",
+        "category": "data",
+        "aliases": [
+          "vector db"
+        ],
+        "asset_ref": "vendors/digitalocean/vector-databases"
+      },
+      {
+        "id": "vpc",
+        "name": "DigitalOcean VPC",
+        "category": "networking",
+        "aliases": [
+          "virtual private cloud"
+        ],
+        "asset_ref": "vendors/digitalocean/vpc"
+      },
+      {
+        "id": "volumes",
+        "name": "DigitalOcean Volumes",
+        "category": "storage",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/volumes"
+      },
+      {
+        "id": "weaviate",
+        "name": "DigitalOcean Weaviate",
+        "category": "data",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/weaviate"
+      },
+      {
+        "id": "workflows",
+        "name": "DigitalOcean Workflows",
+        "category": "analytics",
+        "aliases": [],
+        "asset_ref": "vendors/digitalocean/workflows"
+      }
+    ]
+  },
+  "theme": {
+    "paper": "#ffffff",
+    "paper_2": "#f1f6fd",
+    "ink": "#031b4e",
+    "muted": "#41597a",
+    "soft": "#627693",
+    "accent": "#0069ff",
+    "link": "#005dff"
+  },
+  "icon_palette": [
+    "#0080ff",
+    "#0069ff",
+    "#031b4e",
+    "#c5dcfa",
+    "#005dff",
+    "#0065ff"
+  ],
+  "service_icons": {
+    "entry": "networking",
+    "app": "droplets",
+    "object_store": "spaces-docs",
+    "database": "databases"
+  },
+  "boundaries": {
+    "icons": {
+      "project": "digitalocean:projects",
+      "vpc": "digitalocean:vpc",
+      "cluster": "digitalocean:doks-boundary"
+    },
+    "tab_fill": "paper",
+    "color": "#0080ff"
+  },
+  "services": {
+    "entry": {
+      "name": "Load Balancer",
+      "detail": "edge · TLS"
+    },
+    "app": {
+      "name": "App Platform",
+      "detail": "managed runtime"
+    },
+    "object_store": {
+      "name": "Spaces Bucket",
+      "detail": "static · objects"
+    },
+    "database": {
+      "name": "Managed Database",
+      "detail": "PostgreSQL"
+    }
+  }
+}

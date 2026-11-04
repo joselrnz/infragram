@@ -1,0 +1,143 @@
+{
+  "note": "sha256 of render_project_svg(look_variant(template, look)) per look. Regenerate with `python -m infragram verify:pictures --update` when a picture is meant to change; the diff of this file is the review.",
+  "pictures": {
+    "alibaba-web-application": {
+      "card": "abd961666decf6b527bd2c9541ddf8f37594c90ac2f1e64a376b53da4a1e36dc",
+      "icon": "fe62e0c60aa5376af2dbcf214af462b26c60e1d4653ee32ed500bb471401ddc5"
+    },
+    "aws-site-to-site-vpn": {
+      "card": "deb0b5f8023b0a4f1f4d0c8c93594bf663b00ad3a95e44aa3bc6653e38614aa6",
+      "icon": "92d093448f2f681939f45bdad6614f5868f0c3ddeb954cf16ca85cf6434ecb1f"
+    },
+    "aws-three-tier-web": {
+      "card": "acd5c914e684edc9c305fea0a039dfed5d883f49a157d30f0642d3b6a592b085",
+      "icon": "087504ca3c397b5366264eb510adee6cfa317002417be9e67e13fda80245e8ac"
+    },
+    "azure-aks-baseline": {
+      "card": "6fee6f75082d1a3f9037e51986a312780c549983f1222f022dc021c4827eba78",
+      "icon": "306cc2b1e761409d643d1139dca280d83ccb80aaca4bea5493b73b7b1ff30df5"
+    },
+    "azure-api-reference": {
+      "card": "3f35ba80bd5b6adee9f500d8f0ede72e4a799e30df507bdf0eb6d54a82a0901b",
+      "icon": "59db87ffed600b502508c16e9c9c8b685b8ff535792371cdd0d41e0cd1bc025e"
+    },
+    "azure-hub-spoke-landing-zone": {
+      "card": "ad76c6857fabc642b8c1d9f6ae1353750053f108327140449ee5a96a570bf74c",
+      "icon": "fee84da444c1e0e7ea80b683984da54c7a853d8a6313a10341985aa8e1888a81"
+    },
+    "azure-web-app-front-door": {
+      "card": "f3a3b443da6931f9f3cd31551dd0bd5ba7396c824c72dccb061cbecb3ba84c93",
+      "icon": "d21907769c5dcd583396c0933d8959412f1157719defc68a7191f7c6f2309dc2"
+    },
+    "campus-lan-wan": {
+      "card": "267d71fbfd1d75c9dc8fdcf77d106a1d30b235160e903470d62d2e97c6fb5e9d",
+      "icon": "78b98c7dc5625293dff162772c7c96e929f335bbe9f7c422640c857691e04ea2"
+    },
+    "cloudflare-edge-platform": {
+      "card": "2cf0f3ba71fce195885acce2df8373eef2310ee9c30534f9e0e69d310c4ab72c",
+      "icon": "83fe7ff7a928070e824485d6f644bea6a63b9b4ec3f01a2bc33d36dbf7598047"
+    },
+    "digitalocean-application-delivery": {
+      "card": "1fe5fcaf731b9a7adfe1b3aac490817647531ab3295def377530b9a883194520",
+      "icon": "b40b7e91ddd281d47b3f08320bfb0242b34cec976c0e2c0f01095847e9845a3d"
+    },
+    "digitalocean-base": {
+      "card": "3ec288cfca250b6c52a9a91b57cdb55f473d83cc6ef825a5a43bddb942106ad4",
+      "icon": "f53c33406760bf6068e0df3887ddd9d1e3eb6e7cf46d0d40a6996efd1d29ce12"
+    },
+    "digitalocean-kubernetes-cluster": {
+      "card": "007bdc6dcbba61618307ff8decaa71cf62a94785469b2b1e1987232be0c9f334",
+      "icon": "74ae66e9eab5b3f16de4e59494e19ddc3bcc303d47aaec1e7d821952d1facc20"
+    },
+    "enterprise-data-integration": {
+      "card": "3518982229af862daac4b46181678e2bbcdb8f5c886ca74c5e51077145635759",
+      "icon": "536b4a65221845875cb2e05484c127463e03174cf0ccaeb8e8aa79e090b833c3"
+    },
+    "gcp-three-tier-web": {
+      "card": "d953be72e15154b8a301b285698d516693a442ff89713318330d5d4af3c2f9bc",
+      "icon": "b0a9355f62882109e07abc1defd890937cf637737e5b559686742e36747812dd"
+    },
+    "hetzner-application-delivery": {
+      "card": "8ddb2b28557b941b21e7589ee94168206ffe54b1a699d919d7cae551c4198886",
+      "icon": "c0a27a02aab7d7ae76ef79254156b242c0c70bf44a98bb66b462d015f0a6a4ec"
+    },
+    "hybrid-bgp-edge": {
+      "card": "25b9e3c6fa767686ab93bc9c8fd1c7aeb3cb2b58054a365cd55c26cb92a45696",
+      "icon": "ccca2f40ba335b567111ea9670197c6d33072bc184a7c910a4da92a3c5162f20"
+    },
+    "ibm-vpc-application": {
+      "card": "d0f0ca4b290db3f873bf6627a0575158a16c9e062c619842f3b49ebd92401b2c",
+      "icon": "bda081e761e05c99512f44831385adc5d6e5af690003360fd90f1f9c15bdb721"
+    },
+    "mainframe-modernization": {
+      "card": "8d623c8358c8d180ccb25ea412b0fa714059d0e72e251da4e511a411870cf986",
+      "icon": "68a055bb14b8b0fbe6545e670227efd16894f5986081dafa353ed167437623ba"
+    },
+    "multicloud-base": {
+      "card": "7338112d055ae14497ac23057f32f711ccee4793f0decad27ec069c1635eb18b",
+      "icon": "74423fc363fce33a352c5cab6ea5c2b46dd48285f713b5cd2790a8449daf8463"
+    },
+    "onprem-data-platform": {
+      "card": "dfe324d01869370eeca643293ef4e1594f4486ec7775485acd8d81a3ef17cae4",
+      "icon": "47747b1a0b7c8df8bbc0851d30fa50890de8de475b3540abf380adff470d3abe"
+    },
+    "onprem-datacenter": {
+      "card": "c7d36c81412225e2aa9f6b655f6051595fecd9860154733222202bcc6978aa5b",
+      "icon": "34c7e50696666716585bff263d45d4c7ba28a38c9219846c1f25695afac01a35"
+    },
+    "onprem-dr-backup": {
+      "card": "078d7f08f5d0bbb71da0abaa2e0e28836142facb2a3945e87e7a5410a6843983",
+      "icon": "316660671a144966770cbb63b5b5425efb88e8d94d31ca4d2191bf975aa2947e"
+    },
+    "onprem-kubernetes-platform": {
+      "card": "4397bc95a70dd604cdc24142060e67981c863dda25c5d6668d3f6a459df794be",
+      "icon": "d5203010a1ad3fd92f77249c85fee76249d8ddb43d6ac7a3411b3b26eaa1f722"
+    },
+    "onprem-storage-fabric": {
+      "card": "534ea746b1580b7edf409bf74295bff7c37ed4ba76ecc0d11328d7223c8ddb71",
+      "icon": "864a8c38d3d1eb22903842e92cdf5baf799a9ff5fde42d2c4a57be2c5a614177"
+    },
+    "openstack-private-cloud": {
+      "card": "56e7d2306ec0f78976dd0c48a1032884e26ee2e3b504addf4a217135d11cd856",
+      "icon": "c31736f71d3084944dafe64be7589ef7ee2d5881d3f48eea84ef8611fcc02687"
+    },
+    "oracle-oci-landing-zone": {
+      "card": "45110f59f0a8c04d8063aa31929341a95dab5d07b01ecd0bbe155825aab12859",
+      "icon": "b18ef5d4664781d6b29cbd4861a88359613db04ca9a9ea27bf5fc9991e5ec997"
+    },
+    "ot-iot-edge": {
+      "card": "6e903d07313ff005699e44bcc094fe6f6480544b451332e738276b3b9f268536",
+      "icon": "f4640127bd43e48746b3a7c6b8edb2b59cfb3dd90a9d27bda0eeb0fd3f0501a0"
+    },
+    "private-dx-staging-platform": {
+      "card": "fce55fee6c1d0ab07ab493c1d5e2e418f73869a0c4d3c1c23b349080e29861bd",
+      "icon": "ff0e10996a0087712084eede382289d68e24f02b06cc44c943ab4ea402e458b5"
+    },
+    "proxmox-homelab-cluster": {
+      "card": "b842f7a91cefaa2e9bcfcaf2585742620b5a4be9edb82d92d7ebc3fec7ca9c55",
+      "icon": "4b166d2ea17bfa13595a9d2a70e563e2f33245a63ba5d5b2ddacfb45aa09fd02"
+    },
+    "rstudio-shiny-analytics-platform": {
+      "card": "1cfee869890d138bad82ccf695957e29c574d807218223b27c809e98e4fceb49",
+      "icon": "1b1534ea98bc9630764324a1905b5a2efa347067a94c572adb01d95e2d029974"
+    },
+    "soc-siem": {
+      "card": "a4b9a979879dbac2a4b68d3f4c3efc180b3e7d8e61eab75dbe7d9ffcf1c582ea",
+      "icon": "40179f53d9dd97236b65a9c4906d51b034605b028623a4ad39599118ac2f171c"
+    },
+    "vdi-remote-work": {
+      "card": "9e5ed20e4ab39cd7f50454b30c7929926bbdd57c6f34c4f88924e590150e0415",
+      "icon": "f0056d6790ecb17e53dc52572934f45e40bc0183d01c90e04cc9454c9fa9f5fe"
+    },
+    "vmware-vsphere-estate": {
+      "card": "5f8060f545c23daec0357554c032ad8f25ebdb7aa5f9a9fc69eec42de26dd123",
+      "icon": "c2c817b4be174cfa82bb06f95d4d5ea6180cb603744bc98fef8cdb91dcb4ef31"
+    },
+    "zero-trust-identity": {
+      "card": "0baac8bfbd39f9db4cdcb9d775487b81ae93520d189c7ce4a7e03a7a87d0717d",
+      "icon": "ce38eee4c2d382e4bbffb6ad59c548f7ebf5b8d977b382961be1a057bac04f5d"
+    }
+  },
+  "renderer": "static",
+  "schema": 1
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "slug": "ovhcloud",
+  "name": "OVHcloud",
+  "title": "OVHcloud Public Cloud delivery",
+  "mark": "logos:ovh#default",
+  "mark_color": "#000e9c",
+  "icons": {
+    "categories": [
+      "analytics",
+      "compute",
+      "containers",
+      "data",
+      "integration",
+      "networking",
+      "security",
+      "storage"
+    ],
+    "items": []
+  },
+  "theme": {
+    "paper": "#ffffff",
+    "paper_2": "#f4f5f9",
+    "ink": "#131626",
+    "muted": "#454b68",
+    "soft": "#5e6482",
+    "accent": "#4d6bff",
+    "link": "#001dad"
+  },
+  "icon_palette": [
+    "#000e9c",
+    "#4d6bff",
+    "#ffffff"
+  ],
+  "services": {
+    "entry": {
+      "name": "OVHcloud Load Balancer",
+      "detail": "Public Cloud · TLS"
+    },
+    "app": {
+      "name": "Public Cloud Instance",
+      "detail": "b3-16 · vRack attached"
+    },
+    "object_store": {
+      "name": "Object Storage",
+      "detail": "S3-compatible · Standard"
+    },
+    "database": {
+      "name": "Managed Database",
+      "detail": "PostgreSQL · Business plan"
+    }
+  },
+  "boundaries": {
+    "color": "#4d6bff"
+  }
+}

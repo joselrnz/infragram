@@ -1,0 +1,422 @@
+{
+ "format_version": "1.2",
+ "terraform_version": "1.14.7",
+ "planned_values": {
+  "root_module": {
+   "resources": [
+    {
+     "address": "aws_instance.web[0]",
+     "mode": "managed",
+     "type": "aws_instance",
+     "name": "web",
+     "index": 0,
+     "provider_name": "registry.terraform.io/hashicorp/aws",
+     "schema_version": 1,
+     "values": {
+      "instance_type": "t3.medium",
+      "tags": {
+       "Name": "billing-web-1"
+      }
+     },
+     "sensitive_values": {}
+    },
+    {
+     "address": "aws_security_group.web",
+     "mode": "managed",
+     "type": "aws_security_group",
+     "name": "web",
+     "provider_name": "registry.terraform.io/hashicorp/aws",
+     "schema_version": 1,
+     "values": {
+      "name": "billing-web",
+      "ingress": [
+       {
+        "from_port": 443,
+        "to_port": 443,
+        "protocol": "tcp",
+        "cidr_blocks": [
+         "0.0.0.0/0"
+        ],
+        "security_groups": []
+       }
+      ]
+     },
+     "sensitive_values": {}
+    }
+   ],
+   "child_modules": [
+    {
+     "address": "module.vpc",
+     "resources": [
+      {
+       "address": "module.vpc.aws_vpc.this[0]",
+       "mode": "managed",
+       "type": "aws_vpc",
+       "name": "this",
+       "index": 0,
+       "provider_name": "registry.terraform.io/hashicorp/aws",
+       "values": {
+        "cidr_block": "10.60.0.0/16",
+        "tags": {
+         "Name": "billing"
+        }
+       }
+      },
+      {
+       "address": "module.vpc.aws_subnet.private[0]",
+       "mode": "managed",
+       "type": "aws_subnet",
+       "name": "private",
+       "index": 0,
+       "provider_name": "registry.terraform.io/hashicorp/aws",
+       "values": {
+        "cidr_block": "10.60.1.0/24",
+        "availability_zone": "us-west-2a",
+        "map_public_ip_on_launch": false,
+        "tags": {
+         "Name": "billing-private-us-west-2a"
+        }
+       }
+      },
+      {
+       "address": "module.vpc.aws_subnet.private[1]",
+       "mode": "managed",
+       "type": "aws_subnet",
+       "name": "private",
+       "index": 1,
+       "provider_name": "registry.terraform.io/hashicorp/aws",
+       "values": {
+        "cidr_block": "10.60.2.0/24",
+        "availability_zone": "us-west-2b",
+        "map_public_ip_on_launch": false,
+        "tags": {
+         "Name": "billing-private-us-west-2b"
+        }
+       }
+      },
+      {
+       "address": "module.vpc.aws_subnet.public[0]",
+       "mode": "managed",
+       "type": "aws_subnet",
+       "name": "public",
+       "index": 0,
+       "provider_name": "registry.terraform.io/hashicorp/aws",
+       "values": {
+        "cidr_block": "10.60.101.0/24",
+        "availability_zone": "us-west-2a",
+        "map_public_ip_on_launch": true,
+        "tags": {
+         "Name": "billing-public-us-west-2a"
+        }
+       }
+      },
+      {
+       "address": "module.vpc.aws_internet_gateway.this[0]",
+       "mode": "managed",
+       "type": "aws_internet_gateway",
+       "name": "this",
+       "index": 0,
+       "provider_name": "registry.terraform.io/hashicorp/aws",
+       "values": {
+        "tags": {
+         "Name": "billing"
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "prior_state": {
+  "format_version": "1.0",
+  "values": {
+   "root_module": {
+    "resources": [
+     {
+      "address": "data.aws_availability_zones.available",
+      "mode": "data",
+      "type": "aws_availability_zones",
+      "name": "available",
+      "values": {
+       "names": [
+        "us-west-2a",
+        "us-west-2b"
+       ]
+      }
+     },
+     {
+      "address": "aws_db_instance.legacy",
+      "mode": "managed",
+      "type": "aws_db_instance",
+      "name": "legacy",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "values": {
+       "identifier": "legacy-db",
+       "engine": "postgres",
+       "instance_class": "db.t3.medium"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "configuration": {
+  "provider_config": {
+   "aws": {
+    "name": "aws",
+    "full_name": "registry.terraform.io/hashicorp/aws",
+    "expressions": {
+     "region": {
+      "constant_value": "us-west-2"
+     }
+    }
+   }
+  },
+  "root_module": {
+   "resources": [
+    {
+     "address": "aws_instance.web",
+     "mode": "managed",
+     "type": "aws_instance",
+     "name": "web",
+     "provider_config_key": "aws",
+     "expressions": {
+      "instance_type": {
+       "constant_value": "t3.medium"
+      },
+      "subnet_id": {
+       "references": [
+        "module.vpc.private_subnets[0]",
+        "module.vpc.private_subnets",
+        "module.vpc"
+       ]
+      },
+      "vpc_security_group_ids": {
+       "references": [
+        "aws_security_group.web.id",
+        "aws_security_group.web"
+       ]
+      }
+     },
+     "count_expression": {
+      "constant_value": 1
+     }
+    },
+    {
+     "address": "aws_security_group.web",
+     "mode": "managed",
+     "type": "aws_security_group",
+     "name": "web",
+     "provider_config_key": "aws",
+     "expressions": {
+      "vpc_id": {
+       "references": [
+        "module.vpc.vpc_id",
+        "module.vpc"
+       ]
+      }
+     }
+    }
+   ],
+   "module_calls": {
+    "vpc": {
+     "source": "terraform-aws-modules/vpc/aws",
+     "version": "5.8.1",
+     "expressions": {
+      "cidr": {
+       "constant_value": "10.60.0.0/16"
+      },
+      "name": {
+       "constant_value": "billing"
+      }
+     },
+     "module": {
+      "outputs": {
+       "vpc_id": {
+        "expression": {
+         "references": [
+          "aws_vpc.this[0].id",
+          "aws_vpc.this[0]",
+          "aws_vpc.this"
+         ]
+        }
+       },
+       "private_subnets": {
+        "expression": {
+         "references": [
+          "aws_subnet.private"
+         ]
+        }
+       }
+      },
+      "resources": [
+       {
+        "address": "aws_vpc.this",
+        "mode": "managed",
+        "type": "aws_vpc",
+        "name": "this",
+        "provider_config_key": "aws",
+        "expressions": {
+         "cidr_block": {
+          "references": [
+           "var.cidr"
+          ]
+         }
+        },
+        "count_expression": {
+         "references": [
+          "local.create_vpc"
+         ]
+        }
+       },
+       {
+        "address": "aws_subnet.private",
+        "mode": "managed",
+        "type": "aws_subnet",
+        "name": "private",
+        "provider_config_key": "aws",
+        "expressions": {
+         "vpc_id": {
+          "references": [
+           "local.vpc_id"
+          ]
+         }
+        },
+        "count_expression": {
+         "references": [
+          "local.len_private_subnets"
+         ]
+        }
+       },
+       {
+        "address": "aws_subnet.public",
+        "mode": "managed",
+        "type": "aws_subnet",
+        "name": "public",
+        "provider_config_key": "aws",
+        "expressions": {
+         "vpc_id": {
+          "references": [
+           "local.vpc_id"
+          ]
+         }
+        },
+        "count_expression": {
+         "references": [
+          "local.len_public_subnets"
+         ]
+        }
+       },
+       {
+        "address": "aws_internet_gateway.this",
+        "mode": "managed",
+        "type": "aws_internet_gateway",
+        "name": "this",
+        "provider_config_key": "aws",
+        "expressions": {
+         "vpc_id": {
+          "references": [
+           "local.vpc_id"
+          ]
+         }
+        }
+       }
+      ],
+      "variables": {
+       "cidr": {
+        "default": "10.0.0.0/16"
+       },
+       "name": {
+        "default": ""
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "resource_changes": [
+  {
+   "address": "aws_instance.web[0]",
+   "mode": "managed",
+   "type": "aws_instance",
+   "change": {
+    "actions": [
+     "delete",
+     "create"
+    ]
+   }
+  },
+  {
+   "address": "aws_security_group.web",
+   "mode": "managed",
+   "type": "aws_security_group",
+   "change": {
+    "actions": [
+     "update"
+    ]
+   }
+  },
+  {
+   "address": "module.vpc.aws_vpc.this[0]",
+   "mode": "managed",
+   "type": "aws_vpc",
+   "change": {
+    "actions": [
+     "no-op"
+    ]
+   }
+  },
+  {
+   "address": "module.vpc.aws_subnet.private[0]",
+   "mode": "managed",
+   "type": "aws_subnet",
+   "change": {
+    "actions": [
+     "no-op"
+    ]
+   }
+  },
+  {
+   "address": "module.vpc.aws_subnet.private[1]",
+   "mode": "managed",
+   "type": "aws_subnet",
+   "change": {
+    "actions": [
+     "create"
+    ]
+   }
+  },
+  {
+   "address": "module.vpc.aws_subnet.public[0]",
+   "mode": "managed",
+   "type": "aws_subnet",
+   "change": {
+    "actions": [
+     "no-op"
+    ]
+   }
+  },
+  {
+   "address": "module.vpc.aws_internet_gateway.this[0]",
+   "mode": "managed",
+   "type": "aws_internet_gateway",
+   "change": {
+    "actions": [
+     "create"
+    ]
+   }
+  },
+  {
+   "address": "aws_db_instance.legacy",
+   "mode": "managed",
+   "type": "aws_db_instance",
+   "change": {
+    "actions": [
+     "delete"
+    ]
+   }
+  }
+ ]
+}

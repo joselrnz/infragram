@@ -1,0 +1,411 @@
+{
+ "schema_version": 1,
+ "collection": "vendors/cloudflare",
+ "generated_by": "scripts/build/vendor-tiles.py (this project's own tiles: a Tabler glyph on the vendor's colour)",
+ "source": {
+  "url": "https://developers.cloudflare.com/",
+  "release": "drawn for Infragram; not the vendor's artwork. Glyphs: Tabler Icons (MIT).",
+  "terms": "https://github.com/tabler/tabler-icons/blob/main/LICENSE"
+ },
+ "counts": {
+  "icons": 33
+ },
+ "icons": [
+  {
+   "id": "dns",
+   "name": "Cloudflare DNS",
+   "aliases": [
+    "authoritative dns",
+    "dns"
+   ],
+   "category": "networking",
+   "file": "networking/dns.svg",
+   "source_path": "drawn: Tabler glyph world on #f38020",
+   "sha256": "6ff7533b8a0202865fb367d5d54900b5827d3ca9217376bddaadd81f164bac32"
+  },
+  {
+   "id": "cdn",
+   "name": "Cloudflare CDN",
+   "aliases": [
+    "cache",
+    "edge cache"
+   ],
+   "category": "networking",
+   "file": "networking/cdn.svg",
+   "source_path": "drawn: Tabler glyph cloud-network on #f38020",
+   "sha256": "4789088e475ee7249ad1c14e3b565b531352c09c4e7eced6d983711cd3f97fc3"
+  },
+  {
+   "id": "waf",
+   "name": "Web Application Firewall",
+   "aliases": [
+    "waf",
+    "managed rules"
+   ],
+   "category": "security",
+   "file": "security/waf.svg",
+   "source_path": "drawn: Tabler glyph shield-check on #f38020",
+   "sha256": "3d94c44c05af6bdd1f4d80062814840119b5fbc7181c32ff628e42cb70fe0735"
+  },
+  {
+   "id": "ddos-protection",
+   "name": "DDoS Protection",
+   "aliases": [
+    "ddos",
+    "anti-ddos"
+   ],
+   "category": "security",
+   "file": "security/ddos-protection.svg",
+   "source_path": "drawn: Tabler glyph shield-lock on #f38020",
+   "sha256": "47530396e2ca9c8a99ff3e032b7d3540f4015219a55c5e98389e272052bd1729"
+  },
+  {
+   "id": "load-balancing",
+   "name": "Load Balancing",
+   "aliases": [
+    "load balancer",
+    "steering"
+   ],
+   "category": "networking",
+   "file": "networking/load-balancing.svg",
+   "source_path": "drawn: Tabler glyph arrows-split on #f38020",
+   "sha256": "734bd2c260d7920b56f833bb87eb67ab912b2b4f11951fab35e773854edc22f9"
+  },
+  {
+   "id": "tunnel",
+   "name": "Cloudflare Tunnel",
+   "aliases": [
+    "cloudflared",
+    "argo tunnel"
+   ],
+   "category": "networking",
+   "file": "networking/tunnel.svg",
+   "source_path": "drawn: Tabler glyph route on #f38020",
+   "sha256": "abad227889f5f9680552287e39378f6e2fb5846116d95a5af29430983ebd765b"
+  },
+  {
+   "id": "zero-trust-access",
+   "name": "Zero Trust Access",
+   "aliases": [
+    "ztna",
+    "access"
+   ],
+   "category": "security",
+   "file": "security/zero-trust-access.svg",
+   "source_path": "drawn: Tabler glyph id-badge on #f38020",
+   "sha256": "caaabefee0714b58447393a8840ee85d84ec9c6baa83ed22c2e3bcd392be0ede"
+  },
+  {
+   "id": "zero-trust-gateway",
+   "name": "Zero Trust Gateway",
+   "aliases": [
+    "secure web gateway",
+    "swg"
+   ],
+   "category": "security",
+   "file": "security/zero-trust-gateway.svg",
+   "source_path": "drawn: Tabler glyph cloud-lock on #f38020",
+   "sha256": "dc03e6917eb84d748b31819be8bc584739c705dc0f68a4ccab74705c9cb357d5"
+  },
+  {
+   "id": "warp-client",
+   "name": "WARP Client",
+   "aliases": [
+    "warp",
+    "device client"
+   ],
+   "category": "security",
+   "file": "security/warp-client.svg",
+   "source_path": "drawn: Tabler glyph device-laptop on #f38020",
+   "sha256": "9239a4ab17899a3fe0b3961ff103e7fffd19ad70b3720a920883e158711396bc"
+  },
+  {
+   "id": "r2",
+   "name": "Cloudflare R2",
+   "aliases": [
+    "object storage",
+    "s3-compatible"
+   ],
+   "category": "storage",
+   "file": "storage/r2.svg",
+   "source_path": "drawn: Tabler glyph bucket on #f38020",
+   "sha256": "fee42259ed6c32f4d7e03457b3cf47dff40fbb0dcd730d968ffca4c536807dc4"
+  },
+  {
+   "id": "d1",
+   "name": "Cloudflare D1",
+   "aliases": [
+    "serverless sql",
+    "sqlite"
+   ],
+   "category": "databases",
+   "file": "databases/d1.svg",
+   "source_path": "drawn: Tabler glyph database on #f38020",
+   "sha256": "032f48bb4d21429d4625e26faaf7382459709343458699364a5a10ca0edc1fda"
+  },
+  {
+   "id": "kv",
+   "name": "Workers KV",
+   "aliases": [
+    "key-value",
+    "kv"
+   ],
+   "category": "databases",
+   "file": "databases/kv.svg",
+   "source_path": "drawn: Tabler glyph key on #f38020",
+   "sha256": "a366c241690f153d1716c427246692d7efe12708e26e8cf3ff13c498b3e99e6e"
+  },
+  {
+   "id": "durable-objects",
+   "name": "Durable Objects",
+   "aliases": [
+    "stateful",
+    "coordination"
+   ],
+   "category": "databases",
+   "file": "databases/durable-objects.svg",
+   "source_path": "drawn: Tabler glyph cube on #f38020",
+   "sha256": "1e774656a915b9c79dc26960dbc781a6c1adf5c0da19303e3950fd231989c56d"
+  },
+  {
+   "id": "hyperdrive",
+   "name": "Hyperdrive",
+   "aliases": [
+    "connection pool",
+    "postgres accelerator"
+   ],
+   "category": "databases",
+   "file": "databases/hyperdrive.svg",
+   "source_path": "drawn: Tabler glyph database-export on #f38020",
+   "sha256": "5a9d513496b4a9d5e5ca81463bc489d84dcb86af0d226d384e887b7a834a5747"
+  },
+  {
+   "id": "vectorize",
+   "name": "Vectorize",
+   "aliases": [
+    "vector database",
+    "embeddings"
+   ],
+   "category": "ai-machine-learning",
+   "file": "ai-machine-learning/vectorize.svg",
+   "source_path": "drawn: Tabler glyph grid-dots on #f38020",
+   "sha256": "5599a341aaeb35a130e19bf1b053adc69481cbb52b700a1431cf7bf4019c0d2c"
+  },
+  {
+   "id": "ai-gateway",
+   "name": "AI Gateway",
+   "aliases": [
+    "llm gateway",
+    "ai proxy"
+   ],
+   "category": "ai-machine-learning",
+   "file": "ai-machine-learning/ai-gateway.svg",
+   "source_path": "drawn: Tabler glyph hierarchy-2 on #f38020",
+   "sha256": "c5fb6018ef1afd9a37e1a5ef7a21ee9d898f74da345b31ff027ac1d8a17ab008"
+  },
+  {
+   "id": "queues",
+   "name": "Cloudflare Queues",
+   "aliases": [
+    "queue",
+    "message queue"
+   ],
+   "category": "integration",
+   "file": "integration/queues.svg",
+   "source_path": "drawn: Tabler glyph stack-2 on #f38020",
+   "sha256": "a5c4a25181bc4e344ab26c54883ffab62288bcbbfa592d8c48663ea2e22a8d5b"
+  },
+  {
+   "id": "email-routing",
+   "name": "Email Routing",
+   "aliases": [
+    "email",
+    "mail routing"
+   ],
+   "category": "integration",
+   "file": "integration/email-routing.svg",
+   "source_path": "drawn: Tabler glyph mail-forward on #f38020",
+   "sha256": "5b20c7476dff54d28e985e11cfb1e1c96eafe73998a700294bdbb17d44592c75"
+  },
+  {
+   "id": "stream",
+   "name": "Cloudflare Stream",
+   "aliases": [
+    "video",
+    "streaming"
+   ],
+   "category": "web",
+   "file": "web/stream.svg",
+   "source_path": "drawn: Tabler glyph device-tv on #f38020",
+   "sha256": "9b4cb126ecc1542c10850543a38dac38f6bb2e3fdd4a02813551da7be2e98e2a"
+  },
+  {
+   "id": "images",
+   "name": "Cloudflare Images",
+   "aliases": [
+    "image resizing",
+    "image hosting"
+   ],
+   "category": "web",
+   "file": "web/images.svg",
+   "source_path": "drawn: Tabler glyph file on #f38020",
+   "sha256": "faecaa71cca420f6cdeba995d6aee77b199e081b1b1d188da6495a40ce0af3a8"
+  },
+  {
+   "id": "registrar",
+   "name": "Cloudflare Registrar",
+   "aliases": [
+    "domain",
+    "registrar"
+   ],
+   "category": "networking",
+   "file": "networking/registrar.svg",
+   "source_path": "drawn: Tabler glyph tag on #f38020",
+   "sha256": "0c9d15987caf2873f1322b27cad1bed6381ebe829ad05ea6aa8ebe9dcf69f2a6"
+  },
+  {
+   "id": "spectrum",
+   "name": "Spectrum",
+   "aliases": [
+    "tcp proxy",
+    "udp proxy"
+   ],
+   "category": "networking",
+   "file": "networking/spectrum.svg",
+   "source_path": "drawn: Tabler glyph arrows-exchange on #f38020",
+   "sha256": "ed1cdae979cdc1beab66a0d73696c8b5e9dfe5c905eb9f2775379411f20da9d2"
+  },
+  {
+   "id": "magic-wan",
+   "name": "Magic WAN",
+   "aliases": [
+    "wan",
+    "sd-wan"
+   ],
+   "category": "networking",
+   "file": "networking/magic-wan.svg",
+   "source_path": "drawn: Tabler glyph topology-star on #f38020",
+   "sha256": "9597494a24a66927b90e423490ddfad10ced48433b6b662a028b2d8309dbd217"
+  },
+  {
+   "id": "magic-transit",
+   "name": "Magic Transit",
+   "aliases": [
+    "bgp",
+    "network ddos"
+   ],
+   "category": "networking",
+   "file": "networking/magic-transit.svg",
+   "source_path": "drawn: Tabler glyph network on #f38020",
+   "sha256": "4ae5076abf007cd16de308eca7a367b1ca75e2ecf96fb1fdcbec0fe65830ef8f"
+  },
+  {
+   "id": "argo-smart-routing",
+   "name": "Argo Smart Routing",
+   "aliases": [
+    "smart routing",
+    "argo"
+   ],
+   "category": "networking",
+   "file": "networking/argo-smart-routing.svg",
+   "source_path": "drawn: Tabler glyph route-2 on #f38020",
+   "sha256": "2ea288d28bcea3c602f772da2235a367e49a0571b332eb8b5e0a0e4566c2ed2e"
+  },
+  {
+   "id": "rate-limiting",
+   "name": "Rate Limiting",
+   "aliases": [
+    "rate limit",
+    "throttling"
+   ],
+   "category": "security",
+   "file": "security/rate-limiting.svg",
+   "source_path": "drawn: Tabler glyph gauge on #f38020",
+   "sha256": "bc37a3d2a48a2799041c17b03aac4c37bd6356067e148e4be3345755aa2e0bd9"
+  },
+  {
+   "id": "api-shield",
+   "name": "API Shield",
+   "aliases": [
+    "api security",
+    "schema validation"
+   ],
+   "category": "security",
+   "file": "security/api-shield.svg",
+   "source_path": "drawn: Tabler glyph braces on #f38020",
+   "sha256": "dc0629e54b4ff81a0b982ec6a1f5114e7fb72b0ef76bb6815347d45035a16451"
+  },
+  {
+   "id": "bot-management",
+   "name": "Bot Management",
+   "aliases": [
+    "bots",
+    "bot fight mode"
+   ],
+   "category": "security",
+   "file": "security/bot-management.svg",
+   "source_path": "drawn: Tabler glyph spider on #f38020",
+   "sha256": "bb8dfac772917557aba5979b0e4b224bca7faeb4864370339f3c6a4606cda8a5"
+  },
+  {
+   "id": "turnstile",
+   "name": "Turnstile",
+   "aliases": [
+    "captcha",
+    "challenge"
+   ],
+   "category": "security",
+   "file": "security/turnstile.svg",
+   "source_path": "drawn: Tabler glyph robot on #f38020",
+   "sha256": "416a8cbf948d208322df24d00cde2f489a4449181a0b730ea1c95281af7910d2"
+  },
+  {
+   "id": "logpush",
+   "name": "Logpush",
+   "aliases": [
+    "logs",
+    "log export"
+   ],
+   "category": "analytics",
+   "file": "analytics/logpush.svg",
+   "source_path": "drawn: Tabler glyph file-text on #f38020",
+   "sha256": "1f6455fcb6f6180d2558bd7c6dbfd144540bcd59716aed1f4c2f0144613bf804"
+  },
+  {
+   "id": "web-analytics",
+   "name": "Web Analytics",
+   "aliases": [
+    "analytics",
+    "rum"
+   ],
+   "category": "analytics",
+   "file": "analytics/web-analytics.svg",
+   "source_path": "drawn: Tabler glyph chart-line on #f38020",
+   "sha256": "1d3be88c4fdc32e40729067eb849aaee343e5a35ebf77836ad419e6e3f4a81dd"
+  },
+  {
+   "id": "workers-cron",
+   "name": "Cron Triggers",
+   "aliases": [
+    "scheduled worker",
+    "cron"
+   ],
+   "category": "compute",
+   "file": "compute/workers-cron.svg",
+   "source_path": "drawn: Tabler glyph clock on #f38020",
+   "sha256": "356d552c9b6acec257dd2e3b34b2eae444ac1eff9c058d74069509882d478523"
+  },
+  {
+   "id": "browser-rendering",
+   "name": "Browser Rendering",
+   "aliases": [
+    "headless browser",
+    "puppeteer"
+   ],
+   "category": "compute",
+   "file": "compute/browser-rendering.svg",
+   "source_path": "drawn: Tabler glyph world-www on #f38020",
+   "sha256": "4551ef84b93b997f7874c66aa10a60b3044aef8886d110e0e725034eb05bda0a"
+  }
+ ]
+}

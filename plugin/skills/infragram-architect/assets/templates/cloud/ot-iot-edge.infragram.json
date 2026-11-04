@@ -1,0 +1,491 @@
+{
+  "schema_version": 2,
+  "kind": "hybrid",
+  "slug": "ot-iot-edge",
+  "title": "Plant OT network with an industrial DMZ and cloud telemetry",
+  "description": "PLCs, an HMI and sensors sit in the OT zone behind an industrial firewall; the industrial DMZ hosts the SCADA server, historian and vendor jump host; an edge gateway with an MQTT broker, Node-RED, k3s and single-board computers forwards telemetry to Azure IoT Hub, where Stream Analytics, Data Explorer, Digital Twins and Power BI serve the plant.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    },
+    {
+      "id": "azure",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "OT / IoT architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Plant OT network with an industrial DMZ and cloud telemetry",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "plant",
+        "name": "Plant · Line 1",
+        "type": "location",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "ot",
+            "name": "OT zone · Purdue level 0-2",
+            "type": "security-zone",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "plc1",
+                "name": "PLC · filler",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "iso-plc",
+                  "icon_ref": "onprem:iso-plc"
+                },
+                "attributes": {
+                  "detail": "Profinet"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "scada",
+                    "kind": "solid",
+                    "label": "Modbus/TCP",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "plc2",
+                "name": "PLC · packer",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "iso-plc",
+                  "icon_ref": "onprem:iso-plc"
+                },
+                "attributes": {
+                  "detail": "Profinet"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "scada",
+                    "kind": "solid",
+                    "label": "",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "hmi",
+                "name": "HMI",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "hmi",
+                  "icon_ref": "infragram:hmi"
+                },
+                "attributes": {
+                  "detail": "operator panel"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "scada",
+                    "kind": "solid",
+                    "label": "OPC UA",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "otsw",
+                "name": "Industrial switch",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "network-cisco-switch-l2",
+                  "icon_ref": "onprem:network-cisco-switch-l2"
+                },
+                "attributes": {
+                  "detail": "ruggedised · ring"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "sensors",
+                "name": "Sensors",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "sensor",
+                  "icon_ref": "infragram:sensor"
+                },
+                "attributes": {
+                  "detail": "temperature · vibration"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "sbc",
+                    "kind": "dotted",
+                    "label": "LoRaWAN",
+                    "direction": "forward"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "dmz",
+            "name": "Industrial DMZ · level 3.5",
+            "type": "dmz",
+            "attributes": {
+              "editor_frame_group": "generic"
+            },
+            "children": [
+              {
+                "id": "scada",
+                "name": "SCADA server",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "physical-server",
+                  "icon_ref": "infragram:physical-server"
+                },
+                "attributes": {
+                  "detail": "supervisory control"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "historian",
+                    "kind": "solid",
+                    "label": "tags",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "historian",
+                "name": "Historian",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "database-influxdb",
+                  "icon_ref": "onprem:database-influxdb"
+                },
+                "attributes": {
+                  "detail": "time series"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "gateway",
+                    "kind": "solid",
+                    "label": "replicated tags",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "otfw",
+                "name": "OT firewall",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "firewall",
+                  "icon_ref": "infragram:firewall"
+                },
+                "attributes": {
+                  "detail": "unidirectional rules"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "gateway",
+                    "kind": "dotted",
+                    "label": "allow list",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "jump",
+                "name": "Jump host",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "proxy",
+                  "icon_ref": "infragram:proxy"
+                },
+                "attributes": {
+                  "detail": "vendor remote access"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "edge",
+            "name": "Edge compute",
+            "type": "cluster",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "gateway",
+                "name": "IoT gateway",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "iot-gateway",
+                  "icon_ref": "infragram:iot-gateway"
+                },
+                "attributes": {
+                  "detail": "protocol translation"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "mqtt",
+                    "kind": "solid",
+                    "label": "MQTT",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "mqtt",
+                "name": "MQTT broker",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "queue-emqx",
+                  "icon_ref": "onprem:queue-emqx"
+                },
+                "attributes": {
+                  "detail": "EMQX"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "nodered",
+                    "kind": "solid",
+                    "label": "topics",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "iothub",
+                    "kind": "dashed",
+                    "label": "MQTT over TLS",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "nodered",
+                "name": "Node-RED",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "brand-node-red",
+                  "icon_ref": "infragram:brand-node-red"
+                },
+                "attributes": {
+                  "detail": "flows · alarms"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "k3s",
+                    "kind": "dotted",
+                    "label": "runs on",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "k3s",
+                "name": "k3s",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "container-k3s",
+                  "icon_ref": "onprem:container-k3s"
+                },
+                "attributes": {
+                  "detail": "edge Kubernetes"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "sbc",
+                "name": "Single-board computers",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "single-board-computer",
+                  "icon_ref": "infragram:single-board-computer"
+                },
+                "attributes": {
+                  "detail": "Raspberry Pi · LoRa"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "azure",
+        "name": "Azure subscription",
+        "type": "subscription",
+        "attributes": {
+          "editor_frame_group": "azure"
+        },
+        "children": [
+          {
+            "id": "rg",
+            "name": "Resource group · rg-iot-prod",
+            "type": "resource-group",
+            "attributes": {
+              "editor_frame_group": "azure"
+            },
+            "children": [
+              {
+                "id": "iothub",
+                "name": "IoT Hub",
+                "type": "service",
+                "component": {
+                  "provider": "azure",
+                  "service_id": "iot-hub",
+                  "icon_ref": "azure:iot-hub"
+                },
+                "attributes": {
+                  "detail": "device identity · ingest"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "asa",
+                    "kind": "solid",
+                    "label": "events",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "adt",
+                    "kind": "dotted",
+                    "label": "twins",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "asa",
+                "name": "Stream Analytics",
+                "type": "service",
+                "component": {
+                  "provider": "azure",
+                  "service_id": "stream-analytics-jobs",
+                  "icon_ref": "azure:stream-analytics-jobs"
+                },
+                "attributes": {
+                  "detail": "windows · anomalies"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "adx",
+                    "kind": "solid",
+                    "label": "output",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "adx",
+                "name": "Data Explorer",
+                "type": "service",
+                "component": {
+                  "provider": "azure",
+                  "service_id": "azure-data-explorer-clusters",
+                  "icon_ref": "azure:azure-data-explorer-clusters"
+                },
+                "attributes": {
+                  "detail": "KQL · dashboards"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "dashboards",
+                    "kind": "solid",
+                    "label": "KQL",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "adt",
+                "name": "Digital Twins",
+                "type": "service",
+                "component": {
+                  "provider": "azure",
+                  "service_id": "digital-twins",
+                  "icon_ref": "azure:digital-twins"
+                },
+                "attributes": {
+                  "detail": "plant model"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "dashboards",
+                "name": "Power BI",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "data-power-bi",
+                  "icon_ref": "infragram:data-power-bi"
+                },
+                "attributes": {
+                  "detail": "OEE dashboards"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

@@ -1,0 +1,995 @@
+{
+ "schema_version": 1,
+ "collection": "vendors/digitalocean",
+ "generated_by": "hand-curated DigitalOcean docs icons plus pinned mingrammer/diagrams nodes",
+ "source": {
+  "url": "https://docs.digitalocean.com/",
+  "release": "DigitalOcean product documentation icon set",
+  "terms": "https://www.digitalocean.com/legal/trademark-guidelines"
+ },
+ "counts": {
+  "icons": 75,
+  "third_party_overrides": 28
+ },
+ "icons": [
+  {
+   "id": "accounts",
+   "name": "DigitalOcean Accounts",
+   "aliases": [],
+   "category": "integration",
+   "file": "integration/accounts.svg",
+   "source_path": "images/icons/accounts.7c3a46a4e139957c37b1ba530846464f3b7432b7bc00793db0d8e788940ddf69.svg",
+   "sha256": "7c3a46a4e139957c37b1ba530846464f3b7432b7bc00793db0d8e788940ddf69",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines"
+  },
+  {
+   "id": "ai-assistant",
+   "name": "DigitalOcean AI Assistant",
+   "aliases": [
+    "control panel assistant"
+   ],
+   "category": "ai",
+   "file": "ai/ai-assistant.svg",
+   "source_path": "images/icons/ai-assistant.94496a3010f5c6549b9cd7c8412f61958b4e1b1cb7da8cea0ca7bfc622d27cef.svg",
+   "sha256": "94496a3010f5c6549b9cd7c8412f61958b4e1b1cb7da8cea0ca7bfc622d27cef",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines"
+  },
+  {
+   "id": "app-platform",
+   "name": "DigitalOcean App Platform",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/app-platform.svg",
+   "source_path": "images/icons/app-platform.965eeb0520b4c178cc9bf64423065e5aa5c2f47ad6102384e37beca3c079f287.svg",
+   "sha256": "965eeb0520b4c178cc9bf64423065e5aa5c2f47ad6102384e37beca3c079f287"
+  },
+  {
+   "id": "backups",
+   "name": "DigitalOcean Backups",
+   "aliases": [],
+   "category": "storage",
+   "file": "storage/backups.svg",
+   "source_path": "images/icons/backups.8f2953b640369857d8e09577aab7309b64ba37e4be8cbad0f0514549bf449bd6.svg",
+   "sha256": "8f2953b640369857d8e09577aab7309b64ba37e4be8cbad0f0514549bf449bd6"
+  },
+  {
+   "id": "bare-metal-gpus",
+   "name": "DigitalOcean Bare Metal GPUs",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/bare-metal-gpus.svg",
+   "source_path": "images/icons/bare-metal-gpus.7498b79d7a8142afb95399794d7f631c490388aa4fb5b30d9021292dca01d125.svg",
+   "sha256": "7498b79d7a8142afb95399794d7f631c490388aa4fb5b30d9021292dca01d125"
+  },
+  {
+   "id": "billing",
+   "name": "DigitalOcean Billing",
+   "aliases": [],
+   "category": "integration",
+   "file": "integration/billing.svg",
+   "source_path": "images/icons/billing.357b31651da85802e1aa1c9f0b19cda7b26d5c971352f7176d1a130b21e088b7.svg",
+   "sha256": "357b31651da85802e1aa1c9f0b19cda7b26d5c971352f7176d1a130b21e088b7",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines"
+  },
+  {
+   "id": "certificate",
+   "name": "DigitalOcean Certificate",
+   "class_name": "Certificate",
+   "aliases": [
+    "Certificate",
+    "diagrams.digitalocean.network.Certificate"
+   ],
+   "category": "network",
+   "file": "network/certificate.svg",
+   "source_path": "resources/digitalocean/network/certificate.png",
+   "sha256": "a64f827aa03184a4215fb891597faa918ddd27fa0471dfab73b75f88f0ae5dd7",
+   "source_sha256": "0c25c41478e654a91dc70a0c8f5c502a9292ee1c950b08abba77a37c1512c5cc",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/network/certificate.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "cloudways",
+   "name": "DigitalOcean Cloudways",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/cloudways.svg",
+   "source_path": "images/icons/cloudways.4200c764fb56e3bab6adc9c1009bfd314c9c555e4583882b57f4a571a854ac89.svg",
+   "sha256": "4200c764fb56e3bab6adc9c1009bfd314c9c555e4583882b57f4a571a854ac89"
+  },
+  {
+   "id": "community",
+   "name": "DigitalOcean Community",
+   "aliases": [
+    "developer tools"
+   ],
+   "category": "integration",
+   "file": "integration/community.svg",
+   "source_path": "images/icons/community.e52948b16b3479e4da950fbd790f94f478c598797f6b149a928ed5861c56d088.svg",
+   "sha256": "e52948b16b3479e4da950fbd790f94f478c598797f6b149a928ed5861c56d088",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines"
+  },
+  {
+   "id": "compute",
+   "name": "DigitalOcean Compute",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/compute.svg",
+   "source_path": "images/icons/compute.d66b1a9db6617291fb864e1aecfdbe3eec2ca71149711a1e9c095ffc94a6f89e.svg",
+   "sha256": "d66b1a9db6617291fb864e1aecfdbe3eec2ca71149711a1e9c095ffc94a6f89e"
+  },
+  {
+   "id": "containers",
+   "name": "DigitalOcean Containers",
+   "class_name": "Containers",
+   "aliases": [
+    "Containers",
+    "diagrams.digitalocean.compute.Containers"
+   ],
+   "category": "compute",
+   "file": "compute/containers.svg",
+   "source_path": "resources/digitalocean/compute/containers.png",
+   "sha256": "8170e1a0bbf07afaecf324ee4f74f0a3342d3d0a95a9e453d784efa8b309a09b",
+   "source_sha256": "06d45b785d211bf43e4c92a4e364ed78dab06fc4d85c6afe7ed27a23e92d1c93",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/compute/containers.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "cspm",
+   "name": "DigitalOcean Cloud Security Posture Management",
+   "aliases": [],
+   "category": "security",
+   "file": "security/cspm.svg",
+   "source_path": "images/icons/cspm.6aef7268a146d26d006e3cc5f8201bd03a34a1be46956cd795aa2486549c3fbe.svg",
+   "sha256": "56f12db992da7f9d13070e3cdb4aaf8b23e667601fc7c596370ab0acee508c9c"
+  },
+  {
+   "id": "data-services",
+   "name": "DigitalOcean Data Services",
+   "aliases": [],
+   "category": "data",
+   "file": "data/data-services.svg",
+   "source_path": "images/icons/data-services.1b2daa62fc7a9706c38911dd17ed968bdf107ae1b503f7a9372276c1ffffd539.svg",
+   "sha256": "1b2daa62fc7a9706c38911dd17ed968bdf107ae1b503f7a9372276c1ffffd539"
+  },
+  {
+   "id": "databases",
+   "name": "DigitalOcean Databases",
+   "aliases": [],
+   "category": "data",
+   "file": "data/databases.svg",
+   "source_path": "images/icons/databases.0f9e9a4851eafdab6e70319c75868400cbe7e32cd267b4616704eb5749956e6d.svg",
+   "sha256": "0f9e9a4851eafdab6e70319c75868400cbe7e32cd267b4616704eb5749956e6d"
+  },
+  {
+   "id": "dbaas-primary",
+   "name": "DigitalOcean DBaaS Primary",
+   "class_name": "DbaasPrimary",
+   "aliases": [
+    "DbaasPrimary",
+    "diagrams.digitalocean.database.DbaasPrimary"
+   ],
+   "category": "database",
+   "file": "database/dbaas-primary.svg",
+   "source_path": "resources/digitalocean/database/dbaas-primary.png",
+   "sha256": "9c544b5cac326f844fc093ce56346ce39661ed36dc467973b95e248e5b068c2b",
+   "source_sha256": "8b1bcb2eb9fba6409026ed223ae684aad49368b8666b6e7302df00b4bf5e5eea",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/database/dbaas-primary.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "dbaas-primary-standby-more",
+   "name": "DigitalOcean DBaaS Primary, Standby & Read-only",
+   "class_name": "DbaasPrimaryStandbyMore",
+   "aliases": [
+    "DbaasPrimaryStandbyMore",
+    "diagrams.digitalocean.database.DbaasPrimaryStandbyMore"
+   ],
+   "category": "database",
+   "file": "database/dbaas-primary-standby-more.svg",
+   "source_path": "resources/digitalocean/database/dbaas-primary-standby-more.png",
+   "sha256": "183675ff059f53777451243b24ef40ea56e86f4890d575846624e4e568e6aadb",
+   "source_sha256": "7c930dc1bedd9f6098f2ea3fd4729702e02c7af8cced156442d1e078e35507c0",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/database/dbaas-primary-standby-more.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "dbaas-read-only",
+   "name": "DigitalOcean DBaaS Read-only",
+   "class_name": "DbaasReadOnly",
+   "aliases": [
+    "DbaasReadOnly",
+    "diagrams.digitalocean.database.DbaasReadOnly"
+   ],
+   "category": "database",
+   "file": "database/dbaas-read-only.svg",
+   "source_path": "resources/digitalocean/database/dbaas-read-only.png",
+   "sha256": "e9d09b025ba65b62475d72f7427061bbdfd982037cd6fe86a2febbe36650d592",
+   "source_sha256": "952e6d304f9ebdd8a9258ab2dad420cbcb6fa145d3c255587d5d9b3750f35108",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/database/dbaas-read-only.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "dbaas-standby",
+   "name": "DigitalOcean DBaaS Standby",
+   "class_name": "DbaasStandby",
+   "aliases": [
+    "DbaasStandby",
+    "diagrams.digitalocean.database.DbaasStandby"
+   ],
+   "category": "database",
+   "file": "database/dbaas-standby.svg",
+   "source_path": "resources/digitalocean/database/dbaas-standby.png",
+   "sha256": "33f9835b5c8006565e6e2c236f9578d35c3473fb5c8ad4ab1366493204366a56",
+   "source_sha256": "8d654c43286330008a7f6b04038269fc9b8473add3eaea4c9a61f0b38e0e5ced",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/database/dbaas-standby.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "ddos",
+   "name": "DigitalOcean DDoS Protection",
+   "aliases": [],
+   "category": "security",
+   "file": "security/ddos.svg",
+   "source_path": "images/icons/ddos.d1d685c82e43143a4973f4dca8fb250b84dc76297607557c229c58e1916db549.svg",
+   "sha256": "d1d685c82e43143a4973f4dca8fb250b84dc76297607557c229c58e1916db549",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines"
+  },
+  {
+   "id": "deployments",
+   "name": "DigitalOcean Deployments",
+   "aliases": [],
+   "category": "analytics",
+   "file": "analytics/deployments.svg",
+   "source_path": "images/icons/deployments.3b7f4d8d82c236b51d91c8becee94bb424055a671131be322532b5d1cd26cc20.svg",
+   "sha256": "3b7f4d8d82c236b51d91c8becee94bb424055a671131be322532b5d1cd26cc20"
+  },
+  {
+   "id": "docker",
+   "name": "DigitalOcean Docker",
+   "class_name": "Docker",
+   "aliases": [
+    "diagrams.digitalocean.compute.Docker",
+    "Docker"
+   ],
+   "category": "compute",
+   "file": "compute/docker.svg",
+   "source_path": "resources/digitalocean/compute/docker.png",
+   "sha256": "7584fdfe1139450878a3d90e603271ea3763a92c2223cd0c9e2f9c56328bec6f",
+   "source_sha256": "fe2546d992726b3051d93eeccae131c1fee1e7c61a66cea9e31e3aa6406b519b",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/compute/docker.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "doks-boundary",
+   "name": "DigitalOcean DOKS Boundary",
+   "aliases": [
+    "DOKS frame",
+    "Kubernetes cluster boundary"
+   ],
+   "category": "containers",
+   "file": "containers/doks-boundary.svg",
+   "source_path": "infragram/digitalocean/doks-boundary.svg",
+   "sha256": "c890e31747aece877e0a706e4bb49ebe014b3696054aee0918d9a4f26d54ac1a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/compute/k8s-cluster.png",
+   "source_release": "Infragram boundary glyph retained for white-on-provider tabs; derived from the node vocabulary at mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "domain",
+   "name": "DigitalOcean Domain",
+   "class_name": "Domain",
+   "aliases": [
+    "diagrams.digitalocean.network.Domain",
+    "Domain"
+   ],
+   "category": "network",
+   "file": "network/domain.svg",
+   "source_path": "resources/digitalocean/network/domain.png",
+   "sha256": "e3ccc4cbff76a590b108d55f1d38566893f3c772e865834540b6da2cefebecf3",
+   "source_sha256": "266149ba620e61c2b34cc09ffdc47acc3e1eae84766e5b8032ba002036fec369",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/network/domain.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "domain-registration",
+   "name": "DigitalOcean Domain Registration",
+   "class_name": "DomainRegistration",
+   "aliases": [
+    "diagrams.digitalocean.network.DomainRegistration",
+    "DomainRegistration"
+   ],
+   "category": "network",
+   "file": "network/domain-registration.svg",
+   "source_path": "resources/digitalocean/network/domain-registration.png",
+   "sha256": "b70ee1ae342b2cb44a95a4dbac52077029aa5f35b6595f3d455e35cd64a3533d",
+   "source_sha256": "82fe2b74a29d4dcdf806cb3309dafa699b56a3994f7acc5c428bf308f0cd3b12",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/network/domain-registration.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "droplet",
+   "name": "DigitalOcean Droplet",
+   "class_name": "Droplet",
+   "aliases": [
+    "diagrams.digitalocean.compute.Droplet",
+    "Droplet"
+   ],
+   "category": "compute",
+   "file": "compute/droplet.svg",
+   "source_path": "resources/digitalocean/compute/droplet.png",
+   "sha256": "c24306430f900fdb8ad005e49c885226fb37b358c90883da790da757b6473567",
+   "source_sha256": "29c734aa262869eca752201e5aae6ab07be5c06fcd012b7b22d90224d8740155",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/compute/droplet.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "droplet-connect",
+   "name": "DigitalOcean Droplet Connect",
+   "class_name": "DropletConnect",
+   "aliases": [
+    "diagrams.digitalocean.compute.DropletConnect",
+    "DropletConnect"
+   ],
+   "category": "compute",
+   "file": "compute/droplet-connect.svg",
+   "source_path": "resources/digitalocean/compute/droplet-connect.png",
+   "sha256": "15e79bf8f2d71de4e3e4443d7e05f42ef191a843a36a342ecd5683e2efa41ea5",
+   "source_sha256": "cdf1f1729bbc769b7be1000518c6b1b82f3dbdb670851733511a31655f70e60a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/compute/droplet-connect.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "droplet-snapshot",
+   "name": "DigitalOcean Droplet Snapshot",
+   "class_name": "DropletSnapshot",
+   "aliases": [
+    "diagrams.digitalocean.compute.DropletSnapshot",
+    "DropletSnapshot"
+   ],
+   "category": "compute",
+   "file": "compute/droplet-snapshot.svg",
+   "source_path": "resources/digitalocean/compute/droplet-snapshot.png",
+   "sha256": "35340e57a600154008d97fc65fdb649bb0c190a967a62b7ea10eb448708b402c",
+   "source_sha256": "fdf9fc3c3f85f9feda94988b172aac507c2be3fd0ca833ca61bba7006883ac52",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/compute/droplet-snapshot.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "droplets",
+   "name": "DigitalOcean Droplets",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/droplets.svg",
+   "source_path": "images/icons/droplets.f4877fc574e6b07f8fb9608e252be4160ebecd65569acea11775a046b9370c6f.svg",
+   "sha256": "f4877fc574e6b07f8fb9608e252be4160ebecd65569acea11775a046b9370c6f"
+  },
+  {
+   "id": "firewall",
+   "name": "DigitalOcean Firewall",
+   "class_name": "Firewall",
+   "aliases": [
+    "diagrams.digitalocean.network.Firewall",
+    "Firewall"
+   ],
+   "category": "network",
+   "file": "network/firewall.svg",
+   "source_path": "resources/digitalocean/network/firewall.png",
+   "sha256": "d847f8138af819b1e86993114ced5934cef71121d2d87947f9761e9a0eeb5ab2",
+   "source_sha256": "ece33a5a34deae340dde3f66343674972d47497e11d470b64af897652fe864d1",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/network/firewall.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "floating-ip",
+   "name": "DigitalOcean Floating IP",
+   "class_name": "FloatingIp",
+   "aliases": [
+    "diagrams.digitalocean.network.FloatingIp",
+    "FloatingIp"
+   ],
+   "category": "network",
+   "file": "network/floating-ip.svg",
+   "source_path": "resources/digitalocean/network/floating-ip.png",
+   "sha256": "ec3c7595c1db34bc29c5efba741f74302adde8a74d60a49037e17537019351b1",
+   "source_sha256": "0ec1f247b6eec9108e22f0b5d7412cc0215528dee277f3520a39f80cc26f494d",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/network/floating-ip.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "folder",
+   "name": "DigitalOcean Folder",
+   "class_name": "Folder",
+   "aliases": [
+    "diagrams.digitalocean.storage.Folder",
+    "Folder"
+   ],
+   "category": "storage",
+   "file": "storage/folder.svg",
+   "source_path": "resources/digitalocean/storage/folder.png",
+   "sha256": "da089c70f8dde41fbfadda34a7d44a5870f7157d9aa2b9b89de5fa766586147f",
+   "source_sha256": "f828ccf336bdde10aeb33d82c0927bd5929fa53f0e00672356178e56afc4adca",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/storage/folder.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "functions",
+   "name": "DigitalOcean Functions",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/functions.svg",
+   "source_path": "images/icons/functions.b0bb037d0e06c09d659cd32aeb2b48c4195d6e824680f25a98d7ed1c24010331.svg",
+   "sha256": "b0bb037d0e06c09d659cd32aeb2b48c4195d6e824680f25a98d7ed1c24010331"
+  },
+  {
+   "id": "inference",
+   "name": "DigitalOcean Inference",
+   "aliases": [],
+   "category": "analytics",
+   "file": "analytics/inference.svg",
+   "source_path": "images/icons/inference.25e060459000674212c9927743d98eb7ce79e985aa1f3e51711b57eaf7a0d961.svg",
+   "sha256": "25e060459000674212c9927743d98eb7ce79e985aa1f3e51711b57eaf7a0d961"
+  },
+  {
+   "id": "internet-gateway",
+   "name": "DigitalOcean Internet Gateway",
+   "class_name": "InternetGateway",
+   "aliases": [
+    "diagrams.digitalocean.network.InternetGateway",
+    "InternetGateway"
+   ],
+   "category": "network",
+   "file": "network/internet-gateway.svg",
+   "source_path": "resources/digitalocean/network/internet-gateway.png",
+   "sha256": "1cddda0c19cf01dba37d1d880e3e4cf777dc6b2fafb165b5924b2e44ca6fcefb",
+   "source_sha256": "48626d841055acff249a3544ae47011dc46dcc7ea434f1f9cd916d4d8c082942",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/network/internet-gateway.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "ip-ranges",
+   "name": "DigitalOcean IP Ranges",
+   "aliases": [
+    "csv",
+    "network ranges"
+   ],
+   "category": "networking",
+   "file": "networking/ip-ranges.svg",
+   "source_path": "images/icons/dns.cb34d0653affb99d6826d0a3c70bdb8311ae7f51ca44810ae41cb1deb2e03a71.svg",
+   "sha256": "cb34d0653affb99d6826d0a3c70bdb8311ae7f51ca44810ae41cb1deb2e03a71",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines"
+  },
+  {
+   "id": "k8s-cluster",
+   "name": "DigitalOcean Kubernetes Cluster",
+   "class_name": "K8SCluster",
+   "aliases": [
+    "diagrams.digitalocean.compute.K8SCluster",
+    "doks cluster",
+    "K8SCluster"
+   ],
+   "category": "compute",
+   "file": "compute/k8s-cluster.svg",
+   "source_path": "resources/digitalocean/compute/k8s-cluster.png",
+   "sha256": "b536bfc9a3f68c57ed2011a8f5d3d4b1a78d839d64ec20e40f15313c8b701ae0",
+   "source_sha256": "c2f9751edb2b34467768171d9f329487b2866450b0054997db980c6931c68c96",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/compute/k8s-cluster.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE",
+   "compat_categories": [
+    "containers"
+   ]
+  },
+  {
+   "id": "k8s-node",
+   "name": "DigitalOcean Kubernetes Node",
+   "class_name": "K8SNode",
+   "aliases": [
+    "diagrams.digitalocean.compute.K8SNode",
+    "K8SNode"
+   ],
+   "category": "compute",
+   "file": "compute/k8s-node.svg",
+   "source_path": "resources/digitalocean/compute/k8s-node.png",
+   "sha256": "2e92087645c02584b58dbb4dac160f19d35957ec43d3714c41a9eb521c1fac13",
+   "source_sha256": "3e80c0a208da30ffa7e28b668012fa36ba24b5301a83dfe469b29ea71f80549d",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/compute/k8s-node.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "k8s-node-pool",
+   "name": "DigitalOcean Kubernetes Node Pool",
+   "class_name": "K8SNodePool",
+   "aliases": [
+    "diagrams.digitalocean.compute.K8SNodePool",
+    "K8SNodePool"
+   ],
+   "category": "compute",
+   "file": "compute/k8s-node-pool.svg",
+   "source_path": "resources/digitalocean/compute/k8s-node-pool.png",
+   "sha256": "886aac3ff783142a7cd9fdb7fe53b925471d476c0d83c5eac826968ee40aac80",
+   "source_sha256": "00c8bc0b34f7e404e21bf56f91f47858dc01bc8dc6b5d9934c699875e8d4ed8c",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/compute/k8s-node-pool.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "knowledge-bases",
+   "name": "DigitalOcean Knowledge Bases",
+   "aliases": [],
+   "category": "data",
+   "file": "data/knowledge-bases.svg",
+   "source_path": "images/icons/knowledge-bases.ebabd81540283b9f8553f8c941f599c08f84136fa6f3b4e509be91f204a65245.svg",
+   "sha256": "ebabd81540283b9f8553f8c941f599c08f84136fa6f3b4e509be91f204a65245"
+  },
+  {
+   "id": "kubernetes",
+   "name": "DigitalOcean Kubernetes",
+   "aliases": [],
+   "category": "containers",
+   "file": "containers/kubernetes.svg",
+   "source_path": "images/icons/kubernetes.5c9f5538fc3c9db4ddd19b3b4c2166c4e06a899c3582345cc892b570bd214072.svg",
+   "sha256": "5c9f5538fc3c9db4ddd19b3b4c2166c4e06a899c3582345cc892b570bd214072"
+  },
+  {
+   "id": "load-balancer",
+   "name": "DigitalOcean Load Balancer",
+   "class_name": "LoadBalancer",
+   "aliases": [
+    "diagrams.digitalocean.network.LoadBalancer",
+    "LoadBalancer"
+   ],
+   "category": "network",
+   "file": "network/load-balancer.svg",
+   "source_path": "resources/digitalocean/network/load-balancer.png",
+   "sha256": "ac79772ddc464bf7e742ea767fd97fe59bc382c246e63e4d0a738947027bec59",
+   "source_sha256": "779a0a6f3283b496c7439de07b0e22088a332140e41974aa1270bcec26a57c6a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/network/load-balancer.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE",
+   "compat_categories": [
+    "networking"
+   ]
+  },
+  {
+   "id": "machines",
+   "name": "DigitalOcean Machines",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/machines.svg",
+   "source_path": "images/icons/machines.4f455a935c3878c20e9d35654c24e34c18f052727b612061b52fbe7c0467d808.svg",
+   "sha256": "4f455a935c3878c20e9d35654c24e34c18f052727b612061b52fbe7c0467d808"
+  },
+  {
+   "id": "managed-database",
+   "name": "DigitalOcean Managed Database",
+   "aliases": [],
+   "category": "data",
+   "file": "data/managed-database.svg",
+   "source_path": "resources/digitalocean/database/DbaasPrimary.png",
+   "sha256": "8e81e3e7d4ddb0107083345e3b32a1dd675a2ebad8e93eaa12ea75dd9f29d818",
+   "source_url": "https://github.com/mingrammer/diagrams",
+   "source_release": "mingrammer/diagrams resource icons, normalized to SVG by Infragram",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "managed-vpn",
+   "name": "DigitalOcean Managed VPN",
+   "class_name": "ManagedVpn",
+   "aliases": [
+    "diagrams.digitalocean.network.ManagedVpn",
+    "ManagedVpn"
+   ],
+   "category": "network",
+   "file": "network/managed-vpn.svg",
+   "source_path": "resources/digitalocean/network/managed-vpn.png",
+   "sha256": "7970a548abde109a17fdf87a67cc3b9b1eb58ebb2053d9675da3f0b933ba9bd1",
+   "source_sha256": "c100efe54a0353ac58e7a13a21b121eaa88276d8e5e0fe3773b1e6490c81c433",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/network/managed-vpn.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "marketplace",
+   "name": "DigitalOcean Marketplace",
+   "aliases": [],
+   "category": "integration",
+   "file": "integration/marketplace.svg",
+   "source_path": "images/icons/marketplace.6eb4c8240f6fd707ebe2218018dc699d375e2e3e9885d7fb3e760a9fc120a68e.svg",
+   "sha256": "6eb4c8240f6fd707ebe2218018dc699d375e2e3e9885d7fb3e760a9fc120a68e"
+  },
+  {
+   "id": "mcp",
+   "name": "DigitalOcean MCP Server",
+   "aliases": [],
+   "category": "integration",
+   "file": "integration/mcp.svg",
+   "source_path": "images/icons/mcp.ecd474dcd1a6781abb68b3a2ccb9cec4594cac83394f0c3b3661148969c0700e.svg",
+   "sha256": "ecd474dcd1a6781abb68b3a2ccb9cec4594cac83394f0c3b3661148969c0700e"
+  },
+  {
+   "id": "ml",
+   "name": "Paperspace Machine Learning",
+   "aliases": [],
+   "category": "analytics",
+   "file": "analytics/ml.svg",
+   "source_path": "images/icons/ml.8fa526f2000be550be4cf13328efa900204aadddf78ca969ef95c31dee1c9c94.svg",
+   "sha256": "8fa526f2000be550be4cf13328efa900204aadddf78ca969ef95c31dee1c9c94"
+  },
+  {
+   "id": "monitoring",
+   "name": "DigitalOcean Monitoring",
+   "aliases": [],
+   "category": "analytics",
+   "file": "analytics/monitoring.svg",
+   "source_path": "images/icons/monitoring.76945ea4a7d45a01469c36e1133e112e8cf2b800c56b8106f31d27b146221b0f.svg",
+   "sha256": "76945ea4a7d45a01469c36e1133e112e8cf2b800c56b8106f31d27b146221b0f"
+  },
+  {
+   "id": "networking",
+   "name": "DigitalOcean Networking",
+   "aliases": [],
+   "category": "networking",
+   "file": "networking/networking.svg",
+   "source_path": "images/icons/networking.8ce61209d990cc1c01165492e38bc20ff73c12a59a93ea2fce5f487949e23b78.svg",
+   "sha256": "8ce61209d990cc1c01165492e38bc20ff73c12a59a93ea2fce5f487949e23b78"
+  },
+  {
+   "id": "nfs",
+   "name": "DigitalOcean Network File Storage",
+   "aliases": [],
+   "category": "storage",
+   "file": "storage/nfs.svg",
+   "source_path": "images/icons/nfs.2125812c526e200f3956d48d6e70344c85c156cbeb56103ff278169fd7bcb40f.svg",
+   "sha256": "2125812c526e200f3956d48d6e70344c85c156cbeb56103ff278169fd7bcb40f"
+  },
+  {
+   "id": "notebooks",
+   "name": "DigitalOcean Notebooks",
+   "aliases": [],
+   "category": "analytics",
+   "file": "analytics/notebooks.svg",
+   "source_path": "images/icons/notebooks.32e19af09a55fd5cd33aebcce8d997fae35ad696d0312f02ea32fbd1031df490.svg",
+   "sha256": "32e19af09a55fd5cd33aebcce8d997fae35ad696d0312f02ea32fbd1031df490"
+  },
+  {
+   "id": "organizations",
+   "name": "DigitalOcean Organizations",
+   "aliases": [
+    "consolidated billing"
+   ],
+   "category": "governance",
+   "file": "governance/organizations.svg",
+   "source_path": "images/icons/organizations.ae95392d02268a2e13ef28b6aabf1b35b6a0a5a9ef64517fedf080075500cefd.svg",
+   "sha256": "ae95392d02268a2e13ef28b6aabf1b35b6a0a5a9ef64517fedf080075500cefd",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines"
+  },
+  {
+   "id": "platform",
+   "name": "DigitalOcean Platform",
+   "aliases": [],
+   "category": "integration",
+   "file": "integration/platform.svg",
+   "source_path": "images/icons/platform.50dba4c764fea6a8bb03ae7448789a23e7cf9c9353520d5826a54c13bb635051.svg",
+   "sha256": "50dba4c764fea6a8bb03ae7448789a23e7cf9c9353520d5826a54c13bb635051"
+  },
+  {
+   "id": "platform-logomark",
+   "name": "DigitalOcean Platform Mark",
+   "aliases": [
+    "service status",
+    "trust platform"
+   ],
+   "category": "integration",
+   "file": "integration/platform-logomark.svg",
+   "source_path": "images/icons/digitalocean-logomark.fbe7ea61f6bde3a4d8848d2e3d241a26db3d79d7adc9c651104c68bd1d212c82.svg",
+   "sha256": "fbe7ea61f6bde3a4d8848d2e3d241a26db3d79d7adc9c651104c68bd1d212c82",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines"
+  },
+  {
+   "id": "product-lifecycle",
+   "name": "DigitalOcean Product Lifecycle",
+   "aliases": [
+    "release stage"
+   ],
+   "category": "governance",
+   "file": "governance/product-lifecycle.svg",
+   "source_path": "images/icons/product-lifecycle.420c79b20e1d85e7a00a3dbb1734dc5c65ceaac5449c3ed8c34ad37cc88ffd9b.svg",
+   "sha256": "420c79b20e1d85e7a00a3dbb1734dc5c65ceaac5449c3ed8c34ad37cc88ffd9b",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines"
+  },
+  {
+   "id": "projects",
+   "name": "DigitalOcean Projects",
+   "aliases": [
+    "DigitalOcean Resource Limits",
+    "product limits",
+    "team limits"
+   ],
+   "category": "integration",
+   "file": "integration/projects.svg",
+   "source_path": "images/icons/projects.09205e3f8a46d107d3fe9c819ca920f186df235ea36143c514811a9a37dcb4ad.svg",
+   "sha256": "09205e3f8a46d107d3fe9c819ca920f186df235ea36143c514811a9a37dcb4ad",
+   "additional_source_paths": [
+    "images/icons/default.09205e3f8a46d107d3fe9c819ca920f186df235ea36143c514811a9a37dcb4ad.svg"
+   ]
+  },
+  {
+   "id": "reference",
+   "name": "DigitalOcean Reference",
+   "aliases": [],
+   "category": "integration",
+   "file": "integration/reference.svg",
+   "source_path": "images/icons/reference.a72a2841c2e021e1c757d2a5a0eeb174d079b38bffa1dc4c3452b72cede0a2a1.svg",
+   "sha256": "a72a2841c2e021e1c757d2a5a0eeb174d079b38bffa1dc4c3452b72cede0a2a1"
+  },
+  {
+   "id": "regional-availability",
+   "name": "DigitalOcean Regional Availability",
+   "aliases": [
+    "datacenter availability"
+   ],
+   "category": "governance",
+   "file": "governance/regional-availability.svg",
+   "source_path": "images/icons/regional-availability.32459447c00bfdb1c07abebcc0fdd721a4cbd93143cb616b0fbe5c629e4a938c.svg",
+   "sha256": "32459447c00bfdb1c07abebcc0fdd721a4cbd93143cb616b0fbe5c629e4a938c",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines"
+  },
+  {
+   "id": "release-notes",
+   "name": "DigitalOcean Release Notes",
+   "aliases": [
+    "changelog"
+   ],
+   "category": "devops",
+   "file": "devops/release-notes.svg",
+   "source_path": "images/icons/release-notes.5fbb164636ab961df9e08f892a39623e2bf7848be659fb300d6b0bab87a060dd.svg",
+   "sha256": "5fbb164636ab961df9e08f892a39623e2bf7848be659fb300d6b0bab87a060dd",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines"
+  },
+  {
+   "id": "service-level-agreements",
+   "name": "DigitalOcean Service-Level Agreements",
+   "aliases": [
+    "sla"
+   ],
+   "category": "governance",
+   "file": "governance/service-level-agreements.svg",
+   "source_path": "images/icons/slas.1b124ea38fb251987cabe77aae688f5c00fa72130222aca6073b34a82f26bfe2.svg",
+   "sha256": "1b124ea38fb251987cabe77aae688f5c00fa72130222aca6073b34a82f26bfe2",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines"
+  },
+  {
+   "id": "snapshooter",
+   "name": "DigitalOcean Snapshooter",
+   "aliases": [],
+   "category": "storage",
+   "file": "storage/snapshooter.svg",
+   "source_path": "images/icons/snapshooter.13e207b5891670f2b29dbf31513a019ebef8731d27c25446bbf7557251aca915.svg",
+   "sha256": "13e207b5891670f2b29dbf31513a019ebef8731d27c25446bbf7557251aca915"
+  },
+  {
+   "id": "snapshots",
+   "name": "DigitalOcean Snapshots",
+   "aliases": [],
+   "category": "storage",
+   "file": "storage/snapshots.svg",
+   "source_path": "images/icons/snapshots.257b4659783b27a6528d9939dcfcb23d26d0ecb4f674e8b728d4bbee764fc3c9.svg",
+   "sha256": "257b4659783b27a6528d9939dcfcb23d26d0ecb4f674e8b728d4bbee764fc3c9"
+  },
+  {
+   "id": "space",
+   "name": "DigitalOcean Space",
+   "class_name": "Space",
+   "aliases": [
+    "diagrams.digitalocean.storage.Space",
+    "Space"
+   ],
+   "category": "storage",
+   "file": "storage/space.svg",
+   "source_path": "resources/digitalocean/storage/space.png",
+   "sha256": "b1695521e8e8e6a52e573e482db03486139bb24102ecbdc1df3d9a0828550ac7",
+   "source_sha256": "0b473b6023c2ab737a3ccee6a86930f2070ff65e6b79a94f3f48395c02ecff94",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/storage/space.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "spaces",
+   "name": "DigitalOcean Spaces",
+   "aliases": [],
+   "category": "storage",
+   "file": "storage/spaces.svg",
+   "source_path": "resources/digitalocean/storage/Spaces.png",
+   "sha256": "9387898a4886813e3539e991d3163e5125b5f664c70d617a74ce4c38b9d96c1c",
+   "source_url": "https://github.com/mingrammer/diagrams",
+   "source_release": "mingrammer/diagrams resource icons, normalized to SVG by Infragram",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "spaces-docs",
+   "name": "DigitalOcean Spaces Object Storage",
+   "aliases": [],
+   "category": "storage",
+   "file": "storage/spaces-docs.svg",
+   "source_path": "images/icons/spaces.77fdb5bd2197bad96040b9d1e46f6a66a0cb7b3c03213c5f52b42f43e268affa.svg",
+   "sha256": "77fdb5bd2197bad96040b9d1e46f6a66a0cb7b3c03213c5f52b42f43e268affa"
+  },
+  {
+   "id": "storage",
+   "name": "DigitalOcean Storage",
+   "aliases": [],
+   "category": "storage",
+   "file": "storage/storage.svg",
+   "source_path": "images/icons/storage.88a54399ff359086009b2e5dafc5791295f7d501d6556069bb31ac1dcacde3a2.svg",
+   "sha256": "88a54399ff359086009b2e5dafc5791295f7d501d6556069bb31ac1dcacde3a2"
+  },
+  {
+   "id": "support",
+   "name": "DigitalOcean Support",
+   "aliases": [
+    "DigitalOcean Support Plans",
+    "support ticket"
+   ],
+   "category": "integration",
+   "file": "integration/support.svg",
+   "source_path": "images/icons/support.91273ef64796cbf92aa09b42996c4fd5bae614b3ce3dd81c685d8da10c28f209.svg",
+   "sha256": "91273ef64796cbf92aa09b42996c4fd5bae614b3ce3dd81c685d8da10c28f209",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines",
+   "additional_source_paths": [
+    "images/icons/support-plans.91273ef64796cbf92aa09b42996c4fd5bae614b3ce3dd81c685d8da10c28f209.svg"
+   ]
+  },
+  {
+   "id": "teams",
+   "name": "DigitalOcean Teams",
+   "aliases": [
+    "team members",
+    "team settings"
+   ],
+   "category": "governance",
+   "file": "governance/teams.svg",
+   "source_path": "images/icons/teams.d6932e5b476fcbbdf1fecec304776ef06c1a04d23174de1c0e6b349d96add59f.svg",
+   "sha256": "d6932e5b476fcbbdf1fecec304776ef06c1a04d23174de1c0e6b349d96add59f",
+   "source_url": "https://docs.digitalocean.com/platform/",
+   "source_release": "DigitalOcean Platform documentation icon set",
+   "terms_url": "https://www.digitalocean.com/legal/trademark-guidelines"
+  },
+  {
+   "id": "vector-databases",
+   "name": "DigitalOcean Vector Databases",
+   "aliases": [],
+   "category": "data",
+   "file": "data/vector-databases.svg",
+   "source_path": "images/icons/vector-databases.d30a3c8f114cba082e244133e3d76299debedf3cfb235326cdd95f6024f202f3.svg",
+   "sha256": "d30a3c8f114cba082e244133e3d76299debedf3cfb235326cdd95f6024f202f3"
+  },
+  {
+   "id": "volume",
+   "name": "DigitalOcean Volume",
+   "class_name": "Volume",
+   "aliases": [
+    "diagrams.digitalocean.storage.Volume",
+    "Volume"
+   ],
+   "category": "storage",
+   "file": "storage/volume.svg",
+   "source_path": "resources/digitalocean/storage/volume.png",
+   "sha256": "a648fdfd9885313cbe9581830a5e363c7cbe6ea6493d0f7760dc15c425eb5be9",
+   "source_sha256": "5d532db045fdd4f117df9ce0f5b32e7fec21c3aed9b5257b2c650a110037b003",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/storage/volume.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "volume-snapshot",
+   "name": "DigitalOcean Volume Snapshot",
+   "class_name": "VolumeSnapshot",
+   "aliases": [
+    "diagrams.digitalocean.storage.VolumeSnapshot",
+    "VolumeSnapshot"
+   ],
+   "category": "storage",
+   "file": "storage/volume-snapshot.svg",
+   "source_path": "resources/digitalocean/storage/volume-snapshot.png",
+   "sha256": "4d7b27b7ead069ef9482e86be6650b1e3cffb6e137881eac054cbe27e94759d4",
+   "source_sha256": "a8f8ba763b0b832e6b88cd2c43680011a786ebab65614aa5b7fd3147ada9c409",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/storage/volume-snapshot.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE"
+  },
+  {
+   "id": "volumes",
+   "name": "DigitalOcean Volumes",
+   "aliases": [],
+   "category": "storage",
+   "file": "storage/volumes.svg",
+   "source_path": "images/icons/volumes.9c13d8bb9aee0348ee1af5d72d4c795b4eea86db85fa161806e73d12c0b756d3.svg",
+   "sha256": "9c13d8bb9aee0348ee1af5d72d4c795b4eea86db85fa161806e73d12c0b756d3"
+  },
+  {
+   "id": "vpc",
+   "name": "DigitalOcean VPC",
+   "class_name": "Vpc",
+   "aliases": [
+    "diagrams.digitalocean.network.Vpc",
+    "virtual private cloud",
+    "Vpc"
+   ],
+   "category": "network",
+   "file": "network/vpc.svg",
+   "source_path": "resources/digitalocean/network/vpc.png",
+   "sha256": "df5c6dbd4a3071240381668df1e6daa5c7adea5adfa995e436448c0ed7bb3d6e",
+   "source_sha256": "32da0596e7ddce4c9cae2ae76543970ed611f816bd5a326c92eea5120bc82b9b",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/364c61d47884bc0718d07f932f7c1772e82c42b1/resources/digitalocean/network/vpc.png",
+   "source_release": "mingrammer/diagrams commit 364c61d47884bc0718d07f932f7c1772e82c42b1; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/master/LICENSE",
+   "compat_categories": [
+    "networking"
+   ],
+   "compat_class_names": {
+    "networking": "VPC"
+   }
+  },
+  {
+   "id": "weaviate",
+   "name": "DigitalOcean Weaviate",
+   "aliases": [],
+   "category": "data",
+   "file": "data/weaviate.svg",
+   "source_path": "images/icons/weaviate.af4bfba1621e7fc75f115126db129551c889ff43dfa6e970f2a9c3bcb8972ca0.svg",
+   "sha256": "af4bfba1621e7fc75f115126db129551c889ff43dfa6e970f2a9c3bcb8972ca0"
+  },
+  {
+   "id": "workflows",
+   "name": "DigitalOcean Workflows",
+   "aliases": [],
+   "category": "analytics",
+   "file": "analytics/workflows.svg",
+   "source_path": "images/icons/workflows.3b7ab56ba05e74ff45c932896583f0781174b87ebd9e2feb4560ab9be20c2bb9.svg",
+   "sha256": "3b7ab56ba05e74ff45c932896583f0781174b87ebd9e2feb4560ab9be20c2bb9"
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "schema_version": 1,
+ "slug": "oracle",
+ "name": "Oracle Cloud",
+ "title": "Oracle Cloud application delivery",
+ "mark": "marks/oracle.svg",
+ "icons": {
+  "categories": [
+   "analytics",
+   "compute",
+   "containers",
+   "data",
+   "integration",
+   "networking",
+   "security",
+   "storage"
+  ],
+  "items": []
+ },
+ "theme": {
+  "paper": "#ffffff",
+  "paper_2": "#f9f5f4",
+  "ink": "#261413",
+  "muted": "#684845",
+  "soft": "#82615e",
+  "accent": "#ff6b5f",
+  "link": "#ad0d00"
+ },
+ "icon_palette": [
+  "#f80000",
+  "#c74634",
+  "#312d2a"
+ ],
+ "services": {
+  "entry": {
+   "name": "OCI Load Balancer",
+   "detail": "edge · TLS"
+  },
+  "app": {
+   "name": "Container Instances",
+   "detail": "managed containers"
+  },
+  "object_store": {
+   "name": "Object Storage",
+   "detail": "static · objects"
+  },
+  "database": {
+   "name": "Autonomous Database",
+   "detail": "managed data"
+  }
+ },
+ "boundaries": {
+  "color": "#f80000",
+  "icons": {
+   "cluster": "logos:kubernetes#mono"
+  }
+ }
+}

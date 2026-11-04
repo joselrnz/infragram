@@ -1,0 +1,430 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "onprem-data-platform",
+  "title": "Hadoop data platform with analytics",
+  "description": "Kafka, PostgreSQL and SQL Server feed Flink and NiFi; a Hadoop cluster runs HDFS, Spark and Hive with a cold object tier and Trino as the query layer; Superset, Tableau, SAS and RStudio serve the analysts.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "On-premises data platform",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Hadoop data platform with analytics",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "dc",
+        "name": "Corporate datacenter",
+        "type": "site",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "sources",
+            "name": "VLAN 30 · Sources",
+            "type": "subnet-private",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "kafka",
+                "name": "Kafka",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "queue-kafka",
+                  "icon_ref": "onprem:queue-kafka"
+                },
+                "attributes": {
+                  "detail": "event streams"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "flink",
+                    "kind": "solid",
+                    "label": "streams"
+                  }
+                ]
+              },
+              {
+                "id": "oltp",
+                "name": "PostgreSQL",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "database-postgresql",
+                  "icon_ref": "onprem:database-postgresql"
+                },
+                "attributes": {
+                  "detail": "operational database"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "nifi",
+                    "kind": "solid",
+                    "label": "CDC"
+                  }
+                ]
+              },
+              {
+                "id": "erp",
+                "name": "SQL Server",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "database-mssql",
+                  "icon_ref": "onprem:database-mssql"
+                },
+                "attributes": {
+                  "detail": "ERP"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "nifi",
+                    "kind": "solid",
+                    "label": "extract"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "ingest",
+            "name": "Ingestion & orchestration",
+            "type": "cluster",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "nifi",
+                "name": "Apache NiFi",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "workflow-nifi",
+                  "icon_ref": "onprem:workflow-nifi"
+                },
+                "attributes": {
+                  "detail": "flow ingestion"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "hadoop",
+                    "kind": "solid",
+                    "label": "land"
+                  }
+                ]
+              },
+              {
+                "id": "airflow",
+                "name": "Airflow",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "workflow-airflow",
+                  "icon_ref": "onprem:workflow-airflow"
+                },
+                "attributes": {
+                  "detail": "batch orchestration"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "spark",
+                    "kind": "dotted",
+                    "label": "schedule"
+                  }
+                ]
+              },
+              {
+                "id": "dbt",
+                "name": "dbt",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "analytics-dbt",
+                  "icon_ref": "onprem:analytics-dbt"
+                },
+                "attributes": {
+                  "detail": "transformations"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "hive",
+                    "kind": "dotted",
+                    "label": "models"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "hadoop-cluster",
+            "name": "Hadoop cluster",
+            "type": "cluster",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "flink",
+                "name": "Flink",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "analytics-flink",
+                  "icon_ref": "onprem:analytics-flink"
+                },
+                "attributes": {
+                  "detail": "stream processing"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "hadoop",
+                    "kind": "solid",
+                    "label": "sinks"
+                  }
+                ]
+              },
+              {
+                "id": "hadoop",
+                "name": "Hadoop",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "analytics-hadoop",
+                  "icon_ref": "onprem:analytics-hadoop"
+                },
+                "attributes": {
+                  "detail": "HDFS · YARN"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "cold",
+                    "kind": "dashed",
+                    "label": "cold tier"
+                  }
+                ]
+              },
+              {
+                "id": "spark",
+                "name": "Spark",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "analytics-spark",
+                  "icon_ref": "onprem:analytics-spark"
+                },
+                "attributes": {
+                  "detail": "processing"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "hive",
+                    "kind": "solid",
+                    "label": "tables"
+                  }
+                ]
+              },
+              {
+                "id": "hive",
+                "name": "Hive",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "analytics-hive",
+                  "icon_ref": "onprem:analytics-hive"
+                },
+                "attributes": {
+                  "detail": "metastore · SQL"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "trino",
+                    "kind": "dotted",
+                    "label": "metastore"
+                  }
+                ]
+              },
+              {
+                "id": "cold",
+                "name": "Object storage",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "object-storage-appliance",
+                  "icon_ref": "onprem:object-storage-appliance"
+                },
+                "attributes": {
+                  "detail": "cold tier"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "trino",
+                "name": "Trino",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "analytics-trino",
+                  "icon_ref": "onprem:analytics-trino"
+                },
+                "attributes": {
+                  "detail": "federated SQL"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "superset",
+                    "kind": "solid",
+                    "label": "SQL"
+                  },
+                  {
+                    "target": "tableau",
+                    "kind": "solid",
+                    "label": ""
+                  },
+                  {
+                    "target": "sas",
+                    "kind": "solid",
+                    "label": "ODBC"
+                  },
+                  {
+                    "target": "rstudio",
+                    "kind": "solid",
+                    "label": ""
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "analytics",
+            "name": "VLAN 40 · Analytics",
+            "type": "subnet-private",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "superset",
+                "name": "Superset",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "data-superset",
+                  "icon_ref": "infragram:data-superset"
+                },
+                "attributes": {
+                  "detail": "dashboards"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "tableau",
+                "name": "Tableau",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "data-tableau",
+                  "icon_ref": "infragram:data-tableau"
+                },
+                "attributes": {
+                  "detail": "BI"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "sas",
+                "name": "SAS",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "statistics-sas",
+                  "icon_ref": "infragram:statistics-sas"
+                },
+                "attributes": {
+                  "detail": "statistical analysis"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "rstudio",
+                "name": "RStudio",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "statistics-rstudio",
+                  "icon_ref": "infragram:statistics-rstudio"
+                },
+                "attributes": {
+                  "detail": "data science"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "analysts",
+        "name": "Data analysts",
+        "type": "service",
+        "component": {
+          "provider": "onprem",
+          "service_id": "client-users",
+          "icon_ref": "onprem:client-users"
+        },
+        "attributes": {
+          "detail": "workstations"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "superset",
+            "kind": "solid",
+            "label": "HTTPS"
+          }
+        ]
+      }
+    ],
+    "connections": []
+  }
+}

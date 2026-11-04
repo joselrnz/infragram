@@ -1,0 +1,3821 @@
+{
+ "schema_version": 1,
+ "collection": "vendors/ibm",
+ "generated_by": "scripts/importers/carbon-ibm-icons.py from a reviewed service -> Carbon table",
+ "source": {
+  "url": "https://www.npmjs.com/package/@carbon/icons/v/11.89.0",
+  "release": "@carbon/icons 11.89.0",
+  "terms": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+  "label": "IBM Cloud"
+ },
+ "counts": {
+  "icons": 168
+ },
+ "icons": [
+  {
+   "id": "analytics-analytics",
+   "name": "Analytics",
+   "class_name": "Analytics",
+   "aliases": [
+    "Analytics",
+    "diagrams.ibm.analytics.Analytics",
+    "analytics"
+   ],
+   "category": "analytics",
+   "file": "analytics/analytics-analytics.svg",
+   "source_path": "svg/32/analytics.svg",
+   "sha256": "82358807b3ae63b27b6ad867f396afe22066dc97e0a0720a0558b9a2d5a94e61",
+   "source_sha256": "f2d9c1ffa90cbce3d695e128658df8019aa344d65d9010acad049c6789048b11",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/analytics.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "analytics",
+    "basis": "generic",
+    "note": "generic analytics line chart"
+   }
+  },
+  {
+   "id": "analytics-data-integration",
+   "name": "Data Integration",
+   "class_name": "DataIntegration",
+   "aliases": [
+    "DataIntegration",
+    "diagrams.ibm.analytics.DataIntegration",
+    "data-integration"
+   ],
+   "category": "analytics",
+   "file": "analytics/analytics-data-integration.svg",
+   "source_path": "svg/32/integration.svg",
+   "sha256": "fc28eb712232bc4097fd6a900b51320c820ca89c0d17121fc167f0337f360b90",
+   "source_sha256": "8dac3ab04b2e582e1c1689b710c1403e72a8308f50feea7ad192bf22524dcc78",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/integration.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "integration",
+    "basis": "generic",
+    "note": "Carbon's generic integration glyph; DataStage icon would name one product"
+   }
+  },
+  {
+   "id": "analytics-data-repositories",
+   "name": "Data Repositories",
+   "class_name": "DataRepositories",
+   "aliases": [
+    "DataRepositories",
+    "diagrams.ibm.analytics.DataRepositories",
+    "data-repositories"
+   ],
+   "category": "analytics",
+   "file": "analytics/analytics-data-repositories.svg",
+   "source_path": "svg/32/datastore.svg",
+   "sha256": "5a2c23ff57ef7d8ddfa70c1e22412f00816d80f0452d61130f20b13100ce3a55",
+   "source_sha256": "a4d480d7f4889d4f19aae700ddf41e217fb47e303cfbc160eb70a600bd547b4e",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/datastore.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "datastore",
+    "basis": "generic",
+    "note": "generic data store"
+   }
+  },
+  {
+   "id": "analytics-device-analytics",
+   "name": "Device Analytics",
+   "class_name": "DeviceAnalytics",
+   "aliases": [
+    "DeviceAnalytics",
+    "diagrams.ibm.analytics.DeviceAnalytics",
+    "device-analytics"
+   ],
+   "category": "analytics",
+   "file": "analytics/analytics-device-analytics.svg",
+   "source_path": "svg/32/iot--platform.svg",
+   "sha256": "b26753f0ce98eec8dfe6e62ff72a960b401761dbdb7eaa88bbf870eda7b0ba3d",
+   "source_sha256": "6dd1783d46240559c1f6ac3efecdc89aba45c7a4d6f208970a3fefba996e7811",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/iot--platform.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "iot--platform",
+    "basis": "generic",
+    "note": "IoT device glyph; no device-analytics icon, the chip says IoT not analytics"
+   }
+  },
+  {
+   "id": "analytics-streaming-computing",
+   "name": "Streaming Computing",
+   "class_name": "StreamingComputing",
+   "aliases": [
+    "StreamingComputing",
+    "diagrams.ibm.analytics.StreamingComputing",
+    "streaming-computing"
+   ],
+   "category": "analytics",
+   "file": "analytics/analytics-streaming-computing.svg",
+   "source_path": "svg/32/flow--stream.svg",
+   "sha256": "15d1634f195ccfe55d969e91e5b79d2498cab06192e40f363dad491ea763a65a",
+   "source_sha256": "f2e06f66d539b1efca93ec3c70ff51f4850f70997b726a868a258430263103ce",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/flow--stream.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "flow--stream",
+    "basis": "generic",
+    "note": "generic stream flow; Event Streams is Kafka, not stream computing"
+   }
+  },
+  {
+   "id": "applications-actionable-insight",
+   "name": "Actionable Insight",
+   "class_name": "ActionableInsight",
+   "aliases": [
+    "ActionableInsight",
+    "diagrams.ibm.applications.ActionableInsight",
+    "actionable-insight"
+   ],
+   "category": "applications",
+   "file": "applications/applications-actionable-insight.svg",
+   "source_path": "svg/32/idea.svg",
+   "sha256": "d9ff2e3fd0784ce4c3439ad8903683cca86e46af23a702d2d3c32e238ca0a34c",
+   "source_sha256": "5446c7a70627000076e5f1df9be7b98a8628309a54ddf0edbce516df933611d8",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/idea.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "idea",
+    "basis": "generic",
+    "note": "lightbulb for insight"
+   }
+  },
+  {
+   "id": "applications-annotate",
+   "name": "Annotate",
+   "class_name": "Annotate",
+   "aliases": [
+    "Annotate",
+    "diagrams.ibm.applications.Annotate",
+    "annotate"
+   ],
+   "category": "applications",
+   "file": "applications/applications-annotate.svg",
+   "source_path": "svg/32/document--comment.svg",
+   "sha256": "f58aeb80011b3f4332905592d806c82f8f82ee3c7ac4e8c0eee412b8ff643609",
+   "source_sha256": "302699f8705e44eebd6a53136a0259677114356dd7db90f8e6098b365eb00463",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/document--comment.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "document--comment",
+    "basis": "generic",
+    "note": "document with comment mark"
+   }
+  },
+  {
+   "id": "applications-api-developer-portal",
+   "name": "API Developer Portal",
+   "class_name": "ApiDeveloperPortal",
+   "aliases": [
+    "ApiDeveloperPortal",
+    "diagrams.ibm.applications.ApiDeveloperPortal",
+    "api-developer-portal"
+   ],
+   "category": "applications",
+   "file": "applications/applications-api-developer-portal.svg",
+   "source_path": "svg/32/ibm--webmethods-developer-portal.svg",
+   "sha256": "c8395898d7b0e83e191aa4b65fd0b1e997e78e774f158a83fe7f0ab64d3c947d",
+   "source_sha256": "35f40b7b1d76cea4103fdd5f22f3eb3c6c757e7424cba1d799b4a0794f859c93",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm--webmethods-developer-portal.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm--webmethods-developer-portal",
+    "basis": "ibm-product",
+    "note": "IBM's API developer portal product (webMethods); the 2017 icon meant API Connect's portal"
+   }
+  },
+  {
+   "id": "applications-api-polyglot-runtimes",
+   "name": "API Polyglot Runtimes",
+   "class_name": "ApiPolyglotRuntimes",
+   "aliases": [
+    "ApiPolyglotRuntimes",
+    "diagrams.ibm.applications.ApiPolyglotRuntimes",
+    "api-polyglot-runtimes"
+   ],
+   "category": "applications",
+   "file": "applications/applications-api-polyglot-runtimes.svg",
+   "source_path": "svg/32/cloud-foundry--1.svg",
+   "sha256": "8c3d0a814b60bb36046ba8bf1b019e811707458a07989e5bcc63627266dda716",
+   "source_sha256": "2661ba78a317868c5544c5426e3bce8c208c21783f04cb9bd04eb5e020f12096",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/cloud-foundry--1.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "cloud-foundry--1",
+    "basis": "ibm-product",
+    "note": "Bluemix polyglot runtimes were Cloud Foundry buildpacks"
+   }
+  },
+  {
+   "id": "applications-app-server",
+   "name": "App Server",
+   "class_name": "AppServer",
+   "aliases": [
+    "AppServer",
+    "diagrams.ibm.applications.AppServer",
+    "app-server"
+   ],
+   "category": "applications",
+   "file": "applications/applications-app-server.svg",
+   "source_path": "svg/32/bare-metal-server--02.svg",
+   "sha256": "23f6e656bdf8d5d3e14b7de7443bbaa8d40234d33609af5ea7977f4af6debaca",
+   "source_sha256": "c569fdb2e373f6eccb121af6146915e9d3c7d36fb70c99850d236bb6006c0220",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/bare-metal-server--02.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "bare-metal-server--02",
+    "basis": "generic",
+    "note": "plain server-stack glyph (Carbon names it bare metal 02); no app-server icon"
+   }
+  },
+  {
+   "id": "applications-application-logic",
+   "name": "Application Logic",
+   "class_name": "ApplicationLogic",
+   "aliases": [
+    "ApplicationLogic",
+    "diagrams.ibm.applications.ApplicationLogic",
+    "application-logic"
+   ],
+   "category": "applications",
+   "file": "applications/applications-application-logic.svg",
+   "source_path": "svg/32/flow--conditional.svg",
+   "sha256": "427a24b9759098305b0f877c345838c5c32f8b0061bb2a89ee70f6d9278d3cf0",
+   "source_sha256": "7623adadd0598a30e04f1c9c838273b2b1a7c6fc534af9fef9b8113c12a82f9a",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/flow--conditional.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "flow--conditional",
+    "basis": "generic",
+    "note": "conditional flow for logic"
+   }
+  },
+  {
+   "id": "applications-enterprise-applications",
+   "name": "Enterprise Applications",
+   "class_name": "EnterpriseApplications",
+   "aliases": [
+    "EnterpriseApplications",
+    "diagrams.ibm.applications.EnterpriseApplications",
+    "enterprise-applications"
+   ],
+   "category": "applications",
+   "file": "applications/applications-enterprise-applications.svg",
+   "source_path": "svg/32/apps.svg",
+   "sha256": "42986ee86512b3f8fdd28f2665f6e71c86b8a0823504c3a6f22557344a67357d",
+   "source_sha256": "c3b6965054a93af487a599ff77f141cc6179c5be646dbc91d72e8347a5461606",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/apps.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "apps",
+    "basis": "generic",
+    "note": "suite of applications"
+   }
+  },
+  {
+   "id": "applications-index",
+   "name": "Index",
+   "class_name": "Index",
+   "aliases": [
+    "Index",
+    "diagrams.ibm.applications.Index",
+    "index"
+   ],
+   "category": "applications",
+   "file": "applications/applications-index.svg",
+   "source_path": "svg/32/table-of-contents.svg",
+   "sha256": "0c8fd5bf3b2bf48d4e755a7527cfb439acdf122b822f554b1bb696989512c781",
+   "source_sha256": "af6c3a214fbd3d899879f8f2eb733d0b6cca3377670f461f97390c905dbb6c88",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/table-of-contents.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "table-of-contents",
+    "basis": "generic",
+    "note": "index list"
+   }
+  },
+  {
+   "id": "applications-iot-application",
+   "name": "IoT Application",
+   "class_name": "IotApplication",
+   "aliases": [
+    "IotApplication",
+    "diagrams.ibm.applications.IotApplication",
+    "iot-application"
+   ],
+   "category": "applications",
+   "file": "applications/applications-iot-application.svg",
+   "source_path": "svg/32/iot--connect.svg",
+   "sha256": "388024bdf2d00c5be379374dfc3300e24b9d6d3d38a0149b07c91b61112ba9fd",
+   "source_sha256": "06325e0491a5e8119b92d8d9f8816d25dee9d71729ea63be0916f7faf0d4802b",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/iot--connect.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "iot--connect",
+    "basis": "generic",
+    "note": "IoT connect chip"
+   }
+  },
+  {
+   "id": "applications-microservice",
+   "name": "Microservice",
+   "class_name": "Microservice",
+   "aliases": [
+    "Microservice",
+    "diagrams.ibm.applications.Microservice",
+    "microservice"
+   ],
+   "category": "applications",
+   "file": "applications/applications-microservice.svg",
+   "source_path": "svg/32/microservices--1.svg",
+   "sha256": "ef85d7bf2865ea14760cb928de64634ac3bbc5cc24d1cd31652fe013e90a3cc6",
+   "source_sha256": "b77c2c932762f92182d422d4f139608723ed973d0ae6238131c85a0dfb12f32d",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/microservices--1.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "microservices--1",
+    "basis": "generic",
+    "note": "generic microservices"
+   }
+  },
+  {
+   "id": "applications-mobile-app",
+   "name": "Mobile App",
+   "class_name": "MobileApp",
+   "aliases": [
+    "MobileApp",
+    "diagrams.ibm.applications.MobileApp",
+    "mobile-app"
+   ],
+   "category": "applications",
+   "file": "applications/applications-mobile-app.svg",
+   "source_path": "svg/32/application--mobile.svg",
+   "sha256": "c05ea44d631b988da25429f0bcb46f1fd38aeab89aee31d9ffabacb4e0f50574",
+   "source_sha256": "630110cee1a0765b47d28b4a1e9e20ff37a0a8a5c758073dca72830e585eef5f",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/application--mobile.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "application--mobile",
+    "basis": "generic",
+    "note": "mobile application"
+   }
+  },
+  {
+   "id": "applications-ontology",
+   "name": "Ontology",
+   "class_name": "Ontology",
+   "aliases": [
+    "Ontology",
+    "diagrams.ibm.applications.Ontology",
+    "ontology"
+   ],
+   "category": "applications",
+   "file": "applications/applications-ontology.svg",
+   "source_path": "svg/32/concept.svg",
+   "sha256": "56215a75c5e8bf47dfea7305c90839ca219d7e22fcd8fadc6c29b7b6cfe542ab",
+   "source_sha256": "cbd2a12c2d125cd2181e9df84f7b26794b09c8fde6956403ff3bc2fb2dd76889",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/concept.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "concept",
+    "basis": "generic",
+    "note": "concept graph"
+   }
+  },
+  {
+   "id": "applications-open-source-tools",
+   "name": "Open Source Tools",
+   "class_name": "OpenSourceTools",
+   "aliases": [
+    "OpenSourceTools",
+    "diagrams.ibm.applications.OpenSourceTools",
+    "open-source-tools"
+   ],
+   "category": "applications",
+   "file": "applications/applications-open-source-tools.svg",
+   "source_path": "svg/32/tools.svg",
+   "sha256": "76682f976cc30a80ac360029c1175590253ac0d6a192e32df73b8cceefda956b",
+   "source_sha256": "cccd835074d361594da1123b4ad3f807799f4a0e444f218f6ecc0a6a6455743c",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/tools.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "tools",
+    "basis": "generic",
+    "note": "generic tools; no open-source mark"
+   }
+  },
+  {
+   "id": "applications-runtime-services",
+   "name": "Runtime Services",
+   "class_name": "RuntimeServices",
+   "aliases": [
+    "RuntimeServices",
+    "diagrams.ibm.applications.RuntimeServices",
+    "runtime-services"
+   ],
+   "category": "applications",
+   "file": "applications/applications-runtime-services.svg",
+   "source_path": "svg/32/container--runtime.svg",
+   "sha256": "8cfa2171527a1a56fe7012ed0a56a813f71514ea9247fe2d462f787c83a55cc3",
+   "source_sha256": "a29cd4789056ede50a38a211efb2974d28d4e7ae8b183b05b386ba73910da55a",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/container--runtime.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "container--runtime",
+    "basis": "generic",
+    "note": "generic runtime glyph (aliases: runtime); box with gear"
+   }
+  },
+  {
+   "id": "applications-saas-applications",
+   "name": "Saas Applications",
+   "class_name": "SaasApplications",
+   "aliases": [
+    "SaasApplications",
+    "diagrams.ibm.applications.SaasApplications",
+    "saas-applications"
+   ],
+   "category": "applications",
+   "file": "applications/applications-saas-applications.svg",
+   "source_path": "svg/32/cloud-app.svg",
+   "sha256": "3069c53fb131a9944b54cd0928c5f6466d0327af1979494beb3aa520e0e09b0c",
+   "source_sha256": "4a646c9f33a6803ca281206e40311b17a9d53342d5b457ebee23b4b90da8b36a",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/cloud-app.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "cloud-app",
+    "basis": "generic",
+    "note": "app delivered from the cloud"
+   }
+  },
+  {
+   "id": "applications-speech-to-text",
+   "name": "Speech To Text",
+   "class_name": "SpeechToText",
+   "aliases": [
+    "SpeechToText",
+    "diagrams.ibm.applications.SpeechToText",
+    "speech-to-text"
+   ],
+   "category": "applications",
+   "file": "applications/applications-speech-to-text.svg",
+   "source_path": "svg/32/ibm-watson--speech-to-text.svg",
+   "sha256": "0dbd44cfc8fcae85ce663778d23b081c4f04ec2264b4630fb8a3e63c3395651c",
+   "source_sha256": "eed0c14e194da9ec7b2ac6c822edd17a13d9750ef6f875b4057c89dff8913d5b",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm-watson--speech-to-text.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm-watson--speech-to-text",
+    "basis": "ibm-product"
+   }
+  },
+  {
+   "id": "applications-visual-recognition",
+   "name": "Visual Recognition",
+   "class_name": "VisualRecognition",
+   "aliases": [
+    "VisualRecognition",
+    "diagrams.ibm.applications.VisualRecognition",
+    "visual-recognition"
+   ],
+   "category": "applications",
+   "file": "applications/applications-visual-recognition.svg",
+   "source_path": "svg/32/visual-recognition.svg",
+   "sha256": "7e9f000aaccdb2634a56ea3fda7fb66229c677e5a5ce912d07a57b9d493248d5",
+   "source_sha256": "1f4592f621586b97121964b4523b0781226797386d8a09e14b53ab601f2b425f",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/visual-recognition.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "visual-recognition",
+    "basis": "generic",
+    "note": "Carbon's visual-recognition glyph (Watson VR is retired, no product icon)"
+   }
+  },
+  {
+   "id": "applications-visualization",
+   "name": "Visualization",
+   "class_name": "Visualization",
+   "aliases": [
+    "Visualization",
+    "diagrams.ibm.applications.Visualization",
+    "visualization"
+   ],
+   "category": "applications",
+   "file": "applications/applications-visualization.svg",
+   "source_path": "svg/32/chart--bar.svg",
+   "sha256": "fcddde219f7b7110447288423d66e8c14b73dd4534c5082d14214206bee8b698",
+   "source_sha256": "3f2c551192c237229b4a68705365f2c1c6f4b2b88d8cb338e60c8ac7f158a7b2",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/chart--bar.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "chart--bar",
+    "basis": "generic",
+    "note": "bar chart for visualization"
+   }
+  },
+  {
+   "id": "blockchain-blockchain",
+   "name": "Blockchain",
+   "class_name": "Blockchain",
+   "aliases": [
+    "Blockchain",
+    "diagrams.ibm.blockchain.Blockchain",
+    "blockchain"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-blockchain.svg",
+   "source_path": "svg/32/blockchain.svg",
+   "sha256": "c7b8836dcaaef2bd28ed9168f006316988ac2a204daadc9d970914a49f354c68",
+   "source_sha256": "20357263f2d5a830d97c3364f881fa485af52239b2c8f961d4808bd17bed5572",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/blockchain.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "blockchain",
+    "basis": "generic",
+    "note": "Carbon blockchain glyph (abstract bracketed square)"
+   }
+  },
+  {
+   "id": "blockchain-blockchain-developer",
+   "name": "Blockchain Developer",
+   "class_name": "BlockchainDeveloper",
+   "aliases": [
+    "BlockchainDeveloper",
+    "diagrams.ibm.blockchain.BlockchainDeveloper",
+    "blockchain-developer"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-blockchain-developer.svg",
+   "source_path": "svg/32/development.svg",
+   "sha256": "10417c9ea8f03fbdd450e7e5397d996e66da9a30a3d79b652a637ac88e58e2bf",
+   "source_sha256": "010aa1550b1f7832a3fdd873a4e7a4a0254b8fc820858a607efbb239e7e342b9",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/development.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "development",
+    "basis": "generic",
+    "note": "development blocks; no developer-person icon"
+   }
+  },
+  {
+   "id": "blockchain-certificate-authority",
+   "name": "Certificate Authority",
+   "class_name": "CertificateAuthority",
+   "aliases": [
+    "CertificateAuthority",
+    "diagrams.ibm.blockchain.CertificateAuthority",
+    "certificate-authority"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-certificate-authority.svg",
+   "source_path": "svg/32/certificate.svg",
+   "sha256": "d4c9b212f4f3cce691cf13fcc09cf4c8e084b28fd3680abeb2a03a1a7f1c3d0b",
+   "source_sha256": "7b32fd67e0edf59f649a4bb05532f1cd0b7f5be51043b06aebb92c73cb912aa3",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/certificate.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "certificate",
+    "basis": "generic",
+    "note": "certificate"
+   }
+  },
+  {
+   "id": "blockchain-client-application",
+   "name": "Client Application",
+   "class_name": "ClientApplication",
+   "aliases": [
+    "ClientApplication",
+    "diagrams.ibm.blockchain.ClientApplication",
+    "client-application"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-client-application.svg",
+   "source_path": "svg/32/application.svg",
+   "sha256": "3f91309c66bb87358b1afc054080de78ddbd9e537d69408510b3e5b8e4142187",
+   "source_sha256": "6f81456b9848598165a3af01155d31710d4781063a45c3135f7ea0d8c8629eb2",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/application.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "application",
+    "basis": "generic",
+    "note": "generic application"
+   }
+  },
+  {
+   "id": "blockchain-communication",
+   "name": "Communication",
+   "class_name": "Communication",
+   "aliases": [
+    "Communication",
+    "diagrams.ibm.blockchain.Communication",
+    "communication"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-communication.svg",
+   "source_path": "svg/32/connection--two-way.svg",
+   "sha256": "9c60abb15ee42b1d5e3749a00eba873d08bc8ccb6b33bc129e21fb25aeb09f3c",
+   "source_sha256": "8c44517fde3575610cc64a78d63d693c94f7eca2b99b2ee4d34e8a1e63589510",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/connection--two-way.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "connection--two-way",
+    "basis": "generic",
+    "note": "two-way communication"
+   }
+  },
+  {
+   "id": "blockchain-consensus",
+   "name": "Consensus",
+   "class_name": "Consensus",
+   "aliases": [
+    "Consensus",
+    "diagrams.ibm.blockchain.Consensus",
+    "consensus"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-consensus.svg",
+   "source_path": "svg/32/checkmark--double.svg",
+   "sha256": "347c2fb8541933b38360af34f685af380c12b857b560a45848ad74e1af5ce26e",
+   "source_sha256": "849933ac1d7ed806d9b2f19ee081064ab5c309cff5d35179b3d696fd8a260662",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/checkmark--double.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "checkmark--double",
+    "basis": "generic",
+    "note": "double approval for agreement among peers"
+   }
+  },
+  {
+   "id": "blockchain-event",
+   "name": "Event",
+   "class_name": "Event",
+   "aliases": [
+    "Event",
+    "diagrams.ibm.blockchain.Event",
+    "event"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-event.svg",
+   "source_path": "svg/32/event.svg",
+   "sha256": "ba61bbf5abe7a0ecab6f91a308045b19853881a87e56d6d9d4855cc55acb00d6",
+   "source_sha256": "a40d73b9b77b06e62cd984e5318c37598db4c595ae0d0716a9d01e33360e6824",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/event.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "event",
+    "basis": "generic",
+    "note": "generic event"
+   }
+  },
+  {
+   "id": "blockchain-event-listener",
+   "name": "Event Listener",
+   "class_name": "EventListener",
+   "aliases": [
+    "EventListener",
+    "diagrams.ibm.blockchain.EventListener",
+    "event-listener"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-event-listener.svg",
+   "source_path": "svg/32/trigger.svg",
+   "sha256": "9b550de4cefe7750bb8022981c6967e4c93d79c4dc6da291e1f74b5ee2bc4f61",
+   "source_sha256": "ee12f9633263834bb8358f695e28815ff914a4f0a2ca6ba7a16d7c739c92897c",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/trigger.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "trigger",
+    "basis": "generic",
+    "note": "Carbon trigger (aliases: listener, events)"
+   }
+  },
+  {
+   "id": "blockchain-existing-enterprise-systems",
+   "name": "Existing Enterprise Systems",
+   "class_name": "ExistingEnterpriseSystems",
+   "aliases": [
+    "ExistingEnterpriseSystems",
+    "diagrams.ibm.blockchain.ExistingEnterpriseSystems",
+    "existing-enterprise-systems"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-existing-enterprise-systems.svg",
+   "source_path": "svg/32/enterprise.svg",
+   "sha256": "8f1bc16d2721734c970551885c35442c0d7ce157fc454e04ed0f03cc943cdc4d",
+   "source_sha256": "b5c55d5dab2e56b83c5b3f2d8f94d79633b3e4a784572410b91a80b9d4226dd2",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/enterprise.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "enterprise",
+    "basis": "generic",
+    "note": "enterprise building; same kind as Enterprise"
+   }
+  },
+  {
+   "id": "blockchain-hyperledger-fabric",
+   "name": "Hyperledger Fabric",
+   "class_name": "HyperledgerFabric",
+   "aliases": [
+    "HyperledgerFabric",
+    "diagrams.ibm.blockchain.HyperledgerFabric",
+    "hyperledger-fabric"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-hyperledger-fabric.svg",
+   "source_path": "svg/32/blockchain.svg",
+   "sha256": "c7b8836dcaaef2bd28ed9168f006316988ac2a204daadc9d970914a49f354c68",
+   "source_sha256": "20357263f2d5a830d97c3364f881fa485af52239b2c8f961d4808bd17bed5572",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/blockchain.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "blockchain",
+    "basis": "generic",
+    "note": "Fabric is a blockchain framework; no Hyperledger icon"
+   }
+  },
+  {
+   "id": "blockchain-key-management",
+   "name": "Key Management",
+   "class_name": "KeyManagement",
+   "aliases": [
+    "KeyManagement",
+    "diagrams.ibm.blockchain.KeyManagement",
+    "key-management"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-key-management.svg",
+   "source_path": "svg/32/keychain.svg",
+   "sha256": "3c1bdd967381fd6ae1aed9dc81d72edf5de7ba2a3c1e2937dd745dc432c9765c",
+   "source_sha256": "5b2046bcdb6f0391ca6e5e0b4d9dc4383cdd85ebfa30ed58e737c66f1c59c93a",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/keychain.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "keychain",
+    "basis": "generic",
+    "note": "keys"
+   }
+  },
+  {
+   "id": "blockchain-ledger",
+   "name": "Ledger",
+   "class_name": "Ledger",
+   "aliases": [
+    "Ledger",
+    "diagrams.ibm.blockchain.Ledger",
+    "ledger"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-ledger.svg",
+   "source_path": "svg/32/book.svg",
+   "sha256": "37eae4c3e88bea59630511739e5c32e94474afe59c654caa135abd8c56d2b530",
+   "source_sha256": "9bb89c9a9b77b7cffdd332d61c775eb38fb2ec15c83da55baf15ccc66a8c9a14",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/book.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "book",
+    "basis": "generic",
+    "note": "ledger as a book of records"
+   }
+  },
+  {
+   "id": "blockchain-membership",
+   "name": "Membership",
+   "class_name": "Membership",
+   "aliases": [
+    "Membership",
+    "diagrams.ibm.blockchain.Membership",
+    "membership"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-membership.svg",
+   "source_path": "svg/32/user--multiple.svg",
+   "sha256": "1ec46b30fe257813a943ce7b79fb690c980bef4f7e4b3b66896e6e4f955af7ad",
+   "source_sha256": "99971f5d41603efbb1f04da16fd61ede6469bd09f6d88b1e2477178e7b723e9b",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/user--multiple.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "user--multiple",
+    "basis": "generic",
+    "note": "members"
+   }
+  },
+  {
+   "id": "blockchain-membership-services-provider-api",
+   "name": "Membership Services Provider API",
+   "class_name": "MembershipServicesProviderApi",
+   "aliases": [
+    "MembershipServicesProviderApi",
+    "diagrams.ibm.blockchain.MembershipServicesProviderApi",
+    "membership-services-provider-api"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-membership-services-provider-api.svg",
+   "source_path": "svg/32/user--certification.svg",
+   "sha256": "b7cfe9a61e8c2ee389681452f82d25cb944a2f67177d3ba6faaa247c96d247f1",
+   "source_sha256": "c4ba348adeb37707ed0f662e6843c2400d9936f9ccfded349e05e301b1eb7f2b",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/user--certification.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "user--certification",
+    "basis": "generic",
+    "note": "MSP issues member identity certificates"
+   }
+  },
+  {
+   "id": "blockchain-message-bus",
+   "name": "Message Bus",
+   "class_name": "MessageBus",
+   "aliases": [
+    "MessageBus",
+    "diagrams.ibm.blockchain.MessageBus",
+    "message-bus"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-message-bus.svg",
+   "source_path": "svg/32/message-queue.svg",
+   "sha256": "5f210bca510da52c11fca1d90e86a6e15f5c8a8d562bc13c44e314ac600d0fea",
+   "source_sha256": "4bddc1136443ed80cfcefaa965d1cd64ac0aa82e871d0863786953a1b649d802",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/message-queue.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "message-queue",
+    "basis": "generic",
+    "note": "messaging; queue glyph stands for the bus"
+   }
+  },
+  {
+   "id": "blockchain-node",
+   "name": "Node",
+   "class_name": "Node",
+   "aliases": [
+    "Node",
+    "diagrams.ibm.blockchain.Node",
+    "node"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-node.svg",
+   "source_path": "svg/32/bare-metal-server--01.svg",
+   "sha256": "47056cc130fc1f776e36ff83b43904f5680b1ed81904477b37b2de5219229524",
+   "source_sha256": "87cb52f7f00f95a727fe3ee53992b41b7505188252724a2a10a48dfc94d8c482",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/bare-metal-server--01.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "bare-metal-server--01",
+    "basis": "generic",
+    "note": "a peer node is a server; plain server glyph"
+   }
+  },
+  {
+   "id": "blockchain-services",
+   "name": "Services",
+   "class_name": "Services",
+   "aliases": [
+    "Services",
+    "diagrams.ibm.blockchain.Services",
+    "services"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-services.svg",
+   "source_path": "svg/32/settings--services.svg",
+   "sha256": "70242fbed4418377dfde177b04d537e0f1fde0d5508f17447274dfb4074d7c0b",
+   "source_sha256": "2aee118cee3649bb0d541fe49917c5080863826fb874251773b62c09daaa5254",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/settings--services.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "settings--services",
+    "basis": "generic",
+    "note": "generic services gear"
+   }
+  },
+  {
+   "id": "blockchain-smart-contract",
+   "name": "Smart Contract",
+   "class_name": "SmartContract",
+   "aliases": [
+    "SmartContract",
+    "diagrams.ibm.blockchain.SmartContract",
+    "smart-contract"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-smart-contract.svg",
+   "source_path": "svg/32/document--signed.svg",
+   "sha256": "095dac4ceeea25c098f80979fbe1b3e1c426307f9c3c955797d2dda00aae5951",
+   "source_sha256": "731be5417ecbb6f97376a95a7249e260374c993bf5206ff10cb5971a59ad652d",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/document--signed.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "document--signed",
+    "basis": "generic",
+    "note": "signed contract document"
+   }
+  },
+  {
+   "id": "blockchain-wallet",
+   "name": "Wallet",
+   "class_name": "Wallet",
+   "aliases": [
+    "Wallet",
+    "diagrams.ibm.blockchain.Wallet",
+    "wallet"
+   ],
+   "category": "blockchain",
+   "file": "blockchain/blockchain-wallet.svg",
+   "source_path": "svg/32/wallet.svg",
+   "sha256": "06b4a823cbc3bab54f2d4d4f5257423f778aed1c00c1f213f5eaed3817883e59",
+   "source_sha256": "571df5ce7827c6691031e306f2c7e181228c47041dcb3a3647386534b386ed7e",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/wallet.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "wallet",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "compute-bare-metal-server",
+   "name": "Bare Metal Server",
+   "class_name": "BareMetalServer",
+   "aliases": [
+    "BareMetalServer",
+    "diagrams.ibm.compute.BareMetalServer",
+    "bare-metal-server"
+   ],
+   "category": "compute",
+   "file": "compute/compute-bare-metal-server.svg",
+   "source_path": "svg/32/ibm-cloud--bare-metal-server.svg",
+   "sha256": "8a2b4f24589c4fdd5bd0b770dcc6fc967f9f800721d4b42e45cfe435ec9bdbbf",
+   "source_sha256": "1106bb1416968b79ecc4e8e2b0f1a4cfef96245e402559f5029635a92109b97d",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm-cloud--bare-metal-server.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm-cloud--bare-metal-server",
+    "basis": "ibm-product"
+   }
+  },
+  {
+   "id": "compute-image-service",
+   "name": "Image Service",
+   "class_name": "ImageService",
+   "aliases": [
+    "ImageService",
+    "diagrams.ibm.compute.ImageService",
+    "image-service"
+   ],
+   "category": "compute",
+   "file": "compute/compute-image-service.svg",
+   "source_path": "svg/32/ibm-cloud--vpc-images.svg",
+   "sha256": "f19fe0b177c2a0af0f7996f4ec3f003bb54d20b319b4babec5d33be8be5ad265",
+   "source_sha256": "3aa6296cc7999dfac0e5ac7c1422aa8ba6e9cd258af1fb7ac4df0ddd6be29104",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm-cloud--vpc-images.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm-cloud--vpc-images",
+    "basis": "ibm-product",
+    "note": "VPC image service"
+   }
+  },
+  {
+   "id": "compute-instance",
+   "name": "Instance",
+   "class_name": "Instance",
+   "aliases": [
+    "Instance",
+    "diagrams.ibm.compute.Instance",
+    "instance"
+   ],
+   "category": "compute",
+   "file": "compute/compute-instance.svg",
+   "source_path": "svg/32/ibm-cloud--virtual-server-vpc.svg",
+   "sha256": "2508dc85dfdb764400be355ee0c5e11789ce5e470471dd8ab369026814693c1f",
+   "source_sha256": "4c11619ea3287b0158f9a7739757d101c83d5d0278e5101dea4a0c2a2434a778",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm-cloud--virtual-server-vpc.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm-cloud--virtual-server-vpc",
+    "basis": "ibm-product",
+    "note": "VPC virtual server instance"
+   }
+  },
+  {
+   "id": "compute-key",
+   "name": "Key",
+   "class_name": "Key",
+   "aliases": [
+    "Key",
+    "diagrams.ibm.compute.Key",
+    "key"
+   ],
+   "category": "compute",
+   "file": "compute/compute-key.svg",
+   "source_path": "svg/32/password.svg",
+   "sha256": "941298b92fca6997375449f8050c49a339783456c593c8a12d04992c093a9763",
+   "source_sha256": "e33d27efc79ebcebdb6d0407dba95db42f47a4136ca5f70be8cfc01a2f67bc73",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/password.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "password",
+    "basis": "generic",
+    "note": "key glyph for SSH key"
+   }
+  },
+  {
+   "id": "compute-power-instance",
+   "name": "Power Instance",
+   "class_name": "PowerInstance",
+   "aliases": [
+    "PowerInstance",
+    "diagrams.ibm.compute.PowerInstance",
+    "power-instance"
+   ],
+   "category": "compute",
+   "file": "compute/compute-power-instance.svg",
+   "source_path": "svg/32/ibm--power-vs.svg",
+   "sha256": "c89eb8b9bf8299c9d4196ae7901ceb09c4f75293048707900c54dbaf73a45fe6",
+   "source_sha256": "5e5c3be1af7936183fea8e0398bb8dcf441075dc6445575657c72b5677618dd6",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm--power-vs.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm--power-vs",
+    "basis": "ibm-product",
+    "note": "Power Virtual Server instance"
+   }
+  },
+  {
+   "id": "data-caches",
+   "name": "Caches",
+   "class_name": "Caches",
+   "aliases": [
+    "Caches",
+    "diagrams.ibm.data.Caches",
+    "caches"
+   ],
+   "category": "data",
+   "file": "data/data-caches.svg",
+   "source_path": "svg/32/database--redis.svg",
+   "sha256": "95b7584c5fc64cb62ca54d9a2e4619a8e4a6c0fc0018241a3ca6be223de5004c",
+   "source_sha256": "12d38756d4c25de84bef3dfc0997b95a4b725c080de3b1d6ab4dc259f4f5df36",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/database--redis.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "database--redis",
+    "basis": "generic",
+    "note": "IBM's cache service is Databases for Redis"
+   }
+  },
+  {
+   "id": "data-cloud",
+   "name": "Cloud",
+   "class_name": "Cloud",
+   "aliases": [
+    "Cloud",
+    "diagrams.ibm.data.Cloud",
+    "cloud"
+   ],
+   "category": "data",
+   "file": "data/data-cloud.svg",
+   "source_path": "svg/32/cloud.svg",
+   "sha256": "f4191f1edb624259a3167e0a41e181c5c35fce6173ddc79ef50849b823c52f70",
+   "source_sha256": "fd196fef797e3afc0c8ea35ea4519bbfddc869177e54c332b4baa405a9a0b15a",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/cloud.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "cloud",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "data-conversation-trained-deployed",
+   "name": "Conversation Trained Deployed",
+   "class_name": "ConversationTrainedDeployed",
+   "aliases": [
+    "ConversationTrainedDeployed",
+    "diagrams.ibm.data.ConversationTrainedDeployed",
+    "conversation-trained-deployed"
+   ],
+   "category": "data",
+   "file": "data/data-conversation-trained-deployed.svg",
+   "source_path": "svg/32/chat-bot.svg",
+   "sha256": "a2e2f69603557d1e095b66fa769a624c3759fc0b8cc31fe1ec32ecf076334b87",
+   "source_sha256": "a624e6c24ff77a6dc6ea0f571132c5ae6c799ff8585bee88e55a47d69ff3fc5d",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/chat-bot.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "chat-bot",
+    "basis": "generic",
+    "note": "trained conversation bot"
+   }
+  },
+  {
+   "id": "data-data-services",
+   "name": "Data Services",
+   "class_name": "DataServices",
+   "aliases": [
+    "DataServices",
+    "diagrams.ibm.data.DataServices",
+    "data-services"
+   ],
+   "category": "data",
+   "file": "data/data-data-services.svg",
+   "source_path": "svg/32/data--base.svg",
+   "sha256": "c37369dc6914677e2becd9a99eadd9874f7cbb56e266c896a4b39de360223d5a",
+   "source_sha256": "579c1ec1aa4ab7ee1d2813252addc45c8ffe8938ccf93e42cb96fe51ffc14d67",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/data--base.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "data--base",
+    "basis": "generic",
+    "note": "generic database"
+   }
+  },
+  {
+   "id": "data-data-sources",
+   "name": "Data Sources",
+   "class_name": "DataSources",
+   "aliases": [
+    "DataSources",
+    "diagrams.ibm.data.DataSources",
+    "data-sources"
+   ],
+   "category": "data",
+   "file": "data/data-data-sources.svg",
+   "source_path": "svg/32/data--set.svg",
+   "sha256": "b0b7b6ed37f7fead793197589d347503190acd2ab646c22a4cda66d9eec81a0c",
+   "source_sha256": "ef42b7b1e8882f5ff7dbb3beec03ecbb0f31a548476ea86c2a503e3955e95b03",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/data--set.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "data--set",
+    "basis": "generic",
+    "note": "data set"
+   }
+  },
+  {
+   "id": "data-device-identity-service",
+   "name": "Device Identity Service",
+   "class_name": "DeviceIdentityService",
+   "aliases": [
+    "DeviceIdentityService",
+    "diagrams.ibm.data.DeviceIdentityService",
+    "device-identity-service"
+   ],
+   "category": "data",
+   "file": "data/data-device-identity-service.svg",
+   "source_path": "svg/32/id-management.svg",
+   "sha256": "e26c3fd6330829b196582a66a57b9bb4b7cbcc65c0e14b4e5d2e4e17c7248ed1",
+   "source_sha256": "4efb33ce22c832af93de99196f4b0f739e7f0f15cb4cb5270ba3aa471c8032e8",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/id-management.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "id-management",
+    "basis": "generic",
+    "note": "identity management gear"
+   }
+  },
+  {
+   "id": "data-device-registry",
+   "name": "Device Registry",
+   "class_name": "DeviceRegistry",
+   "aliases": [
+    "DeviceRegistry",
+    "diagrams.ibm.data.DeviceRegistry",
+    "device-registry"
+   ],
+   "category": "data",
+   "file": "data/data-device-registry.svg",
+   "source_path": "svg/32/devices.svg",
+   "sha256": "cce14eb7293a7ae06110fa5b0c63a16aeb6e0199bff1add1fb102d2fd211e7f7",
+   "source_sha256": "651a938d0704d01564c048cc676d4e842198f03ec9703f154fb731f49263b088",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/devices.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "devices",
+    "basis": "generic",
+    "note": "devices; registry of devices"
+   }
+  },
+  {
+   "id": "data-enterprise-data",
+   "name": "Enterprise Data",
+   "class_name": "EnterpriseData",
+   "aliases": [
+    "EnterpriseData",
+    "diagrams.ibm.data.EnterpriseData",
+    "enterprise-data"
+   ],
+   "category": "data",
+   "file": "data/data-enterprise-data.svg",
+   "source_path": "svg/32/datastore.svg",
+   "sha256": "5a2c23ff57ef7d8ddfa70c1e22412f00816d80f0452d61130f20b13100ce3a55",
+   "source_sha256": "a4d480d7f4889d4f19aae700ddf41e217fb47e303cfbc160eb70a600bd547b4e",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/datastore.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "datastore",
+    "basis": "generic",
+    "note": "stored enterprise records; same kind as Data Repositories (data--structured read as an org chart)"
+   }
+  },
+  {
+   "id": "data-enterprise-user-directory",
+   "name": "Enterprise User Directory",
+   "class_name": "EnterpriseUserDirectory",
+   "aliases": [
+    "EnterpriseUserDirectory",
+    "diagrams.ibm.data.EnterpriseUserDirectory",
+    "enterprise-user-directory"
+   ],
+   "category": "data",
+   "file": "data/data-enterprise-user-directory.svg",
+   "source_path": "svg/32/directory-domain.svg",
+   "sha256": "864d00bf9c7d2e65fd2ff1eaecdbccab585ee6854f9905aae709e9315a4ea19b",
+   "source_sha256": "72039f79920f546fa3b01001e990ed6158b621d4c1e535084e452c9fa14a8c7b",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/directory-domain.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "directory-domain",
+    "basis": "generic",
+    "note": "directory domain"
+   }
+  },
+  {
+   "id": "data-file-repository",
+   "name": "File Repository",
+   "class_name": "FileRepository",
+   "aliases": [
+    "FileRepository",
+    "diagrams.ibm.data.FileRepository",
+    "file-repository"
+   ],
+   "category": "data",
+   "file": "data/data-file-repository.svg",
+   "source_path": "svg/32/file--storage.svg",
+   "sha256": "cfaa1263a4da95c0d4792394cd92e3a8d3a85935f2e03d1e4a724f3033aa3266",
+   "source_sha256": "14398156612aa516dd72b9ab536cc38bb508ca4cbeb3bffec00a7a69a8ba13dd",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/file--storage.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "file--storage",
+    "basis": "generic",
+    "note": "file storage"
+   }
+  },
+  {
+   "id": "data-ground-truth",
+   "name": "Ground Truth",
+   "class_name": "GroundTruth",
+   "aliases": [
+    "GroundTruth",
+    "diagrams.ibm.data.GroundTruth",
+    "ground-truth"
+   ],
+   "category": "data",
+   "file": "data/data-ground-truth.svg",
+   "source_path": "svg/32/data--check.svg",
+   "sha256": "c1f362194e07ebd3c2cb0989e3414d23e576bc5d8042b2c1f98545609040abe6",
+   "source_sha256": "d8ba624396daf4c1e535d506d12a6dc4b08e85fa9ca3eea23f447337deaf38b4",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/data--check.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "data--check",
+    "basis": "generic",
+    "note": "verified data"
+   }
+  },
+  {
+   "id": "data-model",
+   "name": "Model",
+   "class_name": "Model",
+   "aliases": [
+    "Model",
+    "diagrams.ibm.data.Model",
+    "model"
+   ],
+   "category": "data",
+   "file": "data/data-model.svg",
+   "source_path": "svg/32/machine-learning-model.svg",
+   "sha256": "fe403119428ab6f880092e928503a8b10b410b68a80a5f34c80063d9e13043d5",
+   "source_sha256": "4ea3b7e522c94b6ab24349fb706cd621d1931f762a75817df6f6ff411df7fc1c",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/machine-learning-model.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "machine-learning-model",
+    "basis": "generic",
+    "note": "ML model"
+   }
+  },
+  {
+   "id": "devops-artifact-management",
+   "name": "Artifact Management",
+   "class_name": "ArtifactManagement",
+   "aliases": [
+    "ArtifactManagement",
+    "diagrams.ibm.devops.ArtifactManagement",
+    "artifact-management"
+   ],
+   "category": "devops",
+   "file": "devops/devops-artifact-management.svg",
+   "source_path": "svg/32/repo--artifact.svg",
+   "sha256": "fce0bf41836ec51f4b715a8be862b3db13227f51bb8648daca1b2cd4f02e7aa0",
+   "source_sha256": "0fa4696c335b736f82a09e1939b5fee6a7a044ade2c3a228fc081e9423211c27",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/repo--artifact.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "repo--artifact",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "devops-build-test",
+   "name": "Build Test",
+   "class_name": "BuildTest",
+   "aliases": [
+    "BuildTest",
+    "diagrams.ibm.devops.BuildTest",
+    "build-test"
+   ],
+   "category": "devops",
+   "file": "devops/devops-build-test.svg",
+   "source_path": "svg/32/build-tool.svg",
+   "sha256": "49016a96d9e22cbfb2c597aa52610affd6ae7e3aeab75937348c380a5463e39d",
+   "source_sha256": "c8894703db0c7e35e9d835b30de84b139ed3ba2f4f4bb84fc95a5e3bbfa960b6",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/build-tool.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "build-tool",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "devops-code-editor",
+   "name": "Code Editor",
+   "class_name": "CodeEditor",
+   "aliases": [
+    "CodeEditor",
+    "diagrams.ibm.devops.CodeEditor",
+    "code-editor"
+   ],
+   "category": "devops",
+   "file": "devops/devops-code-editor.svg",
+   "source_path": "svg/32/code.svg",
+   "sha256": "e46c0f38792303b9532963cb95c915003cafbd606edf6cddf763345352b66eda",
+   "source_sha256": "fc98025cb249190a978be72e055df990f46fe657fb0cd51b48debd24a45569c9",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/code.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "code",
+    "basis": "generic",
+    "note": "code brackets"
+   }
+  },
+  {
+   "id": "devops-collaborative-development",
+   "name": "Collaborative Development",
+   "class_name": "CollaborativeDevelopment",
+   "aliases": [
+    "CollaborativeDevelopment",
+    "diagrams.ibm.devops.CollaborativeDevelopment",
+    "collaborative-development"
+   ],
+   "category": "devops",
+   "file": "devops/devops-collaborative-development.svg",
+   "source_path": "svg/32/pull-request.svg",
+   "sha256": "7eddac4da8d6a63fbe733d9ccfbec8d79385d5c8fed7c4c7190ad54234e83e19",
+   "source_sha256": "8f929903657fe18244e058724cb832869edf230906d90b57c99720280d28d5fc",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/pull-request.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "pull-request",
+    "basis": "generic",
+    "note": "pull request = collaborative development"
+   }
+  },
+  {
+   "id": "devops-configuration-management",
+   "name": "Configuration Management",
+   "class_name": "ConfigurationManagement",
+   "aliases": [
+    "ConfigurationManagement",
+    "diagrams.ibm.devops.ConfigurationManagement",
+    "configuration-management"
+   ],
+   "category": "devops",
+   "file": "devops/devops-configuration-management.svg",
+   "source_path": "svg/32/document--configuration.svg",
+   "sha256": "7032c1dfed73c56dfef2673b7161caca40596eb81fd8ae15e17e0547e1def4ce",
+   "source_sha256": "59788eda6e071071191d48ef0b934c00a7af980dd961514a40bf91e31ddbad05",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/document--configuration.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "document--configuration",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "devops-continuous-deploy",
+   "name": "Continuous Deploy",
+   "class_name": "ContinuousDeploy",
+   "aliases": [
+    "ContinuousDeploy",
+    "diagrams.ibm.devops.ContinuousDeploy",
+    "continuous-deploy"
+   ],
+   "category": "devops",
+   "file": "devops/devops-continuous-deploy.svg",
+   "source_path": "svg/32/continuous-deployment.svg",
+   "sha256": "999653fe1ea60ed0b0d5e42d3c026abd08e6e8b0ecd953b28b921fa7611b6f1e",
+   "source_sha256": "c9d71ca7b6585d72dcdb72842bafc7fcabedb71760d96a0d987de08133c16822",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/continuous-deployment.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "continuous-deployment",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "devops-continuous-testing",
+   "name": "Continuous Testing",
+   "class_name": "ContinuousTesting",
+   "aliases": [
+    "ContinuousTesting",
+    "diagrams.ibm.devops.ContinuousTesting",
+    "continuous-testing"
+   ],
+   "category": "devops",
+   "file": "devops/devops-continuous-testing.svg",
+   "source_path": "svg/32/test-tool.svg",
+   "sha256": "cf650daaa1129e8a1199ef7799949f0f4a607db8decdad83e54a3b242a0f2655",
+   "source_sha256": "d7081de23665c2d93d47a5bd83890b15a1fcc2a42f34f10160c51f0df7fdf77d",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/test-tool.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "test-tool",
+    "basis": "generic",
+    "note": "generic test glyph"
+   }
+  },
+  {
+   "id": "devops-devops",
+   "name": "Devops",
+   "class_name": "Devops",
+   "aliases": [
+    "Devops",
+    "diagrams.ibm.devops.Devops",
+    "devops"
+   ],
+   "category": "devops",
+   "file": "devops/devops-devops.svg",
+   "source_path": "svg/32/infinity-symbol.svg",
+   "sha256": "19f5b9e898e7fb0eff67fa3b9737f407fde84236a9c42880bf06111e53172c5d",
+   "source_sha256": "5bf63f84b7c1025b6e61c492042af7a714f5f3268e952889b0e2068972804eb0",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/infinity-symbol.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "infinity-symbol",
+    "basis": "generic",
+    "note": "the DevOps loop"
+   }
+  },
+  {
+   "id": "devops-provision",
+   "name": "Provision",
+   "class_name": "Provision",
+   "aliases": [
+    "Provision",
+    "diagrams.ibm.devops.Provision",
+    "provision"
+   ],
+   "category": "devops",
+   "file": "devops/devops-provision.svg",
+   "source_path": "svg/32/sys-provision.svg",
+   "sha256": "e83c041db612659cc4b763a2719e2cf576432b73f8d16d6be5956abb134e9a3f",
+   "source_sha256": "a4e876bbb72ef71460b8b7716ee5433fe0b7df8ec416732de0830216a4c7d5f9",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/sys-provision.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "sys-provision",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "devops-release-management",
+   "name": "Release Management",
+   "class_name": "ReleaseManagement",
+   "aliases": [
+    "ReleaseManagement",
+    "diagrams.ibm.devops.ReleaseManagement",
+    "release-management"
+   ],
+   "category": "devops",
+   "file": "devops/devops-release-management.svg",
+   "source_path": "svg/32/version.svg",
+   "sha256": "2dc6f9b7a33bd2ada4f4364516e7df5e2d326f8067313ea80b16d87babaaada9",
+   "source_sha256": "40c66391e96c6bd91d4a52d70dee224b9ca795c3901cc3bef6efb8ed43af8f11",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/version.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "version",
+    "basis": "generic",
+    "note": "versioned releases"
+   }
+  },
+  {
+   "id": "general-cloud-messaging",
+   "name": "Cloud Messaging",
+   "class_name": "CloudMessaging",
+   "aliases": [
+    "CloudMessaging",
+    "diagrams.ibm.general.CloudMessaging",
+    "cloud-messaging"
+   ],
+   "category": "general",
+   "file": "general/general-cloud-messaging.svg",
+   "source_path": "svg/32/message-queue.svg",
+   "sha256": "5f210bca510da52c11fca1d90e86a6e15f5c8a8d562bc13c44e314ac600d0fea",
+   "source_sha256": "4bddc1136443ed80cfcefaa965d1cd64ac0aa82e871d0863786953a1b649d802",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/message-queue.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "message-queue",
+    "basis": "generic",
+    "note": "message queue; same kind as message bus"
+   }
+  },
+  {
+   "id": "general-cloud-services",
+   "name": "Cloud Services",
+   "class_name": "CloudServices",
+   "aliases": [
+    "CloudServices",
+    "diagrams.ibm.general.CloudServices",
+    "cloud-services"
+   ],
+   "category": "general",
+   "file": "general/general-cloud-services.svg",
+   "source_path": "svg/32/cloud-services.svg",
+   "sha256": "bd2d15a39b704c763e1f82d79c5cae9c9ab3089664077d025db9aabfe66132aa",
+   "source_sha256": "e06b0e9b2791fc7d7c5eb130c827a69f760708501b63ed662a78130c40c59199",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/cloud-services.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "cloud-services",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "general-cloudant",
+   "name": "Cloudant",
+   "class_name": "Cloudant",
+   "aliases": [
+    "Cloudant",
+    "diagrams.ibm.general.Cloudant",
+    "cloudant"
+   ],
+   "category": "general",
+   "file": "general/general-cloudant.svg",
+   "source_path": "svg/32/ibm--cloudant.svg",
+   "sha256": "6b6bf02635e5add2185d08787f76bbeabd9dc95fa43188142e3ff43afb66582c",
+   "source_sha256": "9130f7631d0ef802d5b9223300b903d9b3351e0ae11611505e5eaa0e1d481d52",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm--cloudant.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm--cloudant",
+    "basis": "ibm-product"
+   }
+  },
+  {
+   "id": "general-cognitive-services",
+   "name": "Cognitive Services",
+   "class_name": "CognitiveServices",
+   "aliases": [
+    "CognitiveServices",
+    "diagrams.ibm.general.CognitiveServices",
+    "cognitive-services"
+   ],
+   "category": "general",
+   "file": "general/general-cognitive-services.svg",
+   "source_path": "svg/32/cognitive.svg",
+   "sha256": "8e901f6b75dac462527b7a738f106999fa609015af8cd21a9420e27ba26b5e80",
+   "source_sha256": "a0aba2404efac046c339e247f767cb5a9db2b691c27888531bf29d1ab7c6c9b2",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/cognitive.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "cognitive",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "general-data-security",
+   "name": "Data Security",
+   "class_name": "DataSecurity",
+   "aliases": [
+    "DataSecurity",
+    "diagrams.ibm.general.DataSecurity",
+    "data-security"
+   ],
+   "category": "general",
+   "file": "general/general-data-security.svg",
+   "source_path": "svg/32/data-set-encryption.svg",
+   "sha256": "ffa8dffc57f6d9d09888b8f1f2807d897b003ba0ab0a3f666e4e41f8a5b5978e",
+   "source_sha256": "69779be9f41376c275c1cef7d56719057d0daf5395a8f371a57817a794f1e741",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/data-set-encryption.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "data-set-encryption",
+    "basis": "generic",
+    "note": "database + lock glyph (Carbon names it for z/OS data set encryption)"
+   }
+  },
+  {
+   "id": "general-enterprise",
+   "name": "Enterprise",
+   "class_name": "Enterprise",
+   "aliases": [
+    "Enterprise",
+    "diagrams.ibm.general.Enterprise",
+    "enterprise"
+   ],
+   "category": "general",
+   "file": "general/general-enterprise.svg",
+   "source_path": "svg/32/enterprise.svg",
+   "sha256": "8f1bc16d2721734c970551885c35442c0d7ce157fc454e04ed0f03cc943cdc4d",
+   "source_sha256": "b5c55d5dab2e56b83c5b3f2d8f94d79633b3e4a784572410b91a80b9d4226dd2",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/enterprise.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "enterprise",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "general-governance-risk-compliance",
+   "name": "Governance Risk Compliance",
+   "class_name": "GovernanceRiskCompliance",
+   "aliases": [
+    "GovernanceRiskCompliance",
+    "diagrams.ibm.general.GovernanceRiskCompliance",
+    "governance-risk-compliance"
+   ],
+   "category": "general",
+   "file": "general/general-governance-risk-compliance.svg",
+   "source_path": "svg/32/policy.svg",
+   "sha256": "df0bb5eb973956fde58b421b348dd8049fc42f82284f4b7c7e2a3b1470f1019d",
+   "source_sha256": "fcca614cc969ccb792eadc494be780490b7ca759671db86c373c0cc54da91342",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/policy.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "policy",
+    "basis": "generic",
+    "note": "policy document with seal"
+   }
+  },
+  {
+   "id": "general-ibm-containers",
+   "name": "IBM Containers",
+   "class_name": "IBMContainers",
+   "aliases": [
+    "IBMContainers",
+    "diagrams.ibm.general.IBMContainers",
+    "ibm-containers"
+   ],
+   "category": "general",
+   "file": "general/general-ibm-containers.svg",
+   "source_path": "svg/32/container-services.svg",
+   "sha256": "3bb9b9a85ff7892943cb19eb3f3a313285f87fb839b989ac54cb0620dfd26ca0",
+   "source_sha256": "6f899b810bd0304cbb55e119ee485b073a9056adbd48370e0f7139359eed1afb",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/container-services.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "container-services",
+    "basis": "generic",
+    "note": "IBM Containers was retired; generic container services"
+   }
+  },
+  {
+   "id": "general-identity-access-management",
+   "name": "Identity Access Management",
+   "class_name": "IdentityAccessManagement",
+   "aliases": [
+    "IdentityAccessManagement",
+    "diagrams.ibm.general.IdentityAccessManagement",
+    "identity-access-management"
+   ],
+   "category": "general",
+   "file": "general/general-identity-access-management.svg",
+   "source_path": "svg/32/user--access.svg",
+   "sha256": "88cbe12c2f512932c4b8769b6a09a279e0ebe5d9f1b9c49f7551794eb0cce111",
+   "source_sha256": "ce8a841633433e485923e3c862bfe604cd61d596f10eff27f145e42ed38853f1",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/user--access.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "user--access",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "general-identity-provider",
+   "name": "Identity Provider",
+   "class_name": "IdentityProvider",
+   "aliases": [
+    "IdentityProvider",
+    "diagrams.ibm.general.IdentityProvider",
+    "identity-provider"
+   ],
+   "category": "general",
+   "file": "general/general-identity-provider.svg",
+   "source_path": "svg/32/digital--identity.svg",
+   "sha256": "d1bde7bb265e4f0c47a6914a6e2e048bc6bfc3b970e6eaef399fe582335a6376",
+   "source_sha256": "bc91474e96c94299ec380ac9aff5dba491596ad7c8f2ca26dc971644f8dc7bd1",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/digital--identity.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "digital--identity",
+    "basis": "generic",
+    "note": "identity verification"
+   }
+  },
+  {
+   "id": "general-infrastructure-security",
+   "name": "Infrastructure Security",
+   "class_name": "InfrastructureSecurity",
+   "aliases": [
+    "InfrastructureSecurity",
+    "diagrams.ibm.general.InfrastructureSecurity",
+    "infrastructure-security"
+   ],
+   "category": "general",
+   "file": "general/general-infrastructure-security.svg",
+   "source_path": "svg/32/security.svg",
+   "sha256": "eb0e2d0de2802b105b17d26ca8e2824488b9ef295b357cd1e04a4c99381ad5c6",
+   "source_sha256": "5a8bcca54c1800172166d085eb2697229060c64cd23e1c778413e291598962f3",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/security.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "security",
+    "basis": "generic",
+    "note": "generic shield"
+   }
+  },
+  {
+   "id": "general-internet",
+   "name": "Internet",
+   "class_name": "Internet",
+   "aliases": [
+    "Internet",
+    "diagrams.ibm.general.Internet",
+    "internet"
+   ],
+   "category": "general",
+   "file": "general/general-internet.svg",
+   "source_path": "svg/32/earth.svg",
+   "sha256": "364aae64c78d8fa7958ac6598d7fd3a154200b7acdd1d2f94dd179f9c423d319",
+   "source_sha256": "48afd29bbe2db40d3a1655603f0248e342df21e642f06cf6849cfaa1545db472",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/earth.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "earth",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "general-microservices-application",
+   "name": "Microservices Application",
+   "class_name": "MicroservicesApplication",
+   "aliases": [
+    "MicroservicesApplication",
+    "diagrams.ibm.general.MicroservicesApplication",
+    "microservices-application"
+   ],
+   "category": "general",
+   "file": "general/general-microservices-application.svg",
+   "source_path": "svg/32/microservices--2.svg",
+   "sha256": "9617effae04d512681ce33e8e14f9afdcc483e135f35c9633c71dc90f4e2eef8",
+   "source_sha256": "74c11a3aea590fbf0422ce773776b3169e730383a8e81b2795ee23e348bb36de",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/microservices--2.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "microservices--2",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "general-microservices-mesh",
+   "name": "Microservices Mesh",
+   "class_name": "MicroservicesMesh",
+   "aliases": [
+    "MicroservicesMesh",
+    "diagrams.ibm.general.MicroservicesMesh",
+    "microservices-mesh"
+   ],
+   "category": "general",
+   "file": "general/general-microservices-mesh.svg",
+   "source_path": "svg/32/network--4.svg",
+   "sha256": "7ae50d6090b7d3e66660b0cabc137c0400d45cf39fe3774cb0449eec187ee0c6",
+   "source_sha256": "e5c8bea420c7d43095021c39c9b04e20a0f476f7cb6e4d36c1e6293947c651d1",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/network--4.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "network--4",
+    "basis": "generic",
+    "note": "interconnected nodes; no service-mesh icon"
+   }
+  },
+  {
+   "id": "general-monitoring",
+   "name": "Monitoring",
+   "class_name": "Monitoring",
+   "aliases": [
+    "Monitoring",
+    "diagrams.ibm.general.Monitoring",
+    "monitoring"
+   ],
+   "category": "general",
+   "file": "general/general-monitoring.svg",
+   "source_path": "svg/32/cloud--monitoring.svg",
+   "sha256": "97ff011b0d9b865a59d0af4b76935f12a57beb64f7f61b85c6bc8c74753b42af",
+   "source_sha256": "4c4cc3c6682eb768565f1fadaa595ca68771a24592a9ce6858a5b396a09a146a",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/cloud--monitoring.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "cloud--monitoring",
+    "basis": "ibm-product",
+    "note": "IBM Cloud Monitoring"
+   }
+  },
+  {
+   "id": "general-monitoring-logging",
+   "name": "Monitoring Logging",
+   "class_name": "MonitoringLogging",
+   "aliases": [
+    "MonitoringLogging",
+    "diagrams.ibm.general.MonitoringLogging",
+    "monitoring-logging"
+   ],
+   "category": "general",
+   "file": "general/general-monitoring-logging.svg",
+   "source_path": "svg/32/cloud--logging.svg",
+   "sha256": "a781fb84daa75aa2c068a77b5a081072722f6c06f7f9bf50a0e0867b5db3dc1c",
+   "source_sha256": "e4b52074d891d973e3b529cb33c2597d0ad11a9ef9ac0b99cb8284124ba1b1d2",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/cloud--logging.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "cloud--logging",
+    "basis": "ibm-product",
+    "note": "IBM Cloud Log Analysis glyph"
+   }
+  },
+  {
+   "id": "general-object-storage",
+   "name": "Object Storage",
+   "class_name": "ObjectStorage",
+   "aliases": [
+    "ObjectStorage",
+    "diagrams.ibm.general.ObjectStorage",
+    "object-storage"
+   ],
+   "category": "general",
+   "file": "general/general-object-storage.svg",
+   "source_path": "svg/32/object-storage.svg",
+   "sha256": "bc3ea8db94e95398bd072835cabc7de4838ea073f69d22b34f2253f84381399e",
+   "source_sha256": "fa15dc55cf9637276887571d13a0e4b558283b8442645eb08152624b97aa2113",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/object-storage.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "object-storage",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "general-offline-capabilities",
+   "name": "Offline Capabilities",
+   "class_name": "OfflineCapabilities",
+   "aliases": [
+    "OfflineCapabilities",
+    "diagrams.ibm.general.OfflineCapabilities",
+    "offline-capabilities"
+   ],
+   "category": "general",
+   "file": "general/general-offline-capabilities.svg",
+   "source_path": "svg/32/cloud--offline.svg",
+   "sha256": "ac59e46e2a8f01c721439833e7be446bfb00bd910c662d158438164ccac82051",
+   "source_sha256": "e15aba083ef68f194413a6bc6d8fc657705bec9fd9fa4642d77d1193e7c68e65",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/cloud--offline.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "cloud--offline",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "general-openwhisk",
+   "name": "Openwhisk",
+   "class_name": "Openwhisk",
+   "aliases": [
+    "Openwhisk",
+    "diagrams.ibm.general.Openwhisk",
+    "openwhisk"
+   ],
+   "category": "general",
+   "file": "general/general-openwhisk.svg",
+   "source_path": "svg/32/function.svg",
+   "sha256": "dcd3f831f66c9579b58d16345ab89517c1c82de2b13f2730ceecaf79b5da7588",
+   "source_sha256": "40628b00be47d521858daaa40bdeeb2eb2ed3c1166ea4a15140ea449e0973a73",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/function.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "function",
+    "basis": "generic",
+    "note": "Carbon function glyph; Cloud Functions is retired, Code Engine is a different service"
+   }
+  },
+  {
+   "id": "general-retrieve-rank",
+   "name": "Retrieve Rank",
+   "class_name": "RetrieveRank",
+   "aliases": [
+    "RetrieveRank",
+    "diagrams.ibm.general.RetrieveRank",
+    "retrieve-rank"
+   ],
+   "category": "general",
+   "file": "general/general-retrieve-rank.svg",
+   "source_path": "svg/32/improve-relevance.svg",
+   "sha256": "a25a8e459b6196bfb5efa8363340c9839d45fc00c99f09e995797ef4a2773e86",
+   "source_sha256": "e3a93c47c8697ba6282d13ac3a3ad05535befcf8c22fd8c9fce3e5073c13284a",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/improve-relevance.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "improve-relevance",
+    "basis": "generic",
+    "note": "relevance ranking; Retrieve and Rank is retired"
+   }
+  },
+  {
+   "id": "general-scalable",
+   "name": "Scalable",
+   "class_name": "Scalable",
+   "aliases": [
+    "Scalable",
+    "diagrams.ibm.general.Scalable",
+    "scalable"
+   ],
+   "category": "general",
+   "file": "general/general-scalable.svg",
+   "source_path": "svg/32/autoscaling.svg",
+   "sha256": "842b4dae3d5a217dd7268fb2b1abd3d7e2bc27291cdf3ad0d162e9af09762da5",
+   "source_sha256": "6bee96655bd4220e64dc6e3106adc7e9f9c5319052be2f8544c3e330512604bf",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/autoscaling.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "autoscaling",
+    "basis": "ibm-product",
+    "note": "IBM Cloud autoscaling"
+   }
+  },
+  {
+   "id": "general-service-discovery-configuration",
+   "name": "Service Discovery Configuration",
+   "class_name": "ServiceDiscoveryConfiguration",
+   "aliases": [
+    "ServiceDiscoveryConfiguration",
+    "diagrams.ibm.general.ServiceDiscoveryConfiguration",
+    "service-discovery-configuration"
+   ],
+   "category": "general",
+   "file": "general/general-service-discovery-configuration.svg",
+   "source_path": "svg/32/search--locate.svg",
+   "sha256": "c2319513f765fb38ee637b9a5ec52e56d87d21d6f66e98abadda9c0a42340066",
+   "source_sha256": "71dcc9470ea227b549cff116cd22980c8306424bbc8e98df2531f592933d346d",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/search--locate.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "search--locate",
+    "basis": "generic",
+    "note": "locate in a list = registry lookup"
+   }
+  },
+  {
+   "id": "general-text-to-speech",
+   "name": "Text To Speech",
+   "class_name": "TextToSpeech",
+   "aliases": [
+    "TextToSpeech",
+    "diagrams.ibm.general.TextToSpeech",
+    "text-to-speech"
+   ],
+   "category": "general",
+   "file": "general/general-text-to-speech.svg",
+   "source_path": "svg/32/ibm-watson--text-to-speech.svg",
+   "sha256": "3896b5335f20f16706ea8850a01d15eaf46653ea8eea84af6f632531014065f8",
+   "source_sha256": "c2a62ebe9ed125ff8ecdb1f7e8c290575c7c266f0855a207c08fe779d08daa87",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm-watson--text-to-speech.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm-watson--text-to-speech",
+    "basis": "ibm-product"
+   }
+  },
+  {
+   "id": "general-transformation-connectivity",
+   "name": "Transformation Connectivity",
+   "class_name": "TransformationConnectivity",
+   "aliases": [
+    "TransformationConnectivity",
+    "diagrams.ibm.general.TransformationConnectivity",
+    "transformation-connectivity"
+   ],
+   "category": "general",
+   "file": "general/general-transformation-connectivity.svg",
+   "source_path": "svg/32/app-connectivity.svg",
+   "sha256": "dc4a9fcf8d593d9d7b96065f4f59aedb3295bcc8c26f45f61272873c62cf7682",
+   "source_sha256": "f235ca3da5e239d214b1b6528d62a02c8822548e202d65696d06fafbcd40fa9e",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/app-connectivity.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "app-connectivity",
+    "basis": "generic",
+    "note": "app connectivity"
+   }
+  },
+  {
+   "id": "infrastructure-channels",
+   "name": "Channels",
+   "class_name": "Channels",
+   "aliases": [
+    "Channels",
+    "diagrams.ibm.infrastructure.Channels",
+    "channels"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-channels.svg",
+   "source_path": "svg/32/devices--apps.svg",
+   "sha256": "854d65d7ac491c336ccd74018cef00fd425929a0ef65c0666ddf2fbfc66b5759",
+   "source_sha256": "a4380965cdf29b64761282be65efd9507555816e6bb766314888d8fd53d9b773",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/devices--apps.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "devices--apps",
+    "basis": "generic",
+    "note": "delivery channels: mobile, desktop, apps"
+   }
+  },
+  {
+   "id": "infrastructure-cloud-messaging",
+   "name": "Cloud Messaging",
+   "class_name": "CloudMessaging",
+   "aliases": [
+    "CloudMessaging",
+    "diagrams.ibm.infrastructure.CloudMessaging",
+    "cloud-messaging"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-cloud-messaging.svg",
+   "source_path": "svg/32/message-queue.svg",
+   "sha256": "5f210bca510da52c11fca1d90e86a6e15f5c8a8d562bc13c44e314ac600d0fea",
+   "source_sha256": "4bddc1136443ed80cfcefaa965d1cd64ac0aa82e871d0863786953a1b649d802",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/message-queue.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "message-queue",
+    "basis": "generic",
+    "note": "same as general Cloud Messaging"
+   }
+  },
+  {
+   "id": "infrastructure-dashboard",
+   "name": "Dashboard",
+   "class_name": "Dashboard",
+   "aliases": [
+    "Dashboard",
+    "diagrams.ibm.infrastructure.Dashboard",
+    "dashboard"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-dashboard.svg",
+   "source_path": "svg/32/dashboard.svg",
+   "sha256": "8839d3aca182e7a986637a55902eda90efe66705b3605becdbe28e3e28dd4cc7",
+   "source_sha256": "4472b9c9aa661f6a0f4525611ba3a05c0067bd8c108a24bcb1e1fa27a52483ac",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/dashboard.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "dashboard",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "infrastructure-diagnostics",
+   "name": "Diagnostics",
+   "class_name": "Diagnostics",
+   "aliases": [
+    "Diagnostics",
+    "diagrams.ibm.infrastructure.Diagnostics",
+    "diagnostics"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-diagnostics.svg",
+   "source_path": "svg/32/stethoscope.svg",
+   "sha256": "ef9534b5f35e29af6425043c32ace13d0196a27f42a821a05448cd7ccd1cafca",
+   "source_sha256": "1e3026ad7a87c3712a7817ff689ae488b9fadf3f2e36a70e09abef4f7e5c94c3",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/stethoscope.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "stethoscope",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "infrastructure-edge-services",
+   "name": "Edge Services",
+   "class_name": "EdgeServices",
+   "aliases": [
+    "EdgeServices",
+    "diagrams.ibm.infrastructure.EdgeServices",
+    "edge-services"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-edge-services.svg",
+   "source_path": "svg/32/edge-service.svg",
+   "sha256": "ad4b54c23a5d4388221c5a3d9689240e01be531ddc960892526026157e2c213c",
+   "source_sha256": "e9737fd5f7a52cce8d7662f1f0733df8944a1d99aab9e653d49e38e759ab8435",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/edge-service.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "edge-service",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "infrastructure-enterprise-messaging",
+   "name": "Enterprise Messaging",
+   "class_name": "EnterpriseMessaging",
+   "aliases": [
+    "EnterpriseMessaging",
+    "diagrams.ibm.infrastructure.EnterpriseMessaging",
+    "enterprise-messaging"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-enterprise-messaging.svg",
+   "source_path": "svg/32/ibm--mq.svg",
+   "sha256": "349bf09f4e5250df4458f81622b4aa6a95696ee01d9a5fd2978f0c65648e60f1",
+   "source_sha256": "a4e2bac99e96e400de7583f2258fd18cef444afbbacfe9cb43b5e580372d9da5",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm--mq.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm--mq",
+    "basis": "ibm-product",
+    "note": "IBM MQ is IBM's enterprise messaging"
+   }
+  },
+  {
+   "id": "infrastructure-event-feed",
+   "name": "Event Feed",
+   "class_name": "EventFeed",
+   "aliases": [
+    "EventFeed",
+    "diagrams.ibm.infrastructure.EventFeed",
+    "event-feed"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-event-feed.svg",
+   "source_path": "svg/32/rss.svg",
+   "sha256": "3203565cab5b623d8a068da15f0b21a12764525d823e44232bf7d67b39dc2369",
+   "source_sha256": "7f5c5565294a38036ebd7372e5b288fcdd1aae244190d5f3e6690388674dadd2",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/rss.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "rss",
+    "basis": "generic",
+    "note": "feed"
+   }
+  },
+  {
+   "id": "infrastructure-infrastructure-services",
+   "name": "Infrastructure Services",
+   "class_name": "InfrastructureServices",
+   "aliases": [
+    "InfrastructureServices",
+    "diagrams.ibm.infrastructure.InfrastructureServices",
+    "infrastructure-services"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-infrastructure-services.svg",
+   "source_path": "svg/32/infrastructure--classic.svg",
+   "sha256": "511168dbb11c97bacce9b9cb77e33bab9a8cced9b7a45b278b9f4d79e92d62dc",
+   "source_sha256": "8b6c77ef2f61773d356b0f7abdd490bc3d2eb4dfd454f61edd27dea7041ab9cb",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/infrastructure--classic.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "infrastructure--classic",
+    "basis": "ibm-product",
+    "note": "IBM Cloud Classic Infrastructure (the SoftLayer IaaS of that era)"
+   }
+  },
+  {
+   "id": "infrastructure-interservice-communication",
+   "name": "Interservice Communication",
+   "class_name": "InterserviceCommunication",
+   "aliases": [
+    "InterserviceCommunication",
+    "diagrams.ibm.infrastructure.InterserviceCommunication",
+    "interservice-communication"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-interservice-communication.svg",
+   "source_path": "svg/32/connection--two-way.svg",
+   "sha256": "9c60abb15ee42b1d5e3749a00eba873d08bc8ccb6b33bc129e21fb25aeb09f3c",
+   "source_sha256": "8c44517fde3575610cc64a78d63d693c94f7eca2b99b2ee4d34e8a1e63589510",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/connection--two-way.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "connection--two-way",
+    "basis": "generic",
+    "note": "same kind as Communication"
+   }
+  },
+  {
+   "id": "infrastructure-load-balancing-routing",
+   "name": "Load Balancing Routing",
+   "class_name": "LoadBalancingRouting",
+   "aliases": [
+    "LoadBalancingRouting",
+    "diagrams.ibm.infrastructure.LoadBalancingRouting",
+    "load-balancing-routing"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-load-balancing-routing.svg",
+   "source_path": "svg/32/load-balancer--application.svg",
+   "sha256": "795f9e86131b49cefad711ab4f8bda827b9f4e6f71926a4b46174e17a10e86b2",
+   "source_sha256": "ff326ed592ef79c4e9578696188f59ac70919dab623d125dd94dab5253cfd693",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/load-balancer--application.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "load-balancer--application",
+    "basis": "generic",
+    "note": "L7 load balancing and routing"
+   }
+  },
+  {
+   "id": "infrastructure-microservices-mesh",
+   "name": "Microservices Mesh",
+   "class_name": "MicroservicesMesh",
+   "aliases": [
+    "MicroservicesMesh",
+    "diagrams.ibm.infrastructure.MicroservicesMesh",
+    "microservices-mesh"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-microservices-mesh.svg",
+   "source_path": "svg/32/network--4.svg",
+   "sha256": "7ae50d6090b7d3e66660b0cabc137c0400d45cf39fe3774cb0449eec187ee0c6",
+   "source_sha256": "e5c8bea420c7d43095021c39c9b04e20a0f476f7cb6e4d36c1e6293947c651d1",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/network--4.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "network--4",
+    "basis": "generic",
+    "note": "same as general Microservices Mesh"
+   }
+  },
+  {
+   "id": "infrastructure-mobile-backend",
+   "name": "Mobile Backend",
+   "class_name": "MobileBackend",
+   "aliases": [
+    "MobileBackend",
+    "diagrams.ibm.infrastructure.MobileBackend",
+    "mobile-backend"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-mobile-backend.svg",
+   "source_path": "svg/32/bare-metal-server--02.svg",
+   "sha256": "23f6e656bdf8d5d3e14b7de7443bbaa8d40234d33609af5ea7977f4af6debaca",
+   "source_sha256": "c569fdb2e373f6eccb121af6146915e9d3c7d36fb70c99850d236bb6006c0220",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/bare-metal-server--02.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "bare-metal-server--02",
+    "basis": "generic",
+    "note": "backend server glyph; same as App Server"
+   }
+  },
+  {
+   "id": "infrastructure-mobile-provider-network",
+   "name": "Mobile Provider Network",
+   "class_name": "MobileProviderNetwork",
+   "aliases": [
+    "MobileProviderNetwork",
+    "diagrams.ibm.infrastructure.MobileProviderNetwork",
+    "mobile-provider-network"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-mobile-provider-network.svg",
+   "source_path": "svg/32/cell-tower.svg",
+   "sha256": "50b80680f55e03826097f17031ad0ef0b546feee45d40e26a6c3ce188550cf6c",
+   "source_sha256": "b21353188b854383271a07349142d9f81c4d82be64cbfe22ce488e94ae1f4b14",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/cell-tower.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "cell-tower",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "infrastructure-monitoring",
+   "name": "Monitoring",
+   "class_name": "Monitoring",
+   "aliases": [
+    "Monitoring",
+    "diagrams.ibm.infrastructure.Monitoring",
+    "monitoring"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-monitoring.svg",
+   "source_path": "svg/32/cloud--monitoring.svg",
+   "sha256": "97ff011b0d9b865a59d0af4b76935f12a57beb64f7f61b85c6bc8c74753b42af",
+   "source_sha256": "4c4cc3c6682eb768565f1fadaa595ca68771a24592a9ce6858a5b396a09a146a",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/cloud--monitoring.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "cloud--monitoring",
+    "basis": "ibm-product",
+    "note": "IBM Cloud Monitoring"
+   }
+  },
+  {
+   "id": "infrastructure-monitoring-logging",
+   "name": "Monitoring Logging",
+   "class_name": "MonitoringLogging",
+   "aliases": [
+    "MonitoringLogging",
+    "diagrams.ibm.infrastructure.MonitoringLogging",
+    "monitoring-logging"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-monitoring-logging.svg",
+   "source_path": "svg/32/cloud--logging.svg",
+   "sha256": "a781fb84daa75aa2c068a77b5a081072722f6c06f7f9bf50a0e0867b5db3dc1c",
+   "source_sha256": "e4b52074d891d973e3b529cb33c2597d0ad11a9ef9ac0b99cb8284124ba1b1d2",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/cloud--logging.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "cloud--logging",
+    "basis": "ibm-product",
+    "note": "IBM Cloud Log Analysis glyph"
+   }
+  },
+  {
+   "id": "infrastructure-service-discovery-configuration",
+   "name": "Service Discovery Configuration",
+   "class_name": "ServiceDiscoveryConfiguration",
+   "aliases": [
+    "ServiceDiscoveryConfiguration",
+    "diagrams.ibm.infrastructure.ServiceDiscoveryConfiguration",
+    "service-discovery-configuration"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-service-discovery-configuration.svg",
+   "source_path": "svg/32/search--locate.svg",
+   "sha256": "c2319513f765fb38ee637b9a5ec52e56d87d21d6f66e98abadda9c0a42340066",
+   "source_sha256": "71dcc9470ea227b549cff116cd22980c8306424bbc8e98df2531f592933d346d",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/search--locate.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "search--locate",
+    "basis": "generic",
+    "note": "same as general Service Discovery"
+   }
+  },
+  {
+   "id": "infrastructure-transformation-connectivity",
+   "name": "Transformation Connectivity",
+   "class_name": "TransformationConnectivity",
+   "aliases": [
+    "TransformationConnectivity",
+    "diagrams.ibm.infrastructure.TransformationConnectivity",
+    "transformation-connectivity"
+   ],
+   "category": "infrastructure",
+   "file": "infrastructure/infrastructure-transformation-connectivity.svg",
+   "source_path": "svg/32/app-connectivity.svg",
+   "sha256": "dc4a9fcf8d593d9d7b96065f4f59aedb3295bcc8c26f45f61272873c62cf7682",
+   "source_sha256": "f235ca3da5e239d214b1b6528d62a02c8822548e202d65696d06fafbcd40fa9e",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/app-connectivity.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "app-connectivity",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "management-alert-notification",
+   "name": "Alert Notification",
+   "class_name": "AlertNotification",
+   "aliases": [
+    "AlertNotification",
+    "diagrams.ibm.management.AlertNotification",
+    "alert-notification"
+   ],
+   "category": "management",
+   "file": "management/management-alert-notification.svg",
+   "source_path": "svg/32/cloud--alerting.svg",
+   "sha256": "5efac09bc9d43d5f1a56341f2cb8d9ecb979267465212ea86260ce7f9933c08c",
+   "source_sha256": "ef40cf7148c10f56b9b1700614f6f2323ab2c2dca9c67e8cd8af01c9761421c9",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/cloud--alerting.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "cloud--alerting",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "management-api-management",
+   "name": "API Management",
+   "class_name": "ApiManagement",
+   "aliases": [
+    "ApiManagement",
+    "diagrams.ibm.management.ApiManagement",
+    "api-management"
+   ],
+   "category": "management",
+   "file": "management/management-api-management.svg",
+   "source_path": "svg/32/ibm--api-connect.svg",
+   "sha256": "e9bb6fe4504a2b517c51a0f3394cc14f25d194453fa678d34ca62c7c924c66eb",
+   "source_sha256": "7d6342776da47cb061c464b864558bacd9d92ee4fb57f09270c997ffb90ff4c9",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm--api-connect.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm--api-connect",
+    "basis": "ibm-product",
+    "note": "API Connect is IBM's API management"
+   }
+  },
+  {
+   "id": "management-cloud-management",
+   "name": "Cloud Management",
+   "class_name": "CloudManagement",
+   "aliases": [
+    "CloudManagement",
+    "diagrams.ibm.management.CloudManagement",
+    "cloud-management"
+   ],
+   "category": "management",
+   "file": "management/management-cloud-management.svg",
+   "source_path": "svg/32/cloud--service-management.svg",
+   "sha256": "74d5d1f22f1f7ffa027d84705120b84320a1b0ea1c9d775caf0cf925a0fae7b1",
+   "source_sha256": "3e7bb02b737c7331b8af113d883d7394d3dbc23eba57516b5e00f1d70dd3cf77",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/cloud--service-management.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "cloud--service-management",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "management-cluster-management",
+   "name": "Cluster Management",
+   "class_name": "ClusterManagement",
+   "aliases": [
+    "ClusterManagement",
+    "diagrams.ibm.management.ClusterManagement",
+    "cluster-management"
+   ],
+   "category": "management",
+   "file": "management/management-cluster-management.svg",
+   "source_path": "svg/32/software-resource--cluster.svg",
+   "sha256": "c186a1c990b97cc5dd639d2ee10038f7782f2e029594c46a64f29d43927a35c7",
+   "source_sha256": "331c388ccdc5ee78ba7ee9ac6367ca81c42bd3d0e84472427c10e913b2f9751f",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/software-resource--cluster.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "software-resource--cluster",
+    "basis": "generic",
+    "note": "generic cluster; no cluster-management icon"
+   }
+  },
+  {
+   "id": "management-content-management",
+   "name": "Content Management",
+   "class_name": "ContentManagement",
+   "aliases": [
+    "ContentManagement",
+    "diagrams.ibm.management.ContentManagement",
+    "content-management"
+   ],
+   "category": "management",
+   "file": "management/management-content-management.svg",
+   "source_path": "svg/32/document--multiple-01.svg",
+   "sha256": "4d875024ec3edd11f2d65cc12292a784b7ecec75c9e19e464d9401cdd4caa7d7",
+   "source_sha256": "78355b6f919cbdbabf5f7806029ff3816f15abe7fcf03eea4cc7acffe272452e",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/document--multiple-01.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "document--multiple-01",
+    "basis": "generic",
+    "note": "documents"
+   }
+  },
+  {
+   "id": "management-data-services",
+   "name": "Data Services",
+   "class_name": "DataServices",
+   "aliases": [
+    "DataServices",
+    "diagrams.ibm.management.DataServices",
+    "data-services"
+   ],
+   "category": "management",
+   "file": "management/management-data-services.svg",
+   "source_path": "svg/32/data--base.svg",
+   "sha256": "c37369dc6914677e2becd9a99eadd9874f7cbb56e266c896a4b39de360223d5a",
+   "source_sha256": "579c1ec1aa4ab7ee1d2813252addc45c8ffe8938ccf93e42cb96fe51ffc14d67",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/data--base.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "data--base",
+    "basis": "generic",
+    "note": "same as data Data Services"
+   }
+  },
+  {
+   "id": "management-device-management",
+   "name": "Device Management",
+   "class_name": "DeviceManagement",
+   "aliases": [
+    "DeviceManagement",
+    "diagrams.ibm.management.DeviceManagement",
+    "device-management"
+   ],
+   "category": "management",
+   "file": "management/management-device-management.svg",
+   "source_path": "svg/32/mobile--check.svg",
+   "sha256": "df9fcf8662cfc5c2c5e695c15387d5e18c03fc170161ba46ac9ec6732f05be60",
+   "source_sha256": "24255dc994a5e0c14526edea695bdf14f6e41c95937cd13311a2d04af4e88f0f",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/mobile--check.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "mobile--check",
+    "basis": "generic",
+    "note": "managed device"
+   }
+  },
+  {
+   "id": "management-information-governance",
+   "name": "Information Governance",
+   "class_name": "InformationGovernance",
+   "aliases": [
+    "InformationGovernance",
+    "diagrams.ibm.management.InformationGovernance",
+    "information-governance"
+   ],
+   "category": "management",
+   "file": "management/management-information-governance.svg",
+   "source_path": "svg/32/rule--data-quality.svg",
+   "sha256": "84b38ef5b4d4d279063359d4b341cdfcc4dab7e30438a2a1f2b6b2292a793442",
+   "source_sha256": "1c2d8a6624cb558df299558a8d87db7f8d7cc42fdb5c2a4805b4ad715cebe357",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/rule--data-quality.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "rule--data-quality",
+    "basis": "generic",
+    "note": "data rule review; Knowledge Catalog would name a product"
+   }
+  },
+  {
+   "id": "management-it-service-management",
+   "name": "It Service Management",
+   "class_name": "ItServiceManagement",
+   "aliases": [
+    "ItServiceManagement",
+    "diagrams.ibm.management.ItServiceManagement",
+    "it-service-management"
+   ],
+   "category": "management",
+   "file": "management/management-it-service-management.svg",
+   "source_path": "svg/32/service-desk.svg",
+   "sha256": "dfe94995a86735ee40ce62ecc1f4198f7aa3a9a2de150ff737277b6181a619af",
+   "source_sha256": "e1e42476ec563315caa317876468fa843b0bcfeaba5780be8028d5f778c4370d",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/service-desk.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "service-desk",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "management-management",
+   "name": "Management",
+   "class_name": "Management",
+   "aliases": [
+    "Management",
+    "diagrams.ibm.management.Management",
+    "management"
+   ],
+   "category": "management",
+   "file": "management/management-management.svg",
+   "source_path": "svg/32/gui--management.svg",
+   "sha256": "170281f9cda6d228cfe5c183b0a1d082b88488088645311167c5b10834085388",
+   "source_sha256": "f54e646a99f56752a4f74f3310eb5faacc4f5361c4d4bcdab550ffdb53695d99",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/gui--management.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "gui--management",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "management-monitoring-metrics",
+   "name": "Monitoring Metrics",
+   "class_name": "MonitoringMetrics",
+   "aliases": [
+    "MonitoringMetrics",
+    "diagrams.ibm.management.MonitoringMetrics",
+    "monitoring-metrics"
+   ],
+   "category": "management",
+   "file": "management/management-monitoring-metrics.svg",
+   "source_path": "svg/32/meter.svg",
+   "sha256": "21076a71d32f2f671d7743e23a9e5cfa5fc1eb05c0fc1d52c1bf2ab6e8529113",
+   "source_sha256": "8a443bb8249bb132cddc77f6531104a2a62f751f344c6681ec97e04db3a4fdb4",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/meter.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "meter",
+    "basis": "generic",
+    "note": "gauge"
+   }
+  },
+  {
+   "id": "management-process-management",
+   "name": "Process Management",
+   "class_name": "ProcessManagement",
+   "aliases": [
+    "ProcessManagement",
+    "diagrams.ibm.management.ProcessManagement",
+    "process-management"
+   ],
+   "category": "management",
+   "file": "management/management-process-management.svg",
+   "source_path": "svg/32/business-processes.svg",
+   "sha256": "fd015de44b4e6905f56622ad4c8e4144c1db98e7aeabd61c873d31ff96ae796e",
+   "source_sha256": "8ad16ef9827f4fa9108181032459aabf80b62a8da283ae006325f05c39f9158c",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/business-processes.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "business-processes",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "management-push-notifications",
+   "name": "Push Notifications",
+   "class_name": "PushNotifications",
+   "aliases": [
+    "PushNotifications",
+    "diagrams.ibm.management.PushNotifications",
+    "push-notifications"
+   ],
+   "category": "management",
+   "file": "management/management-push-notifications.svg",
+   "source_path": "svg/32/notification--new.svg",
+   "sha256": "4b92a8e654c6975c1338ee6fd7415d5b45c500a8da62133398dd542af7fd2951",
+   "source_sha256": "de1d6dc71c85eb4a5ba0923703550c87e438a8ac83b7588ec58b0ad4b9fb859b",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/notification--new.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "notification--new",
+    "basis": "generic",
+    "note": "bell with new dot"
+   }
+  },
+  {
+   "id": "management-service-management-tools",
+   "name": "Service Management Tools",
+   "class_name": "ServiceManagementTools",
+   "aliases": [
+    "ServiceManagementTools",
+    "diagrams.ibm.management.ServiceManagementTools",
+    "service-management-tools"
+   ],
+   "category": "management",
+   "file": "management/management-service-management-tools.svg",
+   "source_path": "svg/32/tool-box.svg",
+   "sha256": "d7c5c346e37a006b944d61e55b91b7582f5b94639a2790dcaa727a623fffe87e",
+   "source_sha256": "1fe7ae2fdbbfe5b34bb1d05247a6f3d2611743bd16d3b178fec1ef7fbc543b8a",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/tool-box.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "tool-box",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "network-bridge",
+   "name": "Bridge",
+   "class_name": "Bridge",
+   "aliases": [
+    "Bridge",
+    "diagrams.ibm.network.Bridge",
+    "bridge"
+   ],
+   "category": "network",
+   "file": "network/network-bridge.svg",
+   "source_path": "svg/32/switch-layer-2.svg",
+   "sha256": "deb563940c61f5c509be562c23234741c958d0cf16fed921b7f2e16870d6f5c1",
+   "source_sha256": "1951e2a1f05c5851cc2637742863b62a57a6eeeb44b392172aeb84eeef6f18ca",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/switch-layer-2.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "switch-layer-2",
+    "basis": "generic",
+    "note": "a bridge is a layer-2 device"
+   }
+  },
+  {
+   "id": "network-direct-link",
+   "name": "Direct Link",
+   "class_name": "DirectLink",
+   "aliases": [
+    "DirectLink",
+    "diagrams.ibm.network.DirectLink",
+    "direct-link"
+   ],
+   "category": "network",
+   "file": "network/network-direct-link.svg",
+   "source_path": "svg/32/direct-link.svg",
+   "sha256": "2ed349c54a4b7e59d8c36e337956e42d85f248d8aed7ba51d85115b9fd55a5d9",
+   "source_sha256": "996672bcd394a1af7ee317be41a0cce9cb66e450da6365a8067fa4011e33b9bf",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/direct-link.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "direct-link",
+    "basis": "ibm-product",
+    "note": "IBM Cloud Direct Link 2.0"
+   }
+  },
+  {
+   "id": "network-enterprise",
+   "name": "Enterprise",
+   "class_name": "Enterprise",
+   "aliases": [
+    "Enterprise",
+    "diagrams.ibm.network.Enterprise",
+    "enterprise"
+   ],
+   "category": "network",
+   "file": "network/network-enterprise.svg",
+   "source_path": "svg/32/network--enterprise.svg",
+   "sha256": "7a8a235491dff3e133198acbb46b6ecc7674e5e09e24932c02351d34f04dd0d5",
+   "source_sha256": "84d7067a3624f11721a37e025eb5e5bb71cce97b4659ca22d16258db257b4db3",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/network--enterprise.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "network--enterprise",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "network-firewall",
+   "name": "Firewall",
+   "class_name": "Firewall",
+   "aliases": [
+    "Firewall",
+    "diagrams.ibm.network.Firewall",
+    "firewall"
+   ],
+   "category": "network",
+   "file": "network/network-firewall.svg",
+   "source_path": "svg/32/firewall.svg",
+   "sha256": "72be14c093c2d6c0cc96368309e36483927b0e40bad8c527ef8a28b8dcdc65f9",
+   "source_sha256": "df4e690400f5110c118d24008b0742bafab0a19a6e5857c4b9762142cb4fab7d",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/firewall.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "firewall",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "network-floating-ip",
+   "name": "Floating IP",
+   "class_name": "FloatingIp",
+   "aliases": [
+    "FloatingIp",
+    "diagrams.ibm.network.FloatingIp",
+    "floating-ip"
+   ],
+   "category": "network",
+   "file": "network/network-floating-ip.svg",
+   "source_path": "svg/32/floating-ip.svg",
+   "sha256": "4a41c645056222771c50223d035ae88c39b35cb65e33cfa63e922baf7f66ac58",
+   "source_sha256": "96b36755e00f740ff451cdc96f0614f4a9d5d722a20e4b06c17edd876ce7ba36",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/floating-ip.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "floating-ip",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "network-gateway",
+   "name": "Gateway",
+   "class_name": "Gateway",
+   "aliases": [
+    "Gateway",
+    "diagrams.ibm.network.Gateway",
+    "gateway"
+   ],
+   "category": "network",
+   "file": "network/network-gateway.svg",
+   "source_path": "svg/32/gateway.svg",
+   "sha256": "6040c59dadf56f5877aef5bcd6637089c579490fa63e362ae9b5751b7e65d0c4",
+   "source_sha256": "bacd1f43e92088393ba50f71cb5464f63da1f2932896f4fc4c7bf49ec10dd011",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/gateway.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "gateway",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "network-internet-services",
+   "name": "Internet Services",
+   "class_name": "InternetServices",
+   "aliases": [
+    "InternetServices",
+    "diagrams.ibm.network.InternetServices",
+    "internet-services"
+   ],
+   "category": "network",
+   "file": "network/network-internet-services.svg",
+   "source_path": "svg/32/ibm-cloud--internet-services.svg",
+   "sha256": "7a41798c99cfbaf0b436777481cebed8c74d7ee5b646af3eab887b897fa00603",
+   "source_sha256": "37a33353c0cf6623b56dd4a0211aa3c26aae71763477dbd07adf394da4a471e1",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm-cloud--internet-services.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm-cloud--internet-services",
+    "basis": "ibm-product"
+   }
+  },
+  {
+   "id": "network-load-balancer",
+   "name": "Load Balancer",
+   "class_name": "LoadBalancer",
+   "aliases": [
+    "LoadBalancer",
+    "diagrams.ibm.network.LoadBalancer",
+    "load-balancer"
+   ],
+   "category": "network",
+   "file": "network/network-load-balancer.svg",
+   "source_path": "svg/32/load-balancer--vpc.svg",
+   "sha256": "00387351ba832241a7fb04e90dcdd360b4691b883aa5d487f85bac2df187f242",
+   "source_sha256": "8e04a79fd9e41545b176850376195b58ffa888f06e56fbde300237249051cb17",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/load-balancer--vpc.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "load-balancer--vpc",
+    "basis": "ibm-product",
+    "note": "IBM Cloud Load Balancer for VPC"
+   }
+  },
+  {
+   "id": "network-load-balancer-listener",
+   "name": "Load Balancer Listener",
+   "class_name": "LoadBalancerListener",
+   "aliases": [
+    "LoadBalancerListener",
+    "diagrams.ibm.network.LoadBalancerListener",
+    "load-balancer-listener"
+   ],
+   "category": "network",
+   "file": "network/network-load-balancer-listener.svg",
+   "source_path": "svg/32/load-balancer--listener.svg",
+   "sha256": "b39ae09212db5913bea9979ab6733b499c195059e60cf4b57455100091a5de80",
+   "source_sha256": "97914036bb831c78ec510591af3340406544742352dcec885f6a36cfd087e4d2",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/load-balancer--listener.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "load-balancer--listener",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "network-load-balancer-pool",
+   "name": "Load Balancer Pool",
+   "class_name": "LoadBalancerPool",
+   "aliases": [
+    "LoadBalancerPool",
+    "diagrams.ibm.network.LoadBalancerPool",
+    "load-balancer-pool"
+   ],
+   "category": "network",
+   "file": "network/network-load-balancer-pool.svg",
+   "source_path": "svg/32/load-balancer--pool.svg",
+   "sha256": "dbad5f9234507699ce36ecaed4838f33db9148294932f1e0a6d9b538852c10cb",
+   "source_sha256": "b3cefaa4e0e0a98dbf5b056152903f4861fc0b7d3167b74fd3df600171d3990b",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/load-balancer--pool.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "load-balancer--pool",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "network-load-balancing-routing",
+   "name": "Load Balancing Routing",
+   "class_name": "LoadBalancingRouting",
+   "aliases": [
+    "LoadBalancingRouting",
+    "diagrams.ibm.network.LoadBalancingRouting",
+    "load-balancing-routing"
+   ],
+   "category": "network",
+   "file": "network/network-load-balancing-routing.svg",
+   "source_path": "svg/32/load-balancer--application.svg",
+   "sha256": "795f9e86131b49cefad711ab4f8bda827b9f4e6f71926a4b46174e17a10e86b2",
+   "source_sha256": "ff326ed592ef79c4e9578696188f59ac70919dab623d125dd94dab5253cfd693",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/load-balancer--application.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "load-balancer--application",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "network-public-gateway",
+   "name": "Public Gateway",
+   "class_name": "PublicGateway",
+   "aliases": [
+    "PublicGateway",
+    "diagrams.ibm.network.PublicGateway",
+    "public-gateway"
+   ],
+   "category": "network",
+   "file": "network/network-public-gateway.svg",
+   "source_path": "svg/32/gateway--public.svg",
+   "sha256": "3e8b4f1bc8c11de35d1a57d09c00faf49d37464e25125d19d71b7ecded40f228",
+   "source_sha256": "39db9c9a0617fbdfc9aab07065def31e8a490971e9df92c83764930c2da1bafd",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/gateway--public.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "gateway--public",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "network-region",
+   "name": "Region",
+   "class_name": "Region",
+   "aliases": [
+    "Region",
+    "diagrams.ibm.network.Region",
+    "region"
+   ],
+   "category": "network",
+   "file": "network/network-region.svg",
+   "source_path": "svg/32/location.svg",
+   "sha256": "9de58917ab6c33e9605247b32e5257f40bf340168b2908eebd64b542e2237e9a",
+   "source_sha256": "f7ca16532e8d529fc6821c3b64340ff8f241d010848c19ee854ca6620b20a60b",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/location.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "location",
+    "basis": "generic",
+    "note": "location pin for a region"
+   }
+  },
+  {
+   "id": "network-router",
+   "name": "Router",
+   "class_name": "Router",
+   "aliases": [
+    "Router",
+    "diagrams.ibm.network.Router",
+    "router"
+   ],
+   "category": "network",
+   "file": "network/network-router.svg",
+   "source_path": "svg/32/router.svg",
+   "sha256": "9c02149dff0f8ccd4d748c28fac14436e148c213a2d6243a330fa15f09a4b1ee",
+   "source_sha256": "0b90f6b4a446429320fdeed0ea6ea347f6ba1ceb6fb6555b4f393b4bb0b79234",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/router.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "router",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "network-rules",
+   "name": "Rules",
+   "class_name": "Rules",
+   "aliases": [
+    "Rules",
+    "diagrams.ibm.network.Rules",
+    "rules"
+   ],
+   "category": "network",
+   "file": "network/network-rules.svg",
+   "source_path": "svg/32/subnet-acl-rules.svg",
+   "sha256": "b7e185ed5903689c271fc8bbf49be9d60d9fc68c6f525fdc16c70254b133dd19",
+   "source_sha256": "95fdf4ccbddbf99432146e62911ce6c32cebf5ca00e2f1fadb746666bd63079d",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/subnet-acl-rules.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "subnet-acl-rules",
+    "basis": "generic",
+    "note": "network ACL rules"
+   }
+  },
+  {
+   "id": "network-subnet",
+   "name": "Subnet",
+   "class_name": "Subnet",
+   "aliases": [
+    "Subnet",
+    "diagrams.ibm.network.Subnet",
+    "subnet"
+   ],
+   "category": "network",
+   "file": "network/network-subnet.svg",
+   "source_path": "svg/32/ibm-cloud--subnets.svg",
+   "sha256": "f6b940a59b1a93efede8610960d7e59dd3c09002d6443c48aaa7352e13223c22",
+   "source_sha256": "72ec85192dd0ca3731bb275e08c6ec590c245fa1aead646821fbc778c9691355",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm-cloud--subnets.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm-cloud--subnets",
+    "basis": "ibm-product"
+   }
+  },
+  {
+   "id": "network-transit-gateway",
+   "name": "Transit Gateway",
+   "class_name": "TransitGateway",
+   "aliases": [
+    "TransitGateway",
+    "diagrams.ibm.network.TransitGateway",
+    "transit-gateway"
+   ],
+   "category": "network",
+   "file": "network/network-transit-gateway.svg",
+   "source_path": "svg/32/ibm-cloud--transit-gateway.svg",
+   "sha256": "93ffc7a9fdfe72f5f66fbd467473f78e2276c034da28f6a7d22f7470da9240e7",
+   "source_sha256": "1aafdcf13ccb160d98759c5a6238b79b0f1a58537b6608edbfa6e1a589a9e35c",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm-cloud--transit-gateway.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm-cloud--transit-gateway",
+    "basis": "ibm-product"
+   }
+  },
+  {
+   "id": "network-vpc",
+   "name": "VPC",
+   "class_name": "Vpc",
+   "aliases": [
+    "Vpc",
+    "diagrams.ibm.network.Vpc",
+    "vpc"
+   ],
+   "category": "network",
+   "file": "network/network-vpc.svg",
+   "source_path": "svg/32/ibm-cloud--vpc.svg",
+   "sha256": "15fbd1343f07de0cdaf7a28dc11295b2df826fbf5175846177a2b918488f7f13",
+   "source_sha256": "ceecd2c2134a6a17739a3689451329abb61167897af911c1d89c06d3a2dce4e5",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm-cloud--vpc.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm-cloud--vpc",
+    "basis": "ibm-product"
+   }
+  },
+  {
+   "id": "network-vpn-connection",
+   "name": "VPN Connection",
+   "class_name": "VpnConnection",
+   "aliases": [
+    "VpnConnection",
+    "diagrams.ibm.network.VpnConnection",
+    "vpn-connection"
+   ],
+   "category": "network",
+   "file": "network/network-vpn-connection.svg",
+   "source_path": "svg/32/vpn--connection.svg",
+   "sha256": "ce43a39716a09ea444cd6be37825d0925b1161352f2b4f3f0490e7e98e3746f8",
+   "source_sha256": "1d300c8ca7be7c14c3a7b0d31ec64886e753d039d9c7610ed8bfd909e5e4ac68",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/vpn--connection.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "vpn--connection",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "network-vpn-gateway",
+   "name": "VPN Gateway",
+   "class_name": "VpnGateway",
+   "aliases": [
+    "VpnGateway",
+    "diagrams.ibm.network.VpnGateway",
+    "vpn-gateway"
+   ],
+   "category": "network",
+   "file": "network/network-vpn-gateway.svg",
+   "source_path": "svg/32/ibm--vpn-for-vpc.svg",
+   "sha256": "d2396ad89bd429d66eb96c7cf5528359adb45d38377196a132f132562c4afa51",
+   "source_sha256": "a9a1b95110c0a66fc664841400c93999418fac7b3f0c697be6e1bcfa8924e478",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/ibm--vpn-for-vpc.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "ibm--vpn-for-vpc",
+    "basis": "ibm-product",
+    "note": "VPN for VPC is the VPC VPN gateway"
+   }
+  },
+  {
+   "id": "network-vpn-policy",
+   "name": "VPN Policy",
+   "class_name": "VpnPolicy",
+   "aliases": [
+    "VpnPolicy",
+    "diagrams.ibm.network.VpnPolicy",
+    "vpn-policy"
+   ],
+   "category": "network",
+   "file": "network/network-vpn-policy.svg",
+   "source_path": "svg/32/vpn--policy.svg",
+   "sha256": "3e3054c14b72b7fc251919f11de448ffb0d030d24156db3825cfeaeb88f45304",
+   "source_sha256": "2aa611856b58950bf0417835b76a0b9140558197906380454fd63ccd93bcb301",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/vpn--policy.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "vpn--policy",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "security-api-security",
+   "name": "API Security",
+   "class_name": "ApiSecurity",
+   "aliases": [
+    "ApiSecurity",
+    "diagrams.ibm.security.ApiSecurity",
+    "api-security"
+   ],
+   "category": "security",
+   "file": "security/security-api-security.svg",
+   "source_path": "svg/32/api--key.svg",
+   "sha256": "42f720258fe68e9e8635957a6780fe18e0dc207c3e36dff30b244ae6733e8090",
+   "source_sha256": "3b0cfbd725e0b856386b4535c09aa083c8ecc88f2587654988c7b3ae92a734c4",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/api--key.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "api--key",
+    "basis": "generic",
+    "note": "API key"
+   }
+  },
+  {
+   "id": "security-data-security",
+   "name": "Data Security",
+   "class_name": "DataSecurity",
+   "aliases": [
+    "DataSecurity",
+    "diagrams.ibm.security.DataSecurity",
+    "data-security"
+   ],
+   "category": "security",
+   "file": "security/security-data-security.svg",
+   "source_path": "svg/32/data-set-encryption.svg",
+   "sha256": "ffa8dffc57f6d9d09888b8f1f2807d897b003ba0ab0a3f666e4e41f8a5b5978e",
+   "source_sha256": "69779be9f41376c275c1cef7d56719057d0daf5395a8f371a57817a794f1e741",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/data-set-encryption.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "data-set-encryption",
+    "basis": "generic",
+    "note": "same as general Data Security"
+   }
+  },
+  {
+   "id": "security-firewall",
+   "name": "Firewall",
+   "class_name": "Firewall",
+   "aliases": [
+    "Firewall",
+    "diagrams.ibm.security.Firewall",
+    "firewall"
+   ],
+   "category": "security",
+   "file": "security/security-firewall.svg",
+   "source_path": "svg/32/firewall.svg",
+   "sha256": "72be14c093c2d6c0cc96368309e36483927b0e40bad8c527ef8a28b8dcdc65f9",
+   "source_sha256": "df4e690400f5110c118d24008b0742bafab0a19a6e5857c4b9762142cb4fab7d",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/firewall.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "firewall",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "security-gateway",
+   "name": "Gateway",
+   "class_name": "Gateway",
+   "aliases": [
+    "Gateway",
+    "diagrams.ibm.security.Gateway",
+    "gateway"
+   ],
+   "category": "security",
+   "file": "security/security-gateway.svg",
+   "source_path": "svg/32/gateway--security.svg",
+   "sha256": "c5b39bfb971ca35d0c912f18f711f08b5ebf73ff776bca011ffa9e62a500047e",
+   "source_sha256": "17f6ddd18526972404235151f0e41cc7e5a9d62cb630e930a1b7d737bbf43e9d",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/gateway--security.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "gateway--security",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "security-governance-risk-compliance",
+   "name": "Governance Risk Compliance",
+   "class_name": "GovernanceRiskCompliance",
+   "aliases": [
+    "GovernanceRiskCompliance",
+    "diagrams.ibm.security.GovernanceRiskCompliance",
+    "governance-risk-compliance"
+   ],
+   "category": "security",
+   "file": "security/security-governance-risk-compliance.svg",
+   "source_path": "svg/32/policy.svg",
+   "sha256": "df0bb5eb973956fde58b421b348dd8049fc42f82284f4b7c7e2a3b1470f1019d",
+   "source_sha256": "fcca614cc969ccb792eadc494be780490b7ca759671db86c373c0cc54da91342",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/policy.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "policy",
+    "basis": "generic",
+    "note": "same as general GRC"
+   }
+  },
+  {
+   "id": "security-identity-access-management",
+   "name": "Identity Access Management",
+   "class_name": "IdentityAccessManagement",
+   "aliases": [
+    "IdentityAccessManagement",
+    "diagrams.ibm.security.IdentityAccessManagement",
+    "identity-access-management"
+   ],
+   "category": "security",
+   "file": "security/security-identity-access-management.svg",
+   "source_path": "svg/32/user--access.svg",
+   "sha256": "88cbe12c2f512932c4b8769b6a09a279e0ebe5d9f1b9c49f7551794eb0cce111",
+   "source_sha256": "ce8a841633433e485923e3c862bfe604cd61d596f10eff27f145e42ed38853f1",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/user--access.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "user--access",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "security-identity-provider",
+   "name": "Identity Provider",
+   "class_name": "IdentityProvider",
+   "aliases": [
+    "IdentityProvider",
+    "diagrams.ibm.security.IdentityProvider",
+    "identity-provider"
+   ],
+   "category": "security",
+   "file": "security/security-identity-provider.svg",
+   "source_path": "svg/32/digital--identity.svg",
+   "sha256": "d1bde7bb265e4f0c47a6914a6e2e048bc6bfc3b970e6eaef399fe582335a6376",
+   "source_sha256": "bc91474e96c94299ec380ac9aff5dba491596ad7c8f2ca26dc971644f8dc7bd1",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/digital--identity.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "digital--identity",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "security-infrastructure-security",
+   "name": "Infrastructure Security",
+   "class_name": "InfrastructureSecurity",
+   "aliases": [
+    "InfrastructureSecurity",
+    "diagrams.ibm.security.InfrastructureSecurity",
+    "infrastructure-security"
+   ],
+   "category": "security",
+   "file": "security/security-infrastructure-security.svg",
+   "source_path": "svg/32/security.svg",
+   "sha256": "eb0e2d0de2802b105b17d26ca8e2824488b9ef295b357cd1e04a4c99381ad5c6",
+   "source_sha256": "5a8bcca54c1800172166d085eb2697229060c64cd23e1c778413e291598962f3",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/security.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "security",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "security-physical-security",
+   "name": "Physical Security",
+   "class_name": "PhysicalSecurity",
+   "aliases": [
+    "PhysicalSecurity",
+    "diagrams.ibm.security.PhysicalSecurity",
+    "physical-security"
+   ],
+   "category": "security",
+   "file": "security/security-physical-security.svg",
+   "source_path": "svg/32/police.svg",
+   "sha256": "1aaf6cb49e5ebe2f386916c036067eead5f470781704db1d8fac887ecc763ada",
+   "source_sha256": "5c64c98573c45890c0f2ff11b2fea0ee4195b84d7ddf2e27c412c4f7719ea62b",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/police.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "police",
+    "basis": "generic",
+    "note": "guard (aliases: security, guard)"
+   }
+  },
+  {
+   "id": "security-security-monitoring-intelligence",
+   "name": "Security Monitoring Intelligence",
+   "class_name": "SecurityMonitoringIntelligence",
+   "aliases": [
+    "SecurityMonitoringIntelligence",
+    "diagrams.ibm.security.SecurityMonitoringIntelligence",
+    "security-monitoring-intelligence"
+   ],
+   "category": "security",
+   "file": "security/security-security-monitoring-intelligence.svg",
+   "source_path": "svg/32/shield--alert.svg",
+   "sha256": "0ce6649846d5f0917265a765af445f64631de4f6a7038ce417232b82c373bdc8",
+   "source_sha256": "9233b3be545cd2263f12c215000bf0f8954ccf32731e326bc9d84e7f7175f935",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/shield--alert.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "shield--alert",
+    "basis": "generic",
+    "note": "threat alert"
+   }
+  },
+  {
+   "id": "security-security-services",
+   "name": "Security Services",
+   "class_name": "SecurityServices",
+   "aliases": [
+    "SecurityServices",
+    "diagrams.ibm.security.SecurityServices",
+    "security-services"
+   ],
+   "category": "security",
+   "file": "security/security-security-services.svg",
+   "source_path": "svg/32/security-services.svg",
+   "sha256": "adb4fc9624ae4761fb8e93861aefb925f00427e4a7777747e101fc0f3df22ce9",
+   "source_sha256": "dceb274aac9a7eb649775301569e628f4981e80770b227cf26f98a56458bf127",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/security-services.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "security-services",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "security-vpn",
+   "name": "VPN",
+   "class_name": "Vpn",
+   "aliases": [
+    "Vpn",
+    "diagrams.ibm.security.Vpn",
+    "vpn"
+   ],
+   "category": "security",
+   "file": "security/security-vpn.svg",
+   "source_path": "svg/32/VPN.svg",
+   "sha256": "8ca957d1066f97fd0b27ad9b3481d38fb4e2ab4b63fd65eaf4fa366ca4d6eba3",
+   "source_sha256": "fb6e18376d4337e91194dc2d92f9035603a4f7b16ad332009fbfea3c0143d42d",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/VPN.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "VPN",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "social-communities",
+   "name": "Communities",
+   "class_name": "Communities",
+   "aliases": [
+    "Communities",
+    "diagrams.ibm.social.Communities",
+    "communities"
+   ],
+   "category": "social",
+   "file": "social/social-communities.svg",
+   "source_path": "svg/32/group.svg",
+   "sha256": "bd2559e43f7306d4b50ff44fad8d596fba6e4711770e63e77dd42498a15fa6fb",
+   "source_sha256": "04f0e4d2286b02b83a454ea554515979375f1d2270fb215a91a0740f529f5942",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/group.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "group",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "social-file-sync",
+   "name": "File Sync",
+   "class_name": "FileSync",
+   "aliases": [
+    "FileSync",
+    "diagrams.ibm.social.FileSync",
+    "file-sync"
+   ],
+   "category": "social",
+   "file": "social/social-file-sync.svg",
+   "source_path": "svg/32/folder--shared.svg",
+   "sha256": "b20aa0ac91907e96c0f753dfe92f9aef456e828ad54aed02984fd372e19c2b1d",
+   "source_sha256": "22d0c4140af5ff467dba50908ce732afd6bb4152e25d6bfe93c5fcc95f3cd0ae",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/folder--shared.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "folder--shared",
+    "basis": "generic",
+    "note": "shared folder; no sync glyph that fits"
+   }
+  },
+  {
+   "id": "social-live-collaboration",
+   "name": "Live Collaboration",
+   "class_name": "LiveCollaboration",
+   "aliases": [
+    "LiveCollaboration",
+    "diagrams.ibm.social.LiveCollaboration",
+    "live-collaboration"
+   ],
+   "category": "social",
+   "file": "social/social-live-collaboration.svg",
+   "source_path": "svg/32/collaborate.svg",
+   "sha256": "9c4b40b359cda984fae25a21825aaa7369297c3fa99bd3f42620366c567fd29a",
+   "source_sha256": "842b6e4c4db42b10a91a81386310c9adc6b5aadc9c70ae7c7027cb1cf7955168",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/collaborate.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "collaborate",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "social-messaging",
+   "name": "Messaging",
+   "class_name": "Messaging",
+   "aliases": [
+    "Messaging",
+    "diagrams.ibm.social.Messaging",
+    "messaging"
+   ],
+   "category": "social",
+   "file": "social/social-messaging.svg",
+   "source_path": "svg/32/chat.svg",
+   "sha256": "06dc1a7cf51e9f4fe10099de8f86bbf9441e599b1a2b2129cdcedfe2ec11bba4",
+   "source_sha256": "96ad60135cc410a260efeb004d37ff4b1313a2f94e5ec09688170de7e8f3714a",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/chat.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "chat",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "social-networking",
+   "name": "Networking",
+   "class_name": "Networking",
+   "aliases": [
+    "Networking",
+    "diagrams.ibm.social.Networking",
+    "networking"
+   ],
+   "category": "social",
+   "file": "social/social-networking.svg",
+   "source_path": "svg/32/friendship.svg",
+   "sha256": "12a767cfeedf8e1f2541ee69b868d1ea99be136d5dec5a58b65fbcc9561874f7",
+   "source_sha256": "c039c8c347b6bf1e67d10d5b1158b792a606b5a720d95292a437101d1ccf8ca4",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/friendship.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "friendship",
+    "basis": "generic",
+    "note": "people connected"
+   }
+  },
+  {
+   "id": "storage-block-storage",
+   "name": "Block Storage",
+   "class_name": "BlockStorage",
+   "aliases": [
+    "BlockStorage",
+    "diagrams.ibm.storage.BlockStorage",
+    "block-storage"
+   ],
+   "category": "storage",
+   "file": "storage/storage-block-storage.svg",
+   "source_path": "svg/32/block-storage.svg",
+   "sha256": "a8dd62d76895c9b26be67bb7eca778429d377b76362c7057748ce0d6907d29ee",
+   "source_sha256": "bb2a0aafcdec25fbdcb15aa565aabe89f281e6936391b4638f12fba6e1159cda",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/block-storage.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "block-storage",
+    "basis": "ibm-product",
+    "note": "IBM Cloud Block Storage for VPC"
+   }
+  },
+  {
+   "id": "storage-object-storage",
+   "name": "Object Storage",
+   "class_name": "ObjectStorage",
+   "aliases": [
+    "ObjectStorage",
+    "diagrams.ibm.storage.ObjectStorage",
+    "object-storage"
+   ],
+   "category": "storage",
+   "file": "storage/storage-object-storage.svg",
+   "source_path": "svg/32/object-storage.svg",
+   "sha256": "bc3ea8db94e95398bd072835cabc7de4838ea073f69d22b34f2253f84381399e",
+   "source_sha256": "fa15dc55cf9637276887571d13a0e4b558283b8442645eb08152624b97aa2113",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/object-storage.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "object-storage",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "user-browser",
+   "name": "Browser",
+   "class_name": "Browser",
+   "aliases": [
+    "Browser",
+    "diagrams.ibm.user.Browser",
+    "browser"
+   ],
+   "category": "user",
+   "file": "user/user-browser.svg",
+   "source_path": "svg/32/application--web.svg",
+   "sha256": "eca65c4e9c56d8f15cd2f530ba479d5c5b281607b265cc66964b87ceaa01c75c",
+   "source_sha256": "9b0be649f3583267ab5575d4182954e99eaf39a988dfb5889fbe45e2f2dad234",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/application--web.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "application--web",
+    "basis": "generic",
+    "note": "browser window"
+   }
+  },
+  {
+   "id": "user-device",
+   "name": "Device",
+   "class_name": "Device",
+   "aliases": [
+    "Device",
+    "diagrams.ibm.user.Device",
+    "device"
+   ],
+   "category": "user",
+   "file": "user/user-device.svg",
+   "source_path": "svg/32/devices.svg",
+   "sha256": "cce14eb7293a7ae06110fa5b0c63a16aeb6e0199bff1add1fb102d2fd211e7f7",
+   "source_sha256": "651a938d0704d01564c048cc676d4e842198f03ec9703f154fb731f49263b088",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/devices.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "devices",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "user-sensor",
+   "name": "Sensor",
+   "class_name": "Sensor",
+   "aliases": [
+    "Sensor",
+    "diagrams.ibm.user.Sensor",
+    "sensor"
+   ],
+   "category": "user",
+   "file": "user/user-sensor.svg",
+   "source_path": "svg/32/sensor.svg",
+   "sha256": "4151311a0de2e3f5d2ee736f8af78c97db532297cfeaacc253f87477fea450ae",
+   "source_sha256": "af16a70cd3826f74b5eb9f92e9f23fa8eba05cc200fd0b604c56050cd4eedda5",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/sensor.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "sensor",
+    "basis": "generic"
+   }
+  },
+  {
+   "id": "user-user",
+   "name": "User",
+   "class_name": "User",
+   "aliases": [
+    "User",
+    "diagrams.ibm.user.User",
+    "user"
+   ],
+   "category": "user",
+   "file": "user/user-user.svg",
+   "source_path": "svg/32/user.svg",
+   "sha256": "9058dede07f97ec044dc882b59a0f27b8a68c7aab81188d74e7a3d9ddd5c457c",
+   "source_sha256": "fa656ebaf9e7a24de7877474c405f97e870a5ebb758f88cedb2f980ca7bfb0bf",
+   "source_url": "https://github.com/carbon-design-system/carbon/tree/%40carbon/icons%4011.89.0/packages/icons/src/svg/32/user.svg",
+   "source_release": "@carbon/icons 11.89.0; the 32 px icon's paths, unaltered, in this library's SVG wrapper",
+   "terms_url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+   "carbon": {
+    "icon": "user",
+    "basis": "generic"
+   }
+  }
+ ]
+}

@@ -1,0 +1,308 @@
+{
+  "schema_version": 2,
+  "kind": "hybrid",
+  "slug": "cloudflare-edge-platform",
+  "title": "Cloudflare edge platform with an on-premises origin",
+  "description": "Visitors reach a Cloudflare zone where DNS, the WAF and the CDN sit in front of everything; Pages serves the front end, Workers the API and Workers AI the inference calls, all on the global network; cache misses and writes reach an origin in the corporate datacenter through a tunnel.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "cloudflare",
+      "enabled": true
+    },
+    {
+      "id": "onprem",
+      "enabled": true
+    }
+  ],
+  "default_library": "cloudflare",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Cloudflare edge platform with an on-premises origin",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "visitors",
+        "name": "Visitors",
+        "type": "Public users",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": "browsers and apps",
+          "icon": "public-users",
+          "collection": "infragram",
+          "category": "identity"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "dns-waf-and-cdn",
+            "kind": "solid",
+            "label": "HTTPS",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "cloudflare-account",
+        "name": "Cloudflare account",
+        "type": "account",
+        "component": {
+          "provider": "infragram",
+          "service_id": "custom-boundary-cloudflare-account",
+          "icon_ref": "infragram:custom-boundary-cloudflare-account"
+        },
+        "attributes": {
+          "editor_frame_group": "cloudflare"
+        },
+        "children": [
+          {
+            "id": "zone-shop-example-com",
+            "name": "Zone · shop.example.com",
+            "type": "zone",
+            "component": {
+              "provider": "infragram",
+              "service_id": "custom-boundary-cloudflare-zone",
+              "icon_ref": "infragram:custom-boundary-cloudflare-zone"
+            },
+            "attributes": {
+              "editor_frame_group": "cloudflare"
+            },
+            "children": [
+              {
+                "id": "dns-waf-and-cdn",
+                "name": "DNS, WAF and CDN",
+                "type": "Cloudflare",
+                "component": {
+                  "provider": "cloudflare",
+                  "service_id": "cloudflare",
+                  "icon_ref": "cloudflare:cloudflare"
+                },
+                "attributes": {
+                  "detail": "proxied records",
+                  "icon": "cloudflare",
+                  "collection": "cloudflare",
+                  "category": "networking"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "pages",
+                    "kind": "solid",
+                    "label": "static",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "workers",
+                    "kind": "solid",
+                    "label": "/api/*",
+                    "direction": "forward"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "cloudflare-global-network",
+        "name": "Cloudflare global network",
+        "type": "location",
+        "component": {
+          "provider": "infragram",
+          "service_id": "custom-boundary-cloudflare-network",
+          "icon_ref": "infragram:custom-boundary-cloudflare-network"
+        },
+        "attributes": {
+          "editor_frame_group": "cloudflare"
+        },
+        "children": [
+          {
+            "id": "pages",
+            "name": "Pages",
+            "type": "Cloudflare Pages",
+            "component": {
+              "provider": "cloudflare",
+              "service_id": "pages",
+              "icon_ref": "cloudflare:pages"
+            },
+            "attributes": {
+              "detail": "storefront front end",
+              "icon": "pages",
+              "collection": "cloudflare",
+              "category": "web"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "workers",
+            "name": "Workers",
+            "type": "Cloudflare Workers",
+            "component": {
+              "provider": "cloudflare",
+              "service_id": "workers",
+              "icon_ref": "cloudflare:workers"
+            },
+            "attributes": {
+              "detail": "API and routing",
+              "icon": "workers",
+              "collection": "cloudflare",
+              "category": "compute"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "workers-ai",
+                "kind": "solid",
+                "label": "embeddings",
+                "direction": "forward"
+              },
+              {
+                "target": "cloudflare-tunnel",
+                "kind": "dashed",
+                "label": "cache miss",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "workers-ai",
+            "name": "Workers AI",
+            "type": "Cloudflare Workers AI",
+            "component": {
+              "provider": "cloudflare",
+              "service_id": "workers-ai",
+              "icon_ref": "cloudflare:workers-ai"
+            },
+            "attributes": {
+              "detail": "product search",
+              "icon": "workers-ai",
+              "collection": "cloudflare",
+              "category": "ai-machine-learning"
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "corporate-datacenter",
+        "name": "Corporate datacenter",
+        "type": "site",
+        "component": {
+          "provider": "infragram",
+          "service_id": "custom-boundary-onprem-datacenter",
+          "icon_ref": "infragram:custom-boundary-onprem-datacenter"
+        },
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "origin-zone",
+            "name": "Origin zone",
+            "type": "security-zone",
+            "component": {
+              "provider": "infragram",
+              "service_id": "custom-boundary-onprem-security-zone",
+              "icon_ref": "infragram:custom-boundary-onprem-security-zone"
+            },
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "cloudflare-tunnel",
+                "name": "Cloudflare tunnel",
+                "type": "VPN tunnel",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "vpn-tunnel",
+                  "icon_ref": "infragram:vpn-tunnel"
+                },
+                "attributes": {
+                  "detail": "outbound only",
+                  "icon": "vpn-tunnel",
+                  "collection": "infragram",
+                  "category": "networking"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "origin",
+                    "kind": "solid",
+                    "label": "HTTP",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "origin",
+                "name": "Origin",
+                "type": "Nginx",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "network-nginx",
+                  "icon_ref": "onprem:network-nginx"
+                },
+                "attributes": {
+                  "detail": "product catalogue",
+                  "icon": "network-nginx",
+                  "collection": "onprem",
+                  "category": "network"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "postgresql",
+                    "kind": "solid",
+                    "label": "SQL",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "postgresql",
+                "name": "PostgreSQL",
+                "type": "PostgreSQL",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "database-postgresql",
+                  "icon_ref": "onprem:database-postgresql"
+                },
+                "attributes": {
+                  "detail": "orders",
+                  "icon": "database-postgresql",
+                  "collection": "onprem",
+                  "category": "database"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

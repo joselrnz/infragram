@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="9 9 23 23">
+  <defs>
+    <style>.cls-3,.cls-4{fill:none;stroke-miterlimit:10;}.cls-3,.cls-4{stroke:#0069ff;stroke-width:1.49px;}.cls-3{stroke-linecap:round;}.cls-5{fill:#0069ff;}</style>
+  </defs>
+  <title>digitalocean-product-icon-available-standalone-service</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path class="cls-3" d="M11.67,11.48a3.74,3.74,0,0,0-.86,3.09"/>
+    <circle class="cls-4" cx="21.51" cy="21.37" r="2.84"/>
+    <circle class="cls-5" cx="21.51" cy="21.37" r="0.98"/>
+    <path class="cls-3" d="M31.41,31.21c2.37-2.37-.17-8.68-5.61-14.12S14,9.1,11.67,11.48"/>
+    <path class="cls-3" d="M11.67,31.21c2.38,2.38,8.69-.17,14.13-5.61s7.83-11.5,5.74-14"/>
+    <path class="cls-3" d="M29.46,10.62c-3-.33-7.87,2.16-12.23,6.47-5.5,5.44-7.93,11.75-5.56,14.12"/>
+    <circle class="cls-4" cx="30.54" cy="11.05" r="1.16"/>
+    <path class="cls-3" d="M11.66,17.66a26.09,26.09,0,0,0,5.63,7.94c5.44,5.44,11.81,8,14.12,5.61"/>
+    <circle class="cls-4" cx="11.2" cy="16.16" r="1.5"/>
+  </g>
+</svg>

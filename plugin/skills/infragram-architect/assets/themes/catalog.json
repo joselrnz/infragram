@@ -1,0 +1,24 @@
+{
+ "schema_version": 2,
+ "providers": [
+  "azure.json",
+  "aws.json",
+  "gcp.json",
+  "cloudflare.json",
+  "digitalocean.json",
+  "oracle.json",
+  "ibm.json",
+  "alibaba.json",
+  "kubernetes.json",
+  "hetzner.json",
+  "onprem.json",
+  "ovhcloud.json",
+  "vultr.json",
+  "akamai.json",
+  "openstack.json",
+  "vmware.json",
+  "proxmox.json",
+  "databricks.json",
+  "equinix.json"
+ ]
+}

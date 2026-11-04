@@ -1,0 +1,542 @@
+{
+  "schema_version": 2,
+  "kind": "platform",
+  "slug": "onprem-kubernetes-platform",
+  "title": "On-premises Kubernetes platform",
+  "description": "A production cluster on bare-metal workers: MetalLB and an ingress controller front the shop namespace with its Service, Deployment, HPA and a PostgreSQL StatefulSet on Rook-Ceph volumes; Argo CD, Prometheus, Grafana, Loki, Vault and cert-manager form the platform namespace; GitLab, Harbor, an NFS filer and Velero sit on the platform services VLAN.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    },
+    {
+      "id": "kubernetes",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Platform architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "On-premises Kubernetes platform",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "users",
+        "name": "Users",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": ""
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "lb",
+            "kind": "solid",
+            "label": "HTTPS",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "dc",
+        "name": "Datacenter",
+        "type": "site",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "cluster",
+            "name": "Cluster · prod",
+            "type": "cluster",
+            "attributes": {
+              "editor_frame_group": "kubernetes"
+            },
+            "children": [
+              {
+                "id": "ns-ingress",
+                "name": "ingress-system",
+                "type": "namespace",
+                "attributes": {
+                  "editor_frame_group": "kubernetes"
+                },
+                "children": [
+                  {
+                    "id": "lb",
+                    "name": "MetalLB",
+                    "type": "service",
+                    "component": {
+                      "provider": "infragram",
+                      "service_id": "generic-load-balancer",
+                      "icon_ref": "infragram:generic-load-balancer"
+                    },
+                    "attributes": {
+                      "detail": "L2 · VIP pool"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "ingress",
+                        "kind": "solid",
+                        "label": "VIP",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "ingress",
+                    "name": "Ingress controller",
+                    "type": "service",
+                    "component": {
+                      "provider": "kubernetes",
+                      "service_id": "ing",
+                      "icon_ref": "kubernetes:ing"
+                    },
+                    "attributes": {
+                      "detail": "nginx · TLS"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "svc",
+                        "kind": "solid",
+                        "label": "route",
+                        "direction": "forward"
+                      }
+                    ]
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "ns-app",
+                "name": "shop",
+                "type": "namespace",
+                "attributes": {
+                  "editor_frame_group": "kubernetes"
+                },
+                "children": [
+                  {
+                    "id": "svc",
+                    "name": "Service",
+                    "type": "service",
+                    "component": {
+                      "provider": "kubernetes",
+                      "service_id": "svc",
+                      "icon_ref": "kubernetes:svc"
+                    },
+                    "attributes": {
+                      "detail": "ClusterIP"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "deploy",
+                        "kind": "solid",
+                        "label": "selector",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "deploy",
+                    "name": "Deployment",
+                    "type": "service",
+                    "component": {
+                      "provider": "kubernetes",
+                      "service_id": "deploy",
+                      "icon_ref": "kubernetes:deploy"
+                    },
+                    "attributes": {
+                      "detail": "api · 3 replicas"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "sts",
+                        "kind": "solid",
+                        "label": "SQL",
+                        "direction": "forward"
+                      },
+                      {
+                        "target": "hpa",
+                        "kind": "dotted",
+                        "label": "scaled by",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "sts",
+                    "name": "StatefulSet",
+                    "type": "service",
+                    "component": {
+                      "provider": "kubernetes",
+                      "service_id": "sts",
+                      "icon_ref": "kubernetes:sts"
+                    },
+                    "attributes": {
+                      "detail": "PostgreSQL"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "pvc",
+                        "kind": "solid",
+                        "label": "volume",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "hpa",
+                    "name": "HPA",
+                    "type": "service",
+                    "component": {
+                      "provider": "kubernetes",
+                      "service_id": "hpa",
+                      "icon_ref": "kubernetes:hpa"
+                    },
+                    "attributes": {
+                      "detail": "CPU 70 %"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "pvc",
+                    "name": "PersistentVolumeClaim",
+                    "type": "service",
+                    "component": {
+                      "provider": "kubernetes",
+                      "service_id": "pvc",
+                      "icon_ref": "kubernetes:pvc"
+                    },
+                    "attributes": {
+                      "detail": "rook-ceph-block"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "rook",
+                        "kind": "solid",
+                        "label": "CSI",
+                        "direction": "forward"
+                      }
+                    ]
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "pool",
+                "name": "Nodes · bare metal",
+                "type": "node-pool",
+                "attributes": {
+                  "editor_frame_group": "kubernetes"
+                },
+                "children": [
+                  {
+                    "id": "node1",
+                    "name": "Worker node",
+                    "type": "service",
+                    "component": {
+                      "provider": "kubernetes",
+                      "service_id": "node",
+                      "icon_ref": "kubernetes:node"
+                    },
+                    "attributes": {
+                      "detail": "64 cores · 512 GB"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "node2",
+                    "name": "Worker node",
+                    "type": "service",
+                    "component": {
+                      "provider": "kubernetes",
+                      "service_id": "node",
+                      "icon_ref": "kubernetes:node"
+                    },
+                    "attributes": {
+                      "detail": "64 cores · 512 GB"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "cp",
+                    "name": "Control plane",
+                    "type": "service",
+                    "component": {
+                      "provider": "kubernetes",
+                      "service_id": "control-plane",
+                      "icon_ref": "kubernetes:control-plane"
+                    },
+                    "attributes": {
+                      "detail": "3 × etcd · HA"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "rook",
+                    "name": "Rook-Ceph",
+                    "type": "service",
+                    "component": {
+                      "provider": "infragram",
+                      "service_id": "brand-rook",
+                      "icon_ref": "infragram:brand-rook"
+                    },
+                    "attributes": {
+                      "detail": "block · object"
+                    },
+                    "children": [],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "ns-platform",
+                "name": "platform",
+                "type": "namespace",
+                "attributes": {
+                  "editor_frame_group": "kubernetes"
+                },
+                "children": [
+                  {
+                    "id": "argocd",
+                    "name": "Argo CD",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "gitops-argocd",
+                      "icon_ref": "onprem:gitops-argocd"
+                    },
+                    "attributes": {
+                      "detail": "GitOps sync"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "deploy",
+                        "kind": "dotted",
+                        "label": "applies",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "prom",
+                    "name": "Prometheus",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "monitoring-prometheus",
+                      "icon_ref": "onprem:monitoring-prometheus"
+                    },
+                    "attributes": {
+                      "detail": "metrics"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "grafana",
+                        "kind": "solid",
+                        "label": "query",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "grafana",
+                    "name": "Grafana",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "monitoring-grafana",
+                      "icon_ref": "onprem:monitoring-grafana"
+                    },
+                    "attributes": {
+                      "detail": "dashboards"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "loki",
+                    "name": "Loki",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "logging-loki",
+                      "icon_ref": "onprem:logging-loki"
+                    },
+                    "attributes": {
+                      "detail": "logs"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "vault",
+                    "name": "Vault",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "security-vault",
+                      "icon_ref": "onprem:security-vault"
+                    },
+                    "attributes": {
+                      "detail": "secrets · PKI"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "certmgr",
+                    "name": "cert-manager",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "certificates-cert-manager",
+                      "icon_ref": "onprem:certificates-cert-manager"
+                    },
+                    "attributes": {
+                      "detail": "ACME · internal CA"
+                    },
+                    "children": [],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "services",
+            "name": "VLAN 30 · Platform services",
+            "type": "subnet-private",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "gitlab",
+                "name": "GitLab",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "vcs-gitlab",
+                  "icon_ref": "onprem:vcs-gitlab"
+                },
+                "attributes": {
+                  "detail": "source · CI"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "harbor",
+                    "kind": "solid",
+                    "label": "push image",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "harbor",
+                "name": "Harbor",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "registry-harbor",
+                  "icon_ref": "onprem:registry-harbor"
+                },
+                "attributes": {
+                  "detail": "registry · scanning"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "nfs",
+                "name": "NFS filer",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "nas",
+                  "icon_ref": "infragram:nas"
+                },
+                "attributes": {
+                  "detail": "ReadWriteMany volumes"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "backup",
+                "name": "Velero backups",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "backup-recovery",
+                  "icon_ref": "infragram:backup-recovery"
+                },
+                "attributes": {
+                  "detail": "cluster + PV snapshots"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "devs",
+        "name": "Developers",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "administrator",
+          "icon_ref": "infragram:administrator"
+        },
+        "attributes": {
+          "detail": ""
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "gitlab",
+            "kind": "solid",
+            "label": "git push",
+            "direction": "forward"
+          }
+        ]
+      }
+    ],
+    "connections": []
+  }
+}

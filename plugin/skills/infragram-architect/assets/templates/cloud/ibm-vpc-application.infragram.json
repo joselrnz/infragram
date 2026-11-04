@@ -1,0 +1,362 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "ibm-vpc-application",
+  "title": "Application on IBM Cloud VPC",
+  "description": "An IBM Cloud account holds a regional VPC with web, application and data subnets: a load balancer and public gateway at the edge, virtual server instances and IBM Kubernetes Service workers in the middle, Cloudant, Redis and Cloud Object Storage behind them; IAM, Key Protect and monitoring are account services.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "ibm",
+      "enabled": true
+    }
+  ],
+  "default_library": "ibm",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "IBM Cloud reference architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Application on IBM Cloud VPC",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "users",
+        "name": "Users",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": "internet clients"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "internet",
+            "kind": "solid",
+            "label": "HTTPS",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "internet",
+        "name": "Internet",
+        "type": "service",
+        "component": {
+          "provider": "ibm",
+          "service_id": "general-internet",
+          "icon_ref": "ibm:general-internet"
+        },
+        "attributes": {
+          "detail": ""
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "lb",
+            "kind": "solid",
+            "label": "HTTPS",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "account",
+        "name": "IBM Cloud account",
+        "type": "account",
+        "attributes": {
+          "editor_frame_group": "ibm"
+        },
+        "children": [
+          {
+            "id": "region",
+            "name": "Region · us-south",
+            "type": "region",
+            "attributes": {
+              "editor_frame_group": "ibm"
+            },
+            "children": [
+              {
+                "id": "vpc",
+                "name": "VPC · app-vpc",
+                "type": "vpc",
+                "attributes": {
+                  "editor_frame_group": "ibm"
+                },
+                "children": [
+                  {
+                    "id": "web",
+                    "name": "Subnet · web",
+                    "type": "subnet-private",
+                    "attributes": {
+                      "editor_frame_group": "ibm"
+                    },
+                    "children": [
+                      {
+                        "id": "lb",
+                        "name": "Load Balancer",
+                        "type": "service",
+                        "component": {
+                          "provider": "ibm",
+                          "service_id": "network-load-balancer",
+                          "icon_ref": "ibm:network-load-balancer"
+                        },
+                        "attributes": {
+                          "detail": "application LB"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "web-vsi",
+                            "kind": "solid",
+                            "label": "HTTPS",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "iks",
+                            "kind": "solid",
+                            "label": "HTTPS",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "pgw",
+                        "name": "Public Gateway",
+                        "type": "service",
+                        "component": {
+                          "provider": "ibm",
+                          "service_id": "network-public-gateway",
+                          "icon_ref": "ibm:network-public-gateway"
+                        },
+                        "attributes": {
+                          "detail": "egress"
+                        },
+                        "children": [],
+                        "connections": []
+                      },
+                      {
+                        "id": "vpn",
+                        "name": "VPN Gateway",
+                        "type": "service",
+                        "component": {
+                          "provider": "ibm",
+                          "service_id": "network-vpn-gateway",
+                          "icon_ref": "ibm:network-vpn-gateway"
+                        },
+                        "attributes": {
+                          "detail": "site-to-site"
+                        },
+                        "children": [],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  },
+                  {
+                    "id": "appnet",
+                    "name": "Subnet · app",
+                    "type": "subnet-private",
+                    "attributes": {
+                      "editor_frame_group": "ibm"
+                    },
+                    "children": [
+                      {
+                        "id": "web-vsi",
+                        "name": "Web VSI",
+                        "type": "service",
+                        "component": {
+                          "provider": "ibm",
+                          "service_id": "compute-instance",
+                          "icon_ref": "ibm:compute-instance"
+                        },
+                        "attributes": {
+                          "detail": "virtual server instances"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "cloudant",
+                            "kind": "solid",
+                            "label": "REST",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "cache",
+                            "kind": "solid",
+                            "label": "",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "iks",
+                        "name": "IKS workers",
+                        "type": "service",
+                        "component": {
+                          "provider": "ibm",
+                          "service_id": "general-ibm-containers",
+                          "icon_ref": "ibm:general-ibm-containers"
+                        },
+                        "attributes": {
+                          "detail": "Kubernetes Service"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "cloudant",
+                            "kind": "solid",
+                            "label": "REST",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "cos",
+                            "kind": "dashed",
+                            "label": "objects",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "app-vsi",
+                        "name": "App VSI",
+                        "type": "service",
+                        "component": {
+                          "provider": "ibm",
+                          "service_id": "compute-instance",
+                          "icon_ref": "ibm:compute-instance"
+                        },
+                        "attributes": {
+                          "detail": "batch workers"
+                        },
+                        "children": [],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  },
+                  {
+                    "id": "datanet",
+                    "name": "Subnet · data",
+                    "type": "subnet-private",
+                    "attributes": {
+                      "editor_frame_group": "ibm"
+                    },
+                    "children": [
+                      {
+                        "id": "cloudant",
+                        "name": "Cloudant",
+                        "type": "service",
+                        "component": {
+                          "provider": "ibm",
+                          "service_id": "general-cloudant",
+                          "icon_ref": "ibm:general-cloudant"
+                        },
+                        "attributes": {
+                          "detail": "document database"
+                        },
+                        "children": [],
+                        "connections": []
+                      },
+                      {
+                        "id": "cache",
+                        "name": "Redis",
+                        "type": "service",
+                        "component": {
+                          "provider": "ibm",
+                          "service_id": "data-caches",
+                          "icon_ref": "ibm:data-caches"
+                        },
+                        "attributes": {
+                          "detail": "Databases for Redis"
+                        },
+                        "children": [],
+                        "connections": []
+                      },
+                      {
+                        "id": "cos",
+                        "name": "Cloud Object Storage",
+                        "type": "service",
+                        "component": {
+                          "provider": "ibm",
+                          "service_id": "storage-object-storage",
+                          "icon_ref": "ibm:storage-object-storage"
+                        },
+                        "attributes": {
+                          "detail": "regional bucket"
+                        },
+                        "children": [],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "iam",
+            "name": "IAM",
+            "type": "service",
+            "component": {
+              "provider": "ibm",
+              "service_id": "security-identity-access-management",
+              "icon_ref": "ibm:security-identity-access-management"
+            },
+            "attributes": {
+              "detail": "access groups"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "kms",
+            "name": "Key Protect",
+            "type": "service",
+            "component": {
+              "provider": "ibm",
+              "service_id": "security-data-security",
+              "icon_ref": "ibm:security-data-security"
+            },
+            "attributes": {
+              "detail": "KMS"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "monitoring",
+            "name": "Monitoring & Logs",
+            "type": "service",
+            "component": {
+              "provider": "ibm",
+              "service_id": "general-monitoring-logging",
+              "icon_ref": "ibm:general-monitoring-logging"
+            },
+            "attributes": {
+              "detail": "IBM Cloud Monitoring"
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

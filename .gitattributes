@@ -1,0 +1,12 @@
+# Every text file is LF, whatever platform checks it out or writes it: git
+# normalises what is committed and what is checked out, so a Windows editor
+# or a generator's default newline cannot put a CRLF back.
+* text=auto eol=lf
+
+# Icon and mark artwork is content-addressed: catalogs record a sha256 per
+# file and the provider gate verifies it. A line-ending conversion would
+# rewrite those bytes, so the hash stops matching a file nobody touched --
+# and differently on Windows and Linux. Keep assets byte-exact.
+*.svg   -text
+*.png   binary
+*.woff2 binary

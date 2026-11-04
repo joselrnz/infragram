@@ -1,0 +1,367 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "onprem-datacenter",
+  "title": "On-premises datacenter with a branch office",
+  "description": "A branch office reaches a corporate datacenter through a firewall and VPN; a DMZ, application and data VLAN carry the web stack, a Proxmox cluster with Ceph runs it, and a management VLAN watches it.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "On-premises architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "On-premises datacenter with a branch office",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "branch",
+        "name": "Branch office",
+        "type": "location",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "office-users",
+            "name": "Office users",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "client-users",
+              "icon_ref": "onprem:client-users"
+            },
+            "attributes": {
+              "detail": "staff workstations"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "firewall",
+                "kind": "solid",
+                "label": "HTTPS"
+              },
+              {
+                "target": "vpn",
+                "kind": "dashed",
+                "label": "IPsec VPN"
+              }
+            ]
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "datacenter",
+        "name": "Corporate datacenter",
+        "type": "site",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "perimeter",
+            "name": "Perimeter",
+            "type": "security-zone",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "firewall",
+                "name": "pfSense firewall",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "generic-network-firewall",
+                  "icon_ref": "onprem:generic-network-firewall"
+                },
+                "attributes": {
+                  "detail": "edge firewall"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "haproxy",
+                    "kind": "solid",
+                    "label": "HTTPS"
+                  }
+                ]
+              },
+              {
+                "id": "vpn",
+                "name": "VPN gateway",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "vpn-gateway",
+                  "icon_ref": "onprem:vpn-gateway"
+                },
+                "attributes": {
+                  "detail": "site-to-site"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "router",
+                "name": "Core router",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "network-cisco-router",
+                  "icon_ref": "onprem:network-cisco-router"
+                },
+                "attributes": {
+                  "detail": "L3 routing"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "core",
+            "name": "Core network",
+            "type": "network",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "vlan10",
+                "name": "VLAN 10 · DMZ",
+                "type": "subnet-private",
+                "attributes": {
+                  "editor_frame_group": "onprem"
+                },
+                "children": [
+                  {
+                    "id": "haproxy",
+                    "name": "HAProxy",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "network-haproxy",
+                      "icon_ref": "onprem:network-haproxy"
+                    },
+                    "attributes": {
+                      "detail": "TLS termination"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "nginx",
+                        "kind": "solid",
+                        "label": "HTTP"
+                      }
+                    ]
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "vlan20",
+                "name": "VLAN 20 · Application",
+                "type": "subnet-private",
+                "attributes": {
+                  "editor_frame_group": "onprem"
+                },
+                "children": [
+                  {
+                    "id": "nginx",
+                    "name": "Nginx",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "network-nginx",
+                      "icon_ref": "onprem:network-nginx"
+                    },
+                    "attributes": {
+                      "detail": "web tier"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "postgres",
+                        "kind": "solid",
+                        "label": "SQL"
+                      }
+                    ]
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "vlan30",
+                "name": "VLAN 30 · Data",
+                "type": "subnet-private",
+                "attributes": {
+                  "editor_frame_group": "onprem"
+                },
+                "children": [
+                  {
+                    "id": "postgres",
+                    "name": "PostgreSQL",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "database-postgresql",
+                      "icon_ref": "onprem:database-postgresql"
+                    },
+                    "attributes": {
+                      "detail": "primary + replica"
+                    },
+                    "children": [],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "cluster",
+                "name": "Virtualization cluster",
+                "type": "cluster",
+                "attributes": {
+                  "editor_frame_group": "onprem"
+                },
+                "children": [
+                  {
+                    "id": "pve1",
+                    "name": "Proxmox VE node 1",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "proxmox-pve",
+                      "icon_ref": "onprem:proxmox-pve"
+                    },
+                    "attributes": {
+                      "detail": "hypervisor"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "pve2",
+                    "name": "Proxmox VE node 2",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "proxmox-pve",
+                      "icon_ref": "onprem:proxmox-pve"
+                    },
+                    "attributes": {
+                      "detail": "hypervisor"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "ceph",
+                    "name": "Ceph storage",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "storage-ceph",
+                      "icon_ref": "onprem:storage-ceph"
+                    },
+                    "attributes": {
+                      "detail": "3 OSD nodes"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "backup",
+                    "name": "Backup appliance",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "backup-appliance",
+                      "icon_ref": "onprem:backup-appliance"
+                    },
+                    "attributes": {
+                      "detail": "nightly snapshots"
+                    },
+                    "children": [],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "vlan40",
+                "name": "VLAN 40 · Management",
+                "type": "subnet-private",
+                "attributes": {
+                  "editor_frame_group": "onprem"
+                },
+                "children": [
+                  {
+                    "id": "prometheus",
+                    "name": "Prometheus",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "monitoring-prometheus",
+                      "icon_ref": "onprem:monitoring-prometheus"
+                    },
+                    "attributes": {
+                      "detail": "metrics"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "grafana",
+                        "kind": "dotted",
+                        "label": "metrics"
+                      },
+                      {
+                        "target": "pve1",
+                        "kind": "dotted",
+                        "label": "scrape"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "grafana",
+                    "name": "Grafana",
+                    "type": "service",
+                    "component": {
+                      "provider": "onprem",
+                      "service_id": "monitoring-grafana",
+                      "icon_ref": "onprem:monitoring-grafana"
+                    },
+                    "attributes": {
+                      "detail": "dashboards"
+                    },
+                    "children": [],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

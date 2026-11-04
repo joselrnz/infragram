@@ -1,0 +1,407 @@
+{
+  "schema_version": 2,
+  "kind": "hybrid",
+  "slug": "vdi-remote-work",
+  "title": "Virtual desktop infrastructure with cloud burst",
+  "description": "Remote users on thin clients and laptops reach the VDI through a zero-trust gateway and Citrix Gateway in the DMZ; a cluster of Windows Server session hosts and a GPU host is brokered by the delivery controller and built from a golden image; FSLogix profiles sit on a NAS next to the domain controller, file and print services. Azure Virtual Desktop absorbs seasonal demand over a site-to-site VPN.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    },
+    {
+      "id": "azure",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "End-user computing architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Virtual desktop infrastructure with cloud burst",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "thin",
+        "name": "Thin clients",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "thin-client",
+          "icon_ref": "infragram:thin-client"
+        },
+        "attributes": {
+          "detail": "branch offices"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "ztna",
+            "kind": "solid",
+            "label": "HDX · TLS",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "laptops",
+        "name": "Remote laptops",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "browser-client",
+          "icon_ref": "infragram:browser-client"
+        },
+        "attributes": {
+          "detail": "home workers"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "ztna",
+            "kind": "solid",
+            "label": "HTML5 client",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "dc",
+        "name": "Corporate datacenter",
+        "type": "site",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "dmz",
+            "name": "DMZ",
+            "type": "dmz",
+            "attributes": {
+              "editor_frame_group": "generic"
+            },
+            "children": [
+              {
+                "id": "ztna",
+                "name": "Zero-trust gateway",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "zero-trust-gateway",
+                  "icon_ref": "infragram:zero-trust-gateway"
+                },
+                "attributes": {
+                  "detail": "MFA · posture"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "gateway",
+                    "kind": "solid",
+                    "label": "brokered",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "gateway",
+                "name": "Citrix Gateway",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "brand-citrix",
+                  "icon_ref": "infragram:brand-citrix"
+                },
+                "attributes": {
+                  "detail": "StoreFront · ICA proxy"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "broker",
+                    "kind": "solid",
+                    "label": "enumeration",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "waf",
+                "name": "WAF",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "waf",
+                  "icon_ref": "infragram:waf"
+                },
+                "attributes": {
+                  "detail": "web portal"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "vdi",
+            "name": "VDI cluster",
+            "type": "cluster",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "broker",
+                "name": "Delivery controller",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "brand-citrix",
+                  "icon_ref": "infragram:brand-citrix"
+                },
+                "attributes": {
+                  "detail": "brokering · licensing"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "hosts",
+                    "kind": "solid",
+                    "label": "launch",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "gpu",
+                    "kind": "solid",
+                    "label": "launch",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "hosts",
+                "name": "Session hosts",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "windows-server",
+                  "icon_ref": "infragram:windows-server"
+                },
+                "attributes": {
+                  "detail": "Windows Server · RDS · 3 hosts"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "profiles",
+                    "kind": "solid",
+                    "label": "FSLogix",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "ad",
+                    "kind": "dotted",
+                    "label": "Kerberos",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "gpu",
+                "name": "GPU host",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "gpu-server",
+                  "icon_ref": "infragram:gpu-server"
+                },
+                "attributes": {
+                  "detail": "CAD · 3D workstations"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "profiles",
+                    "kind": "solid",
+                    "label": "",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "image",
+                "name": "Golden image",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "virtual-machine",
+                  "icon_ref": "infragram:virtual-machine"
+                },
+                "attributes": {
+                  "detail": "MCS · monthly build"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "services",
+            "name": "VLAN 40 · User services",
+            "type": "subnet-private",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "profiles",
+                "name": "Profile NAS",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "nas",
+                  "icon_ref": "infragram:nas"
+                },
+                "attributes": {
+                  "detail": "FSLogix containers · SMB"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "ad",
+                "name": "Domain controller",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "domain-controller",
+                  "icon_ref": "infragram:domain-controller"
+                },
+                "attributes": {
+                  "detail": "AD · GPO"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "files",
+                "name": "File server",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "generic-file",
+                  "icon_ref": "infragram:generic-file"
+                },
+                "attributes": {
+                  "detail": "home drives"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "print",
+                "name": "Print server",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "print-server",
+                  "icon_ref": "infragram:print-server"
+                },
+                "attributes": {
+                  "detail": "follow-me printing"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "azure",
+        "name": "Azure subscription · cloud burst",
+        "type": "subscription",
+        "attributes": {
+          "editor_frame_group": "azure"
+        },
+        "children": [
+          {
+            "id": "avd",
+            "name": "Azure Virtual Desktop",
+            "type": "service",
+            "component": {
+              "provider": "azure",
+              "service_id": "azure-virtual-desktop",
+              "icon_ref": "azure:azure-virtual-desktop"
+            },
+            "attributes": {
+              "detail": "pooled host pool"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "vpn",
+                "kind": "dashed",
+                "label": "AD · profiles over VPN",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "vpn",
+            "name": "VPN Gateway",
+            "type": "service",
+            "component": {
+              "provider": "azure",
+              "service_id": "virtual-network-gateways",
+              "icon_ref": "azure:virtual-network-gateways"
+            },
+            "attributes": {
+              "detail": "site-to-site"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "ad",
+                "kind": "dashed",
+                "label": "IPsec",
+                "direction": "forward"
+              }
+            ]
+          },
+          {
+            "id": "fs",
+            "name": "Azure Files",
+            "type": "service",
+            "component": {
+              "provider": "azure",
+              "service_id": "azure-fileshares",
+              "icon_ref": "azure:azure-fileshares"
+            },
+            "attributes": {
+              "detail": "FSLogix · burst profiles"
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

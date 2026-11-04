@@ -1,0 +1,299 @@
+{
+ "schema_version": 1,
+ "collection": "vendors/proxmox",
+ "generated_by": "scripts/build/vendor-tiles.py (this project's own tiles: a Tabler glyph on the vendor's colour)",
+ "source": {
+  "url": "https://www.proxmox.com/en/products/proxmox-virtual-environment/overview",
+  "release": "drawn for Infragram; not the vendor's artwork. Glyphs: Tabler Icons (MIT).",
+  "terms": "https://github.com/tabler/tabler-icons/blob/main/LICENSE"
+ },
+ "counts": {
+  "icons": 23
+ },
+ "icons": [
+  {
+   "id": "entry-service",
+   "name": "Reverse Proxy VM",
+   "aliases": [
+    "haproxy",
+    "reverse proxy",
+    "ingress"
+   ],
+   "category": "networking",
+   "file": "networking/entry-service.svg",
+   "source_path": "drawn: Tabler glyph arrows-split on #e57000",
+   "sha256": "590b7ea9c0cad33c61dcec57d63408aaae09edca7b97edf1a022ffae27a876a8"
+  },
+  {
+   "id": "app-service",
+   "name": "QEMU Virtual Machine",
+   "aliases": [
+    "vm",
+    "kvm",
+    "qemu"
+   ],
+   "category": "compute",
+   "file": "compute/app-service.svg",
+   "source_path": "drawn: Tabler glyph cube on #e57000",
+   "sha256": "894af99e720b07ed8c4fd7622bec08da82460c1f485c54ba71a7f6d85454efaf"
+  },
+  {
+   "id": "object-store-service",
+   "name": "Ceph Storage",
+   "aliases": [
+    "ceph",
+    "rbd",
+    "cephfs"
+   ],
+   "category": "storage",
+   "file": "storage/object-store-service.svg",
+   "source_path": "drawn: Tabler glyph stack-2 on #e57000",
+   "sha256": "7a514628dcd7a7a9866ad2941bdd61bc62bcfd7c8c541d9aabc258039a65000d"
+  },
+  {
+   "id": "database-service",
+   "name": "Database Container",
+   "aliases": [
+    "lxc database",
+    "postgresql"
+   ],
+   "category": "databases",
+   "file": "databases/database-service.svg",
+   "source_path": "drawn: Tabler glyph database on #e57000",
+   "sha256": "c3e86dc2b6ac7af4beb1d8720c337dee47e213fb746fc739a314b76a06abbe1b"
+  },
+  {
+   "id": "pve-node",
+   "name": "PVE Node",
+   "aliases": [
+    "node",
+    "host",
+    "pve"
+   ],
+   "category": "compute",
+   "file": "compute/pve-node.svg",
+   "source_path": "drawn: Tabler glyph server on #e57000",
+   "sha256": "494febc5da7a027064e46ed10132684539be3d10c53b92f13b24a380b2a9c483"
+  },
+  {
+   "id": "pve-cluster",
+   "name": "PVE Cluster",
+   "aliases": [
+    "cluster",
+    "corosync"
+   ],
+   "category": "compute",
+   "file": "compute/pve-cluster.svg",
+   "source_path": "drawn: Tabler glyph stack-3 on #e57000",
+   "sha256": "802482d05853f85a615b78f441331c09723b3464386274b0c84c134e036dd99c"
+  },
+  {
+   "id": "datacenter",
+   "name": "Datacenter",
+   "aliases": [
+    "datacenter",
+    "pve datacenter"
+   ],
+   "category": "compute",
+   "file": "compute/datacenter.svg",
+   "source_path": "drawn: Tabler glyph sitemap on #e57000",
+   "sha256": "242609587a12fcc14c2d1a466800119a1b2962ed201d573171535c3dac996cc9"
+  },
+  {
+   "id": "lxc-container",
+   "name": "LXC Container",
+   "aliases": [
+    "lxc",
+    "ct",
+    "container"
+   ],
+   "category": "containers",
+   "file": "containers/lxc-container.svg",
+   "source_path": "drawn: Tabler glyph package on #e57000",
+   "sha256": "520591f29077d79b5febe535df1b67914ff5c46ad1b25344cf3af22e14fcc2bf"
+  },
+  {
+   "id": "vm-template",
+   "name": "VM and CT Template",
+   "aliases": [
+    "template",
+    "clone"
+   ],
+   "category": "compute",
+   "file": "compute/vm-template.svg",
+   "source_path": "drawn: Tabler glyph file on #e57000",
+   "sha256": "71c648da6d94a7e5ba3983f2f3a2897c7c2ddafd4eb23d06b0997269b513cee5"
+  },
+  {
+   "id": "ha-group",
+   "name": "HA Group",
+   "aliases": [
+    "high availability",
+    "ha"
+   ],
+   "category": "compute",
+   "file": "compute/ha-group.svg",
+   "source_path": "drawn: Tabler glyph refresh on #e57000",
+   "sha256": "82d9acd780b39336f5ccd3a53a5c9160a2c3692bab0086a6aa45a69b2627f973"
+  },
+  {
+   "id": "quorum-device",
+   "name": "Corosync Quorum Device",
+   "aliases": [
+    "qdevice",
+    "quorum"
+   ],
+   "category": "compute",
+   "file": "compute/quorum-device.svg",
+   "source_path": "drawn: Tabler glyph hierarchy-2 on #e57000",
+   "sha256": "a55e3bdc52b6d6d9c754d4e779c8b5d0d4dbe17feb6428af76dbbdcf103e18f5"
+  },
+  {
+   "id": "zfs-pool",
+   "name": "ZFS Pool",
+   "aliases": [
+    "zfs",
+    "zpool"
+   ],
+   "category": "storage",
+   "file": "storage/zfs-pool.svg",
+   "source_path": "drawn: Tabler glyph device-floppy on #e57000",
+   "sha256": "391b1f8cf4a59d4806970830d51e307fe793e5dc19c704ffdb9b64f841481ce6"
+  },
+  {
+   "id": "local-storage",
+   "name": "Local and LVM Storage",
+   "aliases": [
+    "local-lvm",
+    "directory storage"
+   ],
+   "category": "storage",
+   "file": "storage/local-storage.svg",
+   "source_path": "drawn: Tabler glyph disc on #e57000",
+   "sha256": "9bab7d6de556070478eee88db27c1ac5690dc86e5b08f3332595d99678b49271"
+  },
+  {
+   "id": "nfs-storage",
+   "name": "NFS and SMB Storage",
+   "aliases": [
+    "nfs",
+    "cifs",
+    "smb"
+   ],
+   "category": "storage",
+   "file": "storage/nfs-storage.svg",
+   "source_path": "drawn: Tabler glyph file on #e57000",
+   "sha256": "71c648da6d94a7e5ba3983f2f3a2897c7c2ddafd4eb23d06b0997269b513cee5"
+  },
+  {
+   "id": "iso-images",
+   "name": "ISO Images and Templates",
+   "aliases": [
+    "iso",
+    "templates"
+   ],
+   "category": "storage",
+   "file": "storage/iso-images.svg",
+   "source_path": "drawn: Tabler glyph device-sd-card on #e57000",
+   "sha256": "f7bf2b92d36ade0d6bd43cf82dc5d95e9c52151ac29e97cd1035e75309eff97d"
+  },
+  {
+   "id": "backup-server",
+   "name": "Proxmox Backup Server",
+   "aliases": [
+    "pbs",
+    "backup"
+   ],
+   "category": "storage",
+   "file": "storage/backup-server.svg",
+   "source_path": "drawn: Tabler glyph archive on #e57000",
+   "sha256": "70c3f63351bc0cf04efd578f2a31ae49ee32b41b5b0932dce4806506daa12eee"
+  },
+  {
+   "id": "mail-gateway",
+   "name": "Proxmox Mail Gateway",
+   "aliases": [
+    "pmg",
+    "mail gateway"
+   ],
+   "category": "security",
+   "file": "security/mail-gateway.svg",
+   "source_path": "drawn: Tabler glyph mail-cog on #e57000",
+   "sha256": "d9109a5a48b2b2c4fa9a195f58827b5e51d09ee5a143673727792d2a70029fb8"
+  },
+  {
+   "id": "linux-bridge",
+   "name": "Linux Bridge",
+   "aliases": [
+    "vmbr",
+    "bridge"
+   ],
+   "category": "networking",
+   "file": "networking/linux-bridge.svg",
+   "source_path": "drawn: Tabler glyph switch-2 on #e57000",
+   "sha256": "8cf25ddc566a34b07b9e68967821590f856e2eb512b4bc021722b7a1ca11cbea"
+  },
+  {
+   "id": "sdn-zone",
+   "name": "SDN Zone",
+   "aliases": [
+    "sdn",
+    "vnet",
+    "vxlan"
+   ],
+   "category": "networking",
+   "file": "networking/sdn-zone.svg",
+   "source_path": "drawn: Tabler glyph topology-star on #e57000",
+   "sha256": "416059319808f141dd37cffd4afdc91eff89898f6811c886676103b0af06c329"
+  },
+  {
+   "id": "bond",
+   "name": "Network Bond",
+   "aliases": [
+    "bond",
+    "lacp"
+   ],
+   "category": "networking",
+   "file": "networking/bond.svg",
+   "source_path": "drawn: Tabler glyph arrows-left-right on #e57000",
+   "sha256": "3f78243350f044e7196d4d9e57ec5f9f3374245943bbba4e9f412eeb877ed2e7"
+  },
+  {
+   "id": "firewall",
+   "name": "PVE Firewall",
+   "aliases": [
+    "firewall",
+    "security group"
+   ],
+   "category": "security",
+   "file": "security/firewall.svg",
+   "source_path": "drawn: Tabler glyph wall on #e57000",
+   "sha256": "9706111091f83bfb1739f6956d25eafc996c95ace3ccd830e4b0bdabea4b4535"
+  },
+  {
+   "id": "two-factor",
+   "name": "Two-Factor Authentication",
+   "aliases": [
+    "totp",
+    "2fa",
+    "realm"
+   ],
+   "category": "identity",
+   "file": "identity/two-factor.svg",
+   "source_path": "drawn: Tabler glyph fingerprint on #e57000",
+   "sha256": "57b3174f3bec507c52c30f24a277ef5cb98f2d4b97fb398fa8da4c6e694a1bdd"
+  },
+  {
+   "id": "api-token",
+   "name": "API Token",
+   "aliases": [
+    "api",
+    "token"
+   ],
+   "category": "identity",
+   "file": "identity/api-token.svg",
+   "source_path": "drawn: Tabler glyph key on #e57000",
+   "sha256": "8dd4189521a1ed89ace7c0fcc693fe551c7005273a41392419de11a720eaaf18"
+  }
+ ]
+}

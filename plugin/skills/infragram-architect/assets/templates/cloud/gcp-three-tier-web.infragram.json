@@ -1,0 +1,343 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "gcp-three-tier-web",
+  "title": "Three-tier web application on Google Cloud",
+  "description": "Users reach a global external load balancer protected by Cloud Armor and fronted by Cloud CDN; GKE and Cloud Run serve the application tier; Cloud SQL, Memorystore and Cloud Storage hold the data; logging, monitoring and Secret Manager sit at project level.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "gcp",
+      "enabled": true
+    }
+  ],
+  "default_library": "gcp",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Google Cloud reference architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Three-tier web application on Google Cloud",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "users",
+        "name": "Users",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": "browsers and apps"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "lb",
+            "kind": "solid",
+            "label": "HTTPS",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "project",
+        "name": "Project · prod-web",
+        "type": "project",
+        "attributes": {
+          "editor_frame_group": "gcp"
+        },
+        "children": [
+          {
+            "id": "vpc",
+            "name": "VPC · web-vpc (global)",
+            "type": "vpc",
+            "attributes": {
+              "editor_frame_group": "gcp"
+            },
+            "children": [
+              {
+                "id": "edge",
+                "name": "Subnet · edge · 10.0.1.0/24",
+                "type": "subnet-private",
+                "attributes": {
+                  "editor_frame_group": "gcp"
+                },
+                "children": [
+                  {
+                    "id": "lb",
+                    "name": "Cloud Load Balancing",
+                    "type": "service",
+                    "component": {
+                      "provider": "gcp",
+                      "service_id": "cloud-load-balancing",
+                      "icon_ref": "gcp:cloud-load-balancing"
+                    },
+                    "attributes": {
+                      "detail": "global external HTTPS"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "gke",
+                        "kind": "solid",
+                        "label": "HTTPS",
+                        "direction": "forward"
+                      },
+                      {
+                        "target": "run",
+                        "kind": "solid",
+                        "label": "HTTPS",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "armor",
+                    "name": "Cloud Armor",
+                    "type": "service",
+                    "component": {
+                      "provider": "gcp",
+                      "service_id": "cloud-armor",
+                      "icon_ref": "gcp:cloud-armor"
+                    },
+                    "attributes": {
+                      "detail": "WAF · DDoS"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "lb",
+                        "kind": "dotted",
+                        "label": "policy",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "cdn",
+                    "name": "Cloud CDN",
+                    "type": "service",
+                    "component": {
+                      "provider": "gcp",
+                      "service_id": "cloud-cdn",
+                      "icon_ref": "gcp:cloud-cdn"
+                    },
+                    "attributes": {
+                      "detail": "edge cache"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "lb",
+                        "kind": "dotted",
+                        "label": "origin",
+                        "direction": "forward"
+                      }
+                    ]
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "app",
+                "name": "Subnet · app · 10.0.2.0/24",
+                "type": "subnet-private",
+                "attributes": {
+                  "editor_frame_group": "gcp"
+                },
+                "children": [
+                  {
+                    "id": "gke",
+                    "name": "GKE",
+                    "type": "service",
+                    "component": {
+                      "provider": "gcp",
+                      "service_id": "google-kubernetes-engine",
+                      "icon_ref": "gcp:google-kubernetes-engine"
+                    },
+                    "attributes": {
+                      "detail": "Autopilot cluster"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "sql",
+                        "kind": "solid",
+                        "label": "SQL",
+                        "direction": "forward"
+                      },
+                      {
+                        "target": "redis",
+                        "kind": "solid",
+                        "label": "cache",
+                        "direction": "forward"
+                      },
+                      {
+                        "target": "gcs",
+                        "kind": "dashed",
+                        "label": "objects",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "run",
+                    "name": "Cloud Run",
+                    "type": "service",
+                    "component": {
+                      "provider": "gcp",
+                      "service_id": "cloud-run",
+                      "icon_ref": "gcp:cloud-run"
+                    },
+                    "attributes": {
+                      "detail": "API services"
+                    },
+                    "children": [],
+                    "connections": [
+                      {
+                        "target": "sql",
+                        "kind": "solid",
+                        "label": "",
+                        "direction": "forward"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nat",
+                    "name": "Cloud NAT",
+                    "type": "service",
+                    "component": {
+                      "provider": "gcp",
+                      "service_id": "cloud-nat",
+                      "icon_ref": "gcp:cloud-nat"
+                    },
+                    "attributes": {
+                      "detail": "egress only"
+                    },
+                    "children": [],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              },
+              {
+                "id": "data",
+                "name": "Subnet · data · 10.0.3.0/24",
+                "type": "subnet-private",
+                "attributes": {
+                  "editor_frame_group": "gcp"
+                },
+                "children": [
+                  {
+                    "id": "sql",
+                    "name": "Cloud SQL",
+                    "type": "service",
+                    "component": {
+                      "provider": "gcp",
+                      "service_id": "cloud-sql",
+                      "icon_ref": "gcp:cloud-sql"
+                    },
+                    "attributes": {
+                      "detail": "PostgreSQL · HA"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "redis",
+                    "name": "Memorystore",
+                    "type": "service",
+                    "component": {
+                      "provider": "gcp",
+                      "service_id": "memorystore",
+                      "icon_ref": "gcp:memorystore"
+                    },
+                    "attributes": {
+                      "detail": "Redis"
+                    },
+                    "children": [],
+                    "connections": []
+                  },
+                  {
+                    "id": "gcs",
+                    "name": "Cloud Storage",
+                    "type": "service",
+                    "component": {
+                      "provider": "gcp",
+                      "service_id": "cloud-storage",
+                      "icon_ref": "gcp:cloud-storage"
+                    },
+                    "attributes": {
+                      "detail": "assets · backups"
+                    },
+                    "children": [],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "logging",
+            "name": "Cloud Logging",
+            "type": "service",
+            "component": {
+              "provider": "gcp",
+              "service_id": "cloud-logging",
+              "icon_ref": "gcp:cloud-logging"
+            },
+            "attributes": {
+              "detail": "project logs"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "monitoring",
+            "name": "Cloud Monitoring",
+            "type": "service",
+            "component": {
+              "provider": "gcp",
+              "service_id": "cloud-monitoring",
+              "icon_ref": "gcp:cloud-monitoring"
+            },
+            "attributes": {
+              "detail": "SLOs · alerts"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "secrets",
+            "name": "Secret Manager",
+            "type": "service",
+            "component": {
+              "provider": "gcp",
+              "service_id": "secret-manager",
+              "icon_ref": "gcp:secret-manager"
+            },
+            "attributes": {
+              "detail": "app secrets"
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

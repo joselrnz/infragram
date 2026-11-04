@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "slug": "aws",
+  "name": "AWS",
+  "title": "AWS application delivery",
+  "mark": "logos:aws#default",
+  "mark_color": "#232f3e",
+  "mark_color_dark": "#ffffff",
+  "icons": {
+    "categories": [
+      "analytics",
+      "compute",
+      "containers",
+      "data",
+      "integration",
+      "networking",
+      "security",
+      "storage"
+    ],
+    "items": [
+      {
+        "id": "lambda",
+        "name": "AWS Lambda",
+        "category": "compute",
+        "aliases": [
+          "serverless function",
+          "function"
+        ],
+        "asset_ref": "vendors/aws/lambda"
+      },
+      {
+        "id": "ec2",
+        "name": "Amazon EC2",
+        "category": "compute",
+        "aliases": [
+          "vm",
+          "virtual machine"
+        ],
+        "asset_ref": "vendors/aws/ec2"
+      },
+      {
+        "id": "simple-storage-service",
+        "name": "Amazon S3",
+        "category": "storage",
+        "aliases": [
+          "s3",
+          "object storage"
+        ],
+        "asset_ref": "vendors/aws/simple-storage-service"
+      },
+      {
+        "id": "rds",
+        "name": "Amazon RDS",
+        "category": "data",
+        "aliases": [
+          "relational database"
+        ],
+        "asset_ref": "vendors/aws/rds"
+      },
+      {
+        "id": "dynamodb",
+        "name": "Amazon DynamoDB",
+        "category": "data",
+        "aliases": [
+          "nosql"
+        ],
+        "asset_ref": "vendors/aws/dynamodb"
+      },
+      {
+        "id": "vpc",
+        "name": "Amazon VPC",
+        "category": "networking",
+        "aliases": [
+          "virtual private cloud"
+        ],
+        "asset_ref": "vendors/aws/virtual-private-cloud"
+      },
+      {
+        "id": "elastic-load-balancing",
+        "name": "Elastic Load Balancing",
+        "category": "networking",
+        "aliases": [
+          "elb",
+          "load balancer"
+        ],
+        "asset_ref": "vendors/aws/elastic-load-balancing"
+      },
+      {
+        "id": "cloudfront",
+        "name": "Amazon CloudFront",
+        "category": "networking",
+        "aliases": [
+          "cdn"
+        ],
+        "asset_ref": "vendors/aws/cloudfront"
+      },
+      {
+        "id": "api-gateway",
+        "name": "Amazon API Gateway",
+        "category": "integration",
+        "aliases": [
+          "api"
+        ],
+        "asset_ref": "vendors/aws/api-gateway"
+      },
+      {
+        "id": "route-53",
+        "name": "Amazon Route 53",
+        "category": "networking",
+        "aliases": [
+          "dns"
+        ],
+        "asset_ref": "vendors/aws/route-53"
+      },
+      {
+        "id": "eks",
+        "name": "Amazon EKS",
+        "category": "containers",
+        "aliases": [
+          "kubernetes"
+        ],
+        "asset_ref": "vendors/aws/elastic-kubernetes-service"
+      },
+      {
+        "id": "ecs",
+        "name": "Amazon ECS",
+        "category": "containers",
+        "aliases": [
+          "containers"
+        ],
+        "asset_ref": "vendors/aws/elastic-container-service"
+      },
+      {
+        "id": "fargate",
+        "name": "AWS Fargate",
+        "category": "containers",
+        "aliases": [
+          "serverless containers"
+        ],
+        "asset_ref": "vendors/aws/fargate"
+      },
+      {
+        "id": "sqs",
+        "name": "Amazon SQS",
+        "category": "integration",
+        "aliases": [
+          "queue"
+        ],
+        "asset_ref": "vendors/aws/simple-queue-service"
+      },
+      {
+        "id": "sns",
+        "name": "Amazon SNS",
+        "category": "integration",
+        "aliases": [
+          "notifications"
+        ],
+        "asset_ref": "vendors/aws/simple-notification-service"
+      },
+      {
+        "id": "secrets-manager",
+        "name": "AWS Secrets Manager",
+        "category": "security",
+        "aliases": [
+          "secrets"
+        ],
+        "asset_ref": "vendors/aws/secrets-manager"
+      }
+    ]
+  },
+  "theme": {
+    "paper": "#ffffff",
+    "paper_2": "#f2f4f7",
+    "ink": "#16191f",
+    "muted": "#4a5568",
+    "soft": "#5f6b7a",
+    "accent": "#0972d3",
+    "link": "#147eba"
+  },
+  "boundaries": {
+    "colors": {
+      "cloud": "#232f3e",
+      "region": "#00a4a6",
+      "vpc": "#8c4fff",
+      "zone": "#00a4a6",
+      "subnet-public": "#7aa116",
+      "subnet-private": "#00a4a6",
+      "location": "#7d8998",
+      "site": "#7d8998",
+      "account": "#e7157b",
+      "organization": "#e7157b",
+      "security-group": "#dd344c",
+      "auto-scaling": "#ed7100"
+    },
+    "dashes": {
+      "cloud": null,
+      "region": "2,3",
+      "vpc": null,
+      "zone": "5,4",
+      "subnet-public": null,
+      "subnet-private": null,
+      "location": null,
+      "site": null,
+      "account": null,
+      "organization": "5,4",
+      "security-group": null,
+      "auto-scaling": "5,4"
+    },
+    "widths": {
+      "cloud": 1.8,
+      "region": 1.0,
+      "vpc": 1.0,
+      "zone": 1.0,
+      "subnet-public": 1.0,
+      "subnet-private": 1.0,
+      "location": 1.0,
+      "site": 1.0,
+      "account": 1.0,
+      "organization": 1.0,
+      "security-group": 1.0,
+      "auto-scaling": 1.0
+    },
+    "radii": {
+      "cloud": 0,
+      "region": 0,
+      "vpc": 0,
+      "zone": 0,
+      "subnet-public": 0,
+      "subnet-private": 0,
+      "location": 0,
+      "site": 0
+    },
+    "fills": {
+      "cloud": "none",
+      "region": "none",
+      "vpc": "none",
+      "zone": "none",
+      "subnet-public": "#7aa116",
+      "subnet-private": "#00a4a6",
+      "location": "none",
+      "site": "none",
+      "account": "none",
+      "organization": "none",
+      "security-group": "none",
+      "auto-scaling": "none"
+    },
+    "icons": {
+      "account": "aws:account",
+      "auto-scaling": "aws:auto-scaling-group",
+      "cloud": "aws:cloud-logo",
+      "organization": "aws:organizations",
+      "region": "aws:region",
+      "site": "aws:corporate-data-center",
+      "subnet-private": "aws:private-subnet",
+      "subnet-public": "aws:public-subnet",
+      "vpc": "aws:virtual-private-cloud-vpc"
+    },
+    "forbidden_kinds": {
+      "subnet": "AWS subnets must use kind='subnet-public' or kind='subnet-private' so the boundary encodes routability."
+    },
+    "fill_tint": 0.1,
+    "label_font": "sans",
+    "label_case": "preserve",
+    "label_weight": 400,
+    "label_tracking": "0",
+    "label_advance": 0.58,
+    "pad": 24,
+    "color": "#7d8998"
+  },
+  "icon_palette": [
+    "#ff9900",
+    "#ed7100",
+    "#7aa116",
+    "#ffffff",
+    "#527fff",
+    "#3f8624",
+    "#c925d1",
+    "#8c4fff",
+    "#e7157b",
+    "#dd344c",
+    "#ffad33"
+  ],
+  "service_icons": {
+    "entry": "cloudfront",
+    "app": "fargate",
+    "object_store": "simple-storage-service",
+    "database": "dynamodb"
+  },
+  "services": {
+    "entry": {
+      "name": "CloudFront",
+      "detail": "CDN · WAF"
+    },
+    "app": {
+      "name": "AWS Fargate",
+      "detail": "serverless containers"
+    },
+    "object_store": {
+      "name": "S3 Bucket",
+      "detail": "static · objects"
+    },
+    "database": {
+      "name": "DynamoDB",
+      "detail": "managed data"
+    }
+  },
+  "dots": false,
+  "typography": {
+    "font": "'Inter', sans-serif",
+    "weight": 600
+  },
+  "style": {
+    "mark_legend_gap": 12,
+    "links": {
+      "vif": {
+        "color": "#147eba",
+        "width": 1.4,
+        "dash": "7,4"
+      },
+      "vpn": {
+        "color": "#c7254e",
+        "width": 1.4,
+        "dash": "8,3,2,3"
+      },
+      "local": {
+        "role": "soft",
+        "width": 1.1
+      }
+    },
+    "canvas": {
+      "height": 700
+    }
+  },
+  "brand": "logos:aws",
+  "step_color": "#232f3e",
+  "step_second": {"color": "#8b250b", "marks": "letters"}
+}

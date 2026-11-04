@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "slug": "proxmox",
+  "name": "Proxmox VE",
+  "title": "Proxmox VE virtualization",
+  "mark": "logos:proxmox#default",
+  "mark_color": "#e57000",
+  "icons": {
+    "categories": [
+      "analytics",
+      "compute",
+      "containers",
+      "data",
+      "integration",
+      "networking",
+      "security",
+      "storage"
+    ],
+    "items": []
+  },
+  "theme": {
+    "paper": "#ffffff",
+    "paper_2": "#f9f7f4",
+    "ink": "#261c13",
+    "muted": "#685645",
+    "soft": "#82705e",
+    "accent": "#e57000",
+    "link": "#ad5500"
+  },
+  "icon_palette": [
+    "#e57000",
+    "#000000",
+    "#ffffff"
+  ],
+  "services": {
+    "entry": {
+      "name": "Reverse proxy VM",
+      "detail": "HAProxy · TLS termination"
+    },
+    "app": {
+      "name": "QEMU Virtual Machine",
+      "detail": "KVM · ZFS-backed disk"
+    },
+    "object_store": {
+      "name": "Ceph Storage",
+      "detail": "RBD and CephFS pools"
+    },
+    "database": {
+      "name": "Database Container",
+      "detail": "LXC · PostgreSQL"
+    }
+  },
+  "boundaries": {
+    "color": "#e57000"
+  }
+}

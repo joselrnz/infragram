@@ -1,0 +1,452 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "openstack-private-cloud",
+  "title": "OpenStack private cloud with a tenant project",
+  "description": "Operators and tenants use Horizon and the CLI against Keystone; a tenant project runs Nova instances behind an Octavia load balancer with a Trove database, a Manila share and Cinder volumes on a Neutron network; Glance, Barbican, Heat, Swift and Designate are shared services, Ceilometer meters the region and Ironic provisions bare-metal nodes in a host aggregate.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "openstack",
+      "enabled": true
+    }
+  ],
+  "default_library": "openstack",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "OpenStack reference architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "OpenStack private cloud with a tenant project",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "tenant",
+        "name": "Tenant users",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": ""
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "horizon",
+            "kind": "solid",
+            "label": "HTTPS",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "cli",
+        "name": "openstack CLI",
+        "type": "service",
+        "component": {
+          "provider": "openstack",
+          "service_id": "user-openstackclient",
+          "icon_ref": "openstack:user-openstackclient"
+        },
+        "attributes": {
+          "detail": "operators"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "keystone",
+            "kind": "solid",
+            "label": "API",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "region",
+        "name": "Region · RegionOne",
+        "type": "region",
+        "attributes": {
+          "editor_frame_group": "openstack"
+        },
+        "children": [
+          {
+            "id": "shared",
+            "name": "Shared services · admin project",
+            "type": "project",
+            "attributes": {
+              "editor_frame_group": "openstack"
+            },
+            "children": [
+              {
+                "id": "horizon",
+                "name": "Horizon",
+                "type": "service",
+                "component": {
+                  "provider": "openstack",
+                  "service_id": "frontend-horizon",
+                  "icon_ref": "openstack:frontend-horizon"
+                },
+                "attributes": {
+                  "detail": "dashboard"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "keystone",
+                    "kind": "solid",
+                    "label": "auth",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "keystone",
+                "name": "Keystone",
+                "type": "service",
+                "component": {
+                  "provider": "openstack",
+                  "service_id": "sharedservices-keystone",
+                  "icon_ref": "openstack:sharedservices-keystone"
+                },
+                "attributes": {
+                  "detail": "identity"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "neutron",
+                    "kind": "dotted",
+                    "label": "token",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "nova",
+                    "kind": "dotted",
+                    "label": "token",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "glance",
+                "name": "Glance",
+                "type": "service",
+                "component": {
+                  "provider": "openstack",
+                  "service_id": "sharedservices-glance",
+                  "icon_ref": "openstack:sharedservices-glance"
+                },
+                "attributes": {
+                  "detail": "images"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "nova",
+                    "kind": "solid",
+                    "label": "boot image",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "heat",
+                "name": "Heat",
+                "type": "service",
+                "component": {
+                  "provider": "openstack",
+                  "service_id": "orchestration-heat",
+                  "icon_ref": "openstack:orchestration-heat"
+                },
+                "attributes": {
+                  "detail": "orchestration"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "nova",
+                    "kind": "dotted",
+                    "label": "stack",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "barbican",
+                "name": "Barbican",
+                "type": "service",
+                "component": {
+                  "provider": "openstack",
+                  "service_id": "sharedservices-barbican",
+                  "icon_ref": "openstack:sharedservices-barbican"
+                },
+                "attributes": {
+                  "detail": "secrets"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "tenant-project",
+            "name": "Project · tenant-a",
+            "type": "project",
+            "attributes": {
+              "editor_frame_group": "openstack"
+            },
+            "children": [
+              {
+                "id": "net",
+                "name": "Network · tenant-net",
+                "type": "network",
+                "attributes": {
+                  "editor_frame_group": "openstack"
+                },
+                "children": [
+                  {
+                    "id": "subnet",
+                    "name": "Subnet · 192.168.10.0/24",
+                    "type": "subnet-private",
+                    "attributes": {
+                      "editor_frame_group": "openstack",
+                      "flow": "grid"
+                    },
+                    "children": [
+                      {
+                        "id": "neutron",
+                        "name": "Neutron",
+                        "type": "service",
+                        "component": {
+                          "provider": "openstack",
+                          "service_id": "networking-neutron",
+                          "icon_ref": "openstack:networking-neutron"
+                        },
+                        "attributes": {
+                          "detail": "router · security groups"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "octavia",
+                            "kind": "solid",
+                            "label": "floating IP",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "nova",
+                        "name": "Nova instances",
+                        "type": "service",
+                        "component": {
+                          "provider": "openstack",
+                          "service_id": "compute-nova",
+                          "icon_ref": "openstack:compute-nova"
+                        },
+                        "attributes": {
+                          "detail": "web + app VMs"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "trove",
+                            "kind": "solid",
+                            "label": "SQL",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "manila",
+                            "kind": "solid",
+                            "label": "NFS",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "cinder",
+                        "name": "Cinder volumes",
+                        "type": "service",
+                        "component": {
+                          "provider": "openstack",
+                          "service_id": "storage-cinder",
+                          "icon_ref": "openstack:storage-cinder"
+                        },
+                        "attributes": {
+                          "detail": "block storage"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "nova",
+                            "kind": "solid",
+                            "label": "attach",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "octavia",
+                        "name": "Octavia",
+                        "type": "service",
+                        "component": {
+                          "provider": "openstack",
+                          "service_id": "networking-octavia",
+                          "icon_ref": "openstack:networking-octavia"
+                        },
+                        "attributes": {
+                          "detail": "load balancer"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "nova",
+                            "kind": "solid",
+                            "label": "HTTP",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "trove",
+                        "name": "Trove",
+                        "type": "service",
+                        "component": {
+                          "provider": "openstack",
+                          "service_id": "workloadprovisioning-trove",
+                          "icon_ref": "openstack:workloadprovisioning-trove"
+                        },
+                        "attributes": {
+                          "detail": "database service"
+                        },
+                        "children": [],
+                        "connections": []
+                      },
+                      {
+                        "id": "manila",
+                        "name": "Manila",
+                        "type": "service",
+                        "component": {
+                          "provider": "openstack",
+                          "service_id": "storage-manila",
+                          "icon_ref": "openstack:storage-manila"
+                        },
+                        "attributes": {
+                          "detail": "shared file system"
+                        },
+                        "children": [],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "aggregate",
+            "name": "Host aggregate · bare metal",
+            "type": "server-group",
+            "attributes": {
+              "editor_frame_group": "openstack"
+            },
+            "children": [
+              {
+                "id": "cyborg",
+                "name": "Cyborg",
+                "type": "service",
+                "component": {
+                  "provider": "openstack",
+                  "service_id": "baremetal-cyborg",
+                  "icon_ref": "openstack:baremetal-cyborg"
+                },
+                "attributes": {
+                  "detail": "accelerators"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "ironic",
+                "name": "Ironic nodes",
+                "type": "service",
+                "component": {
+                  "provider": "openstack",
+                  "service_id": "baremetal-ironic",
+                  "icon_ref": "openstack:baremetal-ironic"
+                },
+                "attributes": {
+                  "detail": "bare-metal provisioning"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "swift",
+                "name": "Swift",
+                "type": "service",
+                "component": {
+                  "provider": "openstack",
+                  "service_id": "storage-swift",
+                  "icon_ref": "openstack:storage-swift"
+                },
+                "attributes": {
+                  "detail": "object storage"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "designate",
+            "name": "Designate",
+            "type": "service",
+            "component": {
+              "provider": "openstack",
+              "service_id": "networking-designate",
+              "icon_ref": "openstack:networking-designate"
+            },
+            "attributes": {
+              "detail": "DNS as a service"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "telemetry",
+            "name": "Ceilometer",
+            "type": "service",
+            "component": {
+              "provider": "openstack",
+              "service_id": "monitoring-telemetry",
+              "icon_ref": "openstack:monitoring-telemetry"
+            },
+            "attributes": {
+              "detail": "metering"
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

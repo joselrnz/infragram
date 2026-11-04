@@ -1,0 +1,916 @@
+{
+ "schema_version": 1,
+ "collection": "vendors/openstack",
+ "generated_by": "pinned mingrammer/diagrams provider node importer",
+ "source": {
+  "url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack",
+  "release": "mingrammer/diagrams v0.25.1 (dd0763d939f377c99898951a489e813c0360cd4a)",
+  "terms": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE",
+  "label": "OpenStack"
+ },
+ "counts": {
+  "icons": 50
+ },
+ "icons": [
+  {
+   "id": "apiproxies-ec2api",
+   "name": "EC2 API",
+   "class_name": "EC2API",
+   "aliases": [
+    "EC2API",
+    "diagrams.openstack.apiproxies.EC2API",
+    "ec2api"
+   ],
+   "category": "apiproxies",
+   "file": "apiproxies/apiproxies-ec2api.svg",
+   "source_path": "resources/openstack/apiproxies/ec2api.png",
+   "sha256": "59e41a562a8c01cfcc264be6c94e8b7259db306f90a00821f924fe2627337345",
+   "source_sha256": "3d11c34eb43dc89a4018c4788db1b30800e4f54a3ed32461e39cf0b1c6047752",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/apiproxies/ec2api.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "applicationlifecycle-freezer",
+   "name": "Freezer",
+   "class_name": "Freezer",
+   "aliases": [
+    "Freezer",
+    "diagrams.openstack.applicationlifecycle.Freezer",
+    "freezer"
+   ],
+   "category": "applicationlifecycle",
+   "file": "applicationlifecycle/applicationlifecycle-freezer.svg",
+   "source_path": "resources/openstack/applicationlifecycle/freezer.png",
+   "sha256": "2160677295350564e48149674153ace4f880535f739ade4b6136da9be6260466",
+   "source_sha256": "cef129433b156924a93aa5c2d1a4d9f9ed38dc6fab0bee419ada44d8e105454d",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/applicationlifecycle/freezer.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "applicationlifecycle-masakari",
+   "name": "Masakari",
+   "class_name": "Masakari",
+   "aliases": [
+    "Masakari",
+    "diagrams.openstack.applicationlifecycle.Masakari",
+    "masakari"
+   ],
+   "category": "applicationlifecycle",
+   "file": "applicationlifecycle/applicationlifecycle-masakari.svg",
+   "source_path": "resources/openstack/applicationlifecycle/masakari.png",
+   "sha256": "196b1214e2adcd1bacc618ff460df88f0f1f3c1e24bcacf2cfc5d3c47dbabde6",
+   "source_sha256": "7c6413e27957d7d150c1d989ba3848e8224e28dc8e070120709c61294a22804a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/applicationlifecycle/masakari.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "applicationlifecycle-murano",
+   "name": "Murano",
+   "class_name": "Murano",
+   "aliases": [
+    "Murano",
+    "diagrams.openstack.applicationlifecycle.Murano",
+    "murano"
+   ],
+   "category": "applicationlifecycle",
+   "file": "applicationlifecycle/applicationlifecycle-murano.svg",
+   "source_path": "resources/openstack/applicationlifecycle/murano.png",
+   "sha256": "224524eaace8d038edde2fff54fa3cb2e85ed3374824dd523ebbface4a6a7d61",
+   "source_sha256": "a50115b4e94773d521a5ef438cd697fcd9747aab3a616cc1209656632396dc35",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/applicationlifecycle/murano.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "applicationlifecycle-solum",
+   "name": "Solum",
+   "class_name": "Solum",
+   "aliases": [
+    "Solum",
+    "diagrams.openstack.applicationlifecycle.Solum",
+    "solum"
+   ],
+   "category": "applicationlifecycle",
+   "file": "applicationlifecycle/applicationlifecycle-solum.svg",
+   "source_path": "resources/openstack/applicationlifecycle/solum.png",
+   "sha256": "0d0073ad4a95339316a4a90ebee00b9106ff2f37396adca08bfb38df63255c3a",
+   "source_sha256": "a2efccd460e830a5697fe3cfd492c768ca5b502d2aadc44088a6767959343104",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/applicationlifecycle/solum.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "baremetal-cyborg",
+   "name": "Cyborg",
+   "class_name": "Cyborg",
+   "aliases": [
+    "Cyborg",
+    "diagrams.openstack.baremetal.Cyborg",
+    "cyborg"
+   ],
+   "category": "baremetal",
+   "file": "baremetal/baremetal-cyborg.svg",
+   "source_path": "resources/openstack/baremetal/cyborg.png",
+   "sha256": "bee3261792376dd513868a541cebfecedc2fb4606bf3da532986b10206680d35",
+   "source_sha256": "2a992cc138c51691acc116263faf591e7000fe539cf2d3e7d3952d58eef5c539",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/baremetal/cyborg.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "baremetal-ironic",
+   "name": "Ironic",
+   "class_name": "Ironic",
+   "aliases": [
+    "Ironic",
+    "diagrams.openstack.baremetal.Ironic",
+    "ironic"
+   ],
+   "category": "baremetal",
+   "file": "baremetal/baremetal-ironic.svg",
+   "source_path": "resources/openstack/baremetal/ironic.png",
+   "sha256": "8456bb9e8c6dacd8eff4478fde32776f5f9934222285cef9f4c82598ddd7e0d5",
+   "source_sha256": "db4dc65ba043cfd7fa2fba7f62249f08a19a7c13d9cb632a38979ed4739c67b3",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/baremetal/ironic.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "billing-cloudkitty",
+   "name": "Cloudkitty",
+   "class_name": "Cloudkitty",
+   "aliases": [
+    "Cloudkitty",
+    "diagrams.openstack.billing.Cloudkitty",
+    "cloudkitty"
+   ],
+   "category": "billing",
+   "file": "billing/billing-cloudkitty.svg",
+   "source_path": "resources/openstack/billing/cloudkitty.png",
+   "sha256": "84defd925e6a6e8777c2dd8f8dd868c550f926af26a1f1966b158faeb7bf4597",
+   "source_sha256": "529241a7656c260f2073cc87cfe1e537e90d9720b3d8c43ac71ca1f71e64d76d",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/billing/cloudkitty.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-nova",
+   "name": "Nova",
+   "class_name": "Nova",
+   "aliases": [
+    "Nova",
+    "diagrams.openstack.compute.Nova",
+    "nova"
+   ],
+   "category": "compute",
+   "file": "compute/compute-nova.svg",
+   "source_path": "resources/openstack/compute/nova.png",
+   "sha256": "5f9cd12cdefea49c26ddcdbe366ee08ffe526fbbed3aff6c54b6600ad40368a9",
+   "source_sha256": "c1a44ccc8336f306275f375dde5b624f24cf245b20c3b34868584425458a3609",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/compute/nova.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-qinling",
+   "name": "Qinling",
+   "class_name": "Qinling",
+   "aliases": [
+    "Qinling",
+    "diagrams.openstack.compute.Qinling",
+    "qinling"
+   ],
+   "category": "compute",
+   "file": "compute/compute-qinling.svg",
+   "source_path": "resources/openstack/compute/qinling.png",
+   "sha256": "9e889e00c6c66cdded992ba49c9222715acfbf820ffceea17179c0f4cdcdfbc5",
+   "source_sha256": "9acfc7a7dca23b2460aeeabcecca22d0eee59a3bd464d9fccd4211c5fe55210f",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/compute/qinling.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-zun",
+   "name": "Zun",
+   "class_name": "Zun",
+   "aliases": [
+    "Zun",
+    "diagrams.openstack.compute.Zun",
+    "zun"
+   ],
+   "category": "compute",
+   "file": "compute/compute-zun.svg",
+   "source_path": "resources/openstack/compute/zun.png",
+   "sha256": "fef6006ed94ae005405056c815dd9212c8063497beac71cf613c55657ba7a863",
+   "source_sha256": "dd3b50c9f0e7073952ab9caa5e5c745ab5b0db720396447f39e0a48978e188ea",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/compute/zun.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "containerservices-kuryr",
+   "name": "Kuryr",
+   "class_name": "Kuryr",
+   "aliases": [
+    "Kuryr",
+    "diagrams.openstack.containerservices.Kuryr",
+    "kuryr"
+   ],
+   "category": "containerservices",
+   "file": "containerservices/containerservices-kuryr.svg",
+   "source_path": "resources/openstack/containerservices/kuryr.png",
+   "sha256": "99a1934ee51fe1bfcb7bc508ea458582661df3971379d2993358b9008ad4e51a",
+   "source_sha256": "fa34e6a6a46891809622c1cb11b913ab619e6af59c7b7b0cf976d58ce625d80d",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/containerservices/kuryr.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "deployment-ansible",
+   "name": "Ansible",
+   "class_name": "Ansible",
+   "aliases": [
+    "Ansible",
+    "diagrams.openstack.deployment.Ansible",
+    "ansible"
+   ],
+   "category": "deployment",
+   "file": "deployment/deployment-ansible.svg",
+   "source_path": "resources/openstack/deployment/ansible.png",
+   "sha256": "aacc7352a12c9998b730f817d772f84d496099b03f063d6e06e2223dfaab7f69",
+   "source_sha256": "32ff828422a69eb9c67c4e137fa218c25276f56185d5b2f79d21cf44f657b4d4",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/deployment/ansible.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "deployment-charms",
+   "name": "Charms",
+   "class_name": "Charms",
+   "aliases": [
+    "Charms",
+    "diagrams.openstack.deployment.Charms",
+    "charms"
+   ],
+   "category": "deployment",
+   "file": "deployment/deployment-charms.svg",
+   "source_path": "resources/openstack/deployment/charms.png",
+   "sha256": "6338aa2bb3ff06a440c9f695249f14b8b9eddfb6ae025a611ffd0e498316a8c4",
+   "source_sha256": "4a030937e07e05c3108614334296d8214c02a224d6ed0f325c0b754bd25bea52",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/deployment/charms.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "deployment-chef",
+   "name": "Chef",
+   "class_name": "Chef",
+   "aliases": [
+    "Chef",
+    "diagrams.openstack.deployment.Chef",
+    "chef"
+   ],
+   "category": "deployment",
+   "file": "deployment/deployment-chef.svg",
+   "source_path": "resources/openstack/deployment/chef.png",
+   "sha256": "3dec70e245c8bbfd09d9b49f4697865eb3506e83e8454c511c5a9a36c1c685b2",
+   "source_sha256": "bec1f29e4a5fa2f233ea71074a2c761729ff2a3d4a1864ca3ea6659b62d63933",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/deployment/chef.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "deployment-helm",
+   "name": "Helm",
+   "class_name": "Helm",
+   "aliases": [
+    "Helm",
+    "diagrams.openstack.deployment.Helm",
+    "helm"
+   ],
+   "category": "deployment",
+   "file": "deployment/deployment-helm.svg",
+   "source_path": "resources/openstack/deployment/helm.png",
+   "sha256": "bb6bc482e5832b7ca20d3b97f61a210d17c8ef1d9e8e4251ea164be71feb0332",
+   "source_sha256": "ff542150ff520d504e5f6116e511e1ebb73b1a38edb69ba912f90b504185be5c",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/deployment/helm.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "deployment-kolla",
+   "name": "Kolla",
+   "class_name": "Kolla",
+   "aliases": [
+    "Kolla",
+    "diagrams.openstack.deployment.Kolla",
+    "kolla"
+   ],
+   "category": "deployment",
+   "file": "deployment/deployment-kolla.svg",
+   "source_path": "resources/openstack/deployment/kolla.png",
+   "sha256": "e28629c2fcbd5b2b50433ce1cb72b33d6d2ca40bdc779029df05e184f319fdbd",
+   "source_sha256": "3136ae55f91c005454fca4a4de0fc62896a8934e808a6dbf0ca54d2f790c91a1",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/deployment/kolla.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "deployment-tripleo",
+   "name": "Tripleo",
+   "class_name": "Tripleo",
+   "aliases": [
+    "Tripleo",
+    "diagrams.openstack.deployment.Tripleo",
+    "tripleo"
+   ],
+   "category": "deployment",
+   "file": "deployment/deployment-tripleo.svg",
+   "source_path": "resources/openstack/deployment/tripleo.png",
+   "sha256": "359412db054f7397634df99d04d54cbf38f1ef30f3d15e2cf4109d48bb629958",
+   "source_sha256": "c7906ad828a67eb1e929c29239ce3f212ac4bd725f398fd8043c0f35ef363103",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/deployment/tripleo.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "frontend-horizon",
+   "name": "Horizon",
+   "class_name": "Horizon",
+   "aliases": [
+    "Horizon",
+    "diagrams.openstack.frontend.Horizon",
+    "horizon"
+   ],
+   "category": "frontend",
+   "file": "frontend/frontend-horizon.svg",
+   "source_path": "resources/openstack/frontend/horizon.png",
+   "sha256": "d3df26950716dc0c33b2c7aa53421c9406a348b49c2176718566e7107a3023a5",
+   "source_sha256": "95beba6af0b4e480723c72c5072f31d6c3aa40b058e34ed458d67dee269e365e",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/frontend/horizon.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "monitoring-monasca",
+   "name": "Monasca",
+   "class_name": "Monasca",
+   "aliases": [
+    "Monasca",
+    "diagrams.openstack.monitoring.Monasca",
+    "monasca"
+   ],
+   "category": "monitoring",
+   "file": "monitoring/monitoring-monasca.svg",
+   "source_path": "resources/openstack/monitoring/monasca.png",
+   "sha256": "65d430e68b5bc8133d948e07c7ffc4bcf7c422bbb340eb41f644ad7c6226eb17",
+   "source_sha256": "da3961c6d77ec581d976206c23d5e4d3529f6a0c255d7f2b83753bff21fc601b",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/monitoring/monasca.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "monitoring-telemetry",
+   "name": "Telemetry",
+   "class_name": "Telemetry",
+   "aliases": [
+    "Telemetry",
+    "diagrams.openstack.monitoring.Telemetry",
+    "telemetry"
+   ],
+   "category": "monitoring",
+   "file": "monitoring/monitoring-telemetry.svg",
+   "source_path": "resources/openstack/monitoring/telemetry.png",
+   "sha256": "345ea96800cb0a117d91f70084f19d3628ea2f2481a688c9bf1b88df60a94245",
+   "source_sha256": "36d998a18a4e5ed518dba12608ba51c1afca798e0c12807d53b0485b3cc63727",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/monitoring/telemetry.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "multiregion-tricircle",
+   "name": "Tricircle",
+   "class_name": "Tricircle",
+   "aliases": [
+    "Tricircle",
+    "diagrams.openstack.multiregion.Tricircle",
+    "tricircle"
+   ],
+   "category": "multiregion",
+   "file": "multiregion/multiregion-tricircle.svg",
+   "source_path": "resources/openstack/multiregion/tricircle.png",
+   "sha256": "15efe31a32938f1d7d9ed9d79e83bd9c34678110fe24720932ca6ccf116da907",
+   "source_sha256": "61b766c043290a086ad8491962eeb42a8ad76d31fbe8440fbe580d3c2e9cb805",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/multiregion/tricircle.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "networking-designate",
+   "name": "Designate",
+   "class_name": "Designate",
+   "aliases": [
+    "Designate",
+    "diagrams.openstack.networking.Designate",
+    "designate"
+   ],
+   "category": "networking",
+   "file": "networking/networking-designate.svg",
+   "source_path": "resources/openstack/networking/designate.png",
+   "sha256": "0d8961d9ea4df1bbadb2713ca62fadb7867777e86337f4cdab4c637937ec9357",
+   "source_sha256": "8e968639ba196901531a0e14f400aba1bb447a82c98f9fb684970637179aa043",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/networking/designate.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "networking-neutron",
+   "name": "Neutron",
+   "class_name": "Neutron",
+   "aliases": [
+    "Neutron",
+    "diagrams.openstack.networking.Neutron",
+    "neutron"
+   ],
+   "category": "networking",
+   "file": "networking/networking-neutron.svg",
+   "source_path": "resources/openstack/networking/neutron.png",
+   "sha256": "61c0543d9c8a8fd41640fd2eb0834d0d692defff36531cdd7bc6ab561b112765",
+   "source_sha256": "f2787ccc882344cb012fafe8862944f24c6f3577efcad86f16d359cf8879ab81",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/networking/neutron.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "networking-octavia",
+   "name": "Octavia",
+   "class_name": "Octavia",
+   "aliases": [
+    "Octavia",
+    "diagrams.openstack.networking.Octavia",
+    "octavia"
+   ],
+   "category": "networking",
+   "file": "networking/networking-octavia.svg",
+   "source_path": "resources/openstack/networking/octavia.png",
+   "sha256": "d2da7194bfd2f07c8716408836f14bbf56114018c142a7ebffbf177689248c67",
+   "source_sha256": "35d326af1119caebfa8c94e7c6027a8615ff48b33a2f45135400fae1fee74b44",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/networking/octavia.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "nfv-tacker",
+   "name": "Tacker",
+   "class_name": "Tacker",
+   "aliases": [
+    "Tacker",
+    "diagrams.openstack.nfv.Tacker",
+    "tacker"
+   ],
+   "category": "nfv",
+   "file": "nfv/nfv-tacker.svg",
+   "source_path": "resources/openstack/nfv/tacker.png",
+   "sha256": "0315195dcc6e0162dc8a543223b37caa5d7e56f6a37dba30f48037c554bd6d7b",
+   "source_sha256": "25994e0f17ae76f7508e00473ea669d81c9435d86fd8b86f6f713d7b89dbf928",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/nfv/tacker.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "optimization-congress",
+   "name": "Congress",
+   "class_name": "Congress",
+   "aliases": [
+    "Congress",
+    "diagrams.openstack.optimization.Congress",
+    "congress"
+   ],
+   "category": "optimization",
+   "file": "optimization/optimization-congress.svg",
+   "source_path": "resources/openstack/optimization/congress.png",
+   "sha256": "b7721ed80b25b5db6651c65540a0c55e56d1e6a72328be544bdd56ed2fb28909",
+   "source_sha256": "52138141a2b2d932a0e0381dba780a98d53165191d8e05ed38581aeaf7472045",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/optimization/congress.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "optimization-rally",
+   "name": "Rally",
+   "class_name": "Rally",
+   "aliases": [
+    "Rally",
+    "diagrams.openstack.optimization.Rally",
+    "rally"
+   ],
+   "category": "optimization",
+   "file": "optimization/optimization-rally.svg",
+   "source_path": "resources/openstack/optimization/rally.png",
+   "sha256": "0f9406422a81438339af50314fcb123f965ea63c9abb0075d31f21a081a208e1",
+   "source_sha256": "43af9a40d985de9d27aba4c76a37dc9d3c63d8eae2abe27d04d92881e2c65469",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/optimization/rally.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "optimization-vitrage",
+   "name": "Vitrage",
+   "class_name": "Vitrage",
+   "aliases": [
+    "Vitrage",
+    "diagrams.openstack.optimization.Vitrage",
+    "vitrage"
+   ],
+   "category": "optimization",
+   "file": "optimization/optimization-vitrage.svg",
+   "source_path": "resources/openstack/optimization/vitrage.png",
+   "sha256": "3e815b9e006ea4cda8758ab3d3708978257d775d670d9e7a7d765e1c97f42cc4",
+   "source_sha256": "83855d1ab103eeb8667608ecb69833cdb59b34ba536cc46c43998118bb850e75",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/optimization/vitrage.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "optimization-watcher",
+   "name": "Watcher",
+   "class_name": "Watcher",
+   "aliases": [
+    "Watcher",
+    "diagrams.openstack.optimization.Watcher",
+    "watcher"
+   ],
+   "category": "optimization",
+   "file": "optimization/optimization-watcher.svg",
+   "source_path": "resources/openstack/optimization/watcher.png",
+   "sha256": "4ed1f54e7a789f5c59dba9df9bcd828e55c58e6f9f1f17d3ab3183fc4463ffce",
+   "source_sha256": "0b938f4a4361dd484df0a1376d48c83067803e9b89c31948379e59cef46018d6",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/optimization/watcher.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "orchestration-blazar",
+   "name": "Blazar",
+   "class_name": "Blazar",
+   "aliases": [
+    "Blazar",
+    "diagrams.openstack.orchestration.Blazar",
+    "blazar"
+   ],
+   "category": "orchestration",
+   "file": "orchestration/orchestration-blazar.svg",
+   "source_path": "resources/openstack/orchestration/blazar.png",
+   "sha256": "498842de5c615e7562f09a992e3c26ba1fa9065815308a501a140e4aab6f4bda",
+   "source_sha256": "f18408a4a2641f2929eb98dbd91289725aed0c4686566f20f16a74e54d3ac12a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/orchestration/blazar.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "orchestration-heat",
+   "name": "Heat",
+   "class_name": "Heat",
+   "aliases": [
+    "Heat",
+    "diagrams.openstack.orchestration.Heat",
+    "heat"
+   ],
+   "category": "orchestration",
+   "file": "orchestration/orchestration-heat.svg",
+   "source_path": "resources/openstack/orchestration/heat.png",
+   "sha256": "3d92cff6b0085fce7b9982bd45514d83351ca4098402f91a76e71c21d07f5ffc",
+   "source_sha256": "11e9389c22d4e94d782cb1dadb7522a2e92701e45e21ef92dd962f042d5f0f0f",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/orchestration/heat.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "orchestration-mistral",
+   "name": "Mistral",
+   "class_name": "Mistral",
+   "aliases": [
+    "Mistral",
+    "diagrams.openstack.orchestration.Mistral",
+    "mistral"
+   ],
+   "category": "orchestration",
+   "file": "orchestration/orchestration-mistral.svg",
+   "source_path": "resources/openstack/orchestration/mistral.png",
+   "sha256": "22fbc932245afba20e5ab341abdb28d9656407f08f924e99ab1becd0b998182c",
+   "source_sha256": "43ab46d0a3094430ac0cda15a02b9155fbc31f7540e578c1774bd19b71563220",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/orchestration/mistral.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "orchestration-senlin",
+   "name": "Senlin",
+   "class_name": "Senlin",
+   "aliases": [
+    "Senlin",
+    "diagrams.openstack.orchestration.Senlin",
+    "senlin"
+   ],
+   "category": "orchestration",
+   "file": "orchestration/orchestration-senlin.svg",
+   "source_path": "resources/openstack/orchestration/senlin.png",
+   "sha256": "9390902b803011ff5950b2d0a0c68caeb8d3f6fc42315533f966845bc8d2a550",
+   "source_sha256": "835ccb550a50e70e9252239c352dc3c597b5cdb2825cbc27f5e1928a1d7933b1",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/orchestration/senlin.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "orchestration-zaqar",
+   "name": "Zaqar",
+   "class_name": "Zaqar",
+   "aliases": [
+    "Zaqar",
+    "diagrams.openstack.orchestration.Zaqar",
+    "zaqar"
+   ],
+   "category": "orchestration",
+   "file": "orchestration/orchestration-zaqar.svg",
+   "source_path": "resources/openstack/orchestration/zaqar.png",
+   "sha256": "e7c730d77ea483cd59eee698869b87a21c2bad331df5390bb0f7ac1deee96617",
+   "source_sha256": "8cc0ad3914bec8692c64f51923609cb359c6168d3bcb80be2413af459356a99e",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/orchestration/zaqar.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "packaging-loci",
+   "name": "LOCI",
+   "class_name": "LOCI",
+   "aliases": [
+    "LOCI",
+    "diagrams.openstack.packaging.LOCI",
+    "loci"
+   ],
+   "category": "packaging",
+   "file": "packaging/packaging-loci.svg",
+   "source_path": "resources/openstack/packaging/loci.png",
+   "sha256": "9a51d24778e832e187e6fc82923b8bf5b0a045a325e0031297528430a5f14946",
+   "source_sha256": "e608197e29264aa45bf66bb8f29f45e0f86e74cbdf0dbd8e3435f189c3597a80",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/packaging/loci.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "packaging-puppet",
+   "name": "Puppet",
+   "class_name": "Puppet",
+   "aliases": [
+    "Puppet",
+    "diagrams.openstack.packaging.Puppet",
+    "puppet"
+   ],
+   "category": "packaging",
+   "file": "packaging/packaging-puppet.svg",
+   "source_path": "resources/openstack/packaging/puppet.png",
+   "sha256": "895bf8af088b74477da33fe108bb65eeb5369832ac76dfdaa3cace86130b284a",
+   "source_sha256": "9b540067bf0453d82116b92580da3b18e75938643d2ee0e2e375bf0fee0a57df",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/packaging/puppet.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "packaging-rpm",
+   "name": "RPM",
+   "class_name": "RPM",
+   "aliases": [
+    "RPM",
+    "diagrams.openstack.packaging.RPM",
+    "rpm"
+   ],
+   "category": "packaging",
+   "file": "packaging/packaging-rpm.svg",
+   "source_path": "resources/openstack/packaging/rpm.png",
+   "sha256": "9432ba086612b707877bb3ae73fb49b4e219a18c53e4e182a919de68995eeba6",
+   "source_sha256": "116b884d7801b4aa98bfe76015eae683e9f8a27bf4e77e5203cb4b126109178d",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/packaging/rpm.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "sharedservices-barbican",
+   "name": "Barbican",
+   "class_name": "Barbican",
+   "aliases": [
+    "Barbican",
+    "diagrams.openstack.sharedservices.Barbican",
+    "barbican"
+   ],
+   "category": "sharedservices",
+   "file": "sharedservices/sharedservices-barbican.svg",
+   "source_path": "resources/openstack/sharedservices/barbican.png",
+   "sha256": "d757ad1042ba971bac7bb259d2e950db98589fcfa9721d2d5534f5cc16b375dd",
+   "source_sha256": "038a5f13bd06c72c278e94aaa136812d86d81806d420b72ff08280a28f9f24a2",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/sharedservices/barbican.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "sharedservices-glance",
+   "name": "Glance",
+   "class_name": "Glance",
+   "aliases": [
+    "Glance",
+    "diagrams.openstack.sharedservices.Glance",
+    "glance"
+   ],
+   "category": "sharedservices",
+   "file": "sharedservices/sharedservices-glance.svg",
+   "source_path": "resources/openstack/sharedservices/glance.png",
+   "sha256": "52c6b84208509d9300eed8cfcc4dd0631ebea9dcb0c77edd8dcc66fd68184620",
+   "source_sha256": "76ec9acc062090116aef0724b368bacda39f9b6b4ba9f82a47293e4a6e458d40",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/sharedservices/glance.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "sharedservices-karbor",
+   "name": "Karbor",
+   "class_name": "Karbor",
+   "aliases": [
+    "Karbor",
+    "diagrams.openstack.sharedservices.Karbor",
+    "karbor"
+   ],
+   "category": "sharedservices",
+   "file": "sharedservices/sharedservices-karbor.svg",
+   "source_path": "resources/openstack/sharedservices/karbor.png",
+   "sha256": "f456b26e418070375f4592c1cc7134458cc8dc99230285b26984425f4f2ff969",
+   "source_sha256": "f2a87816f2e1393e76573e3ef9a1dcda311cafd779e8741c69110b24e9e5c954",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/sharedservices/karbor.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "sharedservices-keystone",
+   "name": "Keystone",
+   "class_name": "Keystone",
+   "aliases": [
+    "Keystone",
+    "diagrams.openstack.sharedservices.Keystone",
+    "keystone"
+   ],
+   "category": "sharedservices",
+   "file": "sharedservices/sharedservices-keystone.svg",
+   "source_path": "resources/openstack/sharedservices/keystone.png",
+   "sha256": "30d77b4ccd1f8afa8b5c285b5fc7c7258a5841e27ceca669b968189aea593cc1",
+   "source_sha256": "b6f2bf688ccf318446c78a5ce790f122678bba5bb1da632c7ba6a04fbe46be6e",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/sharedservices/keystone.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "sharedservices-searchlight",
+   "name": "Searchlight",
+   "class_name": "Searchlight",
+   "aliases": [
+    "Searchlight",
+    "diagrams.openstack.sharedservices.Searchlight",
+    "searchlight"
+   ],
+   "category": "sharedservices",
+   "file": "sharedservices/sharedservices-searchlight.svg",
+   "source_path": "resources/openstack/sharedservices/searchlight.png",
+   "sha256": "5a28ba104a4b5d236717dcd4d4c7970f79104e6c66b40f955b755f403d1a321a",
+   "source_sha256": "51704f6a9871d29d76a1095d0b6344507ca99be65ada7a70142706b7148a564d",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/sharedservices/searchlight.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-cinder",
+   "name": "Cinder",
+   "class_name": "Cinder",
+   "aliases": [
+    "Cinder",
+    "diagrams.openstack.storage.Cinder",
+    "cinder"
+   ],
+   "category": "storage",
+   "file": "storage/storage-cinder.svg",
+   "source_path": "resources/openstack/storage/cinder.png",
+   "sha256": "4b6dd3610849e77bbd2a2185044592f792e153e9e73731f5d6363ff3a05d97ce",
+   "source_sha256": "a2f751bc330ad2919b8db945690d2ffdb86294a95523caec5e4b23a670a58bc8",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/storage/cinder.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-manila",
+   "name": "Manila",
+   "class_name": "Manila",
+   "aliases": [
+    "Manila",
+    "diagrams.openstack.storage.Manila",
+    "manila"
+   ],
+   "category": "storage",
+   "file": "storage/storage-manila.svg",
+   "source_path": "resources/openstack/storage/manila.png",
+   "sha256": "38b7a66eaab52dbc4ad5b240d5511ed02940b8afa2d4980b54b3fd1784d1631d",
+   "source_sha256": "1ccda37df9e97fed5528b048f073672ba61f93e8e8bf242a34ace8defd6fdcdf",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/storage/manila.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-swift",
+   "name": "Swift",
+   "class_name": "Swift",
+   "aliases": [
+    "Swift",
+    "diagrams.openstack.storage.Swift",
+    "swift"
+   ],
+   "category": "storage",
+   "file": "storage/storage-swift.svg",
+   "source_path": "resources/openstack/storage/swift.png",
+   "sha256": "3e639bbc9254c75985d8652b81eb97fb951158c5d7a997bcb751ad2322f11068",
+   "source_sha256": "3b37fc7468a14d7738285226f31780f8b62e5d253e69981d32616e0a049806e6",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/storage/swift.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "user-openstackclient",
+   "name": "OpenStack Client",
+   "class_name": "Openstackclient",
+   "aliases": [
+    "Openstackclient",
+    "diagrams.openstack.user.Openstackclient",
+    "openstackclient"
+   ],
+   "category": "user",
+   "file": "user/user-openstackclient.svg",
+   "source_path": "resources/openstack/user/openstackclient.png",
+   "sha256": "36802f372040d88af5f688544fcb92d10e3c17b4e9edd5cecb633275571a60f3",
+   "source_sha256": "08f45bca9c75a087665dac68b0de19dca6dbdccaf3a397b27926c2c9e331b6b1",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/user/openstackclient.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "workloadprovisioning-magnum",
+   "name": "Magnum",
+   "class_name": "Magnum",
+   "aliases": [
+    "Magnum",
+    "diagrams.openstack.workloadprovisioning.Magnum",
+    "magnum"
+   ],
+   "category": "workloadprovisioning",
+   "file": "workloadprovisioning/workloadprovisioning-magnum.svg",
+   "source_path": "resources/openstack/workloadprovisioning/magnum.png",
+   "sha256": "f82cd0621d309b591fa1efa70ad6c1088f8af6cd423dea7523a423399457dbbc",
+   "source_sha256": "160c83f6eced9ffb6ec14a2e354d4edbd4878a1ba43d6af20059b0ee2d9f04c8",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/workloadprovisioning/magnum.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "workloadprovisioning-sahara",
+   "name": "Sahara",
+   "class_name": "Sahara",
+   "aliases": [
+    "Sahara",
+    "diagrams.openstack.workloadprovisioning.Sahara",
+    "sahara"
+   ],
+   "category": "workloadprovisioning",
+   "file": "workloadprovisioning/workloadprovisioning-sahara.svg",
+   "source_path": "resources/openstack/workloadprovisioning/sahara.png",
+   "sha256": "6947faed27b0eeb748afddc3064190a2338d46f3ac0c1ba1568713564dcd0a71",
+   "source_sha256": "4c03e5e13608732b819c9872f286e09d4cf0b1fbfaa2bf62d51f916b66eff543",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/workloadprovisioning/sahara.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "workloadprovisioning-trove",
+   "name": "Trove",
+   "class_name": "Trove",
+   "aliases": [
+    "Trove",
+    "diagrams.openstack.workloadprovisioning.Trove",
+    "trove"
+   ],
+   "category": "workloadprovisioning",
+   "file": "workloadprovisioning/workloadprovisioning-trove.svg",
+   "source_path": "resources/openstack/workloadprovisioning/trove.png",
+   "sha256": "22929c5dcb285be22e5446d8408d2edb487390dced45a513eda539f8102670cf",
+   "source_sha256": "279bee17baf4d493d4b15d569a6920cde27f8f83ca739e5a8cbb9c6283d6daa7",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/openstack/workloadprovisioning/trove.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  }
+ ]
+}

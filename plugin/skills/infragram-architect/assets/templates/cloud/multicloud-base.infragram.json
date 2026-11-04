@@ -1,0 +1,398 @@
+{
+  "schema_version": 2,
+  "kind": "multicloud",
+  "slug": "multicloud-base",
+  "title": "Multicloud application platform",
+  "description": "A reusable mixed-provider canvas with every installed library: the public clouds, Cloudflare, OVHcloud, Vultr, Akamai Cloud, Kubernetes, OpenStack, VMware vSphere, Proxmox VE, Hetzner, and the complete local/on-premises product library.",
+  "providers": [
+    {
+      "id": "azure",
+      "enabled": true
+    },
+    {
+      "id": "aws",
+      "enabled": true
+    },
+    {
+      "id": "gcp",
+      "enabled": true
+    },
+    {
+      "id": "cloudflare",
+      "enabled": true
+    },
+    {
+      "id": "digitalocean",
+      "enabled": true
+    },
+    {
+      "id": "oracle",
+      "enabled": true
+    },
+    {
+      "id": "ibm",
+      "enabled": true
+    },
+    {
+      "id": "alibaba",
+      "enabled": true
+    },
+    {
+      "id": "kubernetes",
+      "enabled": true
+    },
+    {
+      "id": "hetzner",
+      "enabled": true
+    },
+    {
+      "id": "onprem",
+      "enabled": true
+    },
+    {
+      "id": "ovhcloud",
+      "enabled": true
+    },
+    {
+      "id": "vultr",
+      "enabled": true
+    },
+    {
+      "id": "akamai",
+      "enabled": true
+    },
+    {
+      "id": "openstack",
+      "enabled": true
+    },
+    {
+      "id": "vmware",
+      "enabled": true
+    },
+    {
+      "id": "proxmox",
+      "enabled": true
+    },
+    {
+      "id": "databricks",
+      "enabled": true
+    },
+    {
+      "id": "equinix",
+      "enabled": true
+    }
+  ],
+  "default_library": "all",
+  "layers": [
+    {
+      "id": "provider:azure",
+      "name": "Azure",
+      "kind": "provider",
+      "provider": "azure",
+      "visible": true,
+      "locked": false,
+      "order": 0
+    },
+    {
+      "id": "provider:aws",
+      "name": "AWS",
+      "kind": "provider",
+      "provider": "aws",
+      "visible": true,
+      "locked": false,
+      "order": 1
+    },
+    {
+      "id": "provider:gcp",
+      "name": "Google Cloud",
+      "kind": "provider",
+      "provider": "gcp",
+      "visible": true,
+      "locked": false,
+      "order": 2
+    },
+    {
+      "id": "provider:cloudflare",
+      "name": "Cloudflare",
+      "kind": "provider",
+      "provider": "cloudflare",
+      "visible": true,
+      "locked": false,
+      "order": 3
+    },
+    {
+      "id": "provider:digitalocean",
+      "name": "DigitalOcean",
+      "kind": "provider",
+      "provider": "digitalocean",
+      "visible": true,
+      "locked": false,
+      "order": 4
+    },
+    {
+      "id": "provider:oracle",
+      "name": "Oracle Cloud",
+      "kind": "provider",
+      "provider": "oracle",
+      "visible": true,
+      "locked": false,
+      "order": 5
+    },
+    {
+      "id": "provider:ibm",
+      "name": "IBM Cloud",
+      "kind": "provider",
+      "provider": "ibm",
+      "visible": true,
+      "locked": false,
+      "order": 6
+    },
+    {
+      "id": "provider:alibaba",
+      "name": "Alibaba Cloud",
+      "kind": "provider",
+      "provider": "alibaba",
+      "visible": true,
+      "locked": false,
+      "order": 7
+    },
+    {
+      "id": "platform:kubernetes",
+      "name": "Kubernetes",
+      "kind": "platform",
+      "provider": "kubernetes",
+      "visible": true,
+      "locked": false,
+      "order": 8
+    },
+    {
+      "id": "provider:hetzner",
+      "name": "Hetzner",
+      "kind": "provider",
+      "provider": "hetzner",
+      "visible": true,
+      "locked": false,
+      "order": 9
+    },
+    {
+      "id": "provider:onprem",
+      "name": "Local & On-Premises",
+      "kind": "provider",
+      "provider": "onprem",
+      "visible": true,
+      "locked": false,
+      "order": 10
+    },
+    {
+      "id": "provider:ovhcloud",
+      "name": "OVHcloud",
+      "kind": "provider",
+      "provider": "ovhcloud",
+      "visible": true,
+      "locked": false,
+      "order": 11
+    },
+    {
+      "id": "provider:vultr",
+      "name": "Vultr",
+      "kind": "provider",
+      "provider": "vultr",
+      "visible": true,
+      "locked": false,
+      "order": 12
+    },
+    {
+      "id": "provider:akamai",
+      "name": "Akamai Cloud",
+      "kind": "provider",
+      "provider": "akamai",
+      "visible": true,
+      "locked": false,
+      "order": 13
+    },
+    {
+      "id": "platform:openstack",
+      "name": "OpenStack",
+      "kind": "platform",
+      "provider": "openstack",
+      "visible": true,
+      "locked": false,
+      "order": 14
+    },
+    {
+      "id": "platform:vmware",
+      "name": "VMware vSphere",
+      "kind": "platform",
+      "provider": "vmware",
+      "visible": true,
+      "locked": false,
+      "order": 15
+    },
+    {
+      "id": "platform:proxmox",
+      "name": "Proxmox VE",
+      "kind": "platform",
+      "provider": "proxmox",
+      "visible": true,
+      "locked": false,
+      "order": 16
+    },
+    {
+      "id": "platform:databricks",
+      "name": "Databricks",
+      "kind": "platform",
+      "provider": "databricks",
+      "visible": true,
+      "locked": false,
+      "order": 17
+    },
+    {
+      "id": "provider:equinix",
+      "name": "Equinix",
+      "kind": "provider",
+      "provider": "equinix",
+      "visible": true,
+      "locked": false,
+      "order": 18
+    }
+  ],
+  "presentation": {
+    "size": "fit",
+    "detail": "faithful",
+    "audience": "mixed",
+    "eyebrow": "Multicloud architecture",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Multicloud application platform",
+    "type": "group",
+    "children": [
+      {
+        "id": "azure-gateway",
+        "name": "Azure Application Gateway",
+        "type": "gateway",
+        "component": {
+          "provider": "azure",
+          "service_id": "application-gateways",
+          "icon_ref": "azure:application-gateways"
+        },
+        "layer_id": "provider:azure",
+        "attributes": {
+          "category": "networking",
+          "detail": "application ingress"
+        },
+        "connections": [
+          {
+            "target": "aws-function",
+            "kind": "solid",
+            "label": "HTTPS"
+          }
+        ]
+      },
+      {
+        "id": "aws-function",
+        "name": "AWS Lambda",
+        "type": "service",
+        "component": {
+          "provider": "aws",
+          "service_id": "lambda",
+          "icon_ref": "aws:lambda"
+        },
+        "layer_id": "provider:aws",
+        "attributes": {
+          "category": "compute",
+          "detail": "event processing"
+        },
+        "connections": [
+          {
+            "target": "gcp-database",
+            "kind": "solid",
+            "label": "events"
+          }
+        ]
+      },
+      {
+        "id": "gcp-database",
+        "name": "Google Cloud SQL",
+        "type": "database",
+        "component": {
+          "provider": "gcp",
+          "service_id": "cloud-sql",
+          "icon_ref": "gcp:cloud-sql"
+        },
+        "layer_id": "provider:gcp",
+        "attributes": {
+          "category": "databases",
+          "detail": "managed relational data"
+        },
+        "connections": [
+          {
+            "target": "do-droplet",
+            "kind": "solid",
+            "label": "sync"
+          }
+        ]
+      },
+      {
+        "id": "do-droplet",
+        "name": "DigitalOcean Droplet",
+        "type": "service",
+        "component": {
+          "provider": "digitalocean",
+          "service_id": "droplet",
+          "icon_ref": "digitalocean:droplet"
+        },
+        "layer_id": "provider:digitalocean",
+        "attributes": {
+          "category": "compute",
+          "detail": "edge workload"
+        },
+        "connections": [
+          {
+            "target": "hetzner-cloud",
+            "kind": "solid",
+            "label": "private"
+          }
+        ]
+      },
+      {
+        "id": "hetzner-cloud",
+        "name": "Hetzner Cloud Server",
+        "type": "service",
+        "component": {
+          "provider": "hetzner",
+          "service_id": "cloud",
+          "icon_ref": "hetzner:cloud"
+        },
+        "layer_id": "provider:hetzner",
+        "attributes": {
+          "category": "compute",
+          "detail": "shared vCPU"
+        },
+        "connections": [
+          {
+            "target": "kubernetes-platform",
+            "kind": "solid",
+            "label": "deploy"
+          }
+        ]
+      },
+      {
+        "id": "kubernetes-platform",
+        "name": "Kubernetes",
+        "type": "service",
+        "component": {
+          "provider": "kubernetes",
+          "service_id": "kubernetes",
+          "icon_ref": "kubernetes:kubernetes"
+        },
+        "layer_id": "platform:kubernetes",
+        "attributes": {
+          "category": "containers",
+          "detail": "container orchestration"
+        }
+      }
+    ]
+  }
+}

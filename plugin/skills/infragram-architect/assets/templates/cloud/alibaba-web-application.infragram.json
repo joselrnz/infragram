@@ -1,0 +1,398 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "alibaba-web-application",
+  "title": "Web application on Alibaba Cloud",
+  "description": "DNS and CDN front an Anti-DDoS and WAF edge; a Server Load Balancer spreads traffic over ECS instances and an ACK container cluster in two zone vSwitches; RDS, ApsaraDB for Redis and OSS hold the data; Log Service, Security Center and a bastion host cover operations.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "alibaba",
+      "enabled": true
+    }
+  ],
+  "default_library": "alibaba",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Alibaba Cloud reference architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Web application on Alibaba Cloud",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "users",
+        "name": "Users",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": "internet clients"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "dns",
+            "kind": "solid",
+            "label": "DNS · HTTPS",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "dns",
+        "name": "Alibaba Cloud DNS",
+        "type": "service",
+        "component": {
+          "provider": "alibaba",
+          "service_id": "web-dns",
+          "icon_ref": "alibaba:web-dns"
+        },
+        "attributes": {
+          "detail": ""
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "cdn",
+            "kind": "solid",
+            "label": "CNAME",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "cdn",
+        "name": "CDN",
+        "type": "service",
+        "component": {
+          "provider": "alibaba",
+          "service_id": "network-cdn",
+          "icon_ref": "alibaba:network-cdn"
+        },
+        "attributes": {
+          "detail": "edge cache"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "ddos",
+            "kind": "solid",
+            "label": "origin",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "account",
+        "name": "Alibaba Cloud account",
+        "type": "account",
+        "attributes": {
+          "editor_frame_group": "alibaba"
+        },
+        "children": [
+          {
+            "id": "region",
+            "name": "Region · cn-hangzhou",
+            "type": "region",
+            "attributes": {
+              "editor_frame_group": "alibaba"
+            },
+            "children": [
+              {
+                "id": "vpc",
+                "name": "VPC · 172.16.0.0/12",
+                "type": "vpc",
+                "attributes": {
+                  "editor_frame_group": "alibaba"
+                },
+                "children": [
+                  {
+                    "id": "zone-a",
+                    "name": "vSwitch · Zone A",
+                    "type": "subnet-private",
+                    "attributes": {
+                      "editor_frame_group": "alibaba"
+                    },
+                    "children": [
+                      {
+                        "id": "ddos",
+                        "name": "Anti-DDoS Pro",
+                        "type": "service",
+                        "component": {
+                          "provider": "alibaba",
+                          "service_id": "security-anti-ddos-pro",
+                          "icon_ref": "alibaba:security-anti-ddos-pro"
+                        },
+                        "attributes": {
+                          "detail": ""
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "waf",
+                            "kind": "solid",
+                            "label": "clean traffic",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "waf",
+                        "name": "Web Application Firewall",
+                        "type": "service",
+                        "component": {
+                          "provider": "alibaba",
+                          "service_id": "security-web-application-firewall",
+                          "icon_ref": "alibaba:security-web-application-firewall"
+                        },
+                        "attributes": {
+                          "detail": ""
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "slb",
+                            "kind": "solid",
+                            "label": "HTTPS",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "slb",
+                        "name": "Server Load Balancer",
+                        "type": "service",
+                        "component": {
+                          "provider": "alibaba",
+                          "service_id": "network-server-load-balancer",
+                          "icon_ref": "alibaba:network-server-load-balancer"
+                        },
+                        "attributes": {
+                          "detail": "L7"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "ecs-a",
+                            "kind": "solid",
+                            "label": "HTTP",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "ack",
+                            "kind": "solid",
+                            "label": "HTTP",
+                            "direction": "forward"
+                          }
+                        ]
+                      }
+                    ],
+                    "connections": []
+                  },
+                  {
+                    "id": "zone-b",
+                    "name": "vSwitch · Zone B",
+                    "type": "subnet-private",
+                    "attributes": {
+                      "editor_frame_group": "alibaba"
+                    },
+                    "children": [
+                      {
+                        "id": "ecs-a",
+                        "name": "ECS web tier",
+                        "type": "service",
+                        "component": {
+                          "provider": "alibaba",
+                          "service_id": "compute-elastic-compute-service",
+                          "icon_ref": "alibaba:compute-elastic-compute-service"
+                        },
+                        "attributes": {
+                          "detail": "auto scaling group"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "rds",
+                            "kind": "solid",
+                            "label": "SQL",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "redis",
+                            "kind": "solid",
+                            "label": "cache",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "ack",
+                        "name": "ACK",
+                        "type": "service",
+                        "component": {
+                          "provider": "alibaba",
+                          "service_id": "compute-container-service",
+                          "icon_ref": "alibaba:compute-container-service"
+                        },
+                        "attributes": {
+                          "detail": "Kubernetes"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "rds",
+                            "kind": "solid",
+                            "label": "",
+                            "direction": "forward"
+                          },
+                          {
+                            "target": "oss",
+                            "kind": "dashed",
+                            "label": "objects",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "natgw",
+                        "name": "NAT Gateway",
+                        "type": "service",
+                        "component": {
+                          "provider": "alibaba",
+                          "service_id": "network-nat-gateway",
+                          "icon_ref": "alibaba:network-nat-gateway"
+                        },
+                        "attributes": {
+                          "detail": "egress"
+                        },
+                        "children": [],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  },
+                  {
+                    "id": "zone-data",
+                    "name": "vSwitch · data",
+                    "type": "subnet-private",
+                    "attributes": {
+                      "editor_frame_group": "alibaba"
+                    },
+                    "children": [
+                      {
+                        "id": "rds",
+                        "name": "RDS",
+                        "type": "service",
+                        "component": {
+                          "provider": "alibaba",
+                          "service_id": "database-relational-database-service",
+                          "icon_ref": "alibaba:database-relational-database-service"
+                        },
+                        "attributes": {
+                          "detail": "MySQL · HA"
+                        },
+                        "children": [],
+                        "connections": []
+                      },
+                      {
+                        "id": "redis",
+                        "name": "ApsaraDB for Redis",
+                        "type": "service",
+                        "component": {
+                          "provider": "alibaba",
+                          "service_id": "database-apsaradb-redis",
+                          "icon_ref": "alibaba:database-apsaradb-redis"
+                        },
+                        "attributes": {
+                          "detail": ""
+                        },
+                        "children": [],
+                        "connections": []
+                      },
+                      {
+                        "id": "oss",
+                        "name": "OSS",
+                        "type": "service",
+                        "component": {
+                          "provider": "alibaba",
+                          "service_id": "storage-object-storage-service",
+                          "icon_ref": "alibaba:storage-object-storage-service"
+                        },
+                        "attributes": {
+                          "detail": "object storage"
+                        },
+                        "children": [],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "sls",
+            "name": "Log Service",
+            "type": "service",
+            "component": {
+              "provider": "alibaba",
+              "service_id": "application-log-service",
+              "icon_ref": "alibaba:application-log-service"
+            },
+            "attributes": {
+              "detail": "logs · metrics"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "sc",
+            "name": "Security Center",
+            "type": "service",
+            "component": {
+              "provider": "alibaba",
+              "service_id": "security-security-center",
+              "icon_ref": "alibaba:security-security-center"
+            },
+            "attributes": {
+              "detail": "posture · alerts"
+            },
+            "children": [],
+            "connections": []
+          },
+          {
+            "id": "bastion",
+            "name": "Bastion Host",
+            "type": "service",
+            "component": {
+              "provider": "alibaba",
+              "service_id": "security-bastion-host",
+              "icon_ref": "alibaba:security-bastion-host"
+            },
+            "attributes": {
+              "detail": "operator access"
+            },
+            "children": [],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "slug": "akamai",
+  "name": "Akamai Cloud",
+  "title": "Akamai Cloud (Linode) delivery",
+  "mark": "logos:akamai#default",
+  "mark_color": "#0096d6",
+  "icons": {
+    "categories": [
+      "analytics",
+      "compute",
+      "containers",
+      "data",
+      "integration",
+      "networking",
+      "security",
+      "storage"
+    ],
+    "items": []
+  },
+  "theme": {
+    "paper": "#ffffff",
+    "paper_2": "#f4f8f9",
+    "ink": "#132026",
+    "muted": "#455e68",
+    "soft": "#5e7782",
+    "accent": "#0096d6",
+    "link": "#007aad"
+  },
+  "icon_palette": [
+    "#0096d6",
+    "#00a95c",
+    "#ffffff"
+  ],
+  "services": {
+    "entry": {
+      "name": "NodeBalancer",
+      "detail": "regional · TLS"
+    },
+    "app": {
+      "name": "Linode Compute Instance",
+      "detail": "dedicated CPU · VPC attached"
+    },
+    "object_store": {
+      "name": "Object Storage",
+      "detail": "S3-compatible"
+    },
+    "database": {
+      "name": "Managed Database",
+      "detail": "PostgreSQL · HA"
+    }
+  },
+  "boundaries": {
+    "color": "#0096d6",
+    "icons": {
+      "cluster": "logos:kubernetes#mono"
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+ "schema_version": 1,
+ "slug": "gcp",
+ "name": "Google Cloud",
+ "title": "Google Cloud application delivery",
+ "mark": "marks/gcp.svg",
+ "icons": {
+  "categories": [
+   "analytics",
+   "compute",
+   "containers",
+   "data",
+   "integration",
+   "networking",
+   "security",
+   "storage"
+  ],
+  "items": [
+   {
+    "id": "compute-engine",
+    "name": "Compute Engine",
+    "category": "compute",
+    "aliases": [
+     "vm",
+     "virtual machine"
+    ],
+    "asset_ref": "vendors/gcp/compute-engine-legacy"
+   },
+   {
+    "id": "cloud-functions",
+    "name": "Cloud Functions",
+    "category": "compute",
+    "aliases": [
+     "function",
+     "serverless function"
+    ],
+    "asset_ref": "vendors/gcp/cloud-functions"
+   },
+   {
+    "id": "cloud-run",
+    "name": "Cloud Run",
+    "category": "compute",
+    "aliases": [
+     "serverless containers"
+    ],
+    "asset_ref": "vendors/gcp/cloud-run-legacy"
+   },
+   {
+    "id": "app-engine",
+    "name": "App Engine",
+    "category": "compute",
+    "aliases": [
+     "paas"
+    ],
+    "asset_ref": "vendors/gcp/app-engine"
+   },
+   {
+    "id": "kubernetes-engine",
+    "name": "Google Kubernetes Engine",
+    "category": "containers",
+    "aliases": [
+     "gke",
+     "kubernetes"
+    ],
+    "asset_ref": "vendors/gcp/google-kubernetes-engine"
+   },
+   {
+    "id": "virtual-private-cloud",
+    "name": "Virtual Private Cloud",
+    "category": "networking",
+    "aliases": [
+     "vpc"
+    ],
+    "asset_ref": "vendors/gcp/virtual-private-cloud"
+   },
+   {
+    "id": "cloud-load-balancing",
+    "name": "Cloud Load Balancing",
+    "category": "networking",
+    "aliases": [
+     "load balancer"
+    ],
+    "asset_ref": "vendors/gcp/cloud-load-balancing"
+   },
+   {
+    "id": "cloud-vpn",
+    "name": "Cloud VPN",
+    "category": "networking",
+    "aliases": [
+     "vpn"
+    ],
+    "asset_ref": "vendors/gcp/cloud-vpn"
+   },
+   {
+    "id": "cloud-dns",
+    "name": "Cloud DNS",
+    "category": "networking",
+    "aliases": [
+     "dns"
+    ],
+    "asset_ref": "vendors/gcp/cloud-dns"
+   },
+   {
+    "id": "cloud-storage",
+    "name": "Cloud Storage",
+    "category": "storage",
+    "aliases": [
+     "gcs",
+     "object storage"
+    ],
+    "asset_ref": "vendors/gcp/cloud-storage-legacy"
+   },
+   {
+    "id": "cloud-sql",
+    "name": "Cloud SQL",
+    "category": "data",
+    "aliases": [
+     "relational database"
+    ],
+    "asset_ref": "vendors/gcp/cloud-sql-legacy"
+   },
+   {
+    "id": "cloud-spanner",
+    "name": "Cloud Spanner",
+    "category": "data",
+    "aliases": [
+     "spanner"
+    ],
+    "asset_ref": "vendors/gcp/cloud-spanner-legacy"
+   },
+   {
+    "id": "bigquery",
+    "name": "BigQuery",
+    "category": "analytics",
+    "aliases": [
+     "data warehouse"
+    ],
+    "asset_ref": "vendors/gcp/bigquery-legacy"
+   },
+   {
+    "id": "pub-sub",
+    "name": "Pub/Sub",
+    "category": "integration",
+    "aliases": [
+     "pubsub",
+     "messaging"
+    ],
+    "asset_ref": "vendors/gcp/pubsub"
+   },
+   {
+    "id": "secret-manager",
+    "name": "Secret Manager",
+    "category": "security",
+    "aliases": [
+     "secrets"
+    ],
+    "asset_ref": "vendors/gcp/secret-manager"
+   },
+   {
+    "id": "cloud-monitoring",
+    "name": "Cloud Monitoring",
+    "category": "analytics",
+    "aliases": [
+     "monitoring"
+    ],
+    "asset_ref": "vendors/gcp/cloud-monitoring"
+   }
+  ]
+ },
+ "theme": {
+  "paper": "#ffffff",
+  "paper_2": "#f4f6f9",
+  "ink": "#131a26",
+  "muted": "#455368",
+  "soft": "#5e6c82",
+  "accent": "#8ab4f8",
+  "link": "#0a45a4"
+ },
+ "icon_palette": [
+  "#4285f4",
+  "#669df6",
+  "#aecbfa",
+  "#34a853",
+  "#fbbc04",
+  "#ea4335"
+ ],
+ "service_icons": {
+  "entry": "cloud-load-balancing",
+  "app": "cloud-run",
+  "object_store": "cloud-storage",
+  "database": "cloud-sql"
+ },
+ "services": {
+  "entry": {
+   "name": "Cloud Load Balancing",
+   "detail": "global edge · TLS"
+  },
+  "app": {
+   "name": "Cloud Run",
+   "detail": "managed containers"
+  },
+  "object_store": {
+   "name": "Cloud Storage",
+   "detail": "static · objects"
+  },
+  "database": {
+   "name": "Cloud SQL",
+   "detail": "managed relational"
+  }
+ },
+ "boundaries": {
+  "color": "#4285f4",
+  "icons": {
+   "cluster": "logos:kubernetes#mono"
+  }
+ },
+ "step_color": "#174ea6",
+  "step_second": {"color": "#0d652d", "marks": "letters"}
+}

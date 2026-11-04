@@ -1,0 +1,65 @@
+{
+  "about": "What the aws CLI answers for a small account in eu-west-1: a web tier behind a load balancer, a database, a bucket, the region's default VPC (unused), and one call the account may not make. Keys are the call without --output, --profile and the program name.",
+  "calls": {
+    "sts get-caller-identity": {"Account": "111122223333", "Arn": "arn:aws:iam::111122223333:user/reader", "UserId": "AIDA"},
+    "ec2 describe-vpcs --region eu-west-1": {"Vpcs": [
+      {"VpcId": "vpc-0a1", "CidrBlock": "10.10.0.0/16", "IsDefault": false, "Tags": [{"Key": "Name", "Value": "shop-prod"}]},
+      {"VpcId": "vpc-0de", "CidrBlock": "172.31.0.0/16", "IsDefault": true}
+    ]},
+    "ec2 describe-subnets --region eu-west-1": {"Subnets": [
+      {"SubnetId": "subnet-pub-a", "VpcId": "vpc-0a1", "CidrBlock": "10.10.0.0/24", "AvailabilityZone": "eu-west-1a", "MapPublicIpOnLaunch": false, "DefaultForAz": false, "Tags": [{"Key": "Name", "Value": "shop-prod-public-a"}]},
+      {"SubnetId": "subnet-pub-b", "VpcId": "vpc-0a1", "CidrBlock": "10.10.1.0/24", "AvailabilityZone": "eu-west-1b", "MapPublicIpOnLaunch": false, "DefaultForAz": false, "Tags": [{"Key": "Name", "Value": "shop-prod-public-b"}]},
+      {"SubnetId": "subnet-app-a", "VpcId": "vpc-0a1", "CidrBlock": "10.10.10.0/24", "AvailabilityZone": "eu-west-1a", "MapPublicIpOnLaunch": false, "DefaultForAz": false, "Tags": [{"Key": "Name", "Value": "shop-prod-app-a"}]},
+      {"SubnetId": "subnet-app-b", "VpcId": "vpc-0a1", "CidrBlock": "10.10.11.0/24", "AvailabilityZone": "eu-west-1b", "MapPublicIpOnLaunch": false, "DefaultForAz": false, "Tags": [{"Key": "Name", "Value": "shop-prod-app-b"}]},
+      {"SubnetId": "subnet-def-a", "VpcId": "vpc-0de", "CidrBlock": "172.31.0.0/20", "AvailabilityZone": "eu-west-1a", "MapPublicIpOnLaunch": true, "DefaultForAz": true}
+    ]},
+    "ec2 describe-internet-gateways --region eu-west-1": {"InternetGateways": [
+      {"InternetGatewayId": "igw-0a1", "Attachments": [{"VpcId": "vpc-0a1", "State": "available"}], "Tags": [{"Key": "Name", "Value": "shop-prod-igw"}]}
+    ]},
+    "ec2 describe-nat-gateways --region eu-west-1": {"NatGateways": [
+      {"NatGatewayId": "nat-0a1", "SubnetId": "subnet-pub-a", "VpcId": "vpc-0a1", "State": "available", "Tags": [{"Key": "Name", "Value": "shop-prod-nat"}]}
+    ]},
+    "ec2 describe-route-tables --region eu-west-1": {"RouteTables": [
+      {"RouteTableId": "rtb-pub", "VpcId": "vpc-0a1", "Routes": [{"DestinationCidrBlock": "0.0.0.0/0", "GatewayId": "igw-0a1"}],
+       "Associations": [{"RouteTableAssociationId": "rtbassoc-1", "SubnetId": "subnet-pub-a"}, {"RouteTableAssociationId": "rtbassoc-2", "SubnetId": "subnet-pub-b"}]},
+      {"RouteTableId": "rtb-app", "VpcId": "vpc-0a1", "Routes": [{"DestinationCidrBlock": "0.0.0.0/0", "NatGatewayId": "nat-0a1"}],
+       "Associations": [{"RouteTableAssociationId": "rtbassoc-3", "SubnetId": "subnet-app-a"}, {"RouteTableAssociationId": "rtbassoc-4", "SubnetId": "subnet-app-b"}]}
+    ]},
+    "ec2 describe-security-groups --region eu-west-1": {"SecurityGroups": [
+      {"GroupId": "sg-alb", "GroupName": "shop-alb", "VpcId": "vpc-0a1", "IpPermissions": [
+        {"IpProtocol": "tcp", "FromPort": 443, "ToPort": 443, "IpRanges": [{"CidrIp": "0.0.0.0/0"}], "UserIdGroupPairs": []}]},
+      {"GroupId": "sg-web", "GroupName": "shop-web", "VpcId": "vpc-0a1", "IpPermissions": [
+        {"IpProtocol": "tcp", "FromPort": 8080, "ToPort": 8080, "IpRanges": [], "UserIdGroupPairs": [{"GroupId": "sg-alb"}]}]},
+      {"GroupId": "sg-db", "GroupName": "shop-db", "VpcId": "vpc-0a1", "IpPermissions": [
+        {"IpProtocol": "tcp", "FromPort": 5432, "ToPort": 5432, "IpRanges": [], "UserIdGroupPairs": [{"GroupId": "sg-web"}]}]}
+    ]},
+    "ec2 describe-instances --region eu-west-1": {"Reservations": [
+      {"Instances": [
+        {"InstanceId": "i-web1", "SubnetId": "subnet-app-a", "VpcId": "vpc-0a1", "InstanceType": "m6i.large", "State": {"Name": "running"}, "SecurityGroups": [{"GroupId": "sg-web"}], "PrivateIpAddress": "10.10.10.5", "Tags": [{"Key": "Name", "Value": "shop-prod-web-1"}]},
+        {"InstanceId": "i-web2", "SubnetId": "subnet-app-b", "VpcId": "vpc-0a1", "InstanceType": "m6i.large", "State": {"Name": "running"}, "SecurityGroups": [{"GroupId": "sg-web"}], "PrivateIpAddress": "10.10.11.5", "Tags": [{"Key": "Name", "Value": "shop-prod-web-2"}]},
+        {"InstanceId": "i-old", "SubnetId": "subnet-app-a", "VpcId": "vpc-0a1", "InstanceType": "t3.micro", "State": {"Name": "terminated"}, "SecurityGroups": []}
+      ]}
+    ]},
+    "elbv2 describe-load-balancers --region eu-west-1": {"LoadBalancers": [
+      {"LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:loadbalancer/app/shop-alb/1", "LoadBalancerName": "shop-alb", "DNSName": "shop-alb-1.eu-west-1.elb.amazonaws.com", "Scheme": "internet-facing", "Type": "application", "VpcId": "vpc-0a1",
+       "AvailabilityZones": [{"SubnetId": "subnet-pub-a"}, {"SubnetId": "subnet-pub-b"}], "SecurityGroups": ["sg-alb"]}
+    ]},
+    "elbv2 describe-listeners --load-balancer-arn arn:aws:elasticloadbalancing:eu-west-1:111122223333:loadbalancer/app/shop-alb/1 --region eu-west-1": {"Listeners": [
+      {"ListenerArn": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:listener/app/shop-alb/1/443", "Port": 443, "Protocol": "HTTPS",
+       "DefaultActions": [{"Type": "forward", "TargetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:targetgroup/shop-web/2"}]}
+    ]},
+    "elbv2 describe-target-groups --region eu-west-1": {"TargetGroups": [
+      {"TargetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:targetgroup/shop-web/2", "TargetGroupName": "shop-web", "Port": 8080, "Protocol": "HTTP", "VpcId": "vpc-0a1"}
+    ]},
+    "elbv2 describe-target-health --target-group-arn arn:aws:elasticloadbalancing:eu-west-1:111122223333:targetgroup/shop-web/2 --region eu-west-1": {"TargetHealthDescriptions": [
+      {"Target": {"Id": "i-web1", "Port": 8080}}, {"Target": {"Id": "i-web2", "Port": 8080}}
+    ]},
+    "rds describe-db-instances --region eu-west-1": {"DBInstances": [
+      {"DBInstanceIdentifier": "shop-prod-db", "DbiResourceId": "db-ABC", "DBInstanceArn": "arn:aws:rds:eu-west-1:111122223333:db:shop-prod-db", "DBInstanceClass": "db.r6g.large", "Engine": "postgres", "EngineVersion": "16.3",
+       "DBSubnetGroup": {"DBSubnetGroupName": "shop-db", "Subnets": [{"SubnetIdentifier": "subnet-app-a"}, {"SubnetIdentifier": "subnet-app-b"}]},
+       "VpcSecurityGroups": [{"VpcSecurityGroupId": "sg-db"}]}
+    ]},
+    "s3api list-buckets": {"Buckets": [{"Name": "shop-prod-assets"}]},
+    "lambda list-functions --region eu-west-1": {"__error__": "An error occurred (AccessDeniedException) when calling the ListFunctions operation: not authorized"}
+  }
+}

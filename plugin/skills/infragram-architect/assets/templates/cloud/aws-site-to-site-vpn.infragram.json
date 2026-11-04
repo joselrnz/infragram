@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "slug": "aws-site-to-site-vpn",
+  "title": "AWS Site-to-Site VPN to an Amazon VPC",
+  "description": "Traffic encryption combines an end-to-end IPsec connection with the low latency of AWS Direct Connect. A customer gateway reaches an AWS device over a public virtual interface, and the Site-to-Site VPN terminates on a virtual private gateway attached to a VPC with workloads across two Availability Zones.",
+  "provider": "aws",
+  "presentation": {
+    "size": "fit",
+    "detail": "faithful",
+    "audience": "engineer",
+    "eyebrow": "AWS Reference Architecture",
+    "heading": "Encrypted over Direct Connect",
+    "legend": [
+      [
+        "vif",
+        "Direct Connect public VIF"
+      ],
+      [
+        "vpn",
+        "AWS Site-to-Site VPN"
+      ],
+      [
+        "local",
+        "VPC routing"
+      ]
+    ]
+  },
+  "topology": {
+    "id": "root",
+    "name": "Traffic encryption",
+    "type": "estate",
+    "attributes": {
+      "flow": "row"
+    },
+    "children": [
+      {
+        "id": "aws-cloud",
+        "name": "AWS Cloud",
+        "type": "cloud",
+        "attributes": {
+          "flow": "column"
+        },
+        "children": [
+          {
+            "id": "aws-region",
+            "name": "AWS Region",
+            "type": "region",
+            "attributes": {
+              "flow": "column"
+            },
+            "children": [
+              {
+                "id": "vpc",
+                "name": "VPC · 10.0.0.0/16",
+                "type": "vpc",
+                "attributes": {
+                  "flow": "column"
+                },
+                "children": [
+                  {
+                    "id": "zone-a",
+                    "name": "Availability Zone A",
+                    "type": "zone",
+                    "attributes": {
+                      "flow": "column"
+                    },
+                    "children": [
+                      {
+                        "id": "public-subnet",
+                        "name": "Public subnet · 10.0.0.0/24",
+                        "type": "subnet-public",
+                        "children": [
+                          {
+                            "id": "instance-a",
+                            "name": "Amazon EC2 instance",
+                            "type": "workload",
+                            "attributes": {
+                              "icon": "ec2",
+                              "category": "compute",
+                              "detail": "workload"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "zone-b",
+                    "name": "Availability Zone B",
+                    "type": "zone",
+                    "attributes": {
+                      "flow": "column"
+                    },
+                    "children": [
+                      {
+                        "id": "private-subnet",
+                        "name": "Private subnet · 10.0.1.0/24",
+                        "type": "subnet-private",
+                        "children": [
+                          {
+                            "id": "instance-b",
+                            "name": "EC2 instances",
+                            "type": "workload",
+                            "attributes": {
+                              "icon": "ec2",
+                              "category": "compute",
+                              "detail": "workloads"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "virtual-private-gateway",
+                "name": "Virtual private gateway",
+                "type": "vpn-endpoint",
+                "attributes": {
+                  "icon": "site-to-site-vpn",
+                  "category": "networking-content-delivery",
+                  "detail": "VPN endpoint"
+                },
+                "connections": [
+                  {
+                    "target": "instance-a",
+                    "kind": "local"
+                  },
+                  {
+                    "target": "instance-b",
+                    "kind": "local"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "direct-connect-location",
+        "name": "AWS Direct Connect location",
+        "type": "location",
+        "attributes": {
+          "flow": "row"
+        },
+        "children": [
+          {
+            "id": "aws-device",
+            "name": "AWS device",
+            "type": "cross-connect",
+            "attributes": {
+              "icon": "direct-connect",
+              "category": "networking-content-delivery",
+              "detail": "cross-connect"
+            },
+            "connections": [
+              {
+                "target": "virtual-private-gateway",
+                "kind": "vpn",
+                "label": "AWS Site-to-Site VPN"
+              }
+            ]
+          },
+          {
+            "id": "partner-device",
+            "name": "Customer or partner device",
+            "type": "customer-side",
+            "attributes": {
+              "icon": "direct-connect",
+              "category": "networking-content-delivery",
+              "detail": "customer side"
+            },
+            "connections": [
+              {
+                "target": "aws-device",
+                "kind": "vif",
+                "label": "Direct Connect public VIF"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "corporate-network",
+        "name": "Corporate network · 192.168.0.0/16",
+        "type": "site",
+        "attributes": {
+          "flow": "column"
+        },
+        "children": [
+          {
+            "id": "customer-gateway",
+            "name": "Customer gateway",
+            "type": "customer-gateway",
+            "attributes": {
+              "icon": "site-to-site-vpn",
+              "category": "networking-content-delivery",
+              "detail": "CGW"
+            },
+            "connections": [
+              {
+                "target": "partner-device",
+                "kind": "local"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

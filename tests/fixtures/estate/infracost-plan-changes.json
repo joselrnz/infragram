@@ -1,0 +1,22 @@
+{
+  "version": "0.2",
+  "metadata": {"infracostCommand": "breakdown"},
+  "currency": "USD",
+  "projects": [
+    {
+      "name": "billing",
+      "breakdown": {
+        "resources": [
+          {"name": "aws_instance.web[0]", "resourceType": "aws_instance", "hourlyCost": "0.0416", "monthlyCost": "30.368", "subresources": []},
+          {"name": "aws_db_instance.legacy", "resourceType": "aws_db_instance", "hourlyCost": "0.2055", "monthlyCost": "150.015"},
+          {"name": "aws_cloudwatch_log_group.app", "resourceType": "aws_cloudwatch_log_group", "hourlyCost": "0.0021", "monthlyCost": "1.5"},
+          {"name": "aws_lambda_function.hook", "resourceType": "aws_lambda_function", "hourlyCost": null, "monthlyCost": null}
+        ],
+        "totalHourlyCost": "0.2492",
+        "totalMonthlyCost": "181.883"
+      }
+    }
+  ],
+  "totalHourlyCost": "0.2492",
+  "totalMonthlyCost": "181.883"
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "slug": "digitalocean-application-delivery",
+  "title": "DigitalOcean application delivery",
+  "description": "Client traffic enters through a DigitalOcean Load Balancer, reaches App Platform, writes to a managed database, and backs up to Spaces.",
+  "provider": "digitalocean",
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "DigitalOcean architecture",
+    "legend": [
+      [
+        "solid",
+        "Request and data flow"
+      ]
+    ]
+  },
+  "topology": {
+    "id": "root",
+    "name": "DigitalOcean application delivery",
+    "type": "group",
+    "children": [
+      {
+        "id": "client",
+        "name": "Client",
+        "type": "client",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": "browser"
+        },
+        "connections": [
+          {
+            "target": "load-balancer",
+            "kind": "solid",
+            "label": "HTTPS"
+          }
+        ]
+      },
+      {
+        "id": "load-balancer",
+        "name": "Load Balancer",
+        "type": "gateway",
+        "attributes": {
+          "icon": "load-balancer",
+          "category": "networking",
+          "detail": "edge · TLS"
+        },
+        "connections": [
+          {
+            "target": "app-platform",
+            "kind": "solid",
+            "label": "routes"
+          }
+        ]
+      },
+      {
+        "id": "app-platform",
+        "name": "App Platform",
+        "type": "service",
+        "role": "hub",
+        "attributes": {
+          "icon": "app-platform",
+          "category": "compute",
+          "detail": "managed runtime"
+        },
+        "connections": [
+          {
+            "target": "database",
+            "kind": "solid",
+            "label": "queries"
+          }
+        ]
+      },
+      {
+        "id": "database",
+        "name": "Managed Database",
+        "type": "database",
+        "attributes": {
+          "icon": "databases",
+          "category": "databases",
+          "detail": "PostgreSQL"
+        },
+        "connections": [
+          {
+            "target": "spaces",
+            "kind": "solid",
+            "label": "backups"
+          }
+        ]
+      },
+      {
+        "id": "spaces",
+        "name": "Spaces Bucket",
+        "type": "storage",
+        "attributes": {
+          "icon": "spaces-docs",
+          "category": "storage",
+          "detail": "backup objects"
+        }
+      }
+    ]
+  }
+}

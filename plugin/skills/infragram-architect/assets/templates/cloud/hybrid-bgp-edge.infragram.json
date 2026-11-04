@@ -1,0 +1,375 @@
+{
+  "schema_version": 2,
+  "kind": "hybrid",
+  "slug": "hybrid-bgp-edge",
+  "title": "Multi-homed datacenter with BGP to two ISPs and AWS",
+  "description": "Two edge routers in AS 64512 peer with two ISPs over eBGP and keep an iBGP session; the core runs OSPF; a branch office in AS 64513 reaches the datacenter over IPsec; AWS is reached over Direct Connect with a Site-to-Site VPN as the backup path into a Transit Gateway.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    },
+    {
+      "id": "aws",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Hybrid network architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Multi-homed datacenter with BGP to two ISPs and AWS",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "isp-a",
+        "name": "ISP A · AS 3356",
+        "type": "network",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "pe-a",
+            "name": "PE router A",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "network-cisco-router",
+              "icon_ref": "onprem:network-cisco-router"
+            },
+            "attributes": {
+              "detail": "provider edge"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "internet",
+                "kind": "dotted",
+                "label": "transit"
+              }
+            ]
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "isp-b",
+        "name": "ISP B · AS 1299",
+        "type": "network",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "pe-b",
+            "name": "PE router B",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "network-cisco-router",
+              "icon_ref": "onprem:network-cisco-router"
+            },
+            "attributes": {
+              "detail": "provider edge"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "internet",
+                "kind": "dotted",
+                "label": "transit"
+              }
+            ]
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "internet",
+        "name": "Internet",
+        "type": "service",
+        "component": {
+          "provider": "onprem",
+          "service_id": "network-internet",
+          "icon_ref": "onprem:network-internet"
+        },
+        "attributes": {
+          "detail": "default-free zone"
+        },
+        "children": [],
+        "connections": []
+      },
+      {
+        "id": "branch",
+        "name": "Branch office · AS 64513",
+        "type": "location",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "branch-router",
+            "name": "Branch router",
+            "type": "service",
+            "component": {
+              "provider": "onprem",
+              "service_id": "network-mikrotik",
+              "icon_ref": "onprem:network-mikrotik"
+            },
+            "attributes": {
+              "detail": "eBGP over IPsec"
+            },
+            "children": [],
+            "connections": [
+              {
+                "target": "internet",
+                "kind": "dotted",
+                "label": "ISP"
+              },
+              {
+                "target": "vpn",
+                "kind": "dashed",
+                "label": "IPsec · eBGP AS 64513"
+              }
+            ]
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "dc",
+        "name": "Corporate datacenter · AS 64512",
+        "type": "site",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "edge",
+            "name": "Edge network",
+            "type": "network",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "r1",
+                "name": "Edge router R1",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "network-cisco-router",
+                  "icon_ref": "onprem:network-cisco-router"
+                },
+                "attributes": {
+                  "detail": "eBGP · iBGP"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "pe-a",
+                    "kind": "dashed",
+                    "label": "eBGP · AS 64512 ↔ 3356"
+                  },
+                  {
+                    "target": "r2",
+                    "kind": "dotted",
+                    "label": "iBGP"
+                  }
+                ]
+              },
+              {
+                "id": "r2",
+                "name": "Edge router R2",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "network-cisco-router",
+                  "icon_ref": "onprem:network-cisco-router"
+                },
+                "attributes": {
+                  "detail": "eBGP · iBGP"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "pe-b",
+                    "kind": "dashed",
+                    "label": "eBGP · AS 64512 ↔ 1299"
+                  },
+                  {
+                    "target": "dx",
+                    "kind": "dashed",
+                    "label": "eBGP over Direct Connect"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "core",
+            "name": "Core network · 10.10.0.0/16",
+            "type": "network",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "core-sw",
+                "name": "Core switch L3",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "network-cisco-switch-l3",
+                  "icon_ref": "onprem:network-cisco-switch-l3"
+                },
+                "attributes": {
+                  "detail": "OSPF area 0"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "r1",
+                    "kind": "solid",
+                    "label": "OSPF"
+                  },
+                  {
+                    "target": "r2",
+                    "kind": "solid",
+                    "label": "OSPF"
+                  }
+                ]
+              },
+              {
+                "id": "fw",
+                "name": "Perimeter firewall",
+                "type": "service",
+                "component": {
+                  "provider": "onprem",
+                  "service_id": "perimeter-firewall",
+                  "icon_ref": "onprem:perimeter-firewall"
+                },
+                "attributes": {
+                  "detail": "north-south"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "core-sw",
+                    "kind": "solid",
+                    "label": "L3"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "aws",
+        "name": "AWS Cloud",
+        "type": "cloud",
+        "attributes": {
+          "editor_frame_group": "aws"
+        },
+        "children": [
+          {
+            "id": "dx-loc",
+            "name": "Direct Connect location",
+            "type": "location",
+            "attributes": {
+              "editor_frame_group": "aws"
+            },
+            "children": [
+              {
+                "id": "dx",
+                "name": "Direct Connect",
+                "type": "service",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "direct-connect",
+                  "icon_ref": "aws:direct-connect"
+                },
+                "attributes": {
+                  "detail": "1 Gbps · AS 7224"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "tgw",
+                    "kind": "solid",
+                    "label": "transit VIF"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "region",
+            "name": "us-east-1",
+            "type": "region",
+            "attributes": {
+              "editor_frame_group": "aws"
+            },
+            "children": [
+              {
+                "id": "tgw",
+                "name": "Transit Gateway",
+                "type": "service",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "transit-gateway",
+                  "icon_ref": "aws:transit-gateway"
+                },
+                "attributes": {
+                  "detail": "hub"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "vpn",
+                "name": "Site-to-Site VPN",
+                "type": "service",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "site-to-site-vpn",
+                  "icon_ref": "aws:site-to-site-vpn"
+                },
+                "attributes": {
+                  "detail": "backup path"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "tgw",
+                    "kind": "solid",
+                    "label": "attachment"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

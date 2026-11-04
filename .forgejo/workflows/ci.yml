@@ -1,0 +1,168 @@
+# The full CI, for Forgejo Actions. On GitHub, .github/workflows/ci.yml runs
+# the browser-free quick gates and the inventory check.
+#
+# Two jobs. `gates` is everything that needs no browser: the plugin package
+# and version gate, manifest validation, lint, types, line endings, naming,
+# the full pytest suite, generated code and the wheel, every template exported
+# and checked, the golden pictures, docs sync, the component inventory and the
+# dependency audit. `pictures` is the browser side: the
+# Chromium editor suite, and every template rendered three separate times in
+# both looks with the passes required to be byte-identical before the picture
+# checks run. Nothing is merged on trust.
+
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  PYTHONIOENCODING: utf-8
+  PYTHONUTF8: "1"
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+  # A small self-hosted runner loads a single-file editor page slowly.
+  INFRAGRAM_RENDER_TIMEOUT_MS: "240000"
+  # A page loads nothing remote; offline mode also cuts an older page off
+  # from Google Fonts, so no render waits on a route the runner may not have.
+  INFRAGRAM_RENDER_OFFLINE: "1"
+
+jobs:
+  gates:
+    name: Gates (no browser)
+    runs-on: docker
+    # actions/checkout is a Node action, so the job image must carry Node.
+    # Playwright's Node image does, is multi-arch, ships Chromium at the
+    # version the Python package pins, and is Ubuntu, so Python comes from
+    # apt. Both jobs run on the same base. The version is the one the ink
+    # profiles and the golden pictures are measured with on a workstation:
+    # a different Chromium build rounds three icons' ink differently.
+    container:
+      image: mcr.microsoft.com/playwright:v1.55.0-noble
+    # The runner has limited resources; its jobs use generous time budgets.
+    timeout-minutes: 120
+    steps:
+      - name: Checkout repository history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install Python
+        run: |
+          apt-get update -qq
+          DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends python3 python3-pip python3-venv python-is-python3 > /dev/null
+          python --version
+
+      - name: Install the package and test dependencies
+        run: python -m pip install --break-system-packages -e "./plugin[test]"
+
+      # The script picks its base: origin/main on a pull request, HEAD~1 on a
+      # push to main (where origin/main is HEAD). The manifests, pyproject
+      # must agree. Versions may stay unchanged or increase.
+      - name: Plugin package and version gate
+        run: python scripts/verify/plugin-package.py
+
+      # The repository's marketplace, the plugin's own, and the plugin itself:
+      # its manifest, its skills and its agent. Validating a skills or agents
+      # folder on its own needs a newer CLI than 2.1.229, which refused it as
+      # a plugin with no manifest; 2.1.284 checks their components.
+      - name: Plugin manifests validate
+        run: |
+          set -e
+          npx --yes @anthropic-ai/claude-code@2.1.284 plugin validate . --strict
+          npx --yes @anthropic-ai/claude-code@2.1.284 plugin validate plugin --strict
+          npx --yes @anthropic-ai/claude-code@2.1.284 plugin validate plugin/skills --strict
+          npx --yes @anthropic-ai/claude-code@2.1.284 plugin validate plugin/agents --strict
+
+      - name: Lint
+        if: always()
+        run: python scripts/verify/lint.py
+
+      - name: Types
+        if: always()
+        run: python scripts/verify/typecheck.py
+
+      - name: Line-ending gate
+        if: always()
+        run: python scripts/verify/line-endings.py
+
+      - name: Naming gate
+        if: always()
+        run: python scripts/verify/naming.py
+
+      - name: Unit, skill and integration tests
+        if: always()
+        run: python -m pytest tests/unit tests/skill tests/integration -q -p no:cacheprovider
+
+      - name: Generated code and the wheel
+        if: always()
+        run: |
+          python scripts/tools/generate-nodes.py --check
+          python scripts/build/vendor-tiles.py --check
+          python scripts/verify/wheel.py
+
+      - name: Export every template and check document, page and picture
+        if: always()
+        run: |
+          set -e
+          for f in plugin/skills/infragram-architect/assets/templates/cloud/*.infragram.json; do
+            python -m infragram export:project "$f" --formats template,html,svg --output-dir dist/ci
+          done
+          python plugin/skills/infragram-architect/scripts/project_check.py dist/ci/*.infragram.json dist/ci/*.html dist/ci/*.svg
+
+      - name: Golden pictures
+        if: always()
+        run: python scripts/verify/pictures.py
+
+      - name: Docs and routing sync
+        if: always()
+        run: python scripts/verify/docs-sync.py
+
+      - name: Component inventory
+        if: always()
+        run: python scripts/inventory/build.py --check
+
+      # Every package uv.lock pins, against the published advisories; the one
+      # gate that reads the network, so a new advisory can turn it red with
+      # no change in the tree.
+      - name: Dependency audit
+        if: always()
+        run: python scripts/verify/audit.py
+
+  pictures:
+    name: Pictures (Chromium, three passes)
+    runs-on: docker
+    container:
+      image: mcr.microsoft.com/playwright:v1.55.0-noble
+    timeout-minutes: 240
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Install Python
+        run: |
+          apt-get update -qq
+          DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends python3 python3-pip python3-venv python-is-python3 > /dev/null
+          python --version
+
+      - name: Install the package with the browser's Playwright
+        run: python -m pip install --break-system-packages -e "./plugin[test]"
+
+      - name: Chromium editor suite
+        run: python scripts/verify/browser.py
+
+      - name: Icon ink profiles match the shipped artwork
+        if: always()
+        run: python scripts/tools/ink-profiles.py --check
+
+      - name: Every template, three identical passes, cards and icons
+        if: always()
+        run: |
+          set -e
+          for f in plugin/skills/infragram-architect/assets/templates/cloud/*.infragram.json; do
+            python -m infragram verify:render "$f" --passes 3 --display both
+          done

@@ -1,0 +1,15 @@
+{
+  "resource": {
+    "aws_sqs_queue": {
+      "jobs": {
+        "name": "${local.name}-jobs",
+        "visibility_timeout_seconds": 60
+      }
+    }
+  },
+  "output": {
+    "queue_url": {
+      "value": "${aws_sqs_queue.jobs.url}"
+    }
+  }
+}

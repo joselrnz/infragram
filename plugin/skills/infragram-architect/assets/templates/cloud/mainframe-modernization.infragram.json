@@ -1,0 +1,483 @@
+{
+  "schema_version": 2,
+  "kind": "hybrid",
+  "slug": "mainframe-modernization",
+  "title": "Mainframe modernisation with an event-driven bridge to AWS",
+  "description": "The IBM Z system keeps CICS and Db2 as the system of record; change data capture streams Db2 changes into MSK, IBM MQ bridges transactions to Lambda through an ESB, and managed file transfer moves nightly batch files to S3 over Direct Connect; on AWS, Mainframe Modernization runs refactored COBOL next to Aurora and an API Gateway that serves the mobile channel.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "onprem",
+      "enabled": true
+    },
+    {
+      "id": "aws",
+      "enabled": true
+    }
+  ],
+  "default_library": "onprem",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "Modernisation architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "Mainframe modernisation with an event-driven bridge to AWS",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "tellers",
+        "name": "Branch tellers",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "thin-client",
+          "icon_ref": "infragram:thin-client"
+        },
+        "attributes": {
+          "detail": "3270 emulation"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "mainframe",
+            "kind": "solid",
+            "label": "TN3270 · TLS",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "dc",
+        "name": "Corporate datacenter",
+        "type": "site",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "zone",
+            "name": "System of record",
+            "type": "security-zone",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "mainframe",
+                "name": "IBM z16",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "mainframe",
+                  "icon_ref": "infragram:mainframe"
+                },
+                "attributes": {
+                  "detail": "z/OS · CICS · Db2"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "cdc",
+                    "kind": "solid",
+                    "label": "Db2 log",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "mq",
+                    "kind": "solid",
+                    "label": "MQ",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "mft",
+                    "kind": "solid",
+                    "label": "batch files",
+                    "direction": "forward"
+                  },
+                  {
+                    "target": "ds8k",
+                    "kind": "solid",
+                    "label": "FICON",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "aix",
+                "name": "AIX partitions",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "unix-server",
+                  "icon_ref": "infragram:unix-server"
+                },
+                "attributes": {
+                  "detail": "Power10 · middleware"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "mq",
+                    "kind": "solid",
+                    "label": "",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "ds8k",
+                "name": "DS8000 array",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "storage-array",
+                  "icon_ref": "infragram:storage-array"
+                },
+                "attributes": {
+                  "detail": "FICON storage"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "tape",
+                "name": "Tape library",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "tape-library",
+                  "icon_ref": "infragram:tape-library"
+                },
+                "attributes": {
+                  "detail": "TS4500 · archive"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "hmc",
+                "name": "Hardware console",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "console-server",
+                  "icon_ref": "infragram:console-server"
+                },
+                "attributes": {
+                  "detail": "HMC · OOB"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "bridge",
+            "name": "Integration bridge",
+            "type": "subnet-private",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "cdc",
+                "name": "Change data capture",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "cdc",
+                  "icon_ref": "infragram:cdc"
+                },
+                "attributes": {
+                  "detail": "Db2 → Kafka"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "msk",
+                    "kind": "dashed",
+                    "label": "replication",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "mq",
+                "name": "IBM MQ / ESB",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "esb",
+                  "icon_ref": "infragram:esb"
+                },
+                "attributes": {
+                  "detail": "transaction bridge"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "lambda",
+                    "kind": "dashed",
+                    "label": "AMQP bridge",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "mft",
+                "name": "Managed file transfer",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "file-transfer",
+                  "icon_ref": "infragram:file-transfer"
+                },
+                "attributes": {
+                  "detail": "Connect:Direct → S3"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "s3",
+                    "kind": "dashed",
+                    "label": "nightly batch",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "dx-router",
+                "name": "Edge router",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "edge-router",
+                  "icon_ref": "infragram:edge-router"
+                },
+                "attributes": {
+                  "detail": "Direct Connect · BGP"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "dx",
+                    "kind": "dashed",
+                    "label": "1 Gbps",
+                    "direction": "forward"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "aws",
+        "name": "AWS Cloud",
+        "type": "cloud",
+        "attributes": {
+          "editor_frame_group": "aws"
+        },
+        "children": [
+          {
+            "id": "dxloc",
+            "name": "Direct Connect location",
+            "type": "location",
+            "attributes": {
+              "editor_frame_group": "aws"
+            },
+            "children": [
+              {
+                "id": "dx",
+                "name": "Direct Connect",
+                "type": "service",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "direct-connect",
+                  "icon_ref": "aws:direct-connect"
+                },
+                "attributes": {
+                  "detail": "private VIF"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "msk",
+                    "kind": "solid",
+                    "label": "VPC",
+                    "direction": "forward"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "region",
+            "name": "us-east-1",
+            "type": "region",
+            "attributes": {
+              "editor_frame_group": "aws",
+              "arrange": "manual"
+            },
+            "children": [
+              {
+                "id": "msk",
+                "name": "MSK",
+                "type": "service",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "managed-streaming-for-apache-kafka",
+                  "icon_ref": "aws:managed-streaming-for-apache-kafka"
+                },
+                "attributes": {
+                  "detail": "Kafka topics"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "lambda",
+                    "kind": "solid",
+                    "label": "consume",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "s3",
+                "name": "S3",
+                "type": "service",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "simple-storage-service",
+                  "icon_ref": "aws:simple-storage-service"
+                },
+                "attributes": {
+                  "detail": "batch landing zone"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "lambda",
+                "name": "Lambda",
+                "type": "service",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "lambda",
+                  "icon_ref": "aws:lambda"
+                },
+                "attributes": {
+                  "detail": "event handlers"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "aurora",
+                    "kind": "solid",
+                    "label": "SQL",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "apigw",
+                "name": "API Gateway",
+                "type": "service",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "api-gateway",
+                  "icon_ref": "aws:api-gateway"
+                },
+                "attributes": {
+                  "detail": "REST · channels"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "lambda",
+                    "kind": "solid",
+                    "label": "invoke",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "aurora",
+                "name": "Aurora PostgreSQL",
+                "type": "service",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "aurora",
+                  "icon_ref": "aws:aurora"
+                },
+                "attributes": {
+                  "detail": "modernised data"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "m2",
+                "name": "Mainframe Modernization",
+                "type": "service",
+                "component": {
+                  "provider": "aws",
+                  "service_id": "mainframe-modernization",
+                  "icon_ref": "aws:mainframe-modernization"
+                },
+                "attributes": {
+                  "detail": "refactored COBOL"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "aurora",
+                    "kind": "solid",
+                    "label": "SQL",
+                    "direction": "forward"
+                  }
+                ]
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile customers",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "mobile-client",
+          "icon_ref": "infragram:mobile-client"
+        },
+        "attributes": {
+          "detail": "new channel"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "apigw",
+            "kind": "solid",
+            "label": "HTTPS",
+            "direction": "forward"
+          }
+        ]
+      }
+    ],
+    "connections": []
+  }
+}

@@ -1,0 +1,249 @@
+{
+ "schema_version": 1,
+ "collection": "vendors/hetzner",
+ "generated_by": "migrated from skins by scripts/importers (hand-curated set)",
+ "source": {
+  "url": "https://www.hetzner.com/",
+  "release": "hetzner.com website product icons, fetched 2026-08-18",
+  "terms": "https://www.hetzner.com/legal/notice-of-liability/"
+ },
+ "counts": {
+  "icons": 26
+ },
+ "icons": [
+  {
+   "id": "api",
+   "name": "Hetzner Cloud API",
+   "aliases": [],
+   "category": "integration",
+   "file": "integration/api.svg",
+   "source_path": "assets/Uploads/ICO-Features-API.svg",
+   "sha256": "85e7964b2f28a764152a501b062f999bc3c0d7b380032032235a4b470344d962"
+  },
+  {
+   "id": "ax-server",
+   "name": "Hetzner AX Dedicated Server",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/ax-server.svg",
+   "source_path": "assets/Uploads/icon-circle-ax-line.svg",
+   "sha256": "2589125a402f57cbc6322e266a9a2eb732654214e74bb93d22010a46833d1163"
+  },
+  {
+   "id": "cloud",
+   "name": "Hetzner Cloud",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/cloud.svg",
+   "source_path": "assets/Uploads/icon-hetzner-cloud.svg",
+   "sha256": "481b80ab6f42a5bd9fe25edfa27f343ffac88fcb7f944f908e2a36df2b6d6329"
+  },
+  {
+   "id": "dedicated-server",
+   "name": "Hetzner Dedicated Server",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/dedicated-server.svg",
+   "source_path": "assets/Uploads/dedicated-rootserver.svg",
+   "sha256": "efdd9740f25de8d8dc0eb04c6a98ad9049fe46ea5d59acc6bfeac00d99884524"
+  },
+  {
+   "id": "dns-console",
+   "name": "Hetzner DNS Console",
+   "aliases": [],
+   "category": "networking",
+   "file": "networking/dns-console.svg",
+   "source_path": "assets/Uploads/icon-circle-dns-console5.svg",
+   "sha256": "617ccd89e8356bd7b17918f063eacaca5effa6f9f1f0b4612c32b4d6c17208b9"
+  },
+  {
+   "id": "domain-registration",
+   "name": "Hetzner Domain Registration",
+   "aliases": [],
+   "category": "networking",
+   "file": "networking/domain-registration.svg",
+   "source_path": "assets/Uploads/icon-circle-domain-registration-robot.svg",
+   "sha256": "ef191ae11e63cccb0641ea0b89967b18bdb6bf45c4b33c868572f23adfde53d0"
+  },
+  {
+   "id": "ex-server",
+   "name": "Hetzner EX Dedicated Server",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/ex-server.svg",
+   "source_path": "assets/Uploads/icon-circle-ex-line.svg",
+   "sha256": "64344d5a740001d7092cc03a5e0f1ef9f4887a444cbd8539f662a762b7022c0b"
+  },
+  {
+   "id": "firewalls",
+   "name": "Hetzner Firewalls",
+   "aliases": [],
+   "category": "security",
+   "file": "security/firewalls.svg",
+   "source_path": "assets/Uploads/ICO-Features-Firewalls.svg",
+   "sha256": "b0dafd8abc90b601b1fe02e2e975bdfae2d5fb0795d5c09058ef26ab8fe694b5"
+  },
+  {
+   "id": "gpu-server",
+   "name": "Hetzner GPU Server",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/gpu-server.svg",
+   "source_path": "assets/Uploads/icon-circle-gpu-line.svg",
+   "sha256": "59673a6ddeb6f6f726af7954d379bd3a7a4fc67076b024ce4ee955847b4e4d1b"
+  },
+  {
+   "id": "images",
+   "name": "Hetzner Images",
+   "aliases": [],
+   "category": "containers",
+   "file": "containers/images.svg",
+   "source_path": "assets/Uploads/ICO-Features-Images.svg",
+   "sha256": "710a108af3e566dd7c3941f8000687a4c089ccade50d7f6f18255858e886d9f6"
+  },
+  {
+   "id": "integrations",
+   "name": "Hetzner Integrations",
+   "aliases": [],
+   "category": "integration",
+   "file": "integration/integrations.svg",
+   "source_path": "assets/Uploads/ICO-Features-Integrations.svg",
+   "sha256": "7fbe749ba7ce8e2478c80d42c1bd81dcb076a2842fd73a914360c9778533487d"
+  },
+  {
+   "id": "konsoleh",
+   "name": "Hetzner konsoleH",
+   "aliases": [],
+   "category": "integration",
+   "file": "integration/konsoleh.svg",
+   "source_path": "assets/Uploads/icon-hetzner-konsoleh.svg",
+   "sha256": "2d92c77f88c8bce44c8b951386787255271aed6ba74a5faab95e21e88ea9ccae"
+  },
+  {
+   "id": "load-balancer",
+   "name": "Hetzner Load Balancer",
+   "aliases": [],
+   "category": "networking",
+   "file": "networking/load-balancer.svg",
+   "source_path": "assets/Uploads/icon-load-balancer.svg",
+   "sha256": "6a475b79dae73f79557b16b86ffb99c0b52fa63150be2494b0c7317e86629c7b"
+  },
+  {
+   "id": "managed-server",
+   "name": "Hetzner Managed Server",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/managed-server.svg",
+   "source_path": "assets/Uploads/icon-circle-managed-server.svg",
+   "sha256": "340218a597b6c150a690250dec97baabb265e63e05991f8fb436dd97143775ad"
+  },
+  {
+   "id": "network",
+   "name": "Hetzner Network",
+   "aliases": [],
+   "category": "networking",
+   "file": "networking/network.svg",
+   "source_path": "assets/Uploads/icon-circle-network2.svg",
+   "sha256": "d84e59de4b1344904beb72461cb52ec655a2daebad66ea6996150e938125afe1"
+  },
+  {
+   "id": "networks",
+   "name": "Hetzner Networks",
+   "aliases": [],
+   "category": "networking",
+   "file": "networking/networks.svg",
+   "source_path": "assets/Uploads/ICO-Features-Networks.svg",
+   "sha256": "536a5a13985bd05d57b7a8528afd67f41cda4792d0a0fccceb35e82415b196a0"
+  },
+  {
+   "id": "object-storage",
+   "name": "Hetzner Object Storage",
+   "aliases": [],
+   "category": "storage",
+   "file": "storage/object-storage.svg",
+   "source_path": "assets/Uploads/icon-circle-object-storage.svg",
+   "sha256": "2db4af311b1447496bc883e1cbaca3d50cb4fafc6b8f12dc23e2296110dbe7e2"
+  },
+  {
+   "id": "robot",
+   "name": "Hetzner Robot Console",
+   "aliases": [],
+   "category": "integration",
+   "file": "integration/robot.svg",
+   "source_path": "assets/Uploads/icon-hetzner-robot.svg",
+   "sha256": "b5b75bc52f67e5bb4a031627b44944e903da5a716b97af5edd4450b86aae6e47"
+  },
+  {
+   "id": "rx-server",
+   "name": "Hetzner RX Dedicated Server",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/rx-server.svg",
+   "source_path": "assets/Uploads/icon-circle-rx-line-v2.svg",
+   "sha256": "de8cf1def8b0cae30141e5742826cdd73a2a1cc62b32a8a492767761ce2c1083"
+  },
+  {
+   "id": "security",
+   "name": "Hetzner Security",
+   "aliases": [],
+   "category": "security",
+   "file": "security/security.svg",
+   "source_path": "assets/Uploads/icon-circle-security.svg",
+   "sha256": "c6e73e67ca5ad46b64baf9085c055921e0176ce1f76826f008d4cbbe031b3c18"
+  },
+  {
+   "id": "snapshot",
+   "name": "Hetzner Snapshot",
+   "aliases": [],
+   "category": "storage",
+   "file": "storage/snapshot.svg",
+   "source_path": "assets/Uploads/icon-circle-snapshot.svg",
+   "sha256": "e8313f6ff7ea0c52528ff50acf55da4f6cc2b580e7e9ba387b02828a8b591a2a"
+  },
+  {
+   "id": "ssl-certificate",
+   "name": "Hetzner SSL Certificate",
+   "aliases": [],
+   "category": "security",
+   "file": "security/ssl-certificate.svg",
+   "source_path": "assets/Uploads/icon-circle-ssl-certificate.svg",
+   "sha256": "fd57a0eaf5627edb16d1851fd043c5f8ac6bd26a31b6609ae977729553383bc7"
+  },
+  {
+   "id": "storage-box",
+   "name": "Hetzner Storage Box",
+   "aliases": [],
+   "category": "storage",
+   "file": "storage/storage-box.svg",
+   "source_path": "assets/Uploads/icon-circle-storage-box2.svg",
+   "sha256": "07c33b93f77b59dda8c39eebc76c6c8de55f5a14cd8e8103033b7036ee95c805"
+  },
+  {
+   "id": "storage-share",
+   "name": "Hetzner Storage Share",
+   "aliases": [],
+   "category": "storage",
+   "file": "storage/storage-share.svg",
+   "source_path": "assets/Uploads/icon-circle-storage-share.svg",
+   "sha256": "5fba15f629ea17520b4636e0453682db555c1345c6c3b7ed623c20a56658f754"
+  },
+  {
+   "id": "sx-server",
+   "name": "Hetzner SX Dedicated Server",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/sx-server.svg",
+   "source_path": "assets/Uploads/icon-circle-sx-line.svg",
+   "sha256": "bd723d44aa552fc47abce0c1be61db5e673fe494d41d6d33f4419235cf5f4b2a"
+  },
+  {
+   "id": "webhosting",
+   "name": "Hetzner Webhosting",
+   "aliases": [],
+   "category": "compute",
+   "file": "compute/webhosting.svg",
+   "source_path": "assets/Uploads/icon-circle-webhosting.svg",
+   "sha256": "cd2d66ec7a0c7691c826c0beaf3a17c7297650d057ee5ac9bd1c76811bd51d2c"
+  }
+ ]
+}

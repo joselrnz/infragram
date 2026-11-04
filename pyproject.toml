@@ -1,0 +1,62 @@
+# The repository's own settings: what the tools that check it read. The
+# package, the plugin and the wheel are plugin/pyproject.toml; install it for
+# development with `python -m pip install -e "./plugin[test]"`.
+
+# uv sees the repository as a workspace whose one member is the plugin, so
+# `uv lock` here pins what the plugin installs (uv.lock, beside this file) and
+# `uv sync --all-extras` makes a development environment from it.
+[tool.uv.workspace]
+members = ["plugin"]
+
+[tool.pytest.ini_options]
+# A marker nobody registered is a typo, not a new marker.
+addopts = ["--strict-markers"]
+markers = [
+    "slow: sweeps every shipped template, example or icon, or runs Terraform itself; verify:quick leaves it out",
+]
+
+[tool.mypy]
+# The package, the examples a user copies and the maintainer scripts, checked
+# with pydantic's own plugin. Not strict: the code grew without a checker, and
+# the gate holds it at no errors from here on. The skill's scripts are a
+# second pass (scripts/verify/typecheck.py): its launcher is infragram.py, the
+# package's name, and one run cannot hold both.
+python_version = "3.11"
+mypy_path = "plugin/src"
+files = ["plugin/src/infragram", "plugin/examples", "scripts"]
+plugins = ["pydantic.mypy"]
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.format]
+# The node classes are generate-nodes.py's output, held to it byte for byte
+# by its --check gate; the generator decides their layout.
+exclude = ["plugin/src/infragram/nodes/*/**"]
+
+[tool.ruff.lint]
+# BLE: an `except Exception` says why on its line. RUF100: a noqa that no
+# longer suppresses anything is itself a finding, so none goes stale.
+select = ["E4", "E7", "E9", "F", "I", "UP", "B", "SIM", "S", "BLE", "RUF100"]
+ignore = [
+    # Nested with blocks are the authoring form: one frame per line, containment by indent.
+    "SIM117",
+    # An assert states an invariant the type checker narrows on; no security
+    # decision rests on one, so python -O dropping it opens nothing.
+    "S101",
+    # Every subprocess call passes an argument list to a named tool and never a
+    # shell; the rules that catch a shell (S602, S604, S605) stay on.
+    "S603",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests parse the SVG and XML the product itself wrote, and run git and npm by
+# name inside the throwaway homes they build.
+"tests/**" = ["S314", "S607"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["infragram"]
+combine-as-imports = true

@@ -1,0 +1,25 @@
+# What every editor should do with the files here; the gates check the rest
+# (ruff format for Python, every text file LF).
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+
+[*.py]
+indent_size = 4
+
+[*.{js,css,html,yml,yaml,toml}]
+indent_size = 2
+
+# a Markdown line break is two trailing spaces
+[*.md]
+trim_trailing_whitespace = false
+
+# artwork is kept byte for byte, as its vendor wrote it
+[*.svg]
+insert_final_newline = unset
+trim_trailing_whitespace = unset

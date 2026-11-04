@@ -1,0 +1,23 @@
+---
+title: Production ingress on DOKS
+---
+flowchart TB
+    customer((Customer<br>HTTPS 443<br>payments only when billing is enabled)):::publicEdge
+    edge[Proxied edge<br>public DNS and TLS<br>WAF and cache]:::publicEdge
+    control{{Managed DOKS control plane<br>separate managed API · HA}}:::managed
+    subgraph vpc[Private regional VPC]
+        lb[Public regional HTTP load balancer<br>one Gateway-owned resource]:::publicEdge
+        gw[Managed Cilium gateway<br>TLS termination<br>live placement must be verified]:::privateNet
+        svc[Service web · ClusterIP 80<br>cluster-internal VIP]:::internal
+        app[App workers<br>two nodes, pinned]:::privateNet
+    end
+    contract@{ shape: doc, label: "Network contract<br>default deny<br>no public NodePort" }
+    nogo[Current implementation: NO-GO<br>no recorded deployment evidence]:::blocker
+    customer -->|HTTPS| edge --> lb --> gw --> svc --> app
+    control -.- gw
+    classDef publicEdge fill:#fde6d1,stroke:#cc7631
+    classDef privateNet fill:#e7f2e8,stroke:#4e8a5a
+    classDef internal fill:#e3edf8,stroke:#4a77ad
+    classDef managed fill:#efe9f8,stroke:#7a5cb0
+    classDef blocker fill:#fce3e3,stroke:#c24848
+    style contract fill:#fbf5c2,stroke:#a28d0e

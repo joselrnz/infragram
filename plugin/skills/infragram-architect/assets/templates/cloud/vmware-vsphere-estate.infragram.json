@@ -1,0 +1,431 @@
+{
+  "schema_version": 2,
+  "kind": "single-cloud",
+  "slug": "vmware-vsphere-estate",
+  "title": "VMware vSphere estate in a corporate datacenter",
+  "description": "A vCenter manages a datacenter with a production cluster of two ESXi hosts running application and database VMs behind an NSX load balancer; a distributed switch carries the VM, vMotion and storage port groups; vSAN and a NetApp array over a Fibre Channel fabric hold the datastores; Veeam backs the estate up to a NAS.",
+  "template_brief": "",
+  "providers": [
+    {
+      "id": "vmware",
+      "enabled": true
+    }
+  ],
+  "default_library": "vmware",
+  "layers": [],
+  "presentation": {
+    "size": "fit",
+    "detail": "balanced",
+    "audience": "mixed",
+    "eyebrow": "VMware reference architecture",
+    "heading": "",
+    "legend": []
+  },
+  "topology": {
+    "id": "root",
+    "name": "VMware vSphere estate in a corporate datacenter",
+    "type": "group",
+    "attributes": {},
+    "children": [
+      {
+        "id": "users",
+        "name": "Users",
+        "type": "service",
+        "component": {
+          "provider": "infragram",
+          "service_id": "public-users",
+          "icon_ref": "infragram:public-users"
+        },
+        "attributes": {
+          "detail": "corporate network"
+        },
+        "children": [],
+        "connections": [
+          {
+            "target": "nsx-lb",
+            "kind": "solid",
+            "label": "HTTPS",
+            "direction": "forward"
+          }
+        ]
+      },
+      {
+        "id": "dc",
+        "name": "Corporate datacenter",
+        "type": "site",
+        "attributes": {
+          "editor_frame_group": "onprem"
+        },
+        "children": [
+          {
+            "id": "vcenter",
+            "name": "vCenter Server · vc01",
+            "type": "organization",
+            "attributes": {
+              "editor_frame_group": "vmware"
+            },
+            "children": [
+              {
+                "id": "vdc",
+                "name": "Datacenter · HQ",
+                "type": "site",
+                "attributes": {
+                  "editor_frame_group": "vmware"
+                },
+                "children": [
+                  {
+                    "id": "cluster",
+                    "name": "Cluster · prod (HA · DRS)",
+                    "type": "cluster",
+                    "attributes": {
+                      "editor_frame_group": "vmware",
+                      "flow": "row"
+                    },
+                    "children": [
+                      {
+                        "id": "host1",
+                        "name": "ESXi host · esx01",
+                        "type": "server-group",
+                        "attributes": {
+                          "editor_frame_group": "vmware"
+                        },
+                        "children": [
+                          {
+                            "id": "nsx-lb",
+                            "name": "NSX Load Balancer",
+                            "type": "service",
+                            "component": {
+                              "provider": "vmware",
+                              "service_id": "entry-service",
+                              "icon_ref": "vmware:entry-service"
+                            },
+                            "attributes": {
+                              "detail": "L7"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "web1",
+                                "kind": "solid",
+                                "label": "HTTPS",
+                                "direction": "forward"
+                              },
+                              {
+                                "target": "web2",
+                                "kind": "solid",
+                                "label": "HTTPS",
+                                "direction": "forward"
+                              }
+                            ]
+                          },
+                          {
+                            "id": "web1",
+                            "name": "Web VM",
+                            "type": "service",
+                            "component": {
+                              "provider": "vmware",
+                              "service_id": "app-service",
+                              "icon_ref": "vmware:app-service"
+                            },
+                            "attributes": {
+                              "detail": "vSphere VM"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "db1",
+                                "kind": "solid",
+                                "label": "SQL",
+                                "direction": "forward"
+                              }
+                            ]
+                          },
+                          {
+                            "id": "db1",
+                            "name": "Database VM",
+                            "type": "service",
+                            "component": {
+                              "provider": "vmware",
+                              "service_id": "database-service",
+                              "icon_ref": "vmware:database-service"
+                            },
+                            "attributes": {
+                              "detail": "SQL Server · AG"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "db2",
+                                "kind": "dashed",
+                                "label": "AlwaysOn replication",
+                                "direction": "both"
+                              }
+                            ]
+                          }
+                        ],
+                        "connections": []
+                      },
+                      {
+                        "id": "host2",
+                        "name": "ESXi host · esx02",
+                        "type": "server-group",
+                        "attributes": {
+                          "editor_frame_group": "vmware"
+                        },
+                        "children": [
+                          {
+                            "id": "web2",
+                            "name": "Web VM",
+                            "type": "service",
+                            "component": {
+                              "provider": "vmware",
+                              "service_id": "app-service",
+                              "icon_ref": "vmware:app-service"
+                            },
+                            "attributes": {
+                              "detail": "vSphere VM"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "db2",
+                                "kind": "solid",
+                                "label": "SQL",
+                                "direction": "forward"
+                              }
+                            ]
+                          },
+                          {
+                            "id": "app2",
+                            "name": "App VM",
+                            "type": "service",
+                            "component": {
+                              "provider": "vmware",
+                              "service_id": "app-service",
+                              "icon_ref": "vmware:app-service"
+                            },
+                            "attributes": {
+                              "detail": "vSphere VM"
+                            },
+                            "children": [],
+                            "connections": [
+                              {
+                                "target": "db2",
+                                "kind": "solid",
+                                "label": "SQL",
+                                "direction": "forward"
+                              }
+                            ]
+                          },
+                          {
+                            "id": "db2",
+                            "name": "Database VM",
+                            "type": "service",
+                            "component": {
+                              "provider": "vmware",
+                              "service_id": "database-service",
+                              "icon_ref": "vmware:database-service"
+                            },
+                            "attributes": {
+                              "detail": "SQL Server · AG"
+                            },
+                            "children": [],
+                            "connections": []
+                          }
+                        ],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  },
+                  {
+                    "id": "dvs",
+                    "name": "Distributed switch · dvs01",
+                    "type": "network",
+                    "attributes": {
+                      "editor_frame_group": "vmware"
+                    },
+                    "children": [
+                      {
+                        "id": "pg-vm",
+                        "name": "Port group · VM",
+                        "type": "service",
+                        "component": {
+                          "provider": "vmware",
+                          "service_id": "distributed-switch",
+                          "icon_ref": "vmware:distributed-switch"
+                        },
+                        "attributes": {
+                          "detail": "VLAN 100"
+                        },
+                        "children": [],
+                        "connections": []
+                      },
+                      {
+                        "id": "pg-vmotion",
+                        "name": "Port group · vMotion",
+                        "type": "service",
+                        "component": {
+                          "provider": "vmware",
+                          "service_id": "distributed-switch",
+                          "icon_ref": "vmware:distributed-switch"
+                        },
+                        "attributes": {
+                          "detail": "VLAN 200"
+                        },
+                        "children": [],
+                        "connections": []
+                      },
+                      {
+                        "id": "pg-storage",
+                        "name": "Port group · storage",
+                        "type": "service",
+                        "component": {
+                          "provider": "vmware",
+                          "service_id": "distributed-switch",
+                          "icon_ref": "vmware:distributed-switch"
+                        },
+                        "attributes": {
+                          "detail": "VLAN 300"
+                        },
+                        "children": [],
+                        "connections": [
+                          {
+                            "target": "vsan",
+                            "kind": "solid",
+                            "label": "vSAN traffic",
+                            "direction": "forward"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "core",
+                        "name": "Core switch",
+                        "type": "service",
+                        "component": {
+                          "provider": "infragram",
+                          "service_id": "core-switch",
+                          "icon_ref": "infragram:core-switch"
+                        },
+                        "attributes": {
+                          "detail": "uplinks · LACP"
+                        },
+                        "children": [],
+                        "connections": []
+                      }
+                    ],
+                    "connections": []
+                  }
+                ],
+                "connections": []
+              }
+            ],
+            "connections": []
+          },
+          {
+            "id": "storage",
+            "name": "Storage",
+            "type": "server-group",
+            "attributes": {
+              "editor_frame_group": "onprem"
+            },
+            "children": [
+              {
+                "id": "vsan",
+                "name": "vSAN datastore",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "storage-array",
+                  "icon_ref": "infragram:storage-array"
+                },
+                "attributes": {
+                  "detail": "hyperconverged"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "fc",
+                "name": "SAN fabric switch",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "san-switch",
+                  "icon_ref": "infragram:san-switch"
+                },
+                "attributes": {
+                  "detail": "FC 32G · fabric A/B"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "array",
+                    "kind": "solid",
+                    "label": "FC zoning",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "array",
+                "name": "NetApp array",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "storage-array",
+                  "icon_ref": "infragram:storage-array"
+                },
+                "attributes": {
+                  "detail": "datastores · LUNs"
+                },
+                "children": [],
+                "connections": []
+              },
+              {
+                "id": "veeam",
+                "name": "Veeam Backup",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "brand-veeam",
+                  "icon_ref": "infragram:brand-veeam"
+                },
+                "attributes": {
+                  "detail": "image backups"
+                },
+                "children": [],
+                "connections": [
+                  {
+                    "target": "nas",
+                    "kind": "solid",
+                    "label": "repository",
+                    "direction": "forward"
+                  }
+                ]
+              },
+              {
+                "id": "nas",
+                "name": "Backup NAS",
+                "type": "service",
+                "component": {
+                  "provider": "infragram",
+                  "service_id": "nas",
+                  "icon_ref": "infragram:nas"
+                },
+                "attributes": {
+                  "detail": "NFS repository"
+                },
+                "children": [],
+                "connections": []
+              }
+            ],
+            "connections": []
+          }
+        ],
+        "connections": []
+      }
+    ],
+    "connections": []
+  }
+}

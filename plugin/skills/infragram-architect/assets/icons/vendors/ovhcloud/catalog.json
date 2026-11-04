@@ -1,0 +1,327 @@
+{
+ "schema_version": 1,
+ "collection": "vendors/ovhcloud",
+ "generated_by": "scripts/build/vendor-tiles.py (this project's own tiles: a Tabler glyph on the vendor's colour)",
+ "source": {
+  "url": "https://www.ovhcloud.com/",
+  "release": "drawn for Infragram; not the vendor's artwork. Glyphs: Tabler Icons (MIT).",
+  "terms": "https://github.com/tabler/tabler-icons/blob/main/LICENSE"
+ },
+ "counts": {
+  "icons": 26
+ },
+ "icons": [
+  {
+   "id": "entry-service",
+   "name": "OVHcloud Load Balancer",
+   "aliases": [
+    "load balancer",
+    "octavia"
+   ],
+   "category": "networking",
+   "file": "networking/entry-service.svg",
+   "source_path": "drawn: Tabler glyph arrows-split on #000e9c",
+   "sha256": "844bf4320af1384ce2debfb86ca8320b823ff62a2716bb54f187520273acc2f2"
+  },
+  {
+   "id": "app-service",
+   "name": "Public Cloud Instance",
+   "aliases": [
+    "instance",
+    "public cloud"
+   ],
+   "category": "compute",
+   "file": "compute/app-service.svg",
+   "source_path": "drawn: Tabler glyph server on #000e9c",
+   "sha256": "4131d7f1383ec22d40d9a1a1a0baec73399d932913d6655c93e93bf53fa3b10d"
+  },
+  {
+   "id": "object-store-service",
+   "name": "Object Storage",
+   "aliases": [
+    "s3-compatible",
+    "swift"
+   ],
+   "category": "storage",
+   "file": "storage/object-store-service.svg",
+   "source_path": "drawn: Tabler glyph bucket on #000e9c",
+   "sha256": "18c6c3d2327b5b0f709565c6e8e2a406e200cbf9d506423c6dd212b786f93eba"
+  },
+  {
+   "id": "database-service",
+   "name": "Managed Database",
+   "aliases": [
+    "postgresql",
+    "mysql",
+    "mongodb"
+   ],
+   "category": "databases",
+   "file": "databases/database-service.svg",
+   "source_path": "drawn: Tabler glyph database on #000e9c",
+   "sha256": "b6ae13ecae2cac8af260d72c744cf0cdb9d86e55de5aaa704744bc246b8b4b5c"
+  },
+  {
+   "id": "bare-metal",
+   "name": "Bare Metal Server",
+   "aliases": [
+    "dedicated server",
+    "bare metal"
+   ],
+   "category": "compute",
+   "file": "compute/bare-metal.svg",
+   "source_path": "drawn: Tabler glyph server-2 on #000e9c",
+   "sha256": "8b409a873e751580a099f29df509f5975c3eb60ae3c1a5f737d6bf7427074965"
+  },
+  {
+   "id": "vps",
+   "name": "VPS",
+   "aliases": [
+    "virtual private server"
+   ],
+   "category": "compute",
+   "file": "compute/vps.svg",
+   "source_path": "drawn: Tabler glyph cube on #000e9c",
+   "sha256": "dc26b48e88fa367e63be509c0ba23aad0304355fb9668a42b2f60fd15d7b6ca1"
+  },
+  {
+   "id": "gpu-instance",
+   "name": "GPU Instance",
+   "aliases": [
+    "gpu",
+    "cloud gpu"
+   ],
+   "category": "compute",
+   "file": "compute/gpu-instance.svg",
+   "source_path": "drawn: Tabler glyph cpu on #000e9c",
+   "sha256": "ad12992146ed1c92b2cb54bba75708e4079e402e8ca28299cc015269c8ed2738"
+  },
+  {
+   "id": "hosted-private-cloud",
+   "name": "Hosted Private Cloud",
+   "aliases": [
+    "vmware",
+    "private cloud"
+   ],
+   "category": "compute",
+   "file": "compute/hosted-private-cloud.svg",
+   "source_path": "drawn: Tabler glyph stack-3 on #000e9c",
+   "sha256": "73f9b88529501a4f0990e4a9abf768bb93aaf4679c413c8106a34ca30e094a7b"
+  },
+  {
+   "id": "managed-kubernetes",
+   "name": "Managed Kubernetes Service",
+   "aliases": [
+    "kubernetes",
+    "mks"
+   ],
+   "category": "containers",
+   "file": "containers/managed-kubernetes.svg",
+   "source_path": "drawn: Tabler glyph hexagon on #000e9c",
+   "sha256": "ce6aa62d2fc46c93b319911e5abe29a95335bb78da52567b07d1df0e2a450bbb"
+  },
+  {
+   "id": "managed-registry",
+   "name": "Managed Private Registry",
+   "aliases": [
+    "harbor",
+    "container registry"
+   ],
+   "category": "containers",
+   "file": "containers/managed-registry.svg",
+   "source_path": "drawn: Tabler glyph package on #000e9c",
+   "sha256": "f53136acbfd011ed6a1fffd153bee46831a389981a2223933cd37348c193d00a"
+  },
+  {
+   "id": "block-storage",
+   "name": "Block Storage",
+   "aliases": [
+    "volume",
+    "cinder"
+   ],
+   "category": "storage",
+   "file": "storage/block-storage.svg",
+   "source_path": "drawn: Tabler glyph device-floppy on #000e9c",
+   "sha256": "a651634319dfc408879891b6c01436365582846f96b46bdc097e104e7751581e"
+  },
+  {
+   "id": "cold-archive",
+   "name": "Cold Archive",
+   "aliases": [
+    "archive",
+    "tape"
+   ],
+   "category": "storage",
+   "file": "storage/cold-archive.svg",
+   "source_path": "drawn: Tabler glyph archive on #000e9c",
+   "sha256": "12bd89589fe98119a64f5bd96d4904617e8ff353aa91b5d2e887e6fd49829041"
+  },
+  {
+   "id": "backup",
+   "name": "Backup and Snapshot",
+   "aliases": [
+    "snapshot",
+    "backup"
+   ],
+   "category": "storage",
+   "file": "storage/backup.svg",
+   "source_path": "drawn: Tabler glyph refresh on #000e9c",
+   "sha256": "1a043e70613bb0729b9d92cb7afb754ea1ecc078d383c27e6ac1d0eda8e671e2"
+  },
+  {
+   "id": "nas-ha",
+   "name": "NAS-HA",
+   "aliases": [
+    "nfs",
+    "network attached storage"
+   ],
+   "category": "storage",
+   "file": "storage/nas-ha.svg",
+   "source_path": "drawn: Tabler glyph file on #000e9c",
+   "sha256": "bd1d9a6613b6feae4115d60387ff660584a92e0ef1135ca7c8b93aefe1e70e06"
+  },
+  {
+   "id": "vrack",
+   "name": "vRack",
+   "aliases": [
+    "private network",
+    "vlan"
+   ],
+   "category": "networking",
+   "file": "networking/vrack.svg",
+   "source_path": "drawn: Tabler glyph topology-star on #000e9c",
+   "sha256": "8a60570679758106e8662a7ff87d230c55149e3a53c2c3c0280b0b459e74c7a0"
+  },
+  {
+   "id": "public-network",
+   "name": "Public Network",
+   "aliases": [
+    "floating ip",
+    "additional ip"
+   ],
+   "category": "networking",
+   "file": "networking/public-network.svg",
+   "source_path": "drawn: Tabler glyph world on #000e9c",
+   "sha256": "403f6784a86fb8f99a875d9a5cf795c789e6b4518a57937a434eb2ff14b7e965"
+  },
+  {
+   "id": "domains-dns",
+   "name": "Domains and DNS",
+   "aliases": [
+    "dns",
+    "domain"
+   ],
+   "category": "networking",
+   "file": "networking/domains-dns.svg",
+   "source_path": "drawn: Tabler glyph world-www on #000e9c",
+   "sha256": "383c4862ea5226682827f594c8e877a2fb2a9b9b7bfe7ba8f8a7612784bad3b6"
+  },
+  {
+   "id": "anti-ddos",
+   "name": "Anti-DDoS",
+   "aliases": [
+    "ddos",
+    "vac"
+   ],
+   "category": "security",
+   "file": "security/anti-ddos.svg",
+   "source_path": "drawn: Tabler glyph shield-lock on #000e9c",
+   "sha256": "4a5ff64b9d0be16715cdc3bd3d6f5341b14130beeebc50d733b3e0fd515383c2"
+  },
+  {
+   "id": "network-firewall",
+   "name": "Network Firewall",
+   "aliases": [
+    "firewall",
+    "edge firewall"
+   ],
+   "category": "security",
+   "file": "security/network-firewall.svg",
+   "source_path": "drawn: Tabler glyph wall on #000e9c",
+   "sha256": "98f494f605dbfa6472d5f58f5b4c412f4e45b9ae4e56e40e9d3b07ea817e741a"
+  },
+  {
+   "id": "iam",
+   "name": "Identity and Access Management",
+   "aliases": [
+    "iam",
+    "users"
+   ],
+   "category": "identity",
+   "file": "identity/iam.svg",
+   "source_path": "drawn: Tabler glyph user-shield on #000e9c",
+   "sha256": "2e80e418728c85788f704870bd017e1ccb65e3d18a0f7012ff46b2417648997e"
+  },
+  {
+   "id": "kms",
+   "name": "Key Management Service",
+   "aliases": [
+    "kms",
+    "secrets"
+   ],
+   "category": "security",
+   "file": "security/kms.svg",
+   "source_path": "drawn: Tabler glyph key on #000e9c",
+   "sha256": "1649c0e0c167294f18f50176e71565ebf993fc94b0804ea4d513ad7a0f92a737"
+  },
+  {
+   "id": "web-hosting",
+   "name": "Web Hosting",
+   "aliases": [
+    "shared hosting",
+    "cms"
+   ],
+   "category": "web",
+   "file": "web/web-hosting.svg",
+   "source_path": "drawn: Tabler glyph world-www on #000e9c",
+   "sha256": "383c4862ea5226682827f594c8e877a2fb2a9b9b7bfe7ba8f8a7612784bad3b6"
+  },
+  {
+   "id": "data-processing",
+   "name": "Data Processing",
+   "aliases": [
+    "spark",
+    "analytics"
+   ],
+   "category": "analytics",
+   "file": "analytics/data-processing.svg",
+   "source_path": "drawn: Tabler glyph chart-line on #000e9c",
+   "sha256": "db2745e5f9fd4761368c5bc33e79790284b4f99fa83e5043c46e83433b8854c8"
+  },
+  {
+   "id": "logs-data-platform",
+   "name": "Logs Data Platform",
+   "aliases": [
+    "logs",
+    "opensearch"
+   ],
+   "category": "analytics",
+   "file": "analytics/logs-data-platform.svg",
+   "source_path": "drawn: Tabler glyph list-search on #000e9c",
+   "sha256": "1d602932505b0110d582f516b497de3b95fe770849ecb729283b0766f9b6a3e4"
+  },
+  {
+   "id": "ai-notebooks",
+   "name": "AI Notebooks and Training",
+   "aliases": [
+    "notebooks",
+    "training"
+   ],
+   "category": "ai-machine-learning",
+   "file": "ai-machine-learning/ai-notebooks.svg",
+   "source_path": "drawn: Tabler glyph robot on #000e9c",
+   "sha256": "87b4c8e5e98519937181097ffb1e9193cd8fcdd00dab98169ceb94aa21408f6d"
+  },
+  {
+   "id": "ai-deploy",
+   "name": "AI Deploy",
+   "aliases": [
+    "inference",
+    "model serving"
+   ],
+   "category": "ai-machine-learning",
+   "file": "ai-machine-learning/ai-deploy.svg",
+   "source_path": "drawn: Tabler glyph rocket on #000e9c",
+   "sha256": "562a9b36af89c51c448c26ff92bf80ba6a2edcc0898ca43749e00a4248bca858"
+  }
+ ]
+}

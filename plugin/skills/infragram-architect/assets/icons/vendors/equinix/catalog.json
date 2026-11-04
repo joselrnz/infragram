@@ -1,0 +1,360 @@
+{
+ "schema_version": 1,
+ "collection": "vendors/equinix",
+ "generated_by": "scripts/build/vendor-tiles.py (this project's own tiles: a Tabler glyph on the vendor's colour)",
+ "source": {
+  "url": "https://docs.equinix.com/",
+  "release": "drawn for Infragram; not the vendor's artwork. Glyphs: Tabler Icons (MIT).",
+  "terms": "https://github.com/tabler/tabler-icons/blob/main/LICENSE"
+ },
+ "counts": {
+  "icons": 27
+ },
+ "icons": [
+  {
+   "id": "entry-service",
+   "name": "Network Edge Load Balancer",
+   "aliases": [
+    "load balancer",
+    "adc",
+    "vnf load balancer"
+   ],
+   "category": "networking",
+   "file": "networking/entry-service.svg",
+   "source_path": "drawn: Tabler glyph arrows-split on #ed2224",
+   "sha256": "539ce8013bfa146a09629ae404132f2028a609bbb79a94742e7a8f24260fdeee"
+  },
+  {
+   "id": "app-service",
+   "name": "Colocated Server",
+   "aliases": [
+    "server",
+    "colo server",
+    "customer equipment"
+   ],
+   "category": "compute",
+   "file": "compute/app-service.svg",
+   "source_path": "drawn: Tabler glyph server on #ed2224",
+   "sha256": "c1a827c0c520aa03db42471020e60405ae22eab616321d0404b354eecede0e2f"
+  },
+  {
+   "id": "object-store-service",
+   "name": "Colocated Storage Array",
+   "aliases": [
+    "storage array",
+    "san",
+    "nas"
+   ],
+   "category": "storage",
+   "file": "storage/object-store-service.svg",
+   "source_path": "drawn: Tabler glyph device-floppy on #ed2224",
+   "sha256": "2b637c693df86fb1b066929e692d86edb2df478d951b81277241a6919979db55"
+  },
+  {
+   "id": "database-service",
+   "name": "Colocated Database Server",
+   "aliases": [
+    "database server",
+    "database"
+   ],
+   "category": "databases",
+   "file": "databases/database-service.svg",
+   "source_path": "drawn: Tabler glyph database on #ed2224",
+   "sha256": "b195c1c61673abfd264ad5a2b5c7fb32be34dba964ff8e0fb8be4575de1180ca"
+  },
+  {
+   "id": "fabric-port",
+   "name": "Fabric Port",
+   "aliases": [
+    "port",
+    "fabric port",
+    "physical port"
+   ],
+   "category": "networking",
+   "file": "networking/fabric-port.svg",
+   "source_path": "drawn: Tabler glyph plug on #ed2224",
+   "sha256": "df67bdd3028b7a0838e9ab462157ec5e27d70671e4f3eae988c8707d75edb70a"
+  },
+  {
+   "id": "fabric-virtual-connection",
+   "name": "Fabric Virtual Connection",
+   "aliases": [
+    "virtual connection",
+    "evpl",
+    "layer 2 connection"
+   ],
+   "category": "networking",
+   "file": "networking/fabric-virtual-connection.svg",
+   "source_path": "drawn: Tabler glyph route on #ed2224",
+   "sha256": "537dd99f90b68f0fa0faec5fba9d12b0a0555fc86b4a423f893b4533935acc7e"
+  },
+  {
+   "id": "fabric-cloud-router",
+   "name": "Fabric Cloud Router",
+   "aliases": [
+    "fcr",
+    "cloud router",
+    "layer 3 routing"
+   ],
+   "category": "networking",
+   "file": "networking/fabric-cloud-router.svg",
+   "source_path": "drawn: Tabler glyph cloud-network on #ed2224",
+   "sha256": "6d0ebf404ba8f617820bbee68bca18d4263079773e25b2a67d546c788a94c51f"
+  },
+  {
+   "id": "fabric-cloud-connection",
+   "name": "Fabric Cloud Connection",
+   "aliases": [
+    "cloud onramp",
+    "direct connect",
+    "expressroute",
+    "partner interconnect"
+   ],
+   "category": "networking",
+   "file": "networking/fabric-cloud-connection.svg",
+   "source_path": "drawn: Tabler glyph cloud on #ed2224",
+   "sha256": "859fd32c5cfd36780e1fa97f51c4eca37683e29800573702a09eebc6e0d02fb2"
+  },
+  {
+   "id": "service-profile",
+   "name": "Fabric Service Profile",
+   "aliases": [
+    "service profile",
+    "provider profile",
+    "marketplace"
+   ],
+   "category": "networking",
+   "file": "networking/service-profile.svg",
+   "source_path": "drawn: Tabler glyph id-badge on #ed2224",
+   "sha256": "a868db9ceb572eaab7893439378dcbe1d54f32933ed908a016623514697b22d3"
+  },
+  {
+   "id": "service-token",
+   "name": "Fabric Service Token",
+   "aliases": [
+    "service token",
+    "a-side token",
+    "z-side token"
+   ],
+   "category": "security",
+   "file": "security/service-token.svg",
+   "source_path": "drawn: Tabler glyph key on #ed2224",
+   "sha256": "51d9b92de1c1cb0b822d9ffa7a50ba4965eb736cbb11cb7e456cd65edddd9915"
+  },
+  {
+   "id": "metro-connect",
+   "name": "Metro Connect",
+   "aliases": [
+    "metro connect",
+    "dark fiber",
+    "wavelength"
+   ],
+   "category": "networking",
+   "file": "networking/metro-connect.svg",
+   "source_path": "drawn: Tabler glyph route-2 on #ed2224",
+   "sha256": "512ce641d04253e3709758ae25be3be7e3d80a92b7a3a14603f6f7d57d20693d"
+  },
+  {
+   "id": "internet-exchange",
+   "name": "Equinix Internet Exchange",
+   "aliases": [
+    "ix",
+    "ixp",
+    "peering"
+   ],
+   "category": "networking",
+   "file": "networking/internet-exchange.svg",
+   "source_path": "drawn: Tabler glyph arrows-exchange on #ed2224",
+   "sha256": "3afbb6a9505701bb7dabdcb47714138fcf893e28584afbe80e7cd3c3b2f3ada1"
+  },
+  {
+   "id": "internet-access",
+   "name": "Equinix Internet Access",
+   "aliases": [
+    "eia",
+    "ip transit",
+    "internet"
+   ],
+   "category": "networking",
+   "file": "networking/internet-access.svg",
+   "source_path": "drawn: Tabler glyph world on #ed2224",
+   "sha256": "abb1a4713e0e56bb62eab02ae2ca46ca196e1630ebc27291761ed1ea728c37e9"
+  },
+  {
+   "id": "precision-time",
+   "name": "Equinix Precision Time",
+   "aliases": [
+    "ntp",
+    "ptp",
+    "time sync"
+   ],
+   "category": "networking",
+   "file": "networking/precision-time.svg",
+   "source_path": "drawn: Tabler glyph clock on #ed2224",
+   "sha256": "0ab19d63ef1f0056a4c698f8c7bb04ab2efa08a56dcececf9122c2007cbf33e6"
+  },
+  {
+   "id": "network-edge-device",
+   "name": "Network Edge Virtual Device",
+   "aliases": [
+    "network edge",
+    "vnf",
+    "virtual device"
+   ],
+   "category": "networking",
+   "file": "networking/network-edge-device.svg",
+   "source_path": "drawn: Tabler glyph server-cog on #ed2224",
+   "sha256": "399504d16ea91c2a199792ae3b08f3403091c3e8076967bf9f30530101552fa7"
+  },
+  {
+   "id": "network-edge-router",
+   "name": "Network Edge Router",
+   "aliases": [
+    "virtual router",
+    "vrouter"
+   ],
+   "category": "networking",
+   "file": "networking/network-edge-router.svg",
+   "source_path": "drawn: Tabler glyph router on #ed2224",
+   "sha256": "475bc73b34a4aa6a5ab6abb0f236278a90ca744f372372c4b1506fd60e5fefeb"
+  },
+  {
+   "id": "network-edge-firewall",
+   "name": "Network Edge Firewall",
+   "aliases": [
+    "virtual firewall",
+    "ngfw"
+   ],
+   "category": "security",
+   "file": "security/network-edge-firewall.svg",
+   "source_path": "drawn: Tabler glyph wall on #ed2224",
+   "sha256": "543ab7bcff2cc8c089df64545e908d5d8b3a68ad393dbfef1d054297abd4553a"
+  },
+  {
+   "id": "network-edge-sdwan",
+   "name": "Network Edge SD-WAN",
+   "aliases": [
+    "sd-wan",
+    "sdwan edge"
+   ],
+   "category": "networking",
+   "file": "networking/network-edge-sdwan.svg",
+   "source_path": "drawn: Tabler glyph topology-star-ring on #ed2224",
+   "sha256": "bada40761d7bd232f6931f4eb418172f75e28490db562ea72a50e3f6af7564c8"
+  },
+  {
+   "id": "device-link-group",
+   "name": "Device Link Group",
+   "aliases": [
+    "device link",
+    "dlg"
+   ],
+   "category": "networking",
+   "file": "networking/device-link-group.svg",
+   "source_path": "drawn: Tabler glyph topology-star on #ed2224",
+   "sha256": "3d358ca08a6cb6842fd636c022210263338264ea2defec8b9995438aa78cf592"
+  },
+  {
+   "id": "acl-template",
+   "name": "ACL Template",
+   "aliases": [
+    "acl",
+    "access control list"
+   ],
+   "category": "security",
+   "file": "security/acl-template.svg",
+   "source_path": "drawn: Tabler glyph shield-check on #ed2224",
+   "sha256": "27e99bc551c7ebb20183750b18139648473a7700a54cbc05453acacfadf71456"
+  },
+  {
+   "id": "iam",
+   "name": "Identity and Access Management",
+   "aliases": [
+    "iam",
+    "portal users",
+    "roles"
+   ],
+   "category": "identity",
+   "file": "identity/iam.svg",
+   "source_path": "drawn: Tabler glyph user-shield on #ed2224",
+   "sha256": "c33d40813cb5f5d50f447c61146d56ad8fee6ab66038c4faf4aa22cc4b22daf7"
+  },
+  {
+   "id": "ibx-data-center",
+   "name": "IBX Data Center",
+   "aliases": [
+    "ibx",
+    "international business exchange",
+    "data center"
+   ],
+   "category": "colocation",
+   "file": "colocation/ibx-data-center.svg",
+   "source_path": "drawn: Tabler glyph grid-dots on #ed2224",
+   "sha256": "78dbdcd1f34aa6f7011eb15b4e257d3bbb4447fcb97375f9f1e6c35f012600cb"
+  },
+  {
+   "id": "cage",
+   "name": "Cage",
+   "aliases": [
+    "colocation cage",
+    "private cage",
+    "suite"
+   ],
+   "category": "colocation",
+   "file": "colocation/cage.svg",
+   "source_path": "drawn: Tabler glyph lock-square-rounded on #ed2224",
+   "sha256": "7f2f66f76eec4b5d3fe93ca994c483028e427956d0b44d72713ff94875c78bca"
+  },
+  {
+   "id": "cabinet",
+   "name": "Cabinet",
+   "aliases": [
+    "rack",
+    "colocation cabinet"
+   ],
+   "category": "colocation",
+   "file": "colocation/cabinet.svg",
+   "source_path": "drawn: Tabler glyph stack-3 on #ed2224",
+   "sha256": "3e79c3bf094231d0f8e8b24b406cd6f930fa12242adf32fdc4577a2499834c04"
+  },
+  {
+   "id": "cross-connect",
+   "name": "Cross Connect",
+   "aliases": [
+    "cross connect",
+    "patch",
+    "fiber"
+   ],
+   "category": "colocation",
+   "file": "colocation/cross-connect.svg",
+   "source_path": "drawn: Tabler glyph plug-connected on #ed2224",
+   "sha256": "e7748e1799d31daed65b5c09d5d25bdc060ef3e14eb3fdd313a51860a92a4619"
+  },
+  {
+   "id": "power-circuit",
+   "name": "Power Circuit",
+   "aliases": [
+    "power",
+    "pdu",
+    "circuit"
+   ],
+   "category": "colocation",
+   "file": "colocation/power-circuit.svg",
+   "source_path": "drawn: Tabler glyph bolt on #ed2224",
+   "sha256": "489ea2ee78a512ec08ab70ad827ebdf3c4ff08d33cd430e2d273b86a6b0598ed"
+  },
+  {
+   "id": "smart-hands",
+   "name": "Smart Hands",
+   "aliases": [
+    "remote hands",
+    "smart hands",
+    "on-site support"
+   ],
+   "category": "colocation",
+   "file": "colocation/smart-hands.svg",
+   "source_path": "drawn: Tabler glyph user-check on #ed2224",
+   "sha256": "5425b44f9bbe7223faa6930a6b0f1beb733d503dc46b00c83182985e1056c504"
+  }
+ ]
+}

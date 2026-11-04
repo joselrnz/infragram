@@ -1,0 +1,58 @@
+{
+ "schema_version": 1,
+ "slug": "ibm",
+ "name": "IBM Cloud",
+ "title": "IBM Cloud application delivery",
+ "mark": "marks/ibm.svg",
+ "icons": {
+  "categories": [
+   "analytics",
+   "compute",
+   "containers",
+   "data",
+   "integration",
+   "networking",
+   "security",
+   "storage"
+  ],
+  "items": []
+ },
+ "theme": {
+  "paper": "#ffffff",
+  "paper_2": "#f4f6f9",
+  "ink": "#131926",
+  "muted": "#455268",
+  "soft": "#5e6b82",
+  "accent": "#4589ff",
+  "link": "#003fad"
+ },
+ "icon_palette": [
+  "#0f62fe",
+  "#1192e8",
+  "#198038"
+ ],
+ "services": {
+  "entry": {
+   "name": "Cloud Internet Services",
+   "detail": "edge · security"
+  },
+  "app": {
+   "name": "Code Engine",
+   "detail": "managed runtime"
+  },
+  "object_store": {
+   "name": "Cloud Object Storage",
+   "detail": "static · objects"
+  },
+  "database": {
+   "name": "Cloudant",
+   "detail": "managed data"
+  }
+ },
+ "boundaries": {
+  "color": "#0f62fe",
+  "icons": {
+   "cluster": "logos:kubernetes#mono"
+  }
+ }
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "slug": "openstack",
+  "name": "OpenStack",
+  "title": "OpenStack private cloud",
+  "mark": "logos:openstack#default",
+  "mark_color": "#ed1944",
+  "icons": {
+    "categories": [
+      "analytics",
+      "compute",
+      "containers",
+      "data",
+      "integration",
+      "networking",
+      "security",
+      "storage"
+    ],
+    "items": []
+  },
+  "theme": {
+    "paper": "#ffffff",
+    "paper_2": "#f9f4f5",
+    "ink": "#261316",
+    "muted": "#68454c",
+    "soft": "#825e66",
+    "accent": "#ed1944",
+    "link": "#a10d2b"
+  },
+  "icon_palette": [
+    "#ed1944",
+    "#333333",
+    "#ffffff"
+  ],
+  "services": {
+    "entry": {
+      "name": "Octavia Load Balancer",
+      "detail": "LBaaS · TLS termination"
+    },
+    "app": {
+      "name": "Nova Compute Instance",
+      "detail": "KVM · flavor m1.large"
+    },
+    "object_store": {
+      "name": "Swift Object Storage",
+      "detail": "S3-compatible containers"
+    },
+    "database": {
+      "name": "Trove Database",
+      "detail": "managed PostgreSQL"
+    }
+  },
+  "boundaries": {
+    "color": "#ed1944"
+  }
+}

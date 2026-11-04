@@ -1,0 +1,1708 @@
+{
+ "schema_version": 1,
+ "collection": "vendors/alibaba",
+ "generated_by": "pinned mingrammer/diagrams provider node importer",
+ "source": {
+  "url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud",
+  "release": "mingrammer/diagrams v0.25.1 (dd0763d939f377c99898951a489e813c0360cd4a)",
+  "terms": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE",
+  "label": "Alibaba Cloud"
+ },
+ "counts": {
+  "icons": 94
+ },
+ "icons": [
+  {
+   "id": "analytics-analytic-db",
+   "name": "Analytic DB",
+   "class_name": "AnalyticDb",
+   "aliases": [
+    "AnalyticDb",
+    "diagrams.alibabacloud.analytics.AnalyticDb",
+    "analytic-db"
+   ],
+   "category": "analytics",
+   "file": "analytics/analytics-analytic-db.svg",
+   "source_path": "resources/alibabacloud/analytics/analytic-db.png",
+   "sha256": "34c3e7234c772859dc2db22bec07bc5435bff137067641eeb23b9938bfdecf24",
+   "source_sha256": "de9723bb55965eddc17a59d931dace71786aa75f81578ec51298d2652c5ad66c",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/analytics/analytic-db.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "analytics-click-house",
+   "name": "ClickHouse",
+   "class_name": "ClickHouse",
+   "aliases": [
+    "ClickHouse",
+    "diagrams.alibabacloud.analytics.ClickHouse",
+    "click-house"
+   ],
+   "category": "analytics",
+   "file": "analytics/analytics-click-house.svg",
+   "source_path": "resources/alibabacloud/analytics/click-house.png",
+   "sha256": "ecf171e8579762580ca85372939f438f4c0f3176e946e9e66998bc767cbe0b71",
+   "source_sha256": "2c45d3880f0b4170b07fdacbaebe49c18b3a567bfb439a05b8e630efec29a05e",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/analytics/click-house.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "analytics-data-lake-analytics",
+   "name": "Data Lake Analytics",
+   "class_name": "DataLakeAnalytics",
+   "aliases": [
+    "DataLakeAnalytics",
+    "diagrams.alibabacloud.analytics.DataLakeAnalytics",
+    "data-lake-analytics"
+   ],
+   "category": "analytics",
+   "file": "analytics/analytics-data-lake-analytics.svg",
+   "source_path": "resources/alibabacloud/analytics/data-lake-analytics.png",
+   "sha256": "1d82aaadc3a6edca777b2de365dacde94587e738f137afd8e77368594c8eb527",
+   "source_sha256": "05175a70dcf358aa47a4eeb91e480b05759f7b93b8801bb006b69214f3ede20e",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/analytics/data-lake-analytics.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "analytics-elatic-map-reduce",
+   "name": "Elastic MapReduce",
+   "class_name": "ElaticMapReduce",
+   "aliases": [
+    "ElaticMapReduce",
+    "diagrams.alibabacloud.analytics.ElaticMapReduce",
+    "elatic-map-reduce"
+   ],
+   "category": "analytics",
+   "file": "analytics/analytics-elatic-map-reduce.svg",
+   "source_path": "resources/alibabacloud/analytics/elatic-map-reduce.png",
+   "sha256": "73d294328ac0c215e85fab73f2e76b4f6c3a9ecb136b562c76ad319ac23c7a6a",
+   "source_sha256": "5dfc6b8f84ea9b5a254596a21765906aa06f69df4f8ff817e05a1d4ac1fde1df",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/analytics/elatic-map-reduce.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "analytics-open-search",
+   "name": "Open Search",
+   "class_name": "OpenSearch",
+   "aliases": [
+    "OpenSearch",
+    "diagrams.alibabacloud.analytics.OpenSearch",
+    "open-search"
+   ],
+   "category": "analytics",
+   "file": "analytics/analytics-open-search.svg",
+   "source_path": "resources/alibabacloud/analytics/open-search.png",
+   "sha256": "cbb807c9c16d025a26837cfb85baa36edda42e0e401d7d64ce78ce4775115893",
+   "source_sha256": "376d26107883d01aeefbc1eeb3e04ecf497fa59d4f0ed4a3c7c4e6272c7a32d4",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/analytics/open-search.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-api-gateway",
+   "name": "API Gateway",
+   "class_name": "ApiGateway",
+   "aliases": [
+    "ApiGateway",
+    "diagrams.alibabacloud.application.ApiGateway",
+    "api-gateway"
+   ],
+   "category": "application",
+   "file": "application/application-api-gateway.svg",
+   "source_path": "resources/alibabacloud/application/api-gateway.png",
+   "sha256": "0cdda3593f3c8f7a1ab2bba35002e75b9c3bff3abf7aebeb54cf4340266a193e",
+   "source_sha256": "985d4eb290b3d6cf453f66afb07a37e684a1569637eb5654db3c51d2362d9b67",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/api-gateway.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-bee-bot",
+   "name": "Bee Bot",
+   "class_name": "BeeBot",
+   "aliases": [
+    "BeeBot",
+    "diagrams.alibabacloud.application.BeeBot",
+    "bee-bot"
+   ],
+   "category": "application",
+   "file": "application/application-bee-bot.svg",
+   "source_path": "resources/alibabacloud/application/bee-bot.png",
+   "sha256": "b123b67bd9ed8308c8f878f07e1dbc73f4b8e2a6b6d73f7bc7c3b7d428f9e45d",
+   "source_sha256": "3de871f740a2dfae4bb202bbbc4d2f5b84c78c937caaa72e9ecdf63dc372f6c7",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/bee-bot.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-blockchain-as-a-service",
+   "name": "Blockchain As AService",
+   "class_name": "BlockchainAsAService",
+   "aliases": [
+    "BlockchainAsAService",
+    "diagrams.alibabacloud.application.BlockchainAsAService",
+    "blockchain-as-a-service"
+   ],
+   "category": "application",
+   "file": "application/application-blockchain-as-a-service.svg",
+   "source_path": "resources/alibabacloud/application/blockchain-as-a-service.png",
+   "sha256": "d100fff5c3d2ee08c64aa9dc5300a87cb55eab6fca06ea25d5a1104cd03559f3",
+   "source_sha256": "95a3f4e220a8260aef4245b3db1460b81565a2affd926f15cda41412be24a209",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/blockchain-as-a-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-cloud-call-center",
+   "name": "Cloud Call Center",
+   "class_name": "CloudCallCenter",
+   "aliases": [
+    "CloudCallCenter",
+    "diagrams.alibabacloud.application.CloudCallCenter",
+    "cloud-call-center"
+   ],
+   "category": "application",
+   "file": "application/application-cloud-call-center.svg",
+   "source_path": "resources/alibabacloud/application/cloud-call-center.png",
+   "sha256": "7fee82072f7b8d8194ddde5c60402a7e079320f2386ef32f0da7c1af90d8c252",
+   "source_sha256": "04c15301590a8f6899b16944e896d30bd99e9049b3d977deec8e06689bf40585",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/cloud-call-center.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-code-pipeline",
+   "name": "Code Pipeline",
+   "class_name": "CodePipeline",
+   "aliases": [
+    "CodePipeline",
+    "diagrams.alibabacloud.application.CodePipeline",
+    "code-pipeline"
+   ],
+   "category": "application",
+   "file": "application/application-code-pipeline.svg",
+   "source_path": "resources/alibabacloud/application/code-pipeline.png",
+   "sha256": "4293ae63a9a324c9ba1ffd42a6ab53b2ca1ce64e895b4de8d82e12834e72aa2a",
+   "source_sha256": "bb8cd969db7615ca682485ff8255467d4996bc9ee5ab069e36293271f2357619",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/code-pipeline.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-direct-mail",
+   "name": "Direct Mail",
+   "class_name": "DirectMail",
+   "aliases": [
+    "DirectMail",
+    "diagrams.alibabacloud.application.DirectMail",
+    "direct-mail"
+   ],
+   "category": "application",
+   "file": "application/application-direct-mail.svg",
+   "source_path": "resources/alibabacloud/application/direct-mail.png",
+   "sha256": "09112648f3deda6ec84dd422f57d10bd3b3992480b81ca9e2ca7a9edc6e9bec9",
+   "source_sha256": "56bf2bb8a795516d10ee937bbbd72fb7a3e03aa1a4c63d9a3102ca2090c58c7a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/direct-mail.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-log-service",
+   "name": "Log Service",
+   "class_name": "LogService",
+   "aliases": [
+    "LogService",
+    "diagrams.alibabacloud.application.LogService",
+    "log-service"
+   ],
+   "category": "application",
+   "file": "application/application-log-service.svg",
+   "source_path": "resources/alibabacloud/application/log-service.png",
+   "sha256": "145b9408bee69a04d4990954fb982044aaa5716b7072b40ba019489ebf394cd3",
+   "source_sha256": "7c899dad2efba6f766132d188a83081473e3fbd2bbb8db27ab04f746f84f6407",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/log-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-message-notification-service",
+   "name": "Message Notification Service",
+   "class_name": "MessageNotificationService",
+   "aliases": [
+    "MessageNotificationService",
+    "diagrams.alibabacloud.application.MessageNotificationService",
+    "message-notification-service"
+   ],
+   "category": "application",
+   "file": "application/application-message-notification-service.svg",
+   "source_path": "resources/alibabacloud/application/message-notification-service.png",
+   "sha256": "369ab73650a84a3f8020b20b46ef0541d43d5c95be22d0e7fb221206a0ed1d3a",
+   "source_sha256": "725e0362dfea185f072e65fb8744efe4fd61cb9750918adb57bfdcb9037f8338",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/message-notification-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-node-js-performance-platform",
+   "name": "Node Js Performance Platform",
+   "class_name": "NodeJsPerformancePlatform",
+   "aliases": [
+    "NodeJsPerformancePlatform",
+    "diagrams.alibabacloud.application.NodeJsPerformancePlatform",
+    "node-js-performance-platform"
+   ],
+   "category": "application",
+   "file": "application/application-node-js-performance-platform.svg",
+   "source_path": "resources/alibabacloud/application/node-js-performance-platform.png",
+   "sha256": "703c30e6f15085e25dfa75a8c8630e37273bdb3deb8ddb781a7162538ae7d9bb",
+   "source_sha256": "5cfb31a59c443e55b429c0190fffcfb6adff510374866fbab40579da6f640261",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/node-js-performance-platform.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-open-search",
+   "name": "Open Search",
+   "class_name": "OpenSearch",
+   "aliases": [
+    "OpenSearch",
+    "diagrams.alibabacloud.application.OpenSearch",
+    "open-search"
+   ],
+   "category": "application",
+   "file": "application/application-open-search.svg",
+   "source_path": "resources/alibabacloud/application/open-search.png",
+   "sha256": "cbb807c9c16d025a26837cfb85baa36edda42e0e401d7d64ce78ce4775115893",
+   "source_sha256": "376d26107883d01aeefbc1eeb3e04ecf497fa59d4f0ed4a3c7c4e6272c7a32d4",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/open-search.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-performance-testing-service",
+   "name": "Performance Testing Service",
+   "class_name": "PerformanceTestingService",
+   "aliases": [
+    "PerformanceTestingService",
+    "diagrams.alibabacloud.application.PerformanceTestingService",
+    "performance-testing-service"
+   ],
+   "category": "application",
+   "file": "application/application-performance-testing-service.svg",
+   "source_path": "resources/alibabacloud/application/performance-testing-service.png",
+   "sha256": "55bdc9a882a3a90dec6b67c917632320789a48173f734c3fc3e7dcdad86995a0",
+   "source_sha256": "72161e3e1a49605c743c36a0d9c17abbd153ecac0651eb476a8b068e7c4e9ae5",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/performance-testing-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-rd-cloud",
+   "name": "Rd Cloud",
+   "class_name": "RdCloud",
+   "aliases": [
+    "RdCloud",
+    "diagrams.alibabacloud.application.RdCloud",
+    "rd-cloud"
+   ],
+   "category": "application",
+   "file": "application/application-rd-cloud.svg",
+   "source_path": "resources/alibabacloud/application/rd-cloud.png",
+   "sha256": "2c51b9f6fcd916bfc5a63b0be15e7df9cf24efdecb09e5722a5d84ed509f6803",
+   "source_sha256": "28fe46d9fc55bf52cfb193e02df265c8a98dd1b5f8ac2d16464df48a5afa21b8",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/rd-cloud.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-smart-conversation-analysis",
+   "name": "Smart Conversation Analysis",
+   "class_name": "SmartConversationAnalysis",
+   "aliases": [
+    "SmartConversationAnalysis",
+    "diagrams.alibabacloud.application.SmartConversationAnalysis",
+    "smart-conversation-analysis"
+   ],
+   "category": "application",
+   "file": "application/application-smart-conversation-analysis.svg",
+   "source_path": "resources/alibabacloud/application/smart-conversation-analysis.png",
+   "sha256": "d9286507c6af428faac2d160db6af640789570f390f6250e832470a934b517e6",
+   "source_sha256": "9c4fde803e9d56a3309953d58b3c1e0d10033e889fcb1d449f0e7c1e5cdbfade",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/smart-conversation-analysis.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "application-yida",
+   "name": "Yida",
+   "class_name": "Yida",
+   "aliases": [
+    "Yida",
+    "diagrams.alibabacloud.application.Yida",
+    "yida"
+   ],
+   "category": "application",
+   "file": "application/application-yida.svg",
+   "source_path": "resources/alibabacloud/application/yida.png",
+   "sha256": "9ade6d9c13d875ed9b2c3c688c312d520778e7bd758c8c57e5fca3489f58cccf",
+   "source_sha256": "1cd075666204199b15b9a83fca62ca8dcded836fa5bb4fc7fc1ec6ce3880c7cc",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/application/yida.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "communication-direct-mail",
+   "name": "Direct Mail",
+   "class_name": "DirectMail",
+   "aliases": [
+    "DirectMail",
+    "diagrams.alibabacloud.communication.DirectMail",
+    "direct-mail"
+   ],
+   "category": "communication",
+   "file": "communication/communication-direct-mail.svg",
+   "source_path": "resources/alibabacloud/communication/direct-mail.png",
+   "sha256": "09112648f3deda6ec84dd422f57d10bd3b3992480b81ca9e2ca7a9edc6e9bec9",
+   "source_sha256": "56bf2bb8a795516d10ee937bbbd72fb7a3e03aa1a4c63d9a3102ca2090c58c7a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/communication/direct-mail.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "communication-mobile-push",
+   "name": "Mobile Push",
+   "class_name": "MobilePush",
+   "aliases": [
+    "MobilePush",
+    "diagrams.alibabacloud.communication.MobilePush",
+    "mobile-push"
+   ],
+   "category": "communication",
+   "file": "communication/communication-mobile-push.svg",
+   "source_path": "resources/alibabacloud/communication/mobile-push.png",
+   "sha256": "1929132215694239b4ebd73c95cbf48cf7bfcb8e4f45d5c957ffaebbc9b21e17",
+   "source_sha256": "40935a6036fcc17bd9036104d1c033669c45ce18e028b2d9171c566fcaf61d0e",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/communication/mobile-push.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-auto-scaling",
+   "name": "Auto Scaling",
+   "class_name": "AutoScaling",
+   "aliases": [
+    "AutoScaling",
+    "diagrams.alibabacloud.compute.AutoScaling",
+    "auto-scaling"
+   ],
+   "category": "compute",
+   "file": "compute/compute-auto-scaling.svg",
+   "source_path": "resources/alibabacloud/compute/auto-scaling.png",
+   "sha256": "36f555cedab4e1aa2b3420116de833790d6ce7731f41a05932972f54c6e0e9b9",
+   "source_sha256": "ad78c7fe90128e7d1ef47b184d906cb6c317b22521d03fe1623cc5210c9459e7",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/auto-scaling.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-batch-compute",
+   "name": "Batch Compute",
+   "class_name": "BatchCompute",
+   "aliases": [
+    "BatchCompute",
+    "diagrams.alibabacloud.compute.BatchCompute",
+    "batch-compute"
+   ],
+   "category": "compute",
+   "file": "compute/compute-batch-compute.svg",
+   "source_path": "resources/alibabacloud/compute/batch-compute.png",
+   "sha256": "68fe6463d02ccd3971da56ac3dc5c0e5d645202845fe983b658e825de4cce280",
+   "source_sha256": "b82b5eb65a78ac6f206ba31e48fede53d2b669eb54c7c62e90eb4f7c7831d0cd",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/batch-compute.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-container-registry",
+   "name": "Container Registry",
+   "class_name": "ContainerRegistry",
+   "aliases": [
+    "ContainerRegistry",
+    "diagrams.alibabacloud.compute.ContainerRegistry",
+    "container-registry"
+   ],
+   "category": "compute",
+   "file": "compute/compute-container-registry.svg",
+   "source_path": "resources/alibabacloud/compute/container-registry.png",
+   "sha256": "6261c88099d4ec86af347d87bf1824afbb872e037a7a7810d738e1a463068367",
+   "source_sha256": "42a6a81d572722cbcd3a8ff67161f3053ac5352088c8456fff51dbf7c8a08cfb",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/container-registry.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-container-service",
+   "name": "Container Service",
+   "class_name": "ContainerService",
+   "aliases": [
+    "ContainerService",
+    "diagrams.alibabacloud.compute.ContainerService",
+    "container-service"
+   ],
+   "category": "compute",
+   "file": "compute/compute-container-service.svg",
+   "source_path": "resources/alibabacloud/compute/container-service.png",
+   "sha256": "ff03dadc17219a3b9f1245336ae8f74b7ad3f3e4649d8e09b465f4651b433f7a",
+   "source_sha256": "09ad98c1c5c13313b139d411f51b1eaeec91cac510625d753a26c57a6d812ae8",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/container-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-elastic-compute-service",
+   "name": "Elastic Compute Service",
+   "class_name": "ElasticComputeService",
+   "aliases": [
+    "ElasticComputeService",
+    "diagrams.alibabacloud.compute.ElasticComputeService",
+    "elastic-compute-service"
+   ],
+   "category": "compute",
+   "file": "compute/compute-elastic-compute-service.svg",
+   "source_path": "resources/alibabacloud/compute/elastic-compute-service.png",
+   "sha256": "173fa77f6c8879c41d391aaaf8f2507a70168c50876a62f068f7f2651fdd1733",
+   "source_sha256": "32257706d9d39594c4cf01932779065ca0f05c3cfdcfc67a6a125035067a5172",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/elastic-compute-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-elastic-container-instance",
+   "name": "Elastic Container Instance",
+   "class_name": "ElasticContainerInstance",
+   "aliases": [
+    "ElasticContainerInstance",
+    "diagrams.alibabacloud.compute.ElasticContainerInstance",
+    "elastic-container-instance"
+   ],
+   "category": "compute",
+   "file": "compute/compute-elastic-container-instance.svg",
+   "source_path": "resources/alibabacloud/compute/elastic-container-instance.png",
+   "sha256": "e2e8cbf9d43cc30aba5adc947f3a08b95794db966facda6b72dc88d286b2805d",
+   "source_sha256": "0b5fb5eca6ed686a5197bd241894a1d88d144496d14c9c370ad7db4e04d97a48",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/elastic-container-instance.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-elastic-high-performance-computing",
+   "name": "Elastic High Performance Computing",
+   "class_name": "ElasticHighPerformanceComputing",
+   "aliases": [
+    "ElasticHighPerformanceComputing",
+    "diagrams.alibabacloud.compute.ElasticHighPerformanceComputing",
+    "elastic-high-performance-computing"
+   ],
+   "category": "compute",
+   "file": "compute/compute-elastic-high-performance-computing.svg",
+   "source_path": "resources/alibabacloud/compute/elastic-high-performance-computing.png",
+   "sha256": "3f58a35dfe0a403e5dca087f92c3c475d7911271dbd17cfe29f196b3ddef3240",
+   "source_sha256": "bddc10c1cba4c96a960260b4efe94818cb404002cafef9f4edab6e1befa6f3ba",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/elastic-high-performance-computing.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-elastic-search",
+   "name": "Elastic Search",
+   "class_name": "ElasticSearch",
+   "aliases": [
+    "ElasticSearch",
+    "diagrams.alibabacloud.compute.ElasticSearch",
+    "elastic-search"
+   ],
+   "category": "compute",
+   "file": "compute/compute-elastic-search.svg",
+   "source_path": "resources/alibabacloud/compute/elastic-search.png",
+   "sha256": "a0cb6fd8785910a673d57ebb3b99cbec45be07530420eacaa29d8268781d0391",
+   "source_sha256": "5c9f40653c368a802a450a7ec051da9f71dc5cfca7ab8ad82c1e3b8bb88d1cb7",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/elastic-search.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-function-compute",
+   "name": "Function Compute",
+   "class_name": "FunctionCompute",
+   "aliases": [
+    "FunctionCompute",
+    "diagrams.alibabacloud.compute.FunctionCompute",
+    "function-compute"
+   ],
+   "category": "compute",
+   "file": "compute/compute-function-compute.svg",
+   "source_path": "resources/alibabacloud/compute/function-compute.png",
+   "sha256": "458c7d755042310fe6efab2e3b001107112d8276fcfd02f22aba9756e48cd070",
+   "source_sha256": "24803945fe7f0f3cdd65c2d92cef581698f9c44f3ddb23e4c72207774c2f7fca",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/function-compute.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-operation-orchestration-service",
+   "name": "Operation Orchestration Service",
+   "class_name": "OperationOrchestrationService",
+   "aliases": [
+    "OperationOrchestrationService",
+    "diagrams.alibabacloud.compute.OperationOrchestrationService",
+    "operation-orchestration-service"
+   ],
+   "category": "compute",
+   "file": "compute/compute-operation-orchestration-service.svg",
+   "source_path": "resources/alibabacloud/compute/operation-orchestration-service.png",
+   "sha256": "24ecaf2b89368a3ccd1c8663a8b1486fd600a8eac44b1cc53c22a9ebdc7c7601",
+   "source_sha256": "e637bcc1536660d6b891a9d04a83b7a0c60c6270d21bec9c69fd4bd212537933",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/operation-orchestration-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-resource-orchestration-service",
+   "name": "Resource Orchestration Service",
+   "class_name": "ResourceOrchestrationService",
+   "aliases": [
+    "ResourceOrchestrationService",
+    "diagrams.alibabacloud.compute.ResourceOrchestrationService",
+    "resource-orchestration-service"
+   ],
+   "category": "compute",
+   "file": "compute/compute-resource-orchestration-service.svg",
+   "source_path": "resources/alibabacloud/compute/resource-orchestration-service.png",
+   "sha256": "effcdf4198e09fc80b0a4dc096cbc66bf6de0323cfa0bb993c51e20eedc8b90d",
+   "source_sha256": "f2a9f6587c3025d1ff106e7777d7c9a0c0f2a30be5eb0a18a5cdab98eb5d3df8",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/resource-orchestration-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-server-load-balancer",
+   "name": "Server Load Balancer",
+   "class_name": "ServerLoadBalancer",
+   "aliases": [
+    "ServerLoadBalancer",
+    "diagrams.alibabacloud.compute.ServerLoadBalancer",
+    "server-load-balancer"
+   ],
+   "category": "compute",
+   "file": "compute/compute-server-load-balancer.svg",
+   "source_path": "resources/alibabacloud/compute/server-load-balancer.png",
+   "sha256": "ac76aa25a1c2aac7bb12498071569a5ef906ed406c9ab4f1961730080396f831",
+   "source_sha256": "38d1f48b419c757cec29db4928a45986be986e9281d23212b73a237699286ca0",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/server-load-balancer.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-serverless-app-engine",
+   "name": "Serverless App Engine",
+   "class_name": "ServerlessAppEngine",
+   "aliases": [
+    "ServerlessAppEngine",
+    "diagrams.alibabacloud.compute.ServerlessAppEngine",
+    "serverless-app-engine"
+   ],
+   "category": "compute",
+   "file": "compute/compute-serverless-app-engine.svg",
+   "source_path": "resources/alibabacloud/compute/serverless-app-engine.png",
+   "sha256": "e26c07b3b8362de2da2aca4f3047543e0f460456967be115dd00bf8c21800d4f",
+   "source_sha256": "c4300164fc46069311b124e38d8f6e7429cfcee15fdd59e7285b7651cb51942f",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/serverless-app-engine.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-simple-application-server",
+   "name": "Simple Application Server",
+   "class_name": "SimpleApplicationServer",
+   "aliases": [
+    "SimpleApplicationServer",
+    "diagrams.alibabacloud.compute.SimpleApplicationServer",
+    "simple-application-server"
+   ],
+   "category": "compute",
+   "file": "compute/compute-simple-application-server.svg",
+   "source_path": "resources/alibabacloud/compute/simple-application-server.png",
+   "sha256": "920048bdb53515c0b3b548b04c27aad4286dd7a3d110082022d66279c15d4d7c",
+   "source_sha256": "8004191686d736894b5187b19bea3da6266f1ccffece2ac15ecccbd2a245d989",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/simple-application-server.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "compute-web-app-service",
+   "name": "Web App Service",
+   "class_name": "WebAppService",
+   "aliases": [
+    "WebAppService",
+    "diagrams.alibabacloud.compute.WebAppService",
+    "web-app-service"
+   ],
+   "category": "compute",
+   "file": "compute/compute-web-app-service.svg",
+   "source_path": "resources/alibabacloud/compute/web-app-service.png",
+   "sha256": "709fdfba1c1820700e44da2eb0e45abf7064f8744f3c17bc37f1a2f9098a46d6",
+   "source_sha256": "991d8cfdff044bf4daa1ceed87aabc8312911869a9d9fd52a9018c335d5dcbd8",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/compute/web-app-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-apsaradb-cassandra",
+   "name": "Apsaradb Cassandra",
+   "class_name": "ApsaradbCassandra",
+   "aliases": [
+    "ApsaradbCassandra",
+    "diagrams.alibabacloud.database.ApsaradbCassandra",
+    "apsaradb-cassandra"
+   ],
+   "category": "database",
+   "file": "database/database-apsaradb-cassandra.svg",
+   "source_path": "resources/alibabacloud/database/apsaradb-cassandra.png",
+   "sha256": "06197b43998f58a80921080bf490f46f63ffa06fbd43720c5f4b15fa90a6c88f",
+   "source_sha256": "ae1fcc858f75ec42b8b56cd03ae884f147963cfd453268e5702fd8d934fa552c",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/apsaradb-cassandra.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-apsaradb-hbase",
+   "name": "Apsaradb Hbase",
+   "class_name": "ApsaradbHbase",
+   "aliases": [
+    "ApsaradbHbase",
+    "diagrams.alibabacloud.database.ApsaradbHbase",
+    "apsaradb-hbase"
+   ],
+   "category": "database",
+   "file": "database/database-apsaradb-hbase.svg",
+   "source_path": "resources/alibabacloud/database/apsaradb-hbase.png",
+   "sha256": "de2d6a75d8dd95529be0507758ea2530a724321b1d3feac30619e847a23741fe",
+   "source_sha256": "413b01ab2f93da9e589e2b3c3ede237520b4b0a7b0e110ab012e4deb09bb91f6",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/apsaradb-hbase.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-apsaradb-memcache",
+   "name": "Apsaradb Memcache",
+   "class_name": "ApsaradbMemcache",
+   "aliases": [
+    "ApsaradbMemcache",
+    "diagrams.alibabacloud.database.ApsaradbMemcache",
+    "apsaradb-memcache"
+   ],
+   "category": "database",
+   "file": "database/database-apsaradb-memcache.svg",
+   "source_path": "resources/alibabacloud/database/apsaradb-memcache.png",
+   "sha256": "eabd5112d20e55d50faaf0ec5cdc993edaaef81f57cbee6b04544095041b572e",
+   "source_sha256": "1e838501febe3ecc94cac2ae462671da1ab2af7b9af44d8695a7e650ea7f5d2a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/apsaradb-memcache.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-apsaradb-mongodb",
+   "name": "Apsaradb Mongodb",
+   "class_name": "ApsaradbMongodb",
+   "aliases": [
+    "ApsaradbMongodb",
+    "diagrams.alibabacloud.database.ApsaradbMongodb",
+    "apsaradb-mongodb"
+   ],
+   "category": "database",
+   "file": "database/database-apsaradb-mongodb.svg",
+   "source_path": "resources/alibabacloud/database/apsaradb-mongodb.png",
+   "sha256": "cf54849a8ca596062443e9000522f68b23d109b0a6874db5a6c6d0cd7322a285",
+   "source_sha256": "336d6b923f7e7f10e0cefca21f596b480c47fd5688f969878847ef9fb00e77fa",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/apsaradb-mongodb.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-apsaradb-oceanbase",
+   "name": "Apsaradb Oceanbase",
+   "class_name": "ApsaradbOceanbase",
+   "aliases": [
+    "ApsaradbOceanbase",
+    "diagrams.alibabacloud.database.ApsaradbOceanbase",
+    "apsaradb-oceanbase"
+   ],
+   "category": "database",
+   "file": "database/database-apsaradb-oceanbase.svg",
+   "source_path": "resources/alibabacloud/database/apsaradb-oceanbase.png",
+   "sha256": "a28935998f12dc6e23da3eadd3d314dcb6120e6dcab128656961a2c4fd1fb216",
+   "source_sha256": "08abf43b4ff3da036aa96fcba02cf59e858a9da7a4a77f02283e9d3635f19dfe",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/apsaradb-oceanbase.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-apsaradb-polardb",
+   "name": "Apsaradb Polardb",
+   "class_name": "ApsaradbPolardb",
+   "aliases": [
+    "ApsaradbPolardb",
+    "diagrams.alibabacloud.database.ApsaradbPolardb",
+    "apsaradb-polardb"
+   ],
+   "category": "database",
+   "file": "database/database-apsaradb-polardb.svg",
+   "source_path": "resources/alibabacloud/database/apsaradb-polardb.png",
+   "sha256": "8ce6a0eec3c5f1a5803503d4394fbc41a5a9c1773aac979e1c947d38aad1f6ad",
+   "source_sha256": "69306c2e3aa120cb7c8ec063698884fdf2cf9d9a2e985e42891a7344f9dbf056",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/apsaradb-polardb.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-apsaradb-postgresql",
+   "name": "Apsaradb Postgresql",
+   "class_name": "ApsaradbPostgresql",
+   "aliases": [
+    "ApsaradbPostgresql",
+    "diagrams.alibabacloud.database.ApsaradbPostgresql",
+    "apsaradb-postgresql"
+   ],
+   "category": "database",
+   "file": "database/database-apsaradb-postgresql.svg",
+   "source_path": "resources/alibabacloud/database/apsaradb-postgresql.png",
+   "sha256": "892bb3cc4be957ca80539bb23dc1a385e58c5288c3a41b45e1a884ab5d58f6fb",
+   "source_sha256": "316126f3b53c06f13ddc9b2bb1dd10a44d3d6fa41c558cd2311cd37964f2d08c",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/apsaradb-postgresql.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-apsaradb-ppas",
+   "name": "Apsaradb Ppas",
+   "class_name": "ApsaradbPpas",
+   "aliases": [
+    "ApsaradbPpas",
+    "diagrams.alibabacloud.database.ApsaradbPpas",
+    "apsaradb-ppas"
+   ],
+   "category": "database",
+   "file": "database/database-apsaradb-ppas.svg",
+   "source_path": "resources/alibabacloud/database/apsaradb-ppas.png",
+   "sha256": "446b9d443822a3924c06564ec4d16c94e5413273c08b8d1b57924691320ac2d7",
+   "source_sha256": "972c46b5458af8f6c8f8482b640c2ec9298e382f325e9c316d342e500ee9995f",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/apsaradb-ppas.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-apsaradb-redis",
+   "name": "Apsaradb Redis",
+   "class_name": "ApsaradbRedis",
+   "aliases": [
+    "ApsaradbRedis",
+    "diagrams.alibabacloud.database.ApsaradbRedis",
+    "apsaradb-redis"
+   ],
+   "category": "database",
+   "file": "database/database-apsaradb-redis.svg",
+   "source_path": "resources/alibabacloud/database/apsaradb-redis.png",
+   "sha256": "add6bc0d6a6a0a4222b2dec5823b05e06999ec3470d55fc01d9fc28184fc95c8",
+   "source_sha256": "e6424a73124d9df0ab3dd9a3d3406974f5ebb36e411f9ea435d73e11cda37e7e",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/apsaradb-redis.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-apsaradb-sqlserver",
+   "name": "Apsaradb Sqlserver",
+   "class_name": "ApsaradbSqlserver",
+   "aliases": [
+    "ApsaradbSqlserver",
+    "diagrams.alibabacloud.database.ApsaradbSqlserver",
+    "apsaradb-sqlserver"
+   ],
+   "category": "database",
+   "file": "database/database-apsaradb-sqlserver.svg",
+   "source_path": "resources/alibabacloud/database/apsaradb-sqlserver.png",
+   "sha256": "bd4b1c570ddd6ef37c5d794cb14b4607898dd09b8ac4d0cd5156226652673e65",
+   "source_sha256": "eee73cc8f45f465acac7d05c0455b68167a07adb5f29406e19c4756c56905cf6",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/apsaradb-sqlserver.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-data-management-service",
+   "name": "Data Management Service",
+   "class_name": "DataManagementService",
+   "aliases": [
+    "DataManagementService",
+    "diagrams.alibabacloud.database.DataManagementService",
+    "data-management-service"
+   ],
+   "category": "database",
+   "file": "database/database-data-management-service.svg",
+   "source_path": "resources/alibabacloud/database/data-management-service.png",
+   "sha256": "6025218d516902a045dbc463dfb955329cc66eee1df45bc94d3d8403411b3fc7",
+   "source_sha256": "58e012f286b3970bd7948efe5da84855336adda155f004a09d448733456f7739",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/data-management-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-data-transmission-service",
+   "name": "Data Transmission Service",
+   "class_name": "DataTransmissionService",
+   "aliases": [
+    "DataTransmissionService",
+    "diagrams.alibabacloud.database.DataTransmissionService",
+    "data-transmission-service"
+   ],
+   "category": "database",
+   "file": "database/database-data-transmission-service.svg",
+   "source_path": "resources/alibabacloud/database/data-transmission-service.png",
+   "sha256": "5af28cc05bad9c6828ecd706b0e3772afb6a8924d7fea92e1ce153dd15da94ba",
+   "source_sha256": "cb411428db971499b26587089f763011003fef8a94995fd2f6deadaeb36cadf9",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/data-transmission-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-database-backup-service",
+   "name": "Database Backup Service",
+   "class_name": "DatabaseBackupService",
+   "aliases": [
+    "DatabaseBackupService",
+    "diagrams.alibabacloud.database.DatabaseBackupService",
+    "database-backup-service"
+   ],
+   "category": "database",
+   "file": "database/database-database-backup-service.svg",
+   "source_path": "resources/alibabacloud/database/database-backup-service.png",
+   "sha256": "965ae7def9c8935a48236ab4c8a021f3965159631c994cf62b9b577ef6dc0447",
+   "source_sha256": "2e575bed492e1364f18ef7e43315f7f635b14fd7473541ac9c3860476ee3874a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/database-backup-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-disribute-relational-database-service",
+   "name": "Distributed Relational Database Service",
+   "class_name": "DisributeRelationalDatabaseService",
+   "aliases": [
+    "DisributeRelationalDatabaseService",
+    "diagrams.alibabacloud.database.DisributeRelationalDatabaseService",
+    "disribute-relational-database-service"
+   ],
+   "category": "database",
+   "file": "database/database-disribute-relational-database-service.svg",
+   "source_path": "resources/alibabacloud/database/disribute-relational-database-service.png",
+   "sha256": "ccf85feb06cc5e85e094eb9179ed8c06061d3a9509614eae3102d6c5c034e485",
+   "source_sha256": "2c6580a812db9c5d8a14852575cc0f575dfd96db182cf9451a66314de36a3094",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/disribute-relational-database-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-graph-database-service",
+   "name": "Graph Database Service",
+   "class_name": "GraphDatabaseService",
+   "aliases": [
+    "GraphDatabaseService",
+    "diagrams.alibabacloud.database.GraphDatabaseService",
+    "graph-database-service"
+   ],
+   "category": "database",
+   "file": "database/database-graph-database-service.svg",
+   "source_path": "resources/alibabacloud/database/graph-database-service.png",
+   "sha256": "ac94e2eb36b4e069e0c9e7e7f7b7ae82a82dbf52801ff26bb52c585a6af93b81",
+   "source_sha256": "3e71e5a308d6dfbbe6f67246afd60263ecbf904a27e45b5003f04b53b0ec5a17",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/graph-database-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-hybriddb-for-mysql",
+   "name": "Hybriddb For Mysql",
+   "class_name": "HybriddbForMysql",
+   "aliases": [
+    "HybriddbForMysql",
+    "diagrams.alibabacloud.database.HybriddbForMysql",
+    "hybriddb-for-mysql"
+   ],
+   "category": "database",
+   "file": "database/database-hybriddb-for-mysql.svg",
+   "source_path": "resources/alibabacloud/database/hybriddb-for-mysql.png",
+   "sha256": "79ce2fc6e48583ba42468986f60e7232e8919745241354109ffc4fc5c5143559",
+   "source_sha256": "4c61a4ad4030b5dd5c0bdf4d6df276125a80d3bd52b34dc0a042f4099f71ffaa",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/hybriddb-for-mysql.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "database-relational-database-service",
+   "name": "Relational Database Service",
+   "class_name": "RelationalDatabaseService",
+   "aliases": [
+    "RelationalDatabaseService",
+    "diagrams.alibabacloud.database.RelationalDatabaseService",
+    "relational-database-service"
+   ],
+   "category": "database",
+   "file": "database/database-relational-database-service.svg",
+   "source_path": "resources/alibabacloud/database/relational-database-service.png",
+   "sha256": "cd1ee463db7ada4b82a9cbddb1882aaeb8b19efbf3ed3b928aa2c709bf0ad488",
+   "source_sha256": "2c5c5deb222792ed8748b8fe5b1fe6744915ceabbcb154ec3213136780a05b67",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/database/relational-database-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "iot-iot-internet-device-id",
+   "name": "IoT Internet Device Id",
+   "class_name": "IotInternetDeviceId",
+   "aliases": [
+    "IotInternetDeviceId",
+    "diagrams.alibabacloud.iot.IotInternetDeviceId",
+    "iot-internet-device-id"
+   ],
+   "category": "iot",
+   "file": "iot/iot-iot-internet-device-id.svg",
+   "source_path": "resources/alibabacloud/iot/iot-internet-device-id.png",
+   "sha256": "425c44bbfb24375f432644bf9474d17651d1f9cd2703ae42b59e347718d83620",
+   "source_sha256": "b6ae401ab141e89c5fef0db6ef005075da864ea9af54fc343f205fc236d6667a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/iot/iot-internet-device-id.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "iot-iot-link-wan",
+   "name": "IoT Link Wan",
+   "class_name": "IotLinkWan",
+   "aliases": [
+    "IotLinkWan",
+    "diagrams.alibabacloud.iot.IotLinkWan",
+    "iot-link-wan"
+   ],
+   "category": "iot",
+   "file": "iot/iot-iot-link-wan.svg",
+   "source_path": "resources/alibabacloud/iot/iot-link-wan.png",
+   "sha256": "e571362353261938eadb746f3cc89b46c588166f62547941b613d4ced636d39a",
+   "source_sha256": "5143afa700906d4ea7c549c5055e45eb3a0940afbe52abec5a15a08c239b62f2",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/iot/iot-link-wan.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "iot-iot-mobile-connection-package",
+   "name": "IoT Mobile Connection Package",
+   "class_name": "IotMobileConnectionPackage",
+   "aliases": [
+    "IotMobileConnectionPackage",
+    "diagrams.alibabacloud.iot.IotMobileConnectionPackage",
+    "iot-mobile-connection-package"
+   ],
+   "category": "iot",
+   "file": "iot/iot-iot-mobile-connection-package.svg",
+   "source_path": "resources/alibabacloud/iot/iot-mobile-connection-package.png",
+   "sha256": "43e555d2023454e04653a85994aab8b8771814ec6e8ff77cf9ac4b7da3763b81",
+   "source_sha256": "9a836b65484c0f4345e27ac9d9a4bb57383c4d420feb4dad5d25db3555a048b0",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/iot/iot-mobile-connection-package.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "iot-iot-platform",
+   "name": "IoT Platform",
+   "class_name": "IotPlatform",
+   "aliases": [
+    "IotPlatform",
+    "diagrams.alibabacloud.iot.IotPlatform",
+    "iot-platform"
+   ],
+   "category": "iot",
+   "file": "iot/iot-iot-platform.svg",
+   "source_path": "resources/alibabacloud/iot/iot-platform.png",
+   "sha256": "6044e7c3badc4ae74af86c4ffd96707983e050b47f66c240887274dd8f6f5030",
+   "source_sha256": "22d984ded4ed5a7a0e14e37480883aa3a2737036ec27ab444b6a08a76edf191c",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/iot/iot-platform.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-cdn",
+   "name": "CDN",
+   "class_name": "Cdn",
+   "aliases": [
+    "Cdn",
+    "diagrams.alibabacloud.network.Cdn",
+    "cdn"
+   ],
+   "category": "network",
+   "file": "network/network-cdn.svg",
+   "source_path": "resources/alibabacloud/network/cdn.png",
+   "sha256": "31adbf57da14173ddbcc3d093155f052772cfaaf34764421d6e7fce23dd4fd8b",
+   "source_sha256": "5f4e3bd1bff4e3c017b163c5c765eec33ef938c1fb78752c267edbf325c4942a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/network/cdn.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-cloud-enterprise-network",
+   "name": "Cloud Enterprise Network",
+   "class_name": "CloudEnterpriseNetwork",
+   "aliases": [
+    "CloudEnterpriseNetwork",
+    "diagrams.alibabacloud.network.CloudEnterpriseNetwork",
+    "cloud-enterprise-network"
+   ],
+   "category": "network",
+   "file": "network/network-cloud-enterprise-network.svg",
+   "source_path": "resources/alibabacloud/network/cloud-enterprise-network.png",
+   "sha256": "f97fc9e0f9d5a6d94d624dfdee80808002108f5462612650b08aeb573fd2c7aa",
+   "source_sha256": "660e6b8a4a5567ff692a48503f5612d4b549e6d355d86d8cdf8497aa3e3b40ee",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/network/cloud-enterprise-network.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-elastic-ip-address",
+   "name": "Elastic IP Address",
+   "class_name": "ElasticIpAddress",
+   "aliases": [
+    "ElasticIpAddress",
+    "diagrams.alibabacloud.network.ElasticIpAddress",
+    "elastic-ip-address"
+   ],
+   "category": "network",
+   "file": "network/network-elastic-ip-address.svg",
+   "source_path": "resources/alibabacloud/network/elastic-ip-address.png",
+   "sha256": "9a59904a92735262908f12029b03a9381309763b9e69c84518d9cae98d5f4d11",
+   "source_sha256": "7c85e8489c9fb90ba19ef6fe0489ebbc30855655b1afb7ad6329d189e4243af3",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/network/elastic-ip-address.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-express-connect",
+   "name": "Express Connect",
+   "class_name": "ExpressConnect",
+   "aliases": [
+    "ExpressConnect",
+    "diagrams.alibabacloud.network.ExpressConnect",
+    "express-connect"
+   ],
+   "category": "network",
+   "file": "network/network-express-connect.svg",
+   "source_path": "resources/alibabacloud/network/express-connect.png",
+   "sha256": "403d181e9dfec12df1b3bd04018114cb20630598758959e5692aef1afb801be0",
+   "source_sha256": "e4ce6a0e3e6840c5bbcaddcc2786a6ca00d82eb290a34f7dfa73deb41f0e76a8",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/network/express-connect.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-nat-gateway",
+   "name": "NAT Gateway",
+   "class_name": "NatGateway",
+   "aliases": [
+    "NatGateway",
+    "diagrams.alibabacloud.network.NatGateway",
+    "nat-gateway"
+   ],
+   "category": "network",
+   "file": "network/network-nat-gateway.svg",
+   "source_path": "resources/alibabacloud/network/nat-gateway.png",
+   "sha256": "26ab54cdd7e547d9dc2c6bd56579b5d28ea7d2ef479abe9eb31244c57c795ede",
+   "source_sha256": "7a97119d850dd26b1a890087424159cee0832eed594f0d0f2047ef2731ce082d",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/network/nat-gateway.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-server-load-balancer",
+   "name": "Server Load Balancer",
+   "class_name": "ServerLoadBalancer",
+   "aliases": [
+    "ServerLoadBalancer",
+    "diagrams.alibabacloud.network.ServerLoadBalancer",
+    "server-load-balancer"
+   ],
+   "category": "network",
+   "file": "network/network-server-load-balancer.svg",
+   "source_path": "resources/alibabacloud/network/server-load-balancer.png",
+   "sha256": "ac76aa25a1c2aac7bb12498071569a5ef906ed406c9ab4f1961730080396f831",
+   "source_sha256": "38d1f48b419c757cec29db4928a45986be986e9281d23212b73a237699286ca0",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/network/server-load-balancer.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-smart-access-gateway",
+   "name": "Smart Access Gateway",
+   "class_name": "SmartAccessGateway",
+   "aliases": [
+    "SmartAccessGateway",
+    "diagrams.alibabacloud.network.SmartAccessGateway",
+    "smart-access-gateway"
+   ],
+   "category": "network",
+   "file": "network/network-smart-access-gateway.svg",
+   "source_path": "resources/alibabacloud/network/smart-access-gateway.png",
+   "sha256": "9fe00915848dc08b5f9a6387834a11cde81f01acac4938782a7c06ebc14e8462",
+   "source_sha256": "2e6e64a5707456a7ae18ea8ffab82e5e398f9b81e113da5b3e7a092ae68786bc",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/network/smart-access-gateway.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-virtual-private-cloud",
+   "name": "Virtual Private Cloud",
+   "class_name": "VirtualPrivateCloud",
+   "aliases": [
+    "VirtualPrivateCloud",
+    "diagrams.alibabacloud.network.VirtualPrivateCloud",
+    "virtual-private-cloud"
+   ],
+   "category": "network",
+   "file": "network/network-virtual-private-cloud.svg",
+   "source_path": "resources/alibabacloud/network/virtual-private-cloud.png",
+   "sha256": "4087aeb9b8aa0b1e44a2e4feeb414c253d8c6dc9f8d3a39a186a93721a1f2a6c",
+   "source_sha256": "da1b083533130b9a5f0e4501e30334cbfd2d03c62f43ee8fa228106a5b7bbf7a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/network/virtual-private-cloud.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "network-vpn-gateway",
+   "name": "VPN Gateway",
+   "class_name": "VpnGateway",
+   "aliases": [
+    "VpnGateway",
+    "diagrams.alibabacloud.network.VpnGateway",
+    "vpn-gateway"
+   ],
+   "category": "network",
+   "file": "network/network-vpn-gateway.svg",
+   "source_path": "resources/alibabacloud/network/vpn-gateway.png",
+   "sha256": "0cee9001add5098e966231463aefb71a669c97cdb222cfbda7e6a91ac9fb4a36",
+   "source_sha256": "08f6c723369dd64a7844f1a2a1ec921c1153ad2b865795523d777399991b2603",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/network/vpn-gateway.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-anti-bot-service",
+   "name": "Anti Bot Service",
+   "class_name": "AntiBotService",
+   "aliases": [
+    "AntiBotService",
+    "diagrams.alibabacloud.security.AntiBotService",
+    "anti-bot-service"
+   ],
+   "category": "security",
+   "file": "security/security-anti-bot-service.svg",
+   "source_path": "resources/alibabacloud/security/anti-bot-service.png",
+   "sha256": "3fa62c6e49e798005a681c8677bf79882eac75b075c7828cd0f5670b8f116f83",
+   "source_sha256": "6e80ecb935b65d66d219222c58703c64ad1a70f74b5322c4d2f43be291d07f13",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/anti-bot-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-anti-ddos-basic",
+   "name": "Anti Ddos Basic",
+   "class_name": "AntiDdosBasic",
+   "aliases": [
+    "AntiDdosBasic",
+    "diagrams.alibabacloud.security.AntiDdosBasic",
+    "anti-ddos-basic"
+   ],
+   "category": "security",
+   "file": "security/security-anti-ddos-basic.svg",
+   "source_path": "resources/alibabacloud/security/anti-ddos-basic.png",
+   "sha256": "5459104b17cc87d97c8cf1c237988e2b48a08f2e8578a90bd5035eea45d7eb84",
+   "source_sha256": "26a52de68a977ac5ea493a6016ea21dcc68fd47d79db0de2ff22fb8d79d054fa",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/anti-ddos-basic.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-anti-ddos-pro",
+   "name": "Anti Ddos Pro",
+   "class_name": "AntiDdosPro",
+   "aliases": [
+    "AntiDdosPro",
+    "diagrams.alibabacloud.security.AntiDdosPro",
+    "anti-ddos-pro"
+   ],
+   "category": "security",
+   "file": "security/security-anti-ddos-pro.svg",
+   "source_path": "resources/alibabacloud/security/anti-ddos-pro.png",
+   "sha256": "e707bd89eb0f4330cad882b8eb262e4c1c2e3f72305ee83918daebdb9d5f2bcb",
+   "source_sha256": "b4e49de0973d5154cbd6756d77a4a7703d3f502b9152b591cd8097012eda408e",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/anti-ddos-pro.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-antifraud-service",
+   "name": "Antifraud Service",
+   "class_name": "AntifraudService",
+   "aliases": [
+    "AntifraudService",
+    "diagrams.alibabacloud.security.AntifraudService",
+    "antifraud-service"
+   ],
+   "category": "security",
+   "file": "security/security-antifraud-service.svg",
+   "source_path": "resources/alibabacloud/security/antifraud-service.png",
+   "sha256": "a5e7493cfb9475f25a536674ceeb7d7c66fefccd06fb905b9f890ffcf0d7801f",
+   "source_sha256": "16db23f192c780a1dbf28378d8071a4feddb3781b8d32e805d05066439d26925",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/antifraud-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-bastion-host",
+   "name": "Bastion Host",
+   "class_name": "BastionHost",
+   "aliases": [
+    "BastionHost",
+    "diagrams.alibabacloud.security.BastionHost",
+    "bastion-host"
+   ],
+   "category": "security",
+   "file": "security/security-bastion-host.svg",
+   "source_path": "resources/alibabacloud/security/bastion-host.png",
+   "sha256": "2743df626f4c81c1ea184fe761a183f02a8fa16c1d8bc89e38b3858e17b8783d",
+   "source_sha256": "64002941c4ed4daa9512958b2948ca474cac2e5726e5a8d391eca731f61e882e",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/bastion-host.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-cloud-firewall",
+   "name": "Cloud Firewall",
+   "class_name": "CloudFirewall",
+   "aliases": [
+    "CloudFirewall",
+    "diagrams.alibabacloud.security.CloudFirewall",
+    "cloud-firewall"
+   ],
+   "category": "security",
+   "file": "security/security-cloud-firewall.svg",
+   "source_path": "resources/alibabacloud/security/cloud-firewall.png",
+   "sha256": "e5ebec4e639580dbb99d849fe3ac89d33e0ef1f2aed9f236cdcdbee68dcff8fb",
+   "source_sha256": "2a513c706f1452352bb6266bb512cd3e65ce5ce8d9ede2e86467318532514499",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/cloud-firewall.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-cloud-security-scanner",
+   "name": "Cloud Security Scanner",
+   "class_name": "CloudSecurityScanner",
+   "aliases": [
+    "CloudSecurityScanner",
+    "diagrams.alibabacloud.security.CloudSecurityScanner",
+    "cloud-security-scanner"
+   ],
+   "category": "security",
+   "file": "security/security-cloud-security-scanner.svg",
+   "source_path": "resources/alibabacloud/security/cloud-security-scanner.png",
+   "sha256": "613985be9e4fb9f60209cd0e3390da946b1edf9e3dbfc3f99988e44dd786a847",
+   "source_sha256": "029e48ff289395c5f839d572c7c3d9cdd4ef7b146154dcf27ad4b46fa0334c20",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/cloud-security-scanner.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-content-moderation",
+   "name": "Content Moderation",
+   "class_name": "ContentModeration",
+   "aliases": [
+    "ContentModeration",
+    "diagrams.alibabacloud.security.ContentModeration",
+    "content-moderation"
+   ],
+   "category": "security",
+   "file": "security/security-content-moderation.svg",
+   "source_path": "resources/alibabacloud/security/content-moderation.png",
+   "sha256": "25e0845900fe5e3d8320d3ca06cde325d96c3e197dc2074f1ec4b03aa0093821",
+   "source_sha256": "7c8f4bb7c286d5ef5165b359484c92ac8c9972256980d3235d7c65800ff369e8",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/content-moderation.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-crowdsourced-security-testing",
+   "name": "Crowdsourced Security Testing",
+   "class_name": "CrowdsourcedSecurityTesting",
+   "aliases": [
+    "CrowdsourcedSecurityTesting",
+    "diagrams.alibabacloud.security.CrowdsourcedSecurityTesting",
+    "crowdsourced-security-testing"
+   ],
+   "category": "security",
+   "file": "security/security-crowdsourced-security-testing.svg",
+   "source_path": "resources/alibabacloud/security/crowdsourced-security-testing.png",
+   "sha256": "a80d2798c86a6c27617bc874bc25cca6d8a8d8f469aacd50ad1bffda166227b8",
+   "source_sha256": "752a71e023f7ab9b83f5d254c9ca837bd799cb320af1bc40d73af189d2d49c81",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/crowdsourced-security-testing.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-data-encryption-service",
+   "name": "Data Encryption Service",
+   "class_name": "DataEncryptionService",
+   "aliases": [
+    "DataEncryptionService",
+    "diagrams.alibabacloud.security.DataEncryptionService",
+    "data-encryption-service"
+   ],
+   "category": "security",
+   "file": "security/security-data-encryption-service.svg",
+   "source_path": "resources/alibabacloud/security/data-encryption-service.png",
+   "sha256": "729eae82d62af856b9389a34ab027fe3a6e4e591803155da77a6ab7aefd05214",
+   "source_sha256": "13261020f9c9bc5119fe01ea38c3ee8248efde8c14550c474ac4047d0393869d",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/data-encryption-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-db-audit",
+   "name": "DB Audit",
+   "class_name": "DbAudit",
+   "aliases": [
+    "DbAudit",
+    "diagrams.alibabacloud.security.DbAudit",
+    "db-audit"
+   ],
+   "category": "security",
+   "file": "security/security-db-audit.svg",
+   "source_path": "resources/alibabacloud/security/db-audit.png",
+   "sha256": "1b067611e6018ab39f6811849c5b3ae4d3635b98d77328ae141190c149d39dd2",
+   "source_sha256": "39b3e1ac70d7b41f2f109ed2064b73c1f7f5b879e55c1daf2788301cc097da7f",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/db-audit.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-game-shield",
+   "name": "Game Shield",
+   "class_name": "GameShield",
+   "aliases": [
+    "GameShield",
+    "diagrams.alibabacloud.security.GameShield",
+    "game-shield"
+   ],
+   "category": "security",
+   "file": "security/security-game-shield.svg",
+   "source_path": "resources/alibabacloud/security/game-shield.png",
+   "sha256": "408232a413c9206d3a68523021097fa22c89025fb0b26375d15cc2738ffa7f23",
+   "source_sha256": "df5e3a4baa5318cdf11700920d393ba6aadd74b9d4f3c74ecfeea39bfbedd4a5",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/game-shield.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-id-verification",
+   "name": "Id Verification",
+   "class_name": "IdVerification",
+   "aliases": [
+    "IdVerification",
+    "diagrams.alibabacloud.security.IdVerification",
+    "id-verification"
+   ],
+   "category": "security",
+   "file": "security/security-id-verification.svg",
+   "source_path": "resources/alibabacloud/security/id-verification.png",
+   "sha256": "d8a928ab55fc1b3b9b874d9dadc30b2008dcc8c1bbd1ef7a6773b49bc6452f93",
+   "source_sha256": "0571ebe188b99dce88533a745d3b51b931feca523d3b26b048d4990a420e13ec",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/id-verification.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-managed-security-service",
+   "name": "Managed Security Service",
+   "class_name": "ManagedSecurityService",
+   "aliases": [
+    "ManagedSecurityService",
+    "diagrams.alibabacloud.security.ManagedSecurityService",
+    "managed-security-service"
+   ],
+   "category": "security",
+   "file": "security/security-managed-security-service.svg",
+   "source_path": "resources/alibabacloud/security/managed-security-service.png",
+   "sha256": "2e6531ea43c78a58bede16a27eccd215c9c25dd751e7ad816b45fb65301adf58",
+   "source_sha256": "6646b3abe77eee111ec1cfca351c789383424901ed9e9af6d3973e48f5e5c837",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/managed-security-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-security-center",
+   "name": "Security Center",
+   "class_name": "SecurityCenter",
+   "aliases": [
+    "SecurityCenter",
+    "diagrams.alibabacloud.security.SecurityCenter",
+    "security-center"
+   ],
+   "category": "security",
+   "file": "security/security-security-center.svg",
+   "source_path": "resources/alibabacloud/security/security-center.png",
+   "sha256": "d4d0bc20cd20e818c3a225189a4e3c2183dcacaf097d3f7eb6b1ff1ceae66bb2",
+   "source_sha256": "ea3b8d1b53450e0f7a7482eedd6e21ee5a0c00689201af864fb8a589871db1f8",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/security-center.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-server-guard",
+   "name": "Server Guard",
+   "class_name": "ServerGuard",
+   "aliases": [
+    "ServerGuard",
+    "diagrams.alibabacloud.security.ServerGuard",
+    "server-guard"
+   ],
+   "category": "security",
+   "file": "security/security-server-guard.svg",
+   "source_path": "resources/alibabacloud/security/server-guard.png",
+   "sha256": "305c7acf9d8bf9a663954f68fe2510605ae549377dc5ac3362b995d89244ae06",
+   "source_sha256": "0805a3b5df1f04441161336a4431c6b47d8cd0cb721858460c944c1728638479",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/server-guard.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-ssl-certificates",
+   "name": "SSL Certificates",
+   "class_name": "SslCertificates",
+   "aliases": [
+    "SslCertificates",
+    "diagrams.alibabacloud.security.SslCertificates",
+    "ssl-certificates"
+   ],
+   "category": "security",
+   "file": "security/security-ssl-certificates.svg",
+   "source_path": "resources/alibabacloud/security/ssl-certificates.png",
+   "sha256": "6ab10f076ad7b367cc35e82dc7368d2d0a9cc066850fdf203bf8279e4f0c91b2",
+   "source_sha256": "522853b664078dc9da97a2db06479f528959fba58b0ac7aeb78999be856222eb",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/ssl-certificates.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "security-web-application-firewall",
+   "name": "Web Application Firewall",
+   "class_name": "WebApplicationFirewall",
+   "aliases": [
+    "WebApplicationFirewall",
+    "diagrams.alibabacloud.security.WebApplicationFirewall",
+    "web-application-firewall"
+   ],
+   "category": "security",
+   "file": "security/security-web-application-firewall.svg",
+   "source_path": "resources/alibabacloud/security/web-application-firewall.png",
+   "sha256": "e249643ddfe9c52eeaf8981f4aaec62684ab9a39034d982688c1051dbdd262fd",
+   "source_sha256": "9560a29131b9311ad30cacc2c8b50f684fb30555ab621bf5b8010e040e5c7785",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/security/web-application-firewall.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-cloud-storage-gateway",
+   "name": "Cloud Storage Gateway",
+   "class_name": "CloudStorageGateway",
+   "aliases": [
+    "CloudStorageGateway",
+    "diagrams.alibabacloud.storage.CloudStorageGateway",
+    "cloud-storage-gateway"
+   ],
+   "category": "storage",
+   "file": "storage/storage-cloud-storage-gateway.svg",
+   "source_path": "resources/alibabacloud/storage/cloud-storage-gateway.png",
+   "sha256": "9aedddd3c799152e2727bfa1de2addf6c944026d4425750253a464e0cf5248ae",
+   "source_sha256": "0bfc698d30abf86d55fde2386ea93ace5da38cf996aad4fafd8acf426e7c3fac",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/storage/cloud-storage-gateway.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-file-storage-hdfs",
+   "name": "File Storage Hdfs",
+   "class_name": "FileStorageHdfs",
+   "aliases": [
+    "FileStorageHdfs",
+    "diagrams.alibabacloud.storage.FileStorageHdfs",
+    "file-storage-hdfs"
+   ],
+   "category": "storage",
+   "file": "storage/storage-file-storage-hdfs.svg",
+   "source_path": "resources/alibabacloud/storage/file-storage-hdfs.png",
+   "sha256": "aeb6f9c9a698e1cdd5361bd024f6e3cccd09a02ea1349da7dc0140a45d970dfe",
+   "source_sha256": "9a9434f1297920cc16c0f5154c3b06097f58c6c94f50c6639f9b7ffa44483009",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/storage/file-storage-hdfs.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-file-storage-nas",
+   "name": "File Storage NAS",
+   "class_name": "FileStorageNas",
+   "aliases": [
+    "FileStorageNas",
+    "diagrams.alibabacloud.storage.FileStorageNas",
+    "file-storage-nas"
+   ],
+   "category": "storage",
+   "file": "storage/storage-file-storage-nas.svg",
+   "source_path": "resources/alibabacloud/storage/file-storage-nas.png",
+   "sha256": "11690ec54dcc7c13c13aa6be14ae4e4d9841f2d02ae1b4fc7e6d7e4f4cdd5a62",
+   "source_sha256": "2bce6aa5dff85bdbbd3424c9e1dce957bb21e59fc517398f37f58d696402834b",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/storage/file-storage-nas.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-hybrid-backup-recovery",
+   "name": "Hybrid Backup Recovery",
+   "class_name": "HybridBackupRecovery",
+   "aliases": [
+    "HybridBackupRecovery",
+    "diagrams.alibabacloud.storage.HybridBackupRecovery",
+    "hybrid-backup-recovery"
+   ],
+   "category": "storage",
+   "file": "storage/storage-hybrid-backup-recovery.svg",
+   "source_path": "resources/alibabacloud/storage/hybrid-backup-recovery.png",
+   "sha256": "38726d49e079e0f4bf48b81ee005a80e4543beb81c7408681b0986e6e9349af2",
+   "source_sha256": "cc3ae7f27a52a5777653ca5eb5add2e8218e197ef05fb2f212dd9fa5741f7caa",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/storage/hybrid-backup-recovery.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-hybrid-cloud-disaster-recovery",
+   "name": "Hybrid Cloud Disaster Recovery",
+   "class_name": "HybridCloudDisasterRecovery",
+   "aliases": [
+    "HybridCloudDisasterRecovery",
+    "diagrams.alibabacloud.storage.HybridCloudDisasterRecovery",
+    "hybrid-cloud-disaster-recovery"
+   ],
+   "category": "storage",
+   "file": "storage/storage-hybrid-cloud-disaster-recovery.svg",
+   "source_path": "resources/alibabacloud/storage/hybrid-cloud-disaster-recovery.png",
+   "sha256": "0e1217fece43d1b0a601ec06739621ef223652759ff37b53a24f69bbebd12502",
+   "source_sha256": "b7d212cb3c21ac1ce61f7390837c3104a128b9ee8d03e2822b553edcf0a92f96",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/storage/hybrid-cloud-disaster-recovery.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-imm",
+   "name": "Imm",
+   "class_name": "Imm",
+   "aliases": [
+    "Imm",
+    "diagrams.alibabacloud.storage.Imm",
+    "imm"
+   ],
+   "category": "storage",
+   "file": "storage/storage-imm.svg",
+   "source_path": "resources/alibabacloud/storage/imm.png",
+   "sha256": "fe377a315b6cb50c7f6ea4ebce25811dbf22410ef00969a1164d914c44283cf5",
+   "source_sha256": "11c1247e55f8c6bac96552b74cb36c7152a9eeb8d3a186ad018a1f9e57f90d1a",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/storage/imm.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-object-storage-service",
+   "name": "Object Storage Service",
+   "class_name": "ObjectStorageService",
+   "aliases": [
+    "ObjectStorageService",
+    "diagrams.alibabacloud.storage.ObjectStorageService",
+    "object-storage-service"
+   ],
+   "category": "storage",
+   "file": "storage/storage-object-storage-service.svg",
+   "source_path": "resources/alibabacloud/storage/object-storage-service.png",
+   "sha256": "547f4884bee1373c0fad5d9c53c5306782f7983516103a970a39a711840616c4",
+   "source_sha256": "69dd14483f0ae6f8d8906b664c3e7f5dab1c39dae5ba63dd2f34ba736b8d3862",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/storage/object-storage-service.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "storage-object-table-store",
+   "name": "Object Table Store",
+   "class_name": "ObjectTableStore",
+   "aliases": [
+    "ObjectTableStore",
+    "diagrams.alibabacloud.storage.ObjectTableStore",
+    "object-table-store"
+   ],
+   "category": "storage",
+   "file": "storage/storage-object-table-store.svg",
+   "source_path": "resources/alibabacloud/storage/object-table-store.png",
+   "sha256": "37f3c0860ec76cb8128ab2d8ed3e42b62bd172ad49a8ded3dbd8528d2b728b2a",
+   "source_sha256": "6eb492290ab205c26846eb56b7ac285940eb75b5daa2b8a8848561c38650d3dc",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/storage/object-table-store.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "web-dns",
+   "name": "DNS",
+   "class_name": "Dns",
+   "aliases": [
+    "Dns",
+    "diagrams.alibabacloud.web.Dns",
+    "dns"
+   ],
+   "category": "web",
+   "file": "web/web-dns.svg",
+   "source_path": "resources/alibabacloud/web/dns.png",
+   "sha256": "963097d7242f5883f9ddd4808ab094e060775909a20988edb375cb497909152a",
+   "source_sha256": "3058c291755ec95fe6e7d29fbd0dd1dd2b3d845befb46edbcb439d7853452ddc",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/web/dns.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  },
+  {
+   "id": "web-domain",
+   "name": "Domain",
+   "class_name": "Domain",
+   "aliases": [
+    "Domain",
+    "diagrams.alibabacloud.web.Domain",
+    "domain"
+   ],
+   "category": "web",
+   "file": "web/web-domain.svg",
+   "source_path": "resources/alibabacloud/web/domain.png",
+   "sha256": "30c13ef6f21a87c1cf0e232fd28140f845762c508438af0c78f7d5b84536c1f6",
+   "source_sha256": "2801dd8a66db11f09c39be2677c1753ef2c2d25242a6de863c867d7b5c519773",
+   "source_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/resources/alibabacloud/web/domain.png",
+   "source_release": "mingrammer/diagrams v0.25.1 commit dd0763d939f377c99898951a489e813c0360cd4a; exact PNG embedded in a self-contained SVG wrapper",
+   "terms_url": "https://github.com/mingrammer/diagrams/blob/dd0763d939f377c99898951a489e813c0360cd4a/LICENSE"
+  }
+ ]
+}
