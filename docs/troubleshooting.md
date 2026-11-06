@@ -1,5 +1,14 @@
 # Troubleshooting
 
+**"Filename too long" when cloning on Windows.** Some icon paths in the
+repository run to 146 characters, so a clone into a folder deeper than about
+110 characters passes Windows' 260-character path limit and the checkout
+stops. Clone into a shorter folder, or let Git use long paths:
+
+```bash
+git clone -c core.longpaths=true <repository URL>
+```
+
 **No PNG, or "Playwright isn't installed".** A PNG, and the SVG the editor
 draws, need Playwright and its Chromium. Without them `compose` and
 `export:project` write the HTML and an SVG from the static renderer and print
