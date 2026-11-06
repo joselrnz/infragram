@@ -68,6 +68,9 @@ class BrandPaypal(_Integration):
 class BrandPulsar(_Integration):
     def __init__(self, name: str, detail: str | None = ..., *, role: str | None = ..., id: str | None = ..., icon: str | None = ..., accent: str | None = ..., brand: str | None = ..., **attributes: Any) -> None: ...
 
+class BrandRedpanda(_Integration):
+    def __init__(self, name: str, detail: str | None = ..., *, role: str | None = ..., id: str | None = ..., icon: str | None = ..., accent: str | None = ..., brand: str | None = ..., **attributes: Any) -> None: ...
+
 class BrandRocketChat(_Integration):
     def __init__(self, name: str, detail: str | None = ..., *, role: str | None = ..., id: str | None = ..., icon: str | None = ..., accent: str | None = ..., brand: str | None = ..., **attributes: Any) -> None: ...
 

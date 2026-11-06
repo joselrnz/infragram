@@ -133,12 +133,37 @@ library is a drawing capability, not a claim about any deployment.
 
 These files are provider artwork, not relicensed under Infragram Architect's MIT license. They are bundled only for architecture-diagram and documentation use under the linked provider terms. Their per-file source path, release, terms URL, and SHA-256 digest are recorded in each pack's `catalog.json`.
 
+## Project logos
+
+Two brand marks no icon library carries are taken from the project's own
+repository, pinned to a commit, and kept unmodified in
+`scripts/vendor/icons/official/` (the table is `OFFICIAL` in
+`scripts/build/icons.py`). The gallery draws each in one colour; Redpanda's
+white panda becomes a cut-out of its disc.
+
+- **Valkey** — `static/img/Valkey-logo.svg` from
+  https://github.com/valkey-io/valkey-io.github.io at commit
+  `c2a4d37b33afc4cd879d29857d6c6bf3ae952f97`. BSD-3-Clause (Copyright 2024
+  Linux Foundation or its affiliates); the notice ships as
+  [`licenses/valkey.txt`](licenses/valkey.txt). Valkey is a trademark of the
+  Linux Foundation; the licence grants no trademark rights.
+- **Redpanda** — `docs/icon-redpanda.svg` from
+  https://github.com/redpanda-data/redpanda at commit
+  `10932ba73d4c98eeda85ee55d80f2d6a8e01901c`.
+  - **Rights status:** Redpanda publishes the mark in its repository and in
+    its press media kit, with no explicit redistribution terms. It is bundled
+    at the maintainer's direction for architecture-diagram and documentation
+    use only; it is **not** relicensed under Infragram Architect's MIT
+    license, and Redpanda Data's trademark terms apply. If Redpanda objects
+    or clarifies terms that exclude this use, remove it.
+
 ## One-off sourced icons
 
-None. Apache Hop, Pentaho, Dagster, SAS and Stata have no licence-clean
-brand mark, so each draws a generic Tabler glyph that says what the tool does.
-`tests/unit/test_artwork_licensing.py` fails if a glyph is fetched from a
-vendor page again.
+None besides the two project logos above. Apache Hop, Pentaho, Dagster, SAS
+and Stata have no licence-clean brand mark, so each draws a generic Tabler
+glyph that says what the tool does. `tests/unit/test_artwork_licensing.py`
+fails if a glyph is fetched from a vendor page again, and holds every project
+logo to its entry here.
 
 ## Drawn vendor service tiles
 

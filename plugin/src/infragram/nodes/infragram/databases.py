@@ -110,6 +110,13 @@ class BrandTimescale(_Databases):
     TYPE = "TimescaleDB"
 
 
+class BrandValkey(_Databases):
+    """Valkey."""
+
+    ICON = "brand-valkey"
+    TYPE = "Valkey"
+
+
 class BrandVitess(_Databases):
     """Vitess."""
 
@@ -145,4 +152,4 @@ class SearchIndex(_Databases):
     TYPE = "Search index"
 
 
-__all__ = ["BrandArangodb", "BrandElasticSearch", "BrandMeilisearch", "BrandMilvus", "BrandMySQL", "BrandOpensearch", "BrandOracle", "BrandPostgres", "BrandRedis", "BrandSQLServer", "BrandScylladb", "BrandSqlite", "BrandTidb", "BrandTimescale", "BrandVitess", "GenericCache", "GenericDatabase", "LanguageSQL", "SearchIndex"]
+__all__ = ["BrandArangodb", "BrandElasticSearch", "BrandMeilisearch", "BrandMilvus", "BrandMySQL", "BrandOpensearch", "BrandOracle", "BrandPostgres", "BrandRedis", "BrandSQLServer", "BrandScylladb", "BrandSqlite", "BrandTidb", "BrandTimescale", "BrandValkey", "BrandVitess", "GenericCache", "GenericDatabase", "LanguageSQL", "SearchIndex"]

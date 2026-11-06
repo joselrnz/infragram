@@ -145,6 +145,13 @@ class BrandPulsar(_Integration):
     TYPE = "Apache Pulsar"
 
 
+class BrandRedpanda(_Integration):
+    """Redpanda."""
+
+    ICON = "brand-redpanda"
+    TYPE = "Redpanda"
+
+
 class BrandRocketChat(_Integration):
     """Rocket.Chat."""
 
@@ -348,4 +355,4 @@ class Webhook(_Integration):
     TYPE = "Webhook"
 
 
-__all__ = ["APIEndpoint", "BPM", "BrandBigbluebutton", "BrandCamunda", "BrandDiscord", "BrandDovecot", "BrandErpnext", "BrandGraphQL", "BrandHubspot", "BrandIBM", "BrandJitsi", "BrandMatrix", "BrandMattermost", "BrandMqtt", "BrandN8n", "BrandNodeRed", "BrandOdoo", "BrandPaypal", "BrandPulsar", "BrandRocketChat", "BrandRoundcube", "BrandSAP", "BrandStripe", "BrandTalend", "BrandTelegram", "BrandThunderbird", "BrandTwilio", "BrandZapier", "BrandZendesk", "BrandZoom", "CDC", "CRM", "DataAirflow", "DataDagster", "DataHop", "DataNifi", "ESB", "FileTransfer", "InboundResponse", "MailRelay", "MailServer", "MessageQueue", "MicrosoftTeams", "OutboundRequest", "PaymentGateway", "Slack", "SyncProcess", "Webhook"]
+__all__ = ["APIEndpoint", "BPM", "BrandBigbluebutton", "BrandCamunda", "BrandDiscord", "BrandDovecot", "BrandErpnext", "BrandGraphQL", "BrandHubspot", "BrandIBM", "BrandJitsi", "BrandMatrix", "BrandMattermost", "BrandMqtt", "BrandN8n", "BrandNodeRed", "BrandOdoo", "BrandPaypal", "BrandPulsar", "BrandRedpanda", "BrandRocketChat", "BrandRoundcube", "BrandSAP", "BrandStripe", "BrandTalend", "BrandTelegram", "BrandThunderbird", "BrandTwilio", "BrandZapier", "BrandZendesk", "BrandZoom", "CDC", "CRM", "DataAirflow", "DataDagster", "DataHop", "DataNifi", "ESB", "FileTransfer", "InboundResponse", "MailRelay", "MailServer", "MessageQueue", "MicrosoftTeams", "OutboundRequest", "PaymentGateway", "Slack", "SyncProcess", "Webhook"]

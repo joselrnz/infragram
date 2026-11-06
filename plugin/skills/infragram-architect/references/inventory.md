@@ -6,7 +6,7 @@ libraries actually ship, or when any component's artwork fails to decode.
 Do not edit by hand. The same inventory with a picture of every icon and
 frame is kept in the repository's `docs/inventory/` folder.
 
-**19 libraries · 3620 vendor icons (89 still in the generic `custom` category) · 370 shared primitives · 151 frames in 20 groups · 19 starter stacks · 34 templates.**
+**19 libraries · 3620 vendor icons (89 still in the generic `custom` category) · 372 shared primitives · 151 frames in 20 groups · 19 starter stacks · 34 templates.**
 
 ## Libraries
 
@@ -59,7 +59,7 @@ regions or subnets to draw.
 - **Proxmox VE** (23): compute 7, containers 1, databases 1, identity 2, networking 4, security 2, storage 6
 - **Databricks** (78): ai-machine-learning 17, analytics 18, devops 11, governance 9, integration 15, storage 8
 - **Equinix** (27): compute 1, databases 1, facilities 6, identity 1, networking 14, security 3, storage 1
-- **Shared primitives** (370, every library): ai-machine-learning 4, analytics 37, compute 50, containers 14, custom 5, databases 19, devops 32, governance 1, hybrid-multicloud 5, identity 16, integration 48, internet-of-things 17, mobile 2, networking 45, security 35, storage 29, web 11
+- **Shared primitives** (372, every library): ai-machine-learning 4, analytics 37, compute 50, containers 14, custom 5, databases 20, devops 32, governance 1, hybrid-multicloud 5, identity 16, integration 49, internet-of-things 17, mobile 2, networking 45, security 35, storage 29, web 11
 
 ## Frames
 
