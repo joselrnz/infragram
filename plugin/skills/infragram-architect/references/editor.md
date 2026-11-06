@@ -58,6 +58,11 @@ menu entry shows a tick while it is on, and it ends on that entry, on
   this edition writes them): the components and frames changed
   in the week before the read, or with a Defender for Cloud or Azure Policy
   finding. Listed only when the page holds some.
+- **Show what changed since the last read**, on a page whose components say
+  they were added or changed since an earlier read (the Infragram Azure
+  edition's `export:azure --refresh` writes this; nothing in this edition
+  does): those components and frames. What was removed has nothing left to
+  light, so the status line names it. Listed only on such a page.
 - A tag, listed as `Show env=prod (2)`: the components wearing it. Up to
   twelve tags are listed, the most worn first. Tags come from `.tags(env="prod")` in a diagram file,
   from a resource's tags on import, and from a Kubernetes workload's labels.
