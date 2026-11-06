@@ -54,10 +54,16 @@ What Infragram runs, reads and reaches, as the code does it.
 
 ### What is read as data
 
+- **A `.infragram.json` document** is data. A colour it stores for a card,
+  frame or wire is written into the picture only when it is a colour (a hex,
+  a CSS name, or `rgb()`/`hsl()`); anything else is dropped, and
+  `infragram check` fails the document.
 - **draw.io and Visio XML** goes through `infragram.convert.xmlsafe`, which
   refuses any `ENTITY` declaration and any `DOCTYPE` with an internal subset
   before the standard library parses the file, and checks with expat in the
-  document's own encoding as well as with a text search.
+  document's own encoding as well as with a text search. A compressed page
+  or a `.vsdx` member is expanded only up to a limit
+  (`infragram.convert.bounded`), so a small file cannot claim gigabytes.
 - **Terraform HCL** (`*.tf`, `*.tf.json`, variable files), **plans and
   states** (as `terraform show -json` writes them, or a `terraform.tfstate`
   file), **Mermaid**, **PlantUML** and
@@ -66,8 +72,8 @@ What Infragram runs, reads and reaches, as the code does it.
 - **The plugin's check hook** (`infragram hook:check`, which Claude Code and
   Codex run after the agent writes a file) checks a `.infragram.json` with the
   shipped checker and reads a diagram `.py` with Python's `ast` module. It
-  never runs the file: the only modules it imports are Infragram's own, to
-  confirm that a class the file names exists. It always exits 0, so it never
+  never runs the file: the only modules it imports are Infragram's own, never
+  its command-line `__main__`, to confirm that a class the file names exists. It always exits 0, so it never
   fails the tool call it follows.
 
 ### What reaches the network
@@ -83,15 +89,18 @@ What Infragram runs, reads and reaches, as the code does it.
   opened, from AWS's published price files, over https only
   (`infragram.pricing.fetch` refuses any other scheme), and kept for a day in
   Infragram's cache.
-- **Exported pages load nothing remote.** A page carries its libraries, its
-  fonts (inline, under the OFL) and its editor, and works from `file://`.
-  Links in a card's details are ordinary links; nothing is fetched unless you
-  follow one. `compose --watch` serves its page on 127.0.0.1 only.
+- **Drawing never reaches another machine.** A page carries its libraries,
+  its fonts (inline, under the OFL) and its editor, and works from `file://`.
+  When Chromium draws a PNG or SVG, every request that is not the page, what
+  it carries, or this machine is refused, so a shared document cannot make
+  the render call out. Links in a card's details are ordinary links; nothing
+  is fetched unless you follow one. `compose --watch` serves its page on
+  127.0.0.1 only.
 - **The checker holds pages and artwork to this.** `infragram check` (and
   `--verify` on an export) fails a page that loads a remote script or
   resource (other than the Google Fonts hosts that pages from older versions
-  used), and a document that carries a script, an event handler, an embedded
-  document or a reference to another server. Icon artwork is checked for
+  used), and a document, page or picture whose markup carries a script, an
+  event handler, an embedded document or a reference to another server. Icon artwork is checked for
   active content when a library's catalog is loaded and again before the
   static renderer inlines it; an unsafe icon stops the export.
 
