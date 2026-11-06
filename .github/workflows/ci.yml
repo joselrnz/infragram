@@ -46,6 +46,10 @@ jobs:
 
       - run: python -m pip install -e "./plugin[test]"
 
+      # The 3D items in the unit suite are drawn in Chromium: the build the
+      # pinned Playwright expects, with its system libraries.
+      - run: python -m playwright install --with-deps chromium
+
       # Lint, format, types, line endings, naming, docs, plugin package,
       # then the unit and skill suites without the slow sweeps.
       - run: python -m infragram verify:quick
