@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "infragram"
-version = "0.0.1"
+version = "0.0.2"
 description = "Infrastructure diagram editor, project schema, and export pipeline: the engine of the Infragram Architect plugin"
 readme = "README.md"
 license = "MIT"

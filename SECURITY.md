@@ -17,7 +17,7 @@ use the same private channel.
 
 | Version | Security fixes |
 |---|---|
-| 0.0.1 | yes |
+| 0.0.2 | yes |
 
 An exported page carries the editor of the version that wrote it, so a fix
 in the editor reaches an existing page only when it is exported again.
@@ -63,7 +63,13 @@ What Infragram runs, reads and reaches, as the code does it.
   carried into the page in a JSON script that cannot close itself, and shown
   as text. Comments written in a page stay in that browser's local storage
   until the reader downloads them; the page sends them nowhere, and no SVG,
-  PNG or draw.io carries one.
+  PNG or draw.io carries one. A page opened from a file shares the browser's
+  storage with every other page opened from a file, keyed by the diagram's
+  slug: a page someone sends with the same slug as one of yours opens your
+  saved workspace and comments for that diagram. Nothing leaves the browser
+  unless you download it, but open pages from people you trust, or use
+  `?fresh=` for a separate workspace. A comment's author is whatever name was
+  typed; nothing verifies it.
 - **draw.io and Visio XML** goes through `infragram.convert.xmlsafe`, which
   refuses any `ENTITY` declaration and any `DOCTYPE` with an internal subset
   before the standard library parses the file, and checks with expat in the

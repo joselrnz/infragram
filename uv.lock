@@ -398,7 +398,7 @@ wheels = [
 
 [[package]]
 name = "infragram"
-version = "0.0.1"
+version = "0.0.2"
 source = { editable = "plugin" }
 dependencies = [
     { name = "pydantic" },
