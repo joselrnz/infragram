@@ -84,12 +84,14 @@ def test_exported_pages_stay_small() -> None:
     place of Roboto add about 95 KB, taking Azure's to 2.72 MB and AWS's to
     3.40 MB. The right-click menu's icons, its view entries and its More
     actions submenu add about 17 KB, taking Azure's to 2.78 MB and AWS's to
-    3.46 MB. The budgets leave a small margin
+    3.46 MB. Opening a frame alone, the refresh lens and comments (their panel,
+    markers and file) add about 33 KB, taking Azure's to 2.81 MB and AWS's to
+    3.50 MB. The budgets leave a small margin
     for editor growth while still catching an uncompressed catalog or a
     needless 3D bundle."""
     sizes = {
         name: len(render_project_html(_template(name)).encode("utf-8"))
         for name in ("azure-api", "aws-three-tier-web")
     }
-    assert sizes["azure-api"] < 2_800_000, sizes
-    assert sizes["aws-three-tier-web"] < 3_480_000, sizes
+    assert sizes["azure-api"] < 2_840_000, sizes
+    assert sizes["aws-three-tier-web"] < 3_520_000, sizes

@@ -89,6 +89,8 @@ def test_the_keywords_name_every_choice_the_export_takes() -> None:
         "overwrite",
         "check",
         "project_kwargs",
+        # read from the file beside the document, not an option (ADR 0009)
+        "comments",
     }
     parser = export_project.build_parser()
     assert set(options.export_keywords(parser.parse_args([str(TEMPLATE)]))) == taken

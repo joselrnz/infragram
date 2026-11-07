@@ -54,6 +54,7 @@ SUITES = (
     ROOT / "tests" / "integration" / "test_panels_browser.py",
     ROOT / "tests" / "integration" / "test_drill_down_browser.py",
     ROOT / "tests" / "integration" / "test_refresh_lens_browser.py",
+    ROOT / "tests" / "integration" / "test_comments_browser.py",
 )
 
 
