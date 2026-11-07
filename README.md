@@ -23,11 +23,12 @@ datacenters; write the Python yourself, or import what already exists.
 
 ## How your agent uses it
 
-Install the plugin once (Claude Code shown; Codex and Pi are in
-[installation](docs/install.md), and any MCP client can run `infragram mcp`):
+Install the plugin once (Claude Code shown; Codex, Pi, GitHub Copilot in VS Code
+and Cursor are in [installation](docs/install.md), and any MCP client can run
+`infragram mcp`):
 
 ```bash
-claude plugin marketplace add <repository>
+claude plugin marketplace add joselrnz/infragram
 claude plugin install infragram-architect@infragram-architect
 ```
 
@@ -68,7 +69,7 @@ A bundled `diagram-reviewer` agent gives a second opinion on a finished picture.
 - **Use vendor libraries:** 19 libraries, 3,620 icons and containment rules for cloud and datacenter architecture.
 - **Know what it costs:** every AWS, Azure and Google Cloud component priced from on-demand list prices, added up in the page by frame and item, line by line.
 - **Review infrastructure:** filtered views, change diffs, cost estimates and policy checks.
-- **Work with agents:** Claude Code, Codex and Pi plugins, plus an MCP server.
+- **Work with agents:** Claude Code, Codex and Pi plugins; GitHub Copilot in VS Code and Cursor through the MCP server and the skill.
 
 ## Quick start
 
