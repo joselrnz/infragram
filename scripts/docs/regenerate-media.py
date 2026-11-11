@@ -263,7 +263,11 @@ def empty_point(page) -> tuple[float, float]:
 
 def context_action(page, at: tuple[float, float], action: str) -> None:
     page.mouse.click(*at, button="right")
-    page.locator(f'[data-context-action="{action}"]').click()
+    item = page.locator(f'[data-context-action="{action}"]')
+    if not item.is_visible():
+        # the less common actions sit under More actions
+        page.locator("[data-context-submenu-toggle]").click()
+    item.click()
     park(page)
 
 
@@ -281,27 +285,85 @@ def set_theme(page, choice: str) -> None:
     page.locator(f'[data-theme-choice="{choice}"]').click()
 
 
-def recording_context(browser, scratch: Path):
-    return browser.new_context(
-        viewport={"width": 1600, "height": 1000},
-        record_video_dir=str(scratch),
-        record_video_size={"width": 1600, "height": 1000},
-    )
+#: The editor is recorded at this size in CSS pixels and captured at twice
+#: that, so the GIFs and the MP4s are scaled down from sharp frames.
+VIEWPORT = {"width": 1600, "height": 1000}
+SCALE = 2
 
 
-def record_demo(scratch: Path) -> tuple[Path, float]:
+class Recorder:
+    """Lossless frames from Chromium's screencast, each a PNG with the time it
+    was painted. Playwright's own video is VP8 at about a megabit a second,
+    which blurs the captions and the vendor marks; from these frames the GIFs
+    and the MP4s are encoded once, from the page as it was painted."""
+
+    def __init__(self, page, folder: Path) -> None:
+        self.folder = folder
+        folder.mkdir(parents=True, exist_ok=True)
+        self.frames: list[tuple[Path, float]] = []
+        self.session = page.context.new_cdp_session(page)
+        self.session.on("Page.screencastFrame", self._frame)
+        self.session.send(
+            "Page.startScreencast",
+            {
+                "format": "png",
+                "maxWidth": VIEWPORT["width"] * SCALE,
+                "maxHeight": VIEWPORT["height"] * SCALE,
+                "everyNthFrame": 1,
+            },
+        )
+
+    def _frame(self, event: dict) -> None:
+        path = self.folder / f"{len(self.frames):05d}.png"
+        path.write_bytes(base64.b64decode(event["data"]))
+        self.frames.append((path, event["metadata"]["timestamp"]))
+        self.session.send("Page.screencastFrameAck", {"sessionId": event["sessionId"]})
+
+    def stop(self) -> float:
+        """Stop, and return when: the last frame is held until then."""
+        ended = time.time()
+        self.session.send("Page.stopScreencast")
+        self.session.detach()
+        return ended
+
+    def listing(self, start: float, end: float) -> Path:
+        """An FFmpeg concat list from ``start`` to ``end`` (seconds since the
+        epoch, as the frames are stamped), each frame held until the next was
+        painted. The frame on screen at ``start`` opens it, so no page load
+        shows."""
+        shown = [frame for frame in self.frames if frame[1] > start]
+        before = [frame for frame in self.frames if frame[1] <= start]
+        if before:
+            shown.insert(0, (before[-1][0], start))
+        assert shown, "no frames were painted"
+        lines = [
+            f"file '{path.as_posix()}'\nduration {max(until - at, 0.001):.4f}\n"
+            for (path, at), (_, until) in zip(shown, [*shown[1:], (None, end)], strict=True)
+        ]
+        # the concat demuxer ignores the last entry's duration unless it repeats
+        lines.append(f"file '{shown[-1][0].as_posix()}'\n")
+        target = self.folder / "frames.txt"
+        target.write_text("".join(lines), encoding="utf-8")
+        return target
+
+
+def recording_context(browser):
+    return browser.new_context(viewport=VIEWPORT, device_scale_factor=SCALE)
+
+
+def record_demo(scratch: Path) -> Path:
     source = scratch / "editor.html"
     source.write_text(render_project_html(demo_project()), encoding="utf-8", newline="\n")
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch()
-        context = recording_context(browser, scratch)
+        context = recording_context(browser)
         page = context.new_page()
-        started = time.monotonic()
+        recorder = Recorder(page, scratch / "frames")
         open_editor(page, source)
         # the video starts on the drawing fitted to the canvas, not mid-fit
         page.locator('[data-editor-action="zoom-fit"]').click()
         page.wait_for_timeout(600)
-        lead_in = time.monotonic() - started
+        start = time.time()
         errors = []
         page.on("pageerror", lambda error: errors.append(str(error)))
 
@@ -374,10 +436,8 @@ def record_demo(scratch: Path) -> tuple[Path, float]:
         page.locator("[data-download-menu] > summary").click()
         pause()
         assert not errors, errors
-        video = page.video
-        assert video is not None
+        end = recorder.stop()
         context.close()
-        recording = Path(video.path())
 
         banner_page = browser.new_page(viewport={"width": 1983, "height": 793})
         for theme in ("light", "dark"):
@@ -388,7 +448,7 @@ def record_demo(scratch: Path) -> tuple[Path, float]:
                 omit_background=True,
             )
         browser.close()
-    return recording, lead_in
+    return recorder.listing(start, end)
 
 
 def tour_aws_three_tier(page) -> None:
@@ -492,11 +552,12 @@ TOUR = (
 )
 
 
-def record_tour(scratch: Path) -> list[tuple[Path, float]]:
+def record_tour(scratch: Path) -> list[Path]:
     """The longer tour: AWS, AWS with numbered steps, Azure and Google Cloud,
     each walked stage by stage with the flow, its frames, captions, lenses,
     details, display modes and themes. Each architecture is its own
-    recording, cut in once it is open and folded, so no page load shows."""
+    recording, cut in once it is open and folded, so no page load shows.
+    Returns each one's frame list."""
     takes = []
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch()
@@ -505,40 +566,42 @@ def record_tour(scratch: Path) -> list[tuple[Path, float]]:
             source.write_text(
                 render_project_html(example_project(name)), encoding="utf-8", newline="\n"
             )
-            folder = scratch / name
-            context = recording_context(browser, folder)
+            context = recording_context(browser)
             page = context.new_page()
             errors: list[str] = []
             page.on("pageerror", lambda error, errors=errors: errors.append(str(error)))
-            started = time.monotonic()
+            recorder = Recorder(page, scratch / name)
             open_editor(page, source)
             fold(page, open_panels=False)
             page.wait_for_timeout(600)
-            lead_in = time.monotonic() - started
+            start = time.time()
             page.wait_for_timeout(1700)
             walk(page)
             assert not errors, (name, errors)
-            video = page.video
-            assert video is not None
+            end = recorder.stop()
             context.close()
-            takes.append((Path(video.path()), lead_in))
+            takes.append(recorder.listing(start, end))
         browser.close()
     return takes
 
 
-def to_mp4(recording: Path, lead_in: float, target: Path) -> None:
+def to_mp4(listing: Path, target: Path) -> None:
     encode(
-        "-ss",
-        str(lead_in),
+        "-f",
+        "concat",
+        "-safe",
+        "0",
         "-i",
-        str(recording),
+        str(listing),
         "-an",
-        "-r",
-        "20",
+        "-vf",
+        f"fps=20,scale={VIEWPORT['width']}:-2:flags=lanczos",
         "-c:v",
         "libx264",
+        "-preset",
+        "slow",
         "-crf",
-        "23",
+        "18",
         "-pix_fmt",
         "yuv420p",
         "-movflags",
@@ -547,17 +610,22 @@ def to_mp4(recording: Path, lead_in: float, target: Path) -> None:
     )
 
 
-def to_gif(movie: Path, target: Path, width: int = 1000) -> None:
+def to_gif(listing: Path, target: Path, width: int = 1200) -> None:
     encode(
+        "-f",
+        "concat",
+        "-safe",
+        "0",
         "-i",
-        str(movie),
+        str(listing),
         "-filter_complex",
-        # Ten frames a second keep the flow's dashes marching. The marching
-        # repaints whole regions every frame, so 32 colours, no dither and
-        # rectangle diffs keep the GIFs small (the demo's is over 20 MB with
-        # dithering); the vendor marks and the dark theme survive 32 colours.
+        # Ten frames a second keep the flow's dashes marching. Scaled down
+        # from frames captured at twice the size, so the captions stay sharp;
+        # a full 256-colour palette keeps the vendor marks and the dark theme
+        # true, no dither keeps flat fills clean, and rectangle diffs store
+        # only what changed from one frame to the next.
         f"fps=10,scale={width}:-1:flags=lanczos,split[a][b];"
-        "[a]palettegen=stats_mode=diff:max_colors=32[p];"
+        "[a]palettegen=stats_mode=full:max_colors=256[p];"
         "[b][p]paletteuse=dither=none:diff_mode=rectangle",
         "-loop",
         "0",
@@ -572,27 +640,33 @@ def build_tour() -> None:
     four out as a grid, each a few MB, and links the whole MP4."""
     with tempfile.TemporaryDirectory(prefix="infragram-tour-") as folder:
         scratch = Path(folder)
+        takes = record_tour(scratch)
         parts = []
-        for index, (recording, lead_in) in enumerate(record_tour(scratch)):
+        for index, take in enumerate(takes):
             parts.append(scratch / f"part-{index}.mp4")
-            to_mp4(recording, lead_in, parts[-1])
+            to_mp4(take, parts[-1])
         listing = scratch / "parts.txt"
         listing.write_text("".join(f"file '{part.as_posix()}'\n" for part in parts))
         target = MEDIA / "infragram-tour.mp4"
         encode("-f", "concat", "-safe", "0", "-i", str(listing), "-c", "copy", str(target))
-        for part, (_name, label, _walk) in zip(parts, TOUR, strict=True):
-            to_gif(part, IMAGES / f"infragram-tour-{label}.gif", width=800)
+        for take, (_name, label, _walk) in zip(takes, TOUR, strict=True):
+            to_gif(take, IMAGES / f"infragram-tour-{label}.gif")
 
 
 def main() -> None:
-    brand_assets()
-    mascot_loop()
+    # --recordings rebuilds only the editor demo and the tour, leaving the
+    # mascot artwork, its GIF and the brand kit as they are
+    recordings_only = "--recordings" in sys.argv[1:]
+    if not recordings_only:
+        brand_assets()
+        mascot_loop()
     with tempfile.TemporaryDirectory(prefix="infragram-readme-") as folder:
-        recording, lead_in = record_demo(Path(folder))
-        to_mp4(recording, lead_in, MEDIA / "infragram-editor.mp4")
-    to_gif(MEDIA / "infragram-editor.mp4", IMAGES / "infragram-editor.gif", width=900)
+        listing = record_demo(Path(folder))
+        to_mp4(listing, MEDIA / "infragram-editor.mp4")
+        to_gif(listing, IMAGES / "infragram-editor.gif")
     build_tour()
-    brand_archive()
+    if not recordings_only:
+        brand_archive()
     print("Regenerated selected pangolin PNGs, brand kit, GIFs, editor MP4 and banners")
 
 
