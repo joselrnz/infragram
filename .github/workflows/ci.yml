@@ -19,13 +19,12 @@ concurrency:
 # .forgejo/workflows/ci.yml.
 jobs:
   verify:
-    name: Verify (Python ${{ matrix.python-version }})
+    # One run, on the newest Python. The oldest supported (3.11, as
+    # requires-python says) is still checked statically: ruff and mypy
+    # target it.
+    name: Verify (Python 3.15)
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.11", "3.12"]
     env:
       PYTHONUTF8: "1"
     steps:
@@ -41,7 +40,7 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: "3.15"
           cache: pip
 
       - run: python -m pip install -e "./plugin[test]"
