@@ -47,8 +47,16 @@ jobs:
       - run: python -m pip install -e "./plugin[test]"
 
       # The 3D items in the unit suite are drawn in Chromium: the build the
-      # pinned Playwright expects, with its system libraries.
-      - run: python -m playwright install --with-deps chromium
+      # pinned Playwright expects, with its system libraries. Those come from
+      # Ubuntu's mirror, which runners sometimes cannot resolve (apt then
+      # retries for ten minutes and the job fails before a test runs); the
+      # runner image carries the libraries its own Chrome needs, so a
+      # mirror that does not answer within five minutes is a warning.
+      - name: Chromium's system libraries
+        run: >-
+          timeout 300 python -m playwright install-deps chromium
+          || echo "::warning::Ubuntu's mirror did not answer; Chromium runs on the libraries the runner image carries"
+      - run: python -m playwright install chromium
 
       # Lint, format, types, line endings, naming, docs, plugin package,
       # then the unit and skill suites without the slow sweeps.
