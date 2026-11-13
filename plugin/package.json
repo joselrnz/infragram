@@ -1,6 +1,6 @@
 {
   "name": "infragram-architect",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Interactive, local-first infrastructure diagram editor and exporter. Build cloud, multicloud, hybrid, Kubernetes, virtualization, and on-premises architecture diagrams from nineteen provider libraries (AWS, Azure, Google Cloud, DigitalOcean, Hetzner Cloud, Cloudflare, Oracle Cloud, IBM Cloud, Alibaba Cloud, OVHcloud, Vultr, Akamai Cloud, Kubernetes, Databricks, Equinix, OpenStack, VMware vSphere, Proxmox VE, Local & On-Premises) with provider containment frames and network links, then export one versioned .infragram.json project to interactive HTML, clean SVG, and PNG. Draw what already exists from Terraform or a live AWS, Azure or Google Cloud account or Kubernetes cluster, read-only, and write a diagram's Terraform skeleton.",
   "license": "MIT",
   "author": "Infragram Architect",

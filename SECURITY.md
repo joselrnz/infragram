@@ -17,7 +17,7 @@ use the same private channel.
 
 | Version | Security fixes |
 |---|---|
-| 0.0.2 | yes |
+| 0.0.3 | yes |
 
 An exported page carries the editor of the version that wrote it, so a fix
 in the editor reaches an existing page only when it is exported again.
