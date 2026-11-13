@@ -35,6 +35,8 @@
       updateSelectionToolbar();
     });
   };
+  // The step list stands right of the drawing (placeStepList): a fit takes
+  // it in, or the steps a flow is told by sit past the viewport's edge.
   const fitBounds = () => {
     let bounds = contentBounds();
     // the brand mark under the drawing is part of the picture, though it
@@ -61,7 +63,21 @@
         };
       }
     }
-    return bounds;
+    const list = diagram.querySelector('[data-step-list]');
+    const matrix = diagram.getCTM();
+    const transform = list?.getCTM();
+    if (!bounds || !list || !matrix || !transform) return bounds;
+    const box = list.getBBox();
+    if (!box.width || !box.height) return bounds;
+    const local = matrix.inverse().multiply(transform);
+    const start = new DOMPoint(box.x, box.y).matrixTransform(local);
+    const end = new DOMPoint(box.x + box.width, box.y + box.height).matrixTransform(local);
+    return {
+      left: Math.min(bounds.left, start.x),
+      top: Math.min(bounds.top, start.y),
+      right: Math.max(bounds.right, end.x),
+      bottom: Math.max(bounds.bottom, end.y),
+    };
   };
   const fitZoom = () => {
     fitMode = true;
