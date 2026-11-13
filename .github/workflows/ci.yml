@@ -30,7 +30,7 @@ jobs:
     env:
       PYTHONUTF8: "1"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         env:
           # Artwork is hashed byte for byte: check files out exactly as committed.
           GIT_CONFIG_COUNT: "1"
@@ -40,7 +40,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.15"
           cache: pip
